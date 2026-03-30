@@ -1,0 +1,241 @@
+---
+// src/pages/services.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Our Services" description="Explore Scandic Roots' comprehensive international recruitment and workforce solutions.">
+  <div class="page-header">
+    <div class="container text-center">
+      <h1 class="page-title">Workforce <span class="text-gradient">Solutions</span></h1>
+      <p class="page-subtitle">End-to-End International Recruitment Services</p>
+    </div>
+  </div>
+
+  <section class="section container">
+    <div class="process-wrapper">
+      <h2 class="section-title">The Complete Process</h2>
+      <p class="text-center" style="margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+        We manage the complete process, ensuring employers receive job-ready candidates while minimizing hiring risks and delays.
+      </p>
+
+      <div class="process-steps">
+        <div class="step glass-panel">
+          <div class="step-num">01</div>
+          <h3>Talent Sourcing</h3>
+          <p>We leverage our global networks to find the best candidates suited for your specific industry needs.</p>
+        </div>
+        <div class="step glass-panel">
+          <div class="step-num">02</div>
+          <h3>Screening</h3>
+          <p>Rigorous multi-stage interviews to assess technical skills, motivation, and cultural fit.</p>
+        </div>
+        <div class="step glass-panel">
+          <div class="step-num">03</div>
+          <h3>Preparation</h3>
+          <p>Language instruction and vital skills training to ensure candidates are completely job-ready before relocation.</p>
+        </div>
+        <div class="step glass-panel">
+          <div class="step-num">04</div>
+          <h3>Documentation</h3>
+          <p>Full compliance checks, visa handling, and paperwork processing without any delays.</p>
+        </div>
+        <div class="step glass-panel">
+          <div class="step-num">05</div>
+          <h3>Onboarding</h3>
+          <p>Seamless placement and continued support to ensure high retention numbers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section service-details bg-alt">
+    <div class="container">
+      <h2 class="section-title">Core Disciplines</h2>
+
+      <div class="detail-row" id="ausbildung">
+        <div class="detail-content">
+          <h3 class="detail-title">Ausbildung Recruitment</h3>
+          <p>
+            Scandic Roots supplies international candidates for Germany’s vocational training system, helping companies build a sustainable and future-ready workforce organically.
+          </p>
+          <ul>
+            <li>✓ Pre-screened motivated talents</li>
+            <li>✓ B1/B2 German language certified</li>
+            <li>✓ Visa procurement handling</li>
+          </ul>
+        </div>
+        <div class="detail-icon glass-panel">🎓</div>
+      </div>
+
+      <div class="detail-row reverse" id="opportunity">
+        <div class="detail-content">
+          <h3 class="detail-title">Opportunity Card Candidates</h3>
+          <p>
+            We provide pre-qualified candidates eligible under Germany’s "Chancenkarte" program, enabling faster and more flexible hiring for specialized roles.
+          </p>
+          <ul>
+            <li>✓ Quick deployment</li>
+            <li>✓ Points-system verified candidates</li>
+            <li>✓ Reduced administrative overhead</li>
+          </ul>
+        </div>
+        <div class="detail-icon glass-panel">🎫</div>
+      </div>
+
+      <div class="detail-row" id="healthcare">
+        <div class="detail-content">
+          <h3 class="detail-title">Healthcare Recruitment</h3>
+          <p>
+            We recruit qualified international nurses and medical staff for European healthcare institutions, supporting critical workforce shortages strictly following ethical recruitment frameworks.
+          </p>
+          <ul>
+            <li>✓ Recognition of foreign qualifications</li>
+            <li>✓ Tailored language and cultural prep</li>
+            <li>✓ Specialized hospital placement</li>
+          </ul>
+        </div>
+        <div class="detail-icon glass-panel">⚕️</div>
+      </div>
+
+      <div class="detail-row reverse" id="industrial">
+        <div class="detail-content">
+          <h3 class="detail-title">Industrial Workforce Recruitment</h3>
+          <p>
+            The company delivers skilled and semi-skilled workers for industries such as manufacturing, logistics, and technical trades, ensuring operational continuity and efficiency.
+          </p>
+          <ul>
+            <li>✓ Blue-collar and specialized trades</li>
+            <li>✓ High-volume project staffing</li>
+            <li>✓ Safety and compliance tested</li>
+          </ul>
+        </div>
+        <div class="detail-icon glass-panel">⚙️</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container text-center" style="margin-bottom: 4rem;">
+    <h2 class="section-title">Need a Tailored Solution?</h2>
+    <a href="/contact" class="btn btn-primary">Speak to an Expert</a>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: var(--color-primary-light);
+    padding: 10rem 0 5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .page-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 0.6s ease;
+  }
+
+  .page-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    animation: fadeInUp 0.6s ease;
+  }
+
+  .process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .step {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+    padding-top: 3rem;
+  }
+
+  .step-num {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color-primary-light);
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+    z-index: 0;
+  }
+
+  .step h3 {
+    color: var(--color-primary);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1rem;
+  }
+
+  .step p { position: relative; z-index: 1; }
+
+  .detail-row {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 8rem;
+  }
+
+  .detail-row.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .detail-content {
+    flex: 1;
+  }
+
+  .detail-icon {
+    flex: 1;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    background: linear-gradient(135deg, #ffffff 0%, var(--color-primary-light) 100%);
+  }
+
+  .detail-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .detail-content ul {
+    margin-top: 1.5rem;
+  }
+
+  .detail-content li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 768px) {
+    .detail-row, .detail-row.reverse {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .page-title { font-size: 3rem; }
+  }
+</style>

@@ -1,0 +1,312 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const isDe = lang === 'de';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer-monolith">
+  <!-- Scrolling Marquee Ribbon -->
+  <div class="footer-marquee">
+    <div class="marquee-track">
+      <span>SCANDIC ROOTS &nbsp;•&nbsp; GLOBAL TALENT &nbsp;•&nbsp; STRATEGIC PARTNERSHIP &nbsp;•&nbsp; EUROPEAN VISION &nbsp;•&nbsp; SCANDIC ROOTS &nbsp;•&nbsp; GLOBAL TALENT &nbsp;•&nbsp; STRATEGIC PARTNERSHIP &nbsp;•&nbsp; EUROPEAN VISION &nbsp;•&nbsp;</span>
+    </div>
+  </div>
+
+  <div class="container monolith-container">
+    <div class="monolith-grid">
+      <!-- Column 01: Solutions -->
+      <div class="monolith-col">
+        <div class="col-number">01</div>
+        <h3 class="col-label">{t('footer.solutions')}</h3>
+        <ul class="monolith-links">
+          <li><a href={isDe ? "/de/services#ausbildung" : "/services#ausbildung"}>{isDe ? 'Ausbildungen' : 'Ausbildung Pipeline'}</a></li>
+          <li><a href={isDe ? "/de/services#opportunity" : "/services#opportunity"}>{isDe ? 'Chancenkarte' : 'Opportunity Card'}</a></li>
+          <li><a href={isDe ? "/de/services#healthcare" : "/services#healthcare"}>{isDe ? 'Gesundheitswesen' : 'Healthcare Staffing'}</a></li>
+          <li><a href={isDe ? "/de/services#industrial" : "/services#industrial"}>{isDe ? 'Industrielles Personal' : 'Industrial Workforce'}</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 02: Company -->
+      <div class="monolith-col">
+        <div class="col-number">02</div>
+        <h3 class="col-label">{t('footer.company')}</h3>
+        <ul class="monolith-links">
+          <li><a href={isDe ? "/de/services" : "/services"}>{t('nav.services')}</a></li>
+          <li><a href={isDe ? "/de/contact" : "/contact"}>{t('nav.contact')}</a></li>
+          <li><a href={isDe ? "/de/privacy" : "/privacy"}>{t('footer.privacy')}</a></li>
+          <li><a href={isDe ? "/de/impressum" : "/impressum"}>{t('footer.impressum')}</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 03: Passport (Contact Card) -->
+      <div class="monolith-col passport-col">
+        <div class="col-number">03</div>
+        <h3 class="col-label">{t('footer.contact')}</h3>
+        <div class="passport-card shadow-premium">
+          <div class="passport-top">
+            <span class="passport-title">Official Contact Card</span>
+            <div class="passport-line"></div>
+          </div>
+          <div class="passport-body">
+            <p class="passport-info">
+              <strong>HQ SWEDEN</strong><br/>
+              Götgatan 12, 116 46 Stockholm
+            </p>
+            <p class="passport-info">
+              <strong>CONTACT</strong><br/>
+              {t('topbar.email')}<br/>
+              {t('topbar.phone')}
+            </p>
+          </div>
+          <div class="passport-bottom">
+            <div class="social-row">
+              <a href="#" class="social-orb" aria-label="LinkedIn">IN</a>
+              <a href="#" class="social-orb" aria-label="WhatsApp">WA</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Monolith Bottom -->
+    <div class="monolith-footer-bottom">
+      <div class="monolith-brand">
+        <span class="logo-accent">SCANDIC</span>ROOTS
+      </div>
+      <div class="monolith-copyright">
+        &copy; {year} {t('footer.rights')}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-monolith {
+    position: relative;
+    background-color: #05081A !important;
+    color: #ffffff;
+    padding-bottom: 2rem;
+    overflow: hidden;
+    margin-top: auto;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  /* Marquee Styling */
+  .footer-marquee {
+    background: #11184C;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 6rem;
+  }
+
+  .marquee-track {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+  }
+
+  .marquee-track span {
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .monolith-container {
+    position: relative;
+    z-index: 5;
+  }
+
+  .monolith-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 4rem;
+    margin-bottom: 8rem;
+  }
+
+  .monolith-col {
+    position: relative;
+  }
+
+  .col-number {
+    font-size: 10rem;
+    font-weight: 900;
+    line-height: 0.8;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .col-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    color: var(--color-accent);
+    margin-bottom: 2.5rem;
+    display: block;
+  }
+
+  .monolith-links {
+    list-style: none;
+    padding: 0;
+  }
+
+  .monolith-links li {
+    margin-bottom: 1.2rem;
+  }
+
+  .monolith-links a {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .monolith-links a:hover {
+    color: #ffffff;
+    transform: translateX(10px);
+  }
+
+  /* Passport Card */
+  .passport-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 4px; /* Brutalist sharp */
+    transform: perspective(1000px) rotateY(-10deg);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .passport-card:hover {
+    transform: perspective(1000px) rotateY(0deg) translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-accent);
+  }
+
+  .passport-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .passport-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .passport-line {
+    height: 1px;
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.1);
+    margin-left: 1rem;
+  }
+
+  .passport-info {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+  }
+
+  .passport-info strong {
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .social-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .social-orb {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  .social-orb:hover {
+    background: white;
+    color: #000;
+    border-color: white;
+  }
+
+  /* Monolith Bottom Bar */
+  .monolith-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .monolith-brand {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: #ffffff;
+  }
+
+  .logo-accent { color: var(--color-accent); }
+
+  .monolith-copyright {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .monolith-grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
+    .passport-col { grid-column: span 2; }
+    .passport-card { transform: none; }
+  }
+
+  @media (max-width: 640px) {
+    .footer-marquee { margin-bottom: 3rem; padding: 1rem 0; }
+    .marquee-track span { font-size: 0.9rem; letter-spacing: 3px; }
+    .monolith-grid { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 4rem; }
+    .passport-col { grid-column: span 1; }
+    .col-number { font-size: 5rem; margin-bottom: 1rem; }
+    .col-label { margin-bottom: 1.5rem; }
+    .monolith-links a { font-size: 1rem; }
+    .passport-card { padding: 2rem; }
+    .monolith-brand { font-size: 1.8rem; }
+    .monolith-footer-bottom { 
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
+      gap: 1.5rem; 
+      padding-top: 3rem;
+    }
+  }
+</style>

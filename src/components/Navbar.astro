@@ -1,0 +1,250 @@
+---
+// src/components/Navbar.astro
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.replace(/^\/de/, "").replace(/^\//, ""); // get base path without lang prefix and leading slash
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const isDe = lang === "de";
+// Create toggle URL: if DE, remove /de prefix. If EN, add /de prefix.
+const toggleUrl = isDe
+  ? pathname.replace(/^\/de/, "") || "/"
+  : `/de${pathname === "/" ? "" : pathname}`;
+---
+
+<!-- Optional top bar for reference accuracy (Email / Phone / Location) -->
+<div class="topbar">
+  <div class="container topbar-container">
+    <div class="topbar-left">
+      <span>✉️ {t("topbar.email")}</span>
+      <span>📞 {t("topbar.phone")}</span>
+    </div>
+    <div class="topbar-right">
+      <span class="lang-toggle-wrapper">
+        <a href={toggleUrl} class="lang-toggle">{isDe ? "🇺🇸 EN" : "🇩🇪 DE"}</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<header class="navbar">
+  <div class="container nav-container">
+    <a href="/" class="logo">
+      <span class="logo-red">Scandic</span><span class="logo-blue">Roots</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href={isDe ? "/de/" : "/"} class={currentPath === "" ? "active" : ""}
+        >{t("nav.home")}</a
+      >
+      <a
+        href={isDe ? "/de/services" : "/services"}
+        class={currentPath === "services" ? "active" : ""}
+        >{t("nav.services")}</a
+      >
+      <a
+        href={isDe ? "/de/contact" : "/contact"}
+        class={currentPath === "contact" ? "active" : ""}>{t("nav.contact")}</a
+      >
+    </nav>
+
+    <div class="nav-cta">
+      <a
+        href={isDe ? "/de/contact" : "/contact"}
+        class="btn btn-outline"
+        style="border-radius: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;"
+        >{t("nav.contactBtn")}</a
+      >
+    </div>
+
+    <button class="mobile-toggle" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<style>
+  .topbar {
+    background-color: var(--color-primary); /* Deep Indigo */
+    color: #ffffff;
+    font-size: 0.8rem;
+    padding: 0.4rem 0;
+  }
+  .topbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topbar-left {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .lang-toggle-wrapper {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .lang-toggle {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .lang-toggle:hover {
+    color: var(--color-accent);
+  }
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 1000;
+    border-bottom: 2px solid #f0f4f8; /* subtle border */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* very soft shadow */
+    transition: all var(--transition-normal);
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+  }
+
+  .logo-red {
+    color: #e53e3e; /* Reference red */
+  }
+
+  .logo-blue {
+    color: var(--color-primary); /* Deep Indigo */
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+    position: relative;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--color-accent);
+  }
+
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1100;
+  }
+
+  .mobile-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text-main);
+    transition: all 0.3s;
+  }
+
+  /* Mobile Active State */
+  .mobile-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .mobile-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+
+  @media (max-width: 992px) {
+    header.navbar .nav-links,
+    header.navbar .nav-cta,
+    .topbar {
+      display: none !important;
+    }
+
+    header.navbar .nav-links.active {
+      display: flex !important;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: white;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1050;
+      gap: 2.5rem;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    header.navbar .nav-links.active a {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .mobile-toggle {
+      display: flex !important;
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  function initNav() {
+    const toggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+      });
+
+      // Close menu when a link is clicked
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          toggle.classList.remove('active');
+          navLinks.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  }
+
+  initNav();
+  document.addEventListener('astro:page-load', initNav);
+</script>

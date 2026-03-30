@@ -1,0 +1,500 @@
+---
+// src/components/Hero.astro
+import buildingSrc from "../assets/building.gif";
+import workerSrc from "../assets/worker.gif";
+import girlSrc from "../assets/girl.gif";
+import baloonSrc from "../assets/red-baloon.webp";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const isDe = lang === "de";
+---
+
+<section class="hero">
+  <!-- Interactive Background Elements -->
+  <div class="hero-bg-elements">
+    <div class="sun">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="#FDE047"
+        ><circle cx="12" cy="12" r="6"></circle><path
+          d="M12 2V4M12 20V22M4 12H2M22 12H20M4.92893 4.92893L6.34315 6.34315M17.6569 17.6569L19.0711 19.0711M4.92893 19.0711L6.34315 17.6569M17.6569 6.34315L19.0711 4.92893"
+          stroke="#FDE047"
+          stroke-width="2"
+          stroke-linecap="round"></path></svg
+      >
+    </div>
+    <div class="cloud cloud-1">
+      <svg
+        width="60"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="#ffffff"
+        opacity="0.8"
+        ><path
+          d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.1363 20.1835 10.2001 17.8647 10.0166C17.4334 6.62141 14.5367 4 11 4C7.13401 4 4 7.13401 4 11C4 11.2312 4.01121 11.4598 4.03299 11.6853C2.26126 12.285 1 13.9878 1 16C1 18.2091 2.79086 20 5 20H17.5V19Z"
+        ></path></svg
+      >
+    </div>
+    <div class="cloud cloud-2">
+      <svg
+        width="80"
+        height="50"
+        viewBox="0 0 24 24"
+        fill="#ffffff"
+        opacity="0.9"
+        ><path
+          d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.1363 20.1835 10.2001 17.8647 10.0166C17.4334 6.62141 14.5367 4 11 4C7.13401 4 4 7.13401 4 11C4 11.2312 4.01121 11.4598 4.03299 11.6853C2.26126 12.285 1 13.9878 1 16C1 18.2091 2.79086 20 5 20H17.5V19Z"
+        ></path></svg
+      >
+    </div>
+    <div class="cloud cloud-3">
+      <svg
+        width="80"
+        height="50"
+        viewBox="0 0 24 24"
+        fill="#ffffff"
+        opacity="0.9"
+        ><path
+          d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.1363 20.1835 10.2001 17.8647 10.0166C17.4334 6.62141 14.5367 4 11 4C7.13401 4 4 7.13401 4 11C4 11.2312 4.01121 11.4598 4.03299 11.6853C2.26126 12.285 1 13.9878 1 16C1 18.2091 2.79086 20 5 20H17.5V19Z"
+        ></path></svg
+      >
+    </div>
+    <div class="cloud cloud-4">
+      <svg
+        width="80"
+        height="50"
+        viewBox="0 0 24 24"
+        fill="#ffffff"
+        opacity="0.9"
+        ><path
+          d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.1363 20.1835 10.2001 17.8647 10.0166C17.4334 6.62141 14.5367 4 11 4C7.13401 4 4 7.13401 4 11C4 11.2312 4.01121 11.4598 4.03299 11.6853C2.26126 12.285 1 13.9878 1 16C1 18.2091 2.79086 20 5 20H17.5V19Z"
+        ></path></svg
+      >
+    </div>
+
+    <!-- Red Balloon -->
+    <img src={baloonSrc.src} alt="Red Balloon" class="balloon-img" />
+  </div>
+
+  <div class="container hero-container">
+    <!-- Text Content Left Side -->
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="text-bold-dark">{t("hero.title.part1")}</span>
+        <span class="text-gradient-irish">{t("hero.title.part2")}</span><br />
+        <span class="text-light-dark">{t("hero.title.part3")}</span>
+      </h1>
+      <p class="hero-subtitle">
+        {t("hero.subtitle")}
+      </p>
+
+      <div class="hero-actions">
+        <a href={isDe ? "/de/contact" : "/contact"} class="btn-irish-dark">
+          {t("hero.cta.primary")} &rarr;
+        </a>
+        <a href={isDe ? "/de/services" : "/services"} class="btn-irish-outline">
+          {t("hero.cta.secondary")}
+        </a>
+      </div>
+    </div>
+
+    <!-- Worker Right Side -->
+  </div>
+
+  <div class="threed-container">
+    <div class="worker-wrapper">
+      <!-- Mix-blend-mode screen drops the black background of the GIF -->
+      <img src={workerSrc.src} alt="Walking Worker" class="worker-img" />
+    </div>
+
+    <div class="girl-wrapper">
+      <!-- Mix-blend-mode screen drops the black background of the GIF -->
+      <img src={girlSrc.src} alt="Walking Worker" class="girl-img" />
+    </div>
+  </div>
+  <div class="skyline-wrapper">
+    <!-- Mix-blend-mode multiply drops white backgrounds if the building.png has one -->
+    <img src={buildingSrc.src} alt="Global Skyline" class="skyline-img" />
+  </div>
+
+  <!-- Bottom Skyline -->
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    width: 100%;
+    /* Forced light gradient */
+    background: linear-gradient(
+      110deg,
+      #fdfdfd 10%,
+      #aed6f9 50%,
+      #0a78d8 100%
+    ) !important;
+    height: 85vh;
+    /* padding-top: 100px; */
+    overflow: hidden;
+    color: #1a202c;
+  }
+
+  .hero-bg-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .cloud {
+    position: absolute;
+  }
+  .cloud-1 {
+    top: 25%;
+    left: 40%;
+  }
+  .cloud-2 {
+    top: 35%;
+    right: 15%;
+    transform: scale(1.5);
+  }
+  .cloud-3 {
+    top: 40%;
+    right: 30%;
+    transform: scale(1.5);
+  }
+  .cloud-4 {
+    top: 30%;
+    right: 40%;
+    transform: scale(1.5);
+  }
+  .sun {
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    animation: floatSun 10s ease-in-out infinite;
+  }
+
+  .balloon-img {
+    position: absolute;
+    right: 15%;
+    top: 10%;
+    height: 500px;
+    z-index: 5;
+    animation: floatVertical 7s ease-in-out infinite;
+  }
+
+  @keyframes floatVertical {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(-15px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes floatSun {
+    0% {
+      transform: translateX(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateX(-8px) rotate(5deg);
+    }
+    100% {
+      transform: translateX(0px) rotate(0deg);
+    }
+  }
+
+  .cloud-1 svg {
+    animation: float 8s ease-in-out infinite;
+  }
+  .cloud-2 svg {
+    animation: float 6s ease-in-out infinite 1s;
+  }
+  .cloud-3 svg {
+    animation: float 7s ease-in-out infinite 2s;
+  }
+  .cloud-4 svg {
+    animation: float 9s ease-in-out infinite 0.5s;
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding-bottom: 120px; /* space for skyline */
+    margin-left: 5%;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 20;
+  }
+
+  .hero-title {
+    font-size: 4.5rem;
+    line-height: 1.05;
+    margin-bottom: 0.8rem;
+    color: #1a202c !important;
+  }
+
+  .text-bold-dark,
+  .text-gradient-irish {
+    display: inline-block;
+  }
+
+  .text-bold-dark {
+    font-weight: 900;
+    color: #11184c !important;
+    font-family: var(--font-heading);
+    letter-spacing: -2px;
+  }
+
+  .text-gradient-irish {
+    font-weight: 900;
+    font-family: var(--font-heading);
+    background: linear-gradient(90deg, #e53e3e 0%, #5044a5 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+    letter-spacing: -1px;
+  }
+
+  .text-light-dark {
+    display: block;
+    margin-top: 0.2rem;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #11184c !important;
+    font-family: var(--font-body);
+    letter-spacing: -1.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #4a5568 !important;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .btn-irish-dark {
+    background-color: #1a202c !important;
+    color: #ffffff !important;
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid #1a202c !important;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* box-shadow: 0 4px 15px rgba(17, 24, 76, 0.2); */
+  }
+
+  .btn-irish-dark:hover {
+    background-color: #000000 !important;
+    transform: translateY(-2px);
+  }
+
+  .btn-irish-outline {
+    background-color: transparent !important;
+    color: #1a202c !important;
+    border: 1px solid #1a202c !important;
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-irish-outline:hover {
+    background-color: #f0f4f8 !important;
+    transform: translateY(-2px);
+  }
+
+  .worker-wrapper {
+    position: relative;
+    z-index: 30;
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-end;
+    height: 70%;
+    bottom: 0;
+  }
+  .threed-container {
+    position: absolute;
+    bottom: -10%;
+    left: 30%;
+    z-index: 25;
+    pointer-events: none;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .worker-img {
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+    /* ESSENTIAL: Removes the black background from the GIF */
+    mix-blend-mode: screen;
+    /* Add a slight brightness boost if screen washes him out */
+    filter: contrast(1.1) brightness(1.1);
+  }
+
+  .girl-img {
+    position: absolute;
+    top: 50%;
+    /* z-index: 100; */
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+    /* ESSENTIAL: Removes the black background from the GIF */
+    mix-blend-mode: screen;
+    /* Add a slight brightness boost if screen washes him out */
+    filter: contrast(1.1) brightness(1.1);
+  }
+
+  .skyline-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .skyline-img {
+    width: 100%;
+    height: 60vh;
+    min-height: 200px;
+    object-fit: contain;
+    object-position: bottom right;
+    /* If the structural png has a white background, multiply will remove it */
+    mix-blend-mode: multiply;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 1100px) {
+    .hero-title {
+      font-size: 3.5rem;
+    }
+    .text-light-dark {
+      font-size: 2.2rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .hero {
+      height: auto;
+      min-height: 85vh;
+      padding-top: 4rem;
+      padding-bottom: 8rem;
+    }
+    .hero-container {
+      align-items: center;
+      text-align: center;
+      padding-bottom: 60px;
+    }
+    .hero-content {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+    .hero-actions {
+      justify-content: center;
+    }
+    .threed-container {
+      bottom: 5%;
+      left: 0;
+      /* justify-content: space-around; */
+      height: 150px;
+      margin-left: 20%;
+    }
+    .worker-img,
+    .girl-img {
+      height: 150px;
+    }
+    .girl-img {
+      top: 0;
+    }
+    .skyline-img {
+      height: 50vh;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding-top: 3rem;
+    }
+    .hero-container {
+      margin: 0;
+      margin-top: 50%;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    .text-light-dark {
+      font-size: 1.8rem;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .hero-actions {
+      flex-direction: column;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+    .btn-irish-dark,
+    .btn-irish-outline {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .threed-container {
+      bottom: 3%;
+      margin-left: 30%;
+      z-index: 0;
+      /* display: none; Hide characters on very small mobile to prevent overlap with CTAs */
+    }
+    .balloon-img {
+      height: 400px;
+      top: 5%;
+      left: 0;
+    }
+    .skyline-img {
+      height: 100%;
+    }
+  }
+</style>

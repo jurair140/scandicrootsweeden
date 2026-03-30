@@ -1,0 +1,851 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import ServiceBento from "../components/ServiceBento.astro";
+import DraggableSection from "../components/DraggableSection.astro";
+import VideoCarousel from "../components/VideoCarousel.astro";
+import aboutImg from "../assets/about-img.png";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const isDe = lang === "de";
+---
+
+<Layout
+  title={isDe
+    ? "Europäische Rekrutierungsexperten"
+    : "European Recruitment Experts"}
+  description={isDe
+    ? "Scandic Roots verbindet europäische Arbeitgeber mit globalen Talenten. Spezialisiert auf Ausbildung, Chancenkarte, Gesundheitswesen und industrielle Rekrutierung."
+    : "Scandic Roots connects European employers with global talent. Specializing in Ausbildung, Opportunity Card, Healthcare, and Industrial recruitment."}
+>
+  <Hero />
+
+  <!-- About Snippet -->
+  <section class="section about-snippet container">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-badge">{t("home.about.badge")}</h2>
+        <h3 class="section-title text-left">
+          <Fragment set:html={t("home.about.title")} />
+        </h3>
+        <p>
+          {t("home.about.p1")}
+        </p>
+        <p>
+          {t("home.about.p2")}
+        </p>
+        <a
+          href={isDe ? "/de/services" : "/services"}
+          class="btn btn-outline"
+          style="margin-top: 2rem;">{t("home.about.cta")}</a
+        >
+      </div>
+      <div class="about-visual">
+        <img src={aboutImg.src} alt="About Image" class="about-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Recruitment Roadmap Section -->
+  <section class="section roadmap-section">
+    <div class="container">
+      <h2 class="section-title text-center">{t("home.roadmap.title")}</h2>
+      <p class="roadmap-intro text-center">
+        {t("home.roadmap.intro")}
+      </p>
+
+      <div class="roadmap-wrapper">
+        <div class="roadmap-main-line"></div>
+
+        <div class="roadmap-items">
+          <div class="roadmap-item top">
+            <div class="roadmap-content">
+              <span class="step-num">01</span>
+              <h4>{t("home.roadmap.s1.title")}</h4>
+              <p>{t("home.roadmap.s1.desc")}</p>
+            </div>
+            <div class="roadmap-branch"></div>
+            <div class="roadmap-node"></div>
+          </div>
+
+          <div class="roadmap-item bottom">
+            <div class="roadmap-node"></div>
+            <div class="roadmap-branch"></div>
+            <div class="roadmap-content">
+              <span class="step-num">02</span>
+              <h4>{t("home.roadmap.s2.title")}</h4>
+              <p>{t("home.roadmap.s2.desc")}</p>
+            </div>
+          </div>
+
+          <div class="roadmap-item top">
+            <div class="roadmap-content">
+              <span class="step-num">03</span>
+              <h4>{t("home.roadmap.s3.title")}</h4>
+              <p>{t("home.roadmap.s3.desc")}</p>
+            </div>
+            <div class="roadmap-branch"></div>
+            <div class="roadmap-node"></div>
+          </div>
+
+          <div class="roadmap-item bottom">
+            <div class="roadmap-node"></div>
+            <div class="roadmap-branch"></div>
+            <div class="roadmap-content">
+              <span class="step-num">04</span>
+              <h4>{t("home.roadmap.s4.title")}</h4>
+              <p>{t("home.roadmap.s4.desc")}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services -->
+  <section class="section services-section bg-alt" id="services">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 4rem;">
+        <h2 class="section-title">
+          <Fragment set:html={t("home.services.title")} />
+        </h2>
+        <p style="max-width: 600px; margin: 0 auto;">
+          {t("home.services.desc")}
+        </p>
+      </div>
+
+      <div class="services-wrapper">
+        <div class="decorative-blob blob-1"></div>
+        <div class="decorative-blob blob-2"></div>
+        <ServiceBento />
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section why-choose-us" id="why-us">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 5rem;">
+        <h2 class="section-badge">{t("home.advantage.badge")}</h2>
+        <h3 class="section-title">
+          <Fragment set:html={t("home.advantage.title")} />
+        </h3>
+        <p style="max-width: 600px; margin: 0 auto;">
+          {t("home.advantage.desc")}
+        </p>
+      </div>
+
+      <div class="advantage-grid">
+        <div class="advantage-card">
+          <div class="card-glow"></div>
+          <div class="adv-icon-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path
+                d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"
+              ></path><circle cx="12" cy="10" r="3"></circle></svg
+            >
+          </div>
+          <h4>{t("home.advantage.card1.title")}</h4>
+          <p>
+            {t("home.advantage.card1.desc")}
+          </p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="card-glow"></div>
+          <div class="adv-icon-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+              ></path><circle cx="9" cy="7" r="4"></circle><path
+                d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path
+                d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+            >
+          </div>
+          <h4>{t("home.advantage.card2.title")}</h4>
+          <p>
+            {t("home.advantage.card2.desc")}
+          </p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="card-glow"></div>
+          <div class="adv-icon-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+              ></path></svg
+            >
+          </div>
+          <h4>{t("home.advantage.card3.title")}</h4>
+          <p>
+            {t("home.advantage.card3.desc")}
+          </p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="card-glow"></div>
+          <div class="adv-icon-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline
+                points="22 4 12 14.01 9 11.01"></polyline></svg
+            >
+          </div>
+          <h4>{t("home.advantage.card4.title")}</h4>
+          <p>
+            {t("home.advantage.card4.desc")}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <DraggableSection />
+
+  <VideoCarousel />
+
+  <!-- Designer Glass Portal CTA -->
+  <section class="portal-section">
+    <!-- Massive Artistic Watermark -->
+    <div class="portal-watermark" aria-hidden="true">SCANDIC</div>
+
+    <!-- 3D Background Orbs -->
+    <div class="portal-orb orb-1"></div>
+    <div class="portal-orb orb-2"></div>
+
+    <div class="container portal-relative">
+      <div class="portal-card shadow-premium">
+        <div class="portal-content">
+          <div class="portal-badge">{t("home.portal.badge")}</div>
+          <h2 class="portal-heading">
+            <Fragment set:html={t("home.portal.title")} />
+          </h2>
+          <p class="portal-text">
+            {t("home.portal.text")}
+          </p>
+
+          <div class="portal-action">
+            <a
+              href={isDe ? "/de/contact" : "/contact"}
+              class="btn btn-primary portal-btn magnetic-target"
+            >
+              {t("home.portal.cta")}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="ml-3"
+                ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                  points="12 5 19 12 12 19"></polyline></svg
+              >
+            </a>
+            <p class="portal-subtext">
+              {t("home.portal.subtext")}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .text-left {
+    text-align: left;
+  }
+  .section-badge {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .roadmap-section {
+    padding: 8rem 0;
+    background: #fdfdfd;
+    overflow-x: hidden;
+  }
+
+  .roadmap-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 4rem auto 0;
+    height: 450px; /* Fixed height to allow content above and below line */
+    display: flex;
+    align-items: center;
+  }
+
+  .roadmap-main-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #11184c11, #11184c, #11184c11);
+    transform: translateY(-50%);
+    border-radius: 4px;
+    z-index: 1;
+  }
+
+  .roadmap-items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+  }
+
+  .roadmap-item {
+    position: relative;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .roadmap-node {
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    border: 4px solid #11184c;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+
+  .roadmap-item:hover .roadmap-node {
+    background: #11184c;
+    box-shadow: 0 0 15px rgba(17, 24, 76, 0.4);
+    transform: translateY(-50%) scale(1.2);
+  }
+
+  .roadmap-branch {
+    width: 2px;
+    background: #11184c33;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+
+  .roadmap-item.top .roadmap-branch {
+    bottom: 50%;
+    height: 100px;
+  }
+
+  .roadmap-item.bottom .roadmap-branch {
+    top: 50%;
+    height: 100px;
+  }
+
+  .roadmap-item:hover .roadmap-branch {
+    background: #11184c;
+    width: 3px;
+  }
+
+  .roadmap-content {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: 220px;
+    text-align: center;
+    position: absolute;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+  }
+
+  .roadmap-item.top .roadmap-content {
+    bottom: calc(50% + 100px);
+  }
+
+  .roadmap-item.bottom .roadmap-content {
+    top: calc(50% + 100px);
+  }
+
+  .roadmap-item:hover .roadmap-content {
+    border-color: #11184c;
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(17, 24, 76, 0.1);
+  }
+
+  .step-num {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .roadmap-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #11184c;
+  }
+
+  .roadmap-content p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .about-img {
+    width: 100%;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .services-wrapper {
+    position: relative;
+    padding: 2rem 0;
+  }
+
+  .decorative-blob {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .blob-1 {
+    background: var(--color-accent);
+    top: -10%;
+    right: -5%;
+  }
+
+  .blob-2 {
+    background: var(--color-primary);
+    bottom: -10%;
+    left: -5%;
+  }
+
+  /* Why Choose Us Styles */
+  .why-choose-us {
+    background-color: #ffffff;
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .advantage-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+  }
+
+  .advantage-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-accent);
+    box-shadow: 0 20px 40px rgba(178, 61, 105, 0.1);
+  }
+
+  .card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle at center,
+      rgba(178, 61, 105, 0.15) 0%,
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+  }
+
+  .advantage-card:hover .card-glow {
+    opacity: 1;
+  }
+
+  .adv-icon-box {
+    width: 64px;
+    height: 64px;
+    background: #ffffff;
+    color: var(--color-accent);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+  }
+
+  .adv-icon-box svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .advantage-card:hover .adv-icon-box {
+    background: var(--color-accent);
+    color: #ffffff;
+    transform: rotateY(180deg);
+  }
+
+  .advantage-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    color: var(--color-primary);
+  }
+
+  .advantage-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .advantage-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .advantage-grid {
+      grid-template-columns: 1fr;
+    }
+    .advantage-card {
+      padding: 2rem;
+    }
+  }
+
+  .image-placeholder {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+      135deg,
+      var(--color-primary-light) 0%,
+      rgba(178, 61, 105, 0.1) 100%
+    );
+  }
+
+  .decorative-grid {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image:
+      linear-gradient(rgba(17, 24, 76, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17, 24, 76, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    top: -50%;
+    left: -50%;
+    transform: rotate(-15deg);
+    animation: driftSlow 30s linear infinite;
+  }
+
+  @keyframes driftSlow {
+    from {
+      transform: rotate(-15deg) translateY(0);
+    }
+    to {
+      transform: rotate(-15deg) translateY(-50px);
+    }
+  }
+
+  /* Designer Glass Portal CTA */
+  .portal-section {
+    position: relative;
+    padding: 12rem 0;
+    background-color: var(--color-primary); /* Dark Indigo */
+    overflow: hidden;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .portal-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Outfit", sans-serif;
+    font-size: 25vw;
+    font-weight: 900;
+    color: white;
+    opacity: 0.03;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -2vw;
+    line-height: 0.8;
+    white-space: nowrap;
+    z-index: 0;
+  }
+
+  .portal-orb {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.2;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .orb-1 {
+    background: var(--color-accent);
+    top: -10%;
+    right: -5%;
+    animation: orbMove 15s infinite alternate ease-in-out;
+  }
+
+  .orb-2 {
+    background: #5044a5;
+    bottom: -10%;
+    left: -5%;
+    animation: orbMove 12s infinite alternate-reverse ease-in-out;
+  }
+
+  @keyframes orbMove {
+    from {
+      transform: translate(0, 0) scale(1);
+    }
+    to {
+      transform: translate(60px, 40px) scale(1.2);
+    }
+  }
+
+  .portal-relative {
+    position: relative;
+    z-index: 2;
+  }
+
+  .portal-card {
+    max-width: 850px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    padding: 6rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portal-badge {
+    display: inline-block;
+    font-family: "Outfit", sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+  }
+
+  .portal-heading {
+    font-size: 5.5rem;
+    color: #ffffff;
+    line-height: 0.95;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+  }
+
+  .portal-text {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
+    line-height: 1.5;
+  }
+
+  .portal-btn {
+    font-size: 1.3rem;
+    padding: 1.4rem 4rem;
+    border-radius: 100px;
+    color: #ffffff;
+    background: var(--color-primary);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .portal-btn:hover {
+    background: white;
+    color: var(--color-primary);
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  }
+
+  .portal-subtext {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: "Inter", sans-serif;
+  }
+
+  @media (max-width: 1024px) {
+    .portal-heading {
+      font-size: 4rem;
+    }
+    .portal-card {
+      padding: 4rem 2rem;
+    }
+    .portal-watermark {
+      font-size: 40vw;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .portal-heading {
+      font-size: 2.8rem;
+    }
+    .portal-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 1.2rem 2rem;
+    }
+    .portal-section {
+      padding: 8rem 0;
+      min-height: auto;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+    .about-text {
+      padding: 0 1.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .roadmap-wrapper {
+      height: auto;
+      padding: 2rem 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .roadmap-main-line {
+      left: 30px;
+      width: 4px;
+      height: 100%;
+      top: 0;
+      transform: none;
+      background: linear-gradient(180deg, #11184c11, #11184c, #11184c11);
+    }
+    .roadmap-items {
+      flex-direction: column;
+      width: 100%;
+      gap: 3rem;
+      padding-left: 60px;
+    }
+    .roadmap-item {
+      width: 100%;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .roadmap-node {
+      left: -42px; /* 60px padding - 30px line pos - node half-width */
+      top: 2rem;
+      transform: none;
+    }
+    .roadmap-item.top .roadmap-content,
+    .roadmap-item.bottom .roadmap-content {
+      position: static;
+      width: 100%;
+      text-align: left;
+    }
+    .roadmap-branch {
+      display: none;
+    }
+    .roadmap-item:hover .roadmap-node {
+      transform: scale(1.2);
+    }
+  }
+</style>
+
+<script>
+  function initPortalInteractions() {
+    const magneticBtn = document.querySelector(
+      ".magnetic-target",
+    ) as HTMLElement;
+
+    if (magneticBtn) {
+      document.addEventListener("mousemove", (e) => {
+        const rect = magneticBtn.getBoundingClientRect();
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        const deltaX = (mouseX - centerX) * 0.15;
+        const deltaY = (mouseY - centerY) * 0.15;
+
+        magneticBtn.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(1.05)`;
+      });
+    }
+  }
+
+  initPortalInteractions();
+  document.addEventListener("astro:page-load", initPortalInteractions);
+</script>

@@ -1,0 +1,192 @@
+---
+// src/pages/contact.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us" description="Get in touch with Scandic Roots to secure global talent for your team.">
+  <div class="page-header">
+    <div class="container text-center">
+      <h1 class="page-title">Contact <span class="text-gradient">Our Team</span></h1>
+      <p class="page-subtitle">Ready to address your labor shortages? We are here to help.</p>
+    </div>
+  </div>
+
+  <section class="section container">
+    <div class="contact-grid">
+      
+      <div class="contact-info">
+        <h2 class="section-title text-left">Get In Touch</h2>
+        <p style="margin-bottom: 2rem;">
+          Whether you're an employer looking for candidates or a professional seeking opportunities, reach out to us and our team will respond within 24 hours.
+        </p>
+        
+        <div class="info-block">
+          <div class="info-icon">📍</div>
+          <div class="info-text">
+            <h4>Sweden HQ</h4>
+            <p>Olof Palmes Gata 12<br/>111 37 Stockholm, Sweden</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-icon">✉️</div>
+          <div class="info-text">
+            <h4>Email Us</h4>
+            <p>info@scandicroots.se<br/>support@scandicroots.se</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-icon">📞</div>
+          <div class="info-text">
+            <h4>Call Us</h4>
+            <p>+46 8 123 45 67<br/>Mon-Fri, 09:00-18:00 CET</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper glass-panel">
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@company.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="inquiry">Inquiry Type</label>
+            <select id="inquiry">
+              <option>I'm looking to hire talent</option>
+              <option>I'm looking for a job</option>
+              <option>Partnership opportunities</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
+          </div>
+
+          <button type="button" class="btn btn-primary submit-btn">Send Message</button>
+        </form>
+      </div>
+      
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: var(--color-primary-light);
+    padding: 10rem 0 5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .text-center { text-align: center; }
+  .text-left { text-align: left; }
+  .text-left::after { margin: 1rem 0 0; }
+
+  .page-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    margin-bottom: 4rem;
+  }
+
+  .info-block {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+
+  .info-icon {
+    width: 60px;
+    height: 60px;
+    background: #FFF1F2;
+    border: 1px solid rgba(178, 61, 105, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  .info-text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .info-text p {
+    margin: 0;
+  }
+
+  /* Form Styles */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-text-main);
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    background: #ffffff;
+    border: 1px solid #cbd5e0;
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--color-text-main);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+  }
+
+  .contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(17, 24, 76, 0.1);
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 992px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

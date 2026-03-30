@@ -1,58 +1,63 @@
 ---
 // src/pages/services.astro
-import Layout from '../layouts/Layout.astro';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import Layout from "../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const isDe = lang === "de";
 ---
 
-<Layout 
-  title={isDe ? "Unsere Leistungen" : "Our Services"} 
-  description={isDe ? "Entdecken Sie die umfassenden internationalen Rekrutierungs- und Personallösungen von Scandic Roots." : "Explore Scandic Roots' comprehensive international recruitment and workforce solutions."}
+<Layout
+  title={isDe ? "Unsere Leistungen" : "Our Services"}
+  description={isDe
+    ? "Entdecken Sie die umfassenden internationalen Rekrutierungs- und Personallösungen von Scandic Roots."
+    : "Explore Scandic Roots' comprehensive international recruitment and workforce solutions."}
 >
   <div class="page-header">
     <div class="container text-center">
       <h1 class="page-title">
-        <Fragment set:html={t('services.title')} />
+        <Fragment set:html={t("services.title")} />
       </h1>
-      <p class="page-subtitle">{t('services.subtitle')}</p>
+      <p class="page-subtitle">{t("services.subtitle")}</p>
     </div>
   </div>
 
   <section class="section container">
     <div class="process-wrapper">
-      <h2 class="section-title">{t('services.process.title')}</h2>
-      <p class="text-center" style="margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-        {t('services.process.desc')}
+      <h2 class="section-title">{t("services.process.title")}</h2>
+      <p
+        class="text-center"
+        style="margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;"
+      >
+        {t("services.process.desc")}
       </p>
 
       <div class="process-steps">
         <div class="step glass-panel">
           <div class="step-num">01</div>
-          <h3>{t('services.step1.title')}</h3>
-          <p>{t('services.step1.desc')}</p>
+          <h3>{t("services.step1.title")}</h3>
+          <p>{t("services.step1.desc")}</p>
         </div>
         <div class="step glass-panel">
           <div class="step-num">02</div>
-          <h3>{t('services.step2.title')}</h3>
-          <p>{t('services.step2.desc')}</p>
+          <h3>{t("services.step2.title")}</h3>
+          <p>{t("services.step2.desc")}</p>
         </div>
         <div class="step glass-panel">
           <div class="step-num">03</div>
-          <h3>{t('services.step3.title')}</h3>
-          <p>{t('services.step3.desc')}</p>
+          <h3>{t("services.step3.title")}</h3>
+          <p>{t("services.step3.desc")}</p>
         </div>
         <div class="step glass-panel">
           <div class="step-num">04</div>
-          <h3>{t('services.step4.title')}</h3>
-          <p>{t('services.step4.desc')}</p>
+          <h3>{t("services.step4.title")}</h3>
+          <p>{t("services.step4.desc")}</p>
         </div>
         <div class="step glass-panel">
           <div class="step-num">05</div>
-          <h3>{t('services.step5.title')}</h3>
-          <p>{t('services.step5.desc')}</p>
+          <h3>{t("services.step5.title")}</h3>
+          <p>{t("services.step5.desc")}</p>
         </div>
       </div>
     </div>
@@ -60,18 +65,40 @@ const isDe = lang === "de";
 
   <section class="section service-details bg-alt">
     <div class="container">
-      <h2 class="section-title">{t('services.disciplines.title')}</h2>
+      <h2 class="section-title">{t("services.disciplines.title")}</h2>
 
       <div class="detail-row" id="ausbildung">
         <div class="detail-content">
-          <h3 class="detail-title">{t('services.bento.ausbildung.title')}</h3>
+          <h3 class="detail-title">{t("services.bento.ausbildung.title")}</h3>
           <p>
-            {isDe ? "Scandic Roots vermittelt internationale Kandidaten für das duale Berufsausbildungssystem in Deutschland und hilft Unternehmen dabei, organisch eine nachhaltige und zukunftsorientierte Belegschaft aufzubauen." : "Scandic Roots supplies international candidates for Germany’s vocational training system, helping companies build a sustainable and future-ready workforce organically."}
+            {
+              isDe
+                ? "Scandic Roots vermittelt internationale Kandidaten für das duale Berufsausbildungssystem in Deutschland und hilft Unternehmen dabei, organisch eine nachhaltige und zukunftsorientierte Belegschaft aufzubauen."
+                : "Scandic Roots supplies international candidates for Germany’s vocational training system, helping companies build a sustainable and future-ready workforce organically."
+            }
           </p>
           <ul>
-            <li>✓ {isDe ? "Vorgeprüfte motivierte Talente" : "Pre-screened motivated talents"}</li>
-            <li>✓ {isDe ? "B1/B2 Deutsch Sprachzertifikat" : "B1/B2 German language certified"}</li>
-            <li>✓ {isDe ? "Abwicklung der Visabeschaffung" : "Visa procurement handling"}</li>
+            <li>
+              ✓ {
+                isDe
+                  ? "Vorgeprüfte motivierte Talente"
+                  : "Pre-screened motivated talents"
+              }
+            </li>
+            <li>
+              ✓ {
+                isDe
+                  ? "B1/B2 Deutsch Sprachzertifikat"
+                  : "B1/B2 German language certified"
+              }
+            </li>
+            <li>
+              ✓ {
+                isDe
+                  ? "Abwicklung der Visabeschaffung"
+                  : "Visa procurement handling"
+              }
+            </li>
           </ul>
         </div>
         <div class="detail-icon glass-panel">🎓</div>
@@ -79,14 +106,32 @@ const isDe = lang === "de";
 
       <div class="detail-row reverse" id="opportunity">
         <div class="detail-content">
-          <h3 class="detail-title">{t('services.bento.opportunity.title')}</h3>
+          <h3 class="detail-title">{t("services.bento.opportunity.title")}</h3>
           <p>
-             {isDe ? "Wir stellen vorqualifizierte Kandidaten zur Verfügung, die im Rahmen des deutschen 'Chancenkarte'-Programms berechtigt sind und eine schnellere und flexiblere Einstellung für spezialisierte Rollen ermöglichen." : "We provide pre-qualified candidates eligible under Germany’s 'Chancenkarte' program, enabling faster and more flexible hiring for specialized roles."}
+            {
+              isDe
+                ? "Wir stellen vorqualifizierte Kandidaten zur Verfügung, die im Rahmen des deutschen 'Chancenkarte'-Programms berechtigt sind und eine schnellere und flexiblere Einstellung für spezialisierte Rollen ermöglichen."
+                : "We provide pre-qualified candidates eligible under Germany’s 'Chancenkarte' program, enabling faster and more flexible hiring for specialized roles."
+            }
           </p>
           <ul>
-            <li>✓ {isDe ? "Schnelle Einsatzbereitschaft" : "Quick deployment"}</li>
-            <li>✓ {isDe ? "Punkte-System verifizierte Kandidaten" : "Points-system verified candidates"}</li>
-            <li>✓ {isDe ? "Reduzierter administrativer Aufwand" : "Reduced administrative overhead"}</li>
+            <li>
+              ✓ {isDe ? "Schnelle Einsatzbereitschaft" : "Quick deployment"}
+            </li>
+            <li>
+              ✓ {
+                isDe
+                  ? "Punkte-System verifizierte Kandidaten"
+                  : "Points-system verified candidates"
+              }
+            </li>
+            <li>
+              ✓ {
+                isDe
+                  ? "Reduzierter administrativer Aufwand"
+                  : "Reduced administrative overhead"
+              }
+            </li>
           </ul>
         </div>
         <div class="detail-icon glass-panel">🎫</div>
@@ -94,14 +139,36 @@ const isDe = lang === "de";
 
       <div class="detail-row" id="healthcare">
         <div class="detail-content">
-          <h3 class="detail-title">{t('services.bento.medical.title')}</h3>
+          <h3 class="detail-title">{t("services.bento.medical.title")}</h3>
           <p>
-            {isDe ? "Wir rekrutieren qualifizierte internationale Pflegekräfte und medizinisches Personal für europäische Gesundheitseinrichtungen und unterstützen kritische Personalengpässe streng nach ethischen Rekrutierungsrichtlinien." : "We recruit qualified international nurses and medical staff for European healthcare institutions, supporting critical workforce shortages strictly following ethical recruitment frameworks."}
+            {
+              isDe
+                ? "Wir rekrutieren qualifizierte internationale Pflegekräfte und medizinisches Personal für europäische Gesundheitseinrichtungen und unterstützen kritische Personalengpässe streng nach ethischen Rekrutierungsrichtlinien."
+                : "We recruit qualified international nurses and medical staff for European healthcare institutions, supporting critical workforce shortages strictly following ethical recruitment frameworks."
+            }
           </p>
           <ul>
-            <li>✓ {isDe ? "Anerkennung ausländischer Qualifikationen" : "Recognition of foreign qualifications"}</li>
-            <li>✓ {isDe ? "Maßgeschneiderte sprachliche und kulturelle Vorbereitung" : "Tailored language and cultural prep"}</li>
-            <li>✓ {isDe ? "Spezialisierte Krankenhausvermittlung" : "Specialized hospital placement"}</li>
+            <li>
+              ✓ {
+                isDe
+                  ? "Anerkennung ausländischer Qualifikationen"
+                  : "Recognition of foreign qualifications"
+              }
+            </li>
+            <li>
+              ✓ {
+                isDe
+                  ? "Maßgeschneiderte sprachliche und kulturelle Vorbereitung"
+                  : "Tailored language and cultural prep"
+              }
+            </li>
+            <li>
+              ✓ {
+                isDe
+                  ? "Spezialisierte Krankenhausvermittlung"
+                  : "Specialized hospital placement"
+              }
+            </li>
           </ul>
         </div>
         <div class="detail-icon glass-panel">⚕️</div>
@@ -109,14 +176,36 @@ const isDe = lang === "de";
 
       <div class="detail-row reverse" id="industrial">
         <div class="detail-content">
-          <h3 class="detail-title">{t('services.bento.industrial.title')}</h3>
+          <h3 class="detail-title">{t("services.bento.industrial.title")}</h3>
           <p>
-            {isDe ? "Das Unternehmen liefert Fach- und Hilfskräfte für Branchen wie Fertigung, Logistik und technisches Handwerk und sichert so operative Kontinuität und Effizienz." : "The company delivers skilled and semi-skilled workers for industries such as manufacturing, logistics, and technical trades, ensuring operational continuity and efficiency."}
+            {
+              isDe
+                ? "Das Unternehmen liefert Fach- und Hilfskräfte für Branchen wie Fertigung, Logistik und technisches Handwerk und sichert so operative Kontinuität und Effizienz."
+                : "The company delivers skilled and semi-skilled workers for industries such as manufacturing, logistics, and technical trades, ensuring operational continuity and efficiency."
+            }
           </p>
           <ul>
-            <li>✓ {isDe ? "Facharbeiter und spezialisierte Handwerke" : "Blue-collar and specialized trades"}</li>
-            <li>✓ {isDe ? "Projektbezogene Massenrekrutierung" : "High-volume project staffing"}</li>
-            <li>✓ {isDe ? "Sicherheits- und Compliance-geprüft" : "Safety and compliance tested"}</li>
+            <li>
+              ✓ {
+                isDe
+                  ? "Facharbeiter und spezialisierte Handwerke"
+                  : "Blue-collar and specialized trades"
+              }
+            </li>
+            <li>
+              ✓ {
+                isDe
+                  ? "Projektbezogene Massenrekrutierung"
+                  : "High-volume project staffing"
+              }
+            </li>
+            <li>
+              ✓ {
+                isDe
+                  ? "Sicherheits- und Compliance-geprüft"
+                  : "Safety and compliance tested"
+              }
+            </li>
           </ul>
         </div>
         <div class="detail-icon glass-panel">⚙️</div>
@@ -125,8 +214,10 @@ const isDe = lang === "de";
   </section>
 
   <section class="section container text-center" style="margin-bottom: 4rem;">
-    <h2 class="section-title">{t('services.tailored.title')}</h2>
-    <a href={isDe ? "/de/contact" : "/contact"} class="btn btn-primary">{t('services.tailored.cta')}</a>
+    <h2 class="section-title">{t("services.tailored.title")}</h2>
+    <a href={isDe ? "/de/contact" : "/contact"} class="btn btn-primary"
+      >{t("services.tailored.cta")}</a
+    >
   </section>
 </Layout>
 
@@ -134,7 +225,7 @@ const isDe = lang === "de";
   .page-header {
     background: var(--color-primary-light);
     padding: 10rem 0 5rem;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .text-center {
@@ -178,7 +269,7 @@ const isDe = lang === "de";
     font-size: 3rem;
     font-weight: 900;
     color: var(--color-primary-light);
-    text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
     z-index: 0;
   }
 
@@ -189,7 +280,10 @@ const isDe = lang === "de";
     margin-bottom: 1rem;
   }
 
-  .step p { position: relative; z-index: 1; }
+  .step p {
+    position: relative;
+    z-index: 1;
+  }
 
   .detail-row {
     display: flex;
@@ -213,7 +307,11 @@ const isDe = lang === "de";
     justify-content: center;
     align-items: center;
     font-size: 8rem;
-    background: linear-gradient(135deg, #ffffff 0%, var(--color-primary-light) 100%);
+    background: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      var(--color-primary-light) 100%
+    );
   }
 
   .detail-title {
@@ -232,20 +330,35 @@ const isDe = lang === "de";
   }
 
   @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  
+
   @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @media (max-width: 768px) {
-    .detail-row, .detail-row.reverse {
+    .detail-row,
+    .detail-row.reverse {
       flex-direction: column;
       gap: 2rem;
     }
-    .page-title { font-size: 3rem; }
+    .page-title {
+      font-size: 3rem;
+    }
   }
 </style>

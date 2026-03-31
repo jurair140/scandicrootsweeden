@@ -1,9 +1,9 @@
 ---
 // src/components/DraggableSection.astro
-import berlinImg from "../assets/destination-berlin.png";
-import stockholmImg from "../assets/destination-stockholm.png";
-import professionalsImg from "../assets/placed-professionals.png";
-import careerImg from "../assets/career-path.png";
+import berlinImg from "../assets/destination-berlin.jpg";
+import stockholmImg from "../assets/destination-stockholm.jpg";
+import professionalsImg from "../assets/placed-professionals.jpg";
+import careerImg from "../assets/career-path.jpg";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -11,16 +11,76 @@ const t = useTranslations(lang);
 const isDe = lang === "de";
 
 const polaroids = [
-  { img: berlinImg.src, label: isDe ? "Berlin" : "Berlin, DE", rotation: -5, top: 120, left: 100 },
-  { img: stockholmImg.src, label: isDe ? "Stockholm" : "Stockholm, SE", rotation: 8, top: 100, left: 140 },
-  { img: professionalsImg.src, label: isDe ? "Fachkräfte" : "Placed Talent", rotation: -12, top: 130, left: 110 },
-  { img: careerImg.src, label: isDe ? "Karriereweg" : "Career Success", rotation: 15, top: 140, left: 80 },
-  { img: berlinImg.src, label: isDe ? "Ihre Zukunft" : "Your Future", rotation: 3, top: 110, left: 130 },
-  { img: stockholmImg.src, label: isDe ? "Relocation" : "Relocation", rotation: -8, top: 125, left: 120 },
-  { img: professionalsImg.src, label: isDe ? "Exzellenz" : "Excellence", rotation: 10, top: 115, left: 90 },
-  { img: careerImg.src, label: isDe ? "Wachstum" : "Growth", rotation: -4, top: 135, left: 150 },
-  { img: berlinImg.src, label: isDe ? "Innovation" : "Innovation", rotation: -2, top: 118, left: 125 },
-  { img: professionalsImg.src, label: isDe ? "Partnerschaft" : "Partnership", rotation: 6, top: 105, left: 115 },
+  {
+    img: berlinImg.src,
+    label: isDe ? "Berlin" : "Berlin, DE",
+    rotation: -5,
+    top: 120,
+    left: 100,
+  },
+  {
+    img: stockholmImg.src,
+    label: isDe ? "Stockholm" : "Stockholm, SE",
+    rotation: 8,
+    top: 100,
+    left: 140,
+  },
+  {
+    img: professionalsImg.src,
+    label: isDe ? "Fachkräfte" : "Placed Talent",
+    rotation: -12,
+    top: 130,
+    left: 110,
+  },
+  {
+    img: careerImg.src,
+    label: isDe ? "Karriereweg" : "Career Success",
+    rotation: 15,
+    top: 140,
+    left: 80,
+  },
+  {
+    img: berlinImg.src,
+    label: isDe ? "Ihre Zukunft" : "Your Future",
+    rotation: 3,
+    top: 110,
+    left: 130,
+  },
+  {
+    img: stockholmImg.src,
+    label: isDe ? "Relocation" : "Relocation",
+    rotation: -8,
+    top: 125,
+    left: 120,
+  },
+  {
+    img: professionalsImg.src,
+    label: isDe ? "Exzellenz" : "Excellence",
+    rotation: 10,
+    top: 115,
+    left: 90,
+  },
+  {
+    img: careerImg.src,
+    label: isDe ? "Wachstum" : "Growth",
+    rotation: -4,
+    top: 135,
+    left: 150,
+  },
+  {
+    img: berlinImg.src,
+    label: isDe ? "Innovation" : "Innovation",
+    rotation: -2,
+    top: 118,
+    left: 125,
+  },
+  {
+    img: professionalsImg.src,
+    label: isDe ? "Partnerschaft" : "Partnership",
+    rotation: 6,
+    top: 105,
+    left: 115,
+  },
 ];
 ---
 
@@ -28,43 +88,48 @@ const polaroids = [
   <div class="container draggable-flex">
     <div class="draggable-area" id="drag-container">
       <div class="drag-hint">
-        <div class="hint-circle">{t('home.draggable.hint')}</div>
+        <div class="hint-circle">{t("home.draggable.hint")}</div>
       </div>
 
       <div class="quote-reveal">
-        <blockquote set:html={t('home.draggable.quote')}>
-        </blockquote>
-        <cite>{t('home.draggable.cite')}</cite>
+        <blockquote set:html={t("home.draggable.quote")} />
+        <cite>{t("home.draggable.cite")}</cite>
       </div>
-      
-      {polaroids.map((p, index) => (
-        <div 
-          class="polaroid" 
-          style={`top: ${p.top}px; left: ${p.left}px; transform: rotate(${p.rotation}deg); z-index: ${index + 10};`}
-          data-draggable
-        >
-          <div class="polaroid-image">
-            <img src={p.img} alt={p.label} draggable="false" />
+
+      {
+        polaroids.map((p, index) => (
+          <div
+            class="polaroid"
+            style={`top: ${p.top}px; left: ${p.left}px; transform: rotate(${p.rotation}deg); z-index: ${index + 10};`}
+            data-draggable
+          >
+            <div class="polaroid-image">
+              <img src={p.img} alt={p.label} draggable="false" />
+            </div>
+            <div class="polaroid-label">{p.label}</div>
           </div>
-          <div class="polaroid-label">{p.label}</div>
-        </div>
-      ))}
+        ))
+      }
     </div>
 
     <div class="draggable-content">
-      <h2 class="section-badge">{t('home.draggable.badge')}</h2>
+      <h2 class="section-badge">{t("home.draggable.badge")}</h2>
       <h3 class="section-title text-left">
-        <Fragment set:html={t('home.draggable.title')} />
+        <Fragment set:html={t("home.draggable.title")} />
       </h3>
       <p class="description">
-        {t('home.draggable.p1')}
+        {t("home.draggable.p1")}
       </p>
       <p class="description">
-        {t('home.draggable.p2')}
+        {t("home.draggable.p2")}
       </p>
       <div class="btn-group">
-        <a href={isDe ? "/de/contact" : "/contact"} class="btn btn-primary">{t('home.draggable.cta.primary')}</a>
-        <a href={isDe ? "/de/services" : "/services"} class="btn btn-outline">{t('home.draggable.cta.secondary')}</a>
+        <a href={isDe ? "/de/contact" : "/contact"} class="btn btn-primary"
+          >{t("home.draggable.cta.primary")}</a
+        >
+        <a href={isDe ? "/de/services" : "/services"} class="btn btn-outline"
+          >{t("home.draggable.cta.secondary")}</a
+        >
       </div>
     </div>
   </div>
@@ -87,7 +152,11 @@ const polaroids = [
   .draggable-area {
     position: relative;
     height: 500px;
-    background: radial-gradient(circle at center, rgba(17, 24, 76, 0.03) 0%, transparent 70%);
+    background: radial-gradient(
+      circle at center,
+      rgba(17, 24, 76, 0.03) 0%,
+      transparent 70%
+    );
     border-radius: 30px;
     border: 2px dashed rgba(17, 24, 76, 0.05);
     display: flex;
@@ -106,7 +175,7 @@ const polaroids = [
   }
 
   .quote-reveal blockquote {
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 1.5rem; /* Slightly smaller for a tighter fit */
     font-weight: 700;
     color: var(--color-primary);
@@ -116,7 +185,7 @@ const polaroids = [
 
   .quote-reveal cite {
     font-style: normal;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 0.9rem;
     color: var(--color-accent);
     text-transform: uppercase;
@@ -151,25 +220,37 @@ const polaroids = [
   }
 
   @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.1); opacity: 0.8; }
-    100% { transform: scale(1); opacity: 0.5; }
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
   }
 
   .polaroid {
     position: absolute;
     background: white;
     padding: 12px 12px 40px 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: grab;
     user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;      /* CRITICAL: prevents browser scroll hijacking touch events */
+    will-change: left, top;  /* GPU-composited movement */
     transition: box-shadow 0.3s ease;
     width: 240px;
   }
 
   .polaroid::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -200,7 +281,7 @@ const polaroids = [
   }
 
   .polaroid-label {
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
     font-weight: 600;
     color: var(--color-primary);
     text-align: center;
@@ -258,56 +339,83 @@ const polaroids = [
 
 <script>
   function initDraggable() {
-    const container = document.getElementById('drag-container');
-    const cards = document.querySelectorAll('[data-draggable]');
+    const container = document.getElementById("drag-container");
+    const cards = document.querySelectorAll("[data-draggable]");
     if (!container || !cards.length) return;
 
     let zIndex = 100;
 
-    cards.forEach(cardElement => {
+    cards.forEach((cardElement) => {
       const card = cardElement as HTMLElement;
       let isDragging = false;
-      let startX: number, startY: number, initialLeft: number, initialTop: number;
+      let startX: number,
+        startY: number,
+        initialLeft: number,
+        initialTop: number;
 
-      card.addEventListener('pointerdown', ((e: PointerEvent) => {
+      card.addEventListener("pointerdown", ((e: PointerEvent) => {
+        // Prevent long-press context menu on iOS/Android
+        e.preventDefault();
+
         isDragging = true;
         startX = e.clientX;
         startY = e.clientY;
-        
-        // Hide hint on interaction
-        const hint = document.querySelector('.drag-hint') as HTMLElement;
-        if (hint) hint.style.opacity = '0';
-        
+
+        // Hide hint on first interaction
+        const hint = document.querySelector(".drag-hint") as HTMLElement;
+        if (hint) hint.style.opacity = "0";
+
         const rect = card.getBoundingClientRect();
         const containerRect = container.getBoundingClientRect();
-        
+
         initialLeft = rect.left - containerRect.left;
         initialTop = rect.top - containerRect.top;
-        
+
+        // Snap position so card doesn't jump on first move
+        card.style.left = `${initialLeft}px`;
+        card.style.top = `${initialTop}px`;
+        card.style.transform = `rotate(0deg)`;
         card.style.zIndex = (++zIndex).toString();
+
+        // Suppress child pointer events during drag to prevent image interference
+        card.querySelectorAll("img, div").forEach((el) => {
+          (el as HTMLElement).style.pointerEvents = "none";
+        });
+
         card.setPointerCapture(e.pointerId);
       }) as EventListener);
 
-      card.addEventListener('pointermove', ((e: PointerEvent) => {
+      card.addEventListener("pointermove", ((e: PointerEvent) => {
         if (!isDragging) return;
-        
+        e.preventDefault();
+
         const dx = e.clientX - startX;
         const dy = e.clientY - startY;
-        
+
         card.style.left = `${initialLeft + dx}px`;
         card.style.top = `${initialTop + dy}px`;
       }) as EventListener);
 
-      card.addEventListener('pointerup', ((e: PointerEvent) => {
+      const endDrag = (e: PointerEvent) => {
+        if (!isDragging) return;
         isDragging = false;
+
+        // Restore child pointer events
+        card.querySelectorAll("img, div").forEach((el) => {
+          (el as HTMLElement).style.pointerEvents = "";
+        });
+
         card.releasePointerCapture(e.pointerId);
-      }) as EventListener);
+      };
+
+      card.addEventListener("pointerup", endDrag as EventListener);
+      card.addEventListener("pointercancel", endDrag as EventListener);
     });
   }
 
   // Initialize on load
   initDraggable();
-  
-  // Re-init on Astro transition if needed
-  document.addEventListener('astro:page-load', initDraggable);
+
+  // Re-init on Astro transition
+  document.addEventListener("astro:page-load", initDraggable);
 </script>

@@ -1,9 +1,9 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import ausbildungImg from "../assets/ausbildung.png";
-import opportunityImg from "../assets/opportunity.png";
-import healthcareImg from "../assets/healthcare.png";
-import industrialImg from "../assets/industrial.png";
+import ausbildungImg from "../assets/ausbildung.jpg";
+import opportunityImg from "../assets/opportunity.jpg";
+import healthcareImg from "../assets/healthcare.jpg";
+import industrialImg from "../assets/industrial.jpg";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -13,7 +13,7 @@ const services = [
   {
     id: "ausbildung",
     title: isDe ? "Ausbildung Rekrutierung" : "Ausbildung Recruitment",
-    description: isDe 
+    description: isDe
       ? "Verbinden Sie sich mit Deutschlands renommiertem Berufsbildungssystem. Wir helfen Unternehmen, durch internationale Talente eine zukunftssichere Belegschaft aufzubauen."
       : "Connect with Germany's prestigious vocational training system. We help companies build a future-ready workforce through international talent.",
     image: ausbildungImg.src,
@@ -62,11 +62,7 @@ const services = [
     {
       services.map((service) => (
         <a href={service.link} class={`bento-card card-${service.size}`}>
-          <img
-            src={service.image}
-            alt={service.title}
-            class="card-bg"
-          />
+          <img src={service.image} alt={service.title} class="card-bg" />
           <div class="card-overlay" />
           <div class="card-content">
             <div class="card-header">

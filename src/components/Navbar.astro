@@ -40,6 +40,11 @@ const toggleUrl = isDe
         >{t("nav.home")}</a
       >
       <a
+        href={isDe ? "/de/about" : "/about"}
+        class={currentPath === "about" ? "active" : ""}
+        >{isDe ? "Über uns" : "About"}</a
+      >
+      <a
         href={isDe ? "/de/services" : "/services"}
         class={currentPath === "services" ? "active" : ""}
         >{t("nav.services")}</a

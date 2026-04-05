@@ -35,6 +35,7 @@ const year = new Date().getFullYear();
         <div class="col-number">02</div>
         <h3 class="col-label">{t('footer.company')}</h3>
         <ul class="monolith-links">
+          <li><a href={isDe ? "/de/about" : "/about"}>{isDe ? 'Über uns' : 'About Us'}</a></li>
           <li><a href={isDe ? "/de/services" : "/services"}>{t('nav.services')}</a></li>
           <li><a href={isDe ? "/de/contact" : "/contact"}>{t('nav.contact')}</a></li>
           <li><a href={isDe ? "/de/privacy" : "/privacy"}>{t('footer.privacy')}</a></li>

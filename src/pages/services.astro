@@ -1,1041 +1,1697 @@
----
-import Layout from '../layouts/Layout.astro';
+﻿---
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Our Services" description="Explore Scandic Roots' four specialized workforce programs connecting Indian talent with German opportunity.">
-
-<!-- ══════════════════════════════════════════════════════════
+<Layout
+  title="Our Services"
+  description="Explore Scandic Roots' four specialized workforce programs connecting Indian talent with German opportunity."
+>
+  <!-- ══════════════════════════════════════════════════════════
   HERO — Full-screen dark cinematic hero with animated particles
 ═══════════════════════════════════════════════════════════════ -->
-<section class="sv-hero">
-  <div class="sv-hero__noise"></div>
-  <div class="sv-hero__glow sv-hero__glow--a"></div>
-  <div class="sv-hero__glow sv-hero__glow--b"></div>
-  <div class="sv-hero__glow sv-hero__glow--c"></div>
+  <section class="sv-hero">
+    <div class="sv-hero__noise"></div>
+    <div class="sv-hero__glow sv-hero__glow--a"></div>
+    <div class="sv-hero__glow sv-hero__glow--b"></div>
+    <div class="sv-hero__glow sv-hero__glow--c"></div>
 
-  <div class="container sv-hero__inner">
-    <div class="sv-hero__eyebrow">
-      <span class="dot"></span>
-      <p>Four Specialized Programs</p>
-      <span class="dot"></span>
+    <div class="container sv-hero__inner">
+      <div class="sv-hero__eyebrow">
+        <span class="dot"></span>
+        <p>Four Specialized Programs</p>
+        <span class="dot"></span>
+      </div>
+      <h1 class="sv-hero__title">
+        Connecting <em>Indian Excellence</em><br />
+        with <em>German Opportunity</em>
+      </h1>
+      <p class="sv-hero__sub">
+        From healthcare to industrial sectors — precision recruitment backed by
+        a rigorous 5-stage vetting process that delivers integration-ready
+        professionals.
+      </p>
+
+      <nav class="sv-hero__nav">
+        <a href="/services/opportunity-card" class="sv-nav-pill">
+          <i class="fa-solid fa-passport"></i>
+          <span>Opportunity Card</span>
+        </a>
+        <a href="/services/nurses" class="sv-nav-pill">
+          <i class="fa-solid fa-user-nurse"></i>
+          <span>Nurses</span>
+        </a>
+        <a href="/services/ausbildung" class="sv-nav-pill">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>Ausbildung</span>
+        </a>
+        <a href="/services/skilled-workers" class="sv-nav-pill">
+          <i class="fa-solid fa-helmet-safety"></i>
+          <span>Skilled Workers</span>
+        </a>
+      </nav>
     </div>
-    <h1 class="sv-hero__title">
-      Connecting <em>Indian Excellence</em><br />
-      with <em>German Opportunity</em>
-    </h1>
-    <p class="sv-hero__sub">From healthcare to industrial sectors — precision recruitment backed by a rigorous 5-stage vetting process that delivers integration-ready professionals.</p>
 
-    <nav class="sv-hero__nav">
-      <a href="#opportunity" class="sv-nav-pill">
-        <i class="fa-solid fa-passport"></i>
-        <span>Opportunity Card</span>
-      </a>
-      <a href="#nurses" class="sv-nav-pill">
-        <i class="fa-solid fa-user-nurse"></i>
-        <span>Nurses</span>
-      </a>
-      <a href="#ausbildung" class="sv-nav-pill">
-        <i class="fa-solid fa-graduation-cap"></i>
-        <span>Ausbildung</span>
-      </a>
-      <a href="#skilled" class="sv-nav-pill">
-        <i class="fa-solid fa-helmet-safety"></i>
-        <span>Skilled Workers</span>
-      </a>
-    </nav>
-  </div>
+    <div class="sv-hero__scroll">
+      <span>Scroll to explore</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
 
-  <div class="sv-hero__scroll">
-    <span>Scroll to explore</span>
-    <i class="fa-solid fa-chevron-down"></i>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════
+  <!-- ══════════════════════════════════════════════════════════
   PROGRAM 01 — OPPORTUNITY CARD (Chancenkarte)
   Layout: Left-anchored number + stacked info cards on right
 ═══════════════════════════════════════════════════════════════ -->
-<section class="prg" id="opportunity">
-  <div class="prg__stripe prg__stripe--indigo"></div>
-  <div class="container prg__grid">
-    <!-- Left anchor -->
-    <aside class="prg__anchor">
-      <div class="prg__num">01</div>
-      <div class="prg__icon-wrap"><i class="fa-solid fa-passport"></i></div>
-      <h2 class="prg__title">German Opportunity Card<br /><span class="text-gradient">(Chancenkarte)</span></h2>
-      <p class="prg__lead">A points-based residence permit allowing non-EU professionals to search for employment in Germany — for up to 12 months — without a prior job offer.</p>
-      <a href="/contact" class="btn-glow">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-    </aside>
+  <section class="prg" id="opportunity">
+    <div class="prg__stripe prg__stripe--indigo"></div>
+    <div class="container prg__grid">
+      <!-- Left anchor -->
+      <aside class="prg__anchor">
+        <div class="prg__num">01</div>
+        <div class="prg__icon-wrap"><i class="fa-solid fa-passport"></i></div>
+        <h2 class="prg__title">
+          German Opportunity Card<br /><span class="text-gradient"
+            >(Chancenkarte)</span
+          >
+        </h2>
+        <p class="prg__lead">
+          A points-based residence permit allowing non-EU professionals to
+          search for employment in Germany — for up to 12 months — without a
+          prior job offer.
+        </p>
+        <a href="/contact" class="btn-glow"
+          >Get Started <i class="fa-solid fa-arrow-right"></i></a
+        >
+      </aside>
 
-    <!-- Right cards -->
-    <div class="prg__cards">
-      <div class="info-card info-card--accent">
-        <div class="info-card__head">
-          <i class="fa-solid fa-list-check"></i>
-          <h3>Eligibility Criteria</h3>
+      <!-- Right cards -->
+      <div class="prg__cards">
+        <div class="info-card info-card--accent">
+          <div class="info-card__head">
+            <i class="fa-solid fa-list-check"></i>
+            <h3>Eligibility Criteria</h3>
+          </div>
+          <ul class="check-list">
+            <li>Recognized university degree or vocational qualification</li>
+            <li>German (A1) or English language skills minimum</li>
+            <li>Relevant professional work experience</li>
+            <li>Sufficient financial means for self-support</li>
+            <li>
+              Bonus: Higher language level, prior Germany stay, age under 35
+            </li>
+          </ul>
         </div>
-        <ul class="check-list">
-          <li>Recognized university degree or vocational qualification</li>
-          <li>German (A1) or English language skills minimum</li>
-          <li>Relevant professional work experience</li>
-          <li>Sufficient financial means for self-support</li>
-          <li>Bonus: Higher language level, prior Germany stay, age under 35</li>
-        </ul>
-      </div>
 
-      <div class="info-card">
-        <div class="info-card__head">
-          <i class="fa-solid fa-vault"></i>
-          <h3>Blocked Account (Sperrkonto)</h3>
+        <div class="info-card">
+          <div class="info-card__head">
+            <i class="fa-solid fa-vault"></i>
+            <h3>Blocked Account (Sperrkonto)</h3>
+          </div>
+          <p>
+            Applicants must show proof of financial resources, typically a
+            German blocked bank account. The required amount is approximately <strong
+              >€12,000+</strong
+            > for one year — ensuring self-sufficiency during the job search period.
+          </p>
+          <div class="tag-row">
+            <span class="tag">€12,000+ Required</span>
+            <span class="tag">Sperrkonto Setup Support</span>
+          </div>
         </div>
-        <p>Applicants must show proof of financial resources, typically a German blocked bank account. The required amount is approximately <strong>€12,000+</strong> for one year — ensuring self-sufficiency during the job search period.</p>
-        <div class="tag-row">
-          <span class="tag">€12,000+ Required</span>
-          <span class="tag">Sperrkonto Setup Support</span>
-        </div>
-      </div>
 
-      <div class="info-card">
-        <div class="info-card__head">
-          <i class="fa-regular fa-calendar"></i>
-          <h3>Intakes & Timeline</h3>
+        <div class="info-card">
+          <div class="info-card__head">
+            <i class="fa-regular fa-calendar"></i>
+            <h3>Intakes & Timeline</h3>
+          </div>
+          <p>
+            Applications can be submitted <strong>year-round</strong> — no fixed intake
+            cycle. Processing times vary by embassy location. Early preparation of
+            documents is strongly recommended.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Year-Round</span>
+            <span class="tag">Embassy-Dependent</span>
+          </div>
         </div>
-        <p>Applications can be submitted <strong>year-round</strong> — no fixed intake cycle. Processing times vary by embassy location. Early preparation of documents is strongly recommended.</p>
-        <div class="tag-row">
-          <span class="tag">Year-Round</span>
-          <span class="tag">Embassy-Dependent</span>
-        </div>
-      </div>
 
-      <div class="info-card info-card--dark">
-        <div class="info-card__head">
-          <i class="fa-solid fa-handshake-angle"></i>
-          <h3>Additional Support We Provide</h3>
-        </div>
-        <div class="support-pills">
-          <span><i class="fa-solid fa-file-lines"></i> Document Preparation</span>
-          <span><i class="fa-solid fa-vault"></i> Sperrkonto Guidance</span>
-          <span><i class="fa-solid fa-magnifying-glass-location"></i> Job Search Orientation</span>
-          <span><i class="fa-solid fa-house"></i> Accommodation Support</span>
-          <span><i class="fa-solid fa-earth-europe"></i> European Life Orientation</span>
-          <span><i class="fa-solid fa-scale-balanced"></i> German Law Briefing</span>
+        <div class="info-card info-card--dark">
+          <div class="info-card__head">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <h3>Additional Support We Provide</h3>
+          </div>
+          <div class="support-pills">
+            <span
+              ><i class="fa-solid fa-file-lines"></i> Document Preparation</span
+            >
+            <span><i class="fa-solid fa-vault"></i> Sperrkonto Guidance</span>
+            <span
+              ><i class="fa-solid fa-magnifying-glass-location"></i> Job Search Orientation</span
+            >
+            <span><i class="fa-solid fa-house"></i> Accommodation Support</span>
+            <span
+              ><i class="fa-solid fa-earth-europe"></i> European Life Orientation</span
+            >
+            <span
+              ><i class="fa-solid fa-scale-balanced"></i> German Law Briefing</span
+            >
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════════════════════════════
+  <!-- ══════════════════════════════════════════════════════════
   PROGRAM 02 — NURSES (Flipped layout + image panel)
 ═══════════════════════════════════════════════════════════════ -->
-<section class="prg prg--alt" id="nurses">
-  <div class="prg__stripe prg__stripe--rose"></div>
-  <div class="container prg__grid prg__grid--flip">
-    <aside class="prg__anchor">
-      <div class="prg__num">02</div>
-      <div class="prg__icon-wrap prg__icon-wrap--rose"><i class="fa-solid fa-user-nurse"></i></div>
-      <h2 class="prg__title">Indian Nurses<br /><span class="text-gradient">Recruitment Program</span></h2>
-      <p class="prg__lead">Well-qualified, experienced and German language-skilled Indian nurses for hospitals, elderly care centers, and rehabilitation facilities across Germany.</p>
-      <a href="/contact" class="btn-glow">Hire Nurses <i class="fa-solid fa-arrow-right"></i></a>
-    </aside>
+  <section class="prg prg--alt" id="nurses">
+    <div class="prg__stripe prg__stripe--rose"></div>
+    <div class="container prg__grid prg__grid--flip">
+      <aside class="prg__anchor">
+        <div class="prg__num">02</div>
+        <div class="prg__icon-wrap prg__icon-wrap--rose">
+          <i class="fa-solid fa-user-nurse"></i>
+        </div>
+        <h2 class="prg__title">
+          Indian Nurses<br /><span class="text-gradient"
+            >Recruitment Program</span
+          >
+        </h2>
+        <p class="prg__lead">
+          Well-qualified, experienced and German language-skilled Indian nurses
+          for hospitals, elderly care centers, and rehabilitation facilities
+          across Germany.
+        </p>
+        <a href="/contact" class="btn-glow"
+          >Hire Nurses <i class="fa-solid fa-arrow-right"></i></a
+        >
+      </aside>
 
-    <div class="prg__cards">
-      <div class="info-card">
-        <div class="info-card__head">
-          <i class="fa-solid fa-id-badge"></i>
-          <h3>Candidate Profile</h3>
+      <div class="prg__cards">
+        <div class="info-card">
+          <div class="info-card__head">
+            <i class="fa-solid fa-id-badge"></i>
+            <h3>Candidate Profile</h3>
+          </div>
+          <ul class="check-list">
+            <li>Recognized Diploma or Bachelor's degree in Nursing</li>
+            <li>Relevant clinical experience in hospital or care settings</li>
+            <li>German language proficiency at <strong>B1–B2 level</strong></li>
+            <li>
+              Professionally screened for adaptability and long-term commitment
+            </li>
+          </ul>
         </div>
-        <ul class="check-list">
-          <li>Recognized Diploma or Bachelor's degree in Nursing</li>
-          <li>Relevant clinical experience in hospital or care settings</li>
-          <li>German language proficiency at <strong>B1–B2 level</strong></li>
-          <li>Professionally screened for adaptability and long-term commitment</li>
-        </ul>
-      </div>
 
-      <div class="info-card info-card--accent">
-        <div class="info-card__head">
-          <i class="fa-solid fa-certificate"></i>
-          <h3>Qualification Recognition</h3>
+        <div class="info-card info-card--accent">
+          <div class="info-card__head">
+            <i class="fa-solid fa-certificate"></i>
+            <h3>Qualification Recognition</h3>
+          </div>
+          <p>
+            We assist throughout the professional recognition process required
+            in Germany. Candidates may begin employment as <strong
+              >nursing assistants</strong
+            > where applicable while completing adaptation training or recognition
+            examinations toward full professional licensing.
+          </p>
         </div>
-        <p>We assist throughout the professional recognition process required in Germany. Candidates may begin employment as <strong>nursing assistants</strong> where applicable while completing adaptation training or recognition examinations toward full professional licensing.</p>
-      </div>
 
-      <div class="info-card info-card--dark">
-        <div class="info-card__head">
-          <i class="fa-solid fa-filter"></i>
-          <h3>Pre-Selection & Screening</h3>
+        <div class="info-card info-card--dark">
+          <div class="info-card__head">
+            <i class="fa-solid fa-filter"></i>
+            <h3>Pre-Selection & Screening</h3>
+          </div>
+          <div class="support-pills">
+            <span
+              ><i class="fa-solid fa-comments"></i> German Language Interviews</span
+            >
+            <span
+              ><i class="fa-solid fa-file-contract"></i> Certificate Verification</span
+            >
+            <span
+              ><i class="fa-solid fa-shield-halved"></i> Criminal Record Check</span
+            >
+            <span
+              ><i class="fa-solid fa-scale-balanced"></i> Document Compliance Review</span
+            >
+            <span
+              ><i class="fa-solid fa-calendar-check"></i> Year-Round Availability</span
+            >
+          </div>
         </div>
-        <div class="support-pills">
-          <span><i class="fa-solid fa-comments"></i> German Language Interviews</span>
-          <span><i class="fa-solid fa-file-contract"></i> Certificate Verification</span>
-          <span><i class="fa-solid fa-shield-halved"></i> Criminal Record Check</span>
-          <span><i class="fa-solid fa-scale-balanced"></i> Document Compliance Review</span>
-          <span><i class="fa-solid fa-calendar-check"></i> Year-Round Availability</span>
-        </div>
-      </div>
 
-      <div class="info-card">
-        <div class="info-card__head">
-          <i class="fa-solid fa-plane-arrival"></i>
-          <h3>Integration & Relocation</h3>
+        <div class="info-card">
+          <div class="info-card__head">
+            <i class="fa-solid fa-plane-arrival"></i>
+            <h3>Integration & Relocation</h3>
+          </div>
+          <p>
+            We support candidates with accommodation coordination, relocation
+            preparation, and provide online orientation sessions covering
+            European social rules, workplace expectations, and healthcare system
+            culture — ensuring smoother integration and long-term retention.
+          </p>
         </div>
-        <p>We support candidates with accommodation coordination, relocation preparation, and provide online orientation sessions covering European social rules, workplace expectations, and healthcare system culture — ensuring smoother integration and long-term retention.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════════════════════════════
+  <!-- ══════════════════════════════════════════════════════════
   PROGRAM 03 — AUSBILDUNG (Full-width bento-style layout)
 ═══════════════════════════════════════════════════════════════ -->
-<section class="prg-bento" id="ausbildung">
-  <div class="container">
-    <header class="bento-header">
-      <div class="bento-header__meta">
-        <div class="prg__num">03</div>
-        <div class="prg__icon-wrap prg__icon-wrap--indigo"><i class="fa-solid fa-graduation-cap"></i></div>
-      </div>
-      <div class="bento-header__text">
-        <h2>Indian Ausbildung <span class="text-gradient">Candidate Placement</span></h2>
-        <p>Motivated, German language-skilled Indian candidates for Germany's dual vocational training system — matched to companies across multiple sectors.</p>
-      </div>
-    </header>
-
-    <div class="bento">
-      <div class="bento__cell bento__cell--hero-dark">
-        <div class="bento__inner">
-          <i class="fa-solid fa-users-between-lines bento__big-icon"></i>
-          <h3>About the Program</h3>
-          <p>Our Indian Ausbildung Candidates Placement Program supports German companies across multiple sectors by providing carefully selected and well-prepared Indian candidates for vocational training. We focus on delivering motivated, reliable, and integration-ready trainees committed to building long-term careers in Germany.</p>
-          <p>Candidates are selected for adaptability, responsibility, and long-term commitment to training completion.</p>
-        </div>
-      </div>
-
-      <div class="bento__cell">
-        <i class="fa-solid fa-id-card bento__cell-icon"></i>
-        <h4>Candidate Profile</h4>
-        <p>Completed secondary education (10th/12th), A2–B1 German, strong motivation for training and adaptation within the German vocational system.</p>
-      </div>
-
-      <div class="bento__cell bento__cell--accent">
-        <i class="fa-solid fa-calendar-check bento__cell-icon"></i>
-        <h4>Recruitment Intakes</h4>
-        <div class="intake-rows">
-          <div class="intake-row intake-row--primary">
-            <span>Primary</span>
-            <strong>August – September</strong>
-          </div>
-          <div class="intake-row intake-row--secondary">
-            <span>Secondary</span>
-            <strong>February – March</strong>
+  <section class="prg-bento" id="ausbildung">
+    <div class="container">
+      <header class="bento-header">
+        <div class="bento-header__meta">
+          <div class="prg__num">03</div>
+          <div class="prg__icon-wrap prg__icon-wrap--indigo">
+            <i class="fa-solid fa-graduation-cap"></i>
           </div>
         </div>
-        <p class="intake-note">Year-round placement available based on employer schedules.</p>
-      </div>
-
-      <div class="bento__cell bento__cell--fields">
-        <i class="fa-solid fa-layer-group bento__cell-icon"></i>
-        <h4>Available Training Fields</h4>
-        <div class="field-tags">
-          <span><i class="fa-solid fa-stethoscope"></i> Healthcare</span>
-          <span><i class="fa-solid fa-bed"></i> Elderly Care</span>
-          <span><i class="fa-solid fa-hotel"></i> Hospitality</span>
-          <span><i class="fa-solid fa-truck"></i> Logistics</span>
-          <span><i class="fa-solid fa-wrench"></i> Technical Trades</span>
-          <span><i class="fa-solid fa-store"></i> Retail</span>
-          <span><i class="fa-solid fa-briefcase"></i> Business Admin</span>
+        <div class="bento-header__text">
+          <h2>
+            Indian Ausbildung <span class="text-gradient"
+              >Candidate Placement</span
+            >
+          </h2>
+          <p>
+            Motivated, German language-skilled Indian candidates for Germany's
+            dual vocational training system — matched to companies across
+            multiple sectors.
+          </p>
         </div>
-      </div>
+      </header>
 
-      <div class="bento__cell bento__cell--wide">
-        <div class="bento__split">
-          <div>
-            <i class="fa-solid fa-magnifying-glass bento__cell-icon"></i>
-            <h4>Pre-Selection Process</h4>
-            <p>Structured language interviews, certificate verification, criminal record checks and documentation compliance — ensuring companies receive dependable, prepared candidates.</p>
+      <div class="bento">
+        <div class="bento__cell bento__cell--hero-dark">
+          <div class="bento__inner">
+            <i class="fa-solid fa-users-between-lines bento__big-icon"></i>
+            <h3>About the Program</h3>
+            <p>
+              Our Indian Ausbildung Candidates Placement Program supports German
+              companies across multiple sectors by providing carefully selected
+              and well-prepared Indian candidates for vocational training. We
+              focus on delivering motivated, reliable, and integration-ready
+              trainees committed to building long-term careers in Germany.
+            </p>
+            <p>
+              Candidates are selected for adaptability, responsibility, and
+              long-term commitment to training completion.
+            </p>
           </div>
-          <div>
-            <i class="fa-solid fa-house-circle-check bento__cell-icon"></i>
-            <h4>Integration Support</h4>
-            <p>Accommodation coordination, relocation preparation, and online orientation sessions covering European social rules, workplace expectations and daily-life regulations.</p>
+        </div>
+
+        <div class="bento__cell">
+          <i class="fa-solid fa-id-card bento__cell-icon"></i>
+          <h4>Candidate Profile</h4>
+          <p>
+            Completed secondary education (10th/12th), A2–B1 German, strong
+            motivation for training and adaptation within the German vocational
+            system.
+          </p>
+        </div>
+
+        <div class="bento__cell bento__cell--accent">
+          <i class="fa-solid fa-calendar-check bento__cell-icon"></i>
+          <h4>Recruitment Intakes</h4>
+          <div class="intake-rows">
+            <div class="intake-row intake-row--primary">
+              <span>Primary</span>
+              <strong>August – September</strong>
+            </div>
+            <div class="intake-row intake-row--secondary">
+              <span>Secondary</span>
+              <strong>February – March</strong>
+            </div>
+          </div>
+          <p class="intake-note">
+            Year-round placement available based on employer schedules.
+          </p>
+        </div>
+
+        <div class="bento__cell bento__cell--fields">
+          <i class="fa-solid fa-layer-group bento__cell-icon"></i>
+          <h4>Available Training Fields</h4>
+          <div class="field-tags">
+            <span><i class="fa-solid fa-stethoscope"></i> Healthcare</span>
+            <span><i class="fa-solid fa-bed"></i> Elderly Care</span>
+            <span><i class="fa-solid fa-hotel"></i> Hospitality</span>
+            <span><i class="fa-solid fa-truck"></i> Logistics</span>
+            <span><i class="fa-solid fa-wrench"></i> Technical Trades</span>
+            <span><i class="fa-solid fa-store"></i> Retail</span>
+            <span><i class="fa-solid fa-briefcase"></i> Business Admin</span>
+          </div>
+        </div>
+
+        <div class="bento__cell bento__cell--wide">
+          <div class="bento__split">
+            <div>
+              <i class="fa-solid fa-magnifying-glass bento__cell-icon"></i>
+              <h4>Pre-Selection Process</h4>
+              <p>
+                Structured language interviews, certificate verification,
+                criminal record checks and documentation compliance — ensuring
+                companies receive dependable, prepared candidates.
+              </p>
+            </div>
+            <div>
+              <i class="fa-solid fa-house-circle-check bento__cell-icon"></i>
+              <h4>Integration Support</h4>
+              <p>
+                Accommodation coordination, relocation preparation, and online
+                orientation sessions covering European social rules, workplace
+                expectations and daily-life regulations.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════════════════════════════
+  <!-- ══════════════════════════════════════════════════════════
   PROGRAM 04 — SKILLED WORKERS (Tabbed profiles)
 ═══════════════════════════════════════════════════════════════ -->
-<section class="prg prg--alt" id="skilled">
-  <div class="prg__stripe prg__stripe--indigo"></div>
-  <div class="container">
-    <header class="skilled-header">
-      <div class="skilled-header__left">
-        <div class="prg__num">04</div>
-        <div class="prg__icon-wrap"><i class="fa-solid fa-helmet-safety"></i></div>
-        <h2>International Skilled <span class="text-gradient">Workers</span></h2>
-        <p>Experienced, language-skilled workers for Germany's shipbuilding, meat processing, and industrial sectors. Available year-round, pre-screened and ready for immediate integration.</p>
-        <a href="/contact" class="btn-glow">Discuss Requirements <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-      <div class="skilled-header__right">
-        <div class="skilled-stat">
-          <i class="fa-solid fa-earth-europe"></i>
-          <div>
-            <strong>A2–B1</strong>
-            <span>Language Level</span>
+  <section class="prg prg--alt" id="skilled">
+    <div class="prg__stripe prg__stripe--indigo"></div>
+    <div class="container">
+      <header class="skilled-header">
+        <div class="skilled-header__left">
+          <div class="prg__num">04</div>
+          <div class="prg__icon-wrap">
+            <i class="fa-solid fa-helmet-safety"></i>
+          </div>
+          <h2>
+            International Skilled <span class="text-gradient">Workers</span>
+          </h2>
+          <p>
+            Experienced, language-skilled workers for Germany's shipbuilding,
+            meat processing, and industrial sectors. Available year-round,
+            pre-screened and ready for immediate integration.
+          </p>
+          <a href="/contact" class="btn-glow"
+            >Discuss Requirements <i class="fa-solid fa-arrow-right"></i></a
+          >
+        </div>
+        <div class="skilled-header__right">
+          <div class="skilled-stat">
+            <i class="fa-solid fa-earth-europe"></i>
+            <div>
+              <strong>A2–B1</strong>
+              <span>Language Level</span>
+            </div>
+          </div>
+          <div class="skilled-stat">
+            <i class="fa-solid fa-filter"></i>
+            <div>
+              <strong>5-Stage</strong>
+              <span>Vetting Process</span>
+            </div>
+          </div>
+          <div class="skilled-stat">
+            <i class="fa-solid fa-calendar"></i>
+            <div>
+              <strong>Year-Round</strong>
+              <span>Availability</span>
+            </div>
           </div>
         </div>
-        <div class="skilled-stat">
-          <i class="fa-solid fa-filter"></i>
-          <div>
-            <strong>5-Stage</strong>
-            <span>Vetting Process</span>
+      </header>
+
+      <!-- Worker profiles in 3 columns -->
+      <div class="worker-grid">
+        <div class="worker-card">
+          <div class="worker-card__top">
+            <div class="worker-card__icon">
+              <i class="fa-solid fa-ship"></i>
+            </div>
+            <h3>Shipbuilding Professionals</h3>
+            <p>
+              Experienced shipyard workers with hands-on skills across welding
+              and structural work.
+            </p>
           </div>
+          <ul class="worker-skills">
+            <li><i class="fa-solid fa-fire-burner"></i> TIG Welding (141)</li>
+            <li><i class="fa-solid fa-fire-burner"></i> MIG Welding (131)</li>
+            <li>
+              <i class="fa-solid fa-fire-burner"></i> MAG Welding (135/136)
+            </li>
+            <li><i class="fa-solid fa-fire-burner"></i> Stick Welding (111)</li>
+            <li>
+              <i class="fa-solid fa-building"></i> Structural Steel Fabrication
+            </li>
+            <li>
+              <i class="fa-solid fa-ruler-combined"></i> Pipe Fitting & Welding
+            </li>
+            <li>
+              <i class="fa-solid fa-anchor"></i> Hull Construction Support
+            </li>
+            <li><i class="fa-solid fa-gears"></i> Mechanical Assembly</li>
+            <li>
+              <i class="fa-solid fa-drafting-compass"></i> Blueprint Reading
+            </li>
+            <li>
+              <i class="fa-solid fa-helmet-safety"></i> Industrial Safety Compliance
+            </li>
+          </ul>
         </div>
-        <div class="skilled-stat">
-          <i class="fa-solid fa-calendar"></i>
-          <div>
-            <strong>Year-Round</strong>
-            <span>Availability</span>
+
+        <div class="worker-card worker-card--featured">
+          <div class="worker-card__top">
+            <div class="worker-card__icon">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h3>Butchers & Meat Processing</h3>
+            <p>
+              Trained professionals with industrial experience in hygienic food
+              processing environments.
+            </p>
           </div>
+          <ul class="worker-skills">
+            <li>
+              <i class="fa-solid fa-industry"></i> Slaughterhouse Operations
+            </li>
+            <li>
+              <i class="fa-solid fa-scissors"></i> Industrial Cutting & Trimming
+            </li>
+            <li>
+              <i class="fa-solid fa-drumstick-bite"></i> Deboning — Beef, Poultry,
+              Lamb
+            </li>
+            <li>
+              <i class="fa-solid fa-boxes-packing"></i> Portion Cutting & Packaging
+            </li>
+            <li>
+              <i class="fa-solid fa-pump-medical"></i> HACCP Hygiene Compliance
+            </li>
+            <li>
+              <i class="fa-solid fa-snowflake"></i> Cold Storage Procedures
+            </li>
+            <li>
+              <i class="fa-solid fa-conveyor-belt"></i> Production-Line Processing
+            </li>
+            <li>
+              <i class="fa-solid fa-shield-halved"></i> Knife-Handling Safety
+            </li>
+            <li>
+              <i class="fa-solid fa-clipboard-check"></i> Food Safety Compliance
+            </li>
+          </ul>
+        </div>
+
+        <div class="worker-card">
+          <div class="worker-card__top">
+            <div class="worker-card__icon">
+              <i class="fa-solid fa-industry"></i>
+            </div>
+            <h3>Industrial Workers</h3>
+            <p>
+              Diverse industrial candidates experienced in manufacturing,
+              logistics and technical operations.
+            </p>
+          </div>
+          <ul class="worker-skills">
+            <li>
+              <i class="fa-solid fa-microchip"></i> Machine Operation Assistance
+            </li>
+            <li>
+              <i class="fa-solid fa-microchip"></i> CNC Support Operations
+            </li>
+            <li>
+              <i class="fa-solid fa-conveyor-belt"></i> Assembly-Line Production
+            </li>
+            <li><i class="fa-solid fa-warehouse"></i> Warehouse Logistics</li>
+            <li>
+              <i class="fa-solid fa-truck-ramp-box"></i> Forklift Experience
+            </li>
+            <li>
+              <i class="fa-solid fa-magnifying-glass-chart"></i> Quality Inspection
+              Support
+            </li>
+            <li>
+              <i class="fa-solid fa-boxes-packing"></i> Packaging & Dispatch
+            </li>
+            <li>
+              <i class="fa-solid fa-hammer"></i> Metal Fabrication Assistance
+            </li>
+            <li>
+              <i class="fa-solid fa-screwdriver-wrench"></i> Maintenance Helper Roles
+            </li>
+          </ul>
         </div>
       </div>
-    </header>
 
-    <!-- Worker profiles in 3 columns -->
-    <div class="worker-grid">
-      <div class="worker-card">
-        <div class="worker-card__top">
-          <div class="worker-card__icon"><i class="fa-solid fa-ship"></i></div>
-          <h3>Shipbuilding Professionals</h3>
-          <p>Experienced shipyard workers with hands-on skills across welding and structural work.</p>
+      <!-- Language readiness bar -->
+      <div class="readiness-bar">
+        <div class="readiness-bar__icon">
+          <i class="fa-solid fa-language"></i>
         </div>
-        <ul class="worker-skills">
-          <li><i class="fa-solid fa-fire-burner"></i> TIG Welding (141)</li>
-          <li><i class="fa-solid fa-fire-burner"></i> MIG Welding (131)</li>
-          <li><i class="fa-solid fa-fire-burner"></i> MAG Welding (135/136)</li>
-          <li><i class="fa-solid fa-fire-burner"></i> Stick Welding (111)</li>
-          <li><i class="fa-solid fa-building"></i> Structural Steel Fabrication</li>
-          <li><i class="fa-solid fa-ruler-combined"></i> Pipe Fitting & Welding</li>
-          <li><i class="fa-solid fa-anchor"></i> Hull Construction Support</li>
-          <li><i class="fa-solid fa-gears"></i> Mechanical Assembly</li>
-          <li><i class="fa-solid fa-drafting-compass"></i> Blueprint Reading</li>
-          <li><i class="fa-solid fa-helmet-safety"></i> Industrial Safety Compliance</li>
-        </ul>
-      </div>
-
-      <div class="worker-card worker-card--featured">
-        <div class="worker-card__top">
-          <div class="worker-card__icon"><i class="fa-solid fa-utensils"></i></div>
-          <h3>Butchers & Meat Processing</h3>
-          <p>Trained professionals with industrial experience in hygienic food processing environments.</p>
+        <div class="readiness-bar__text">
+          <strong>Language & Workplace Readiness</strong>
+          <p>
+            All skilled worker candidates receive German language preparation
+            (A2–B1 depending on role) plus workplace orientation training to
+            support communication and integration within German industrial
+            teams.
+          </p>
         </div>
-        <ul class="worker-skills">
-          <li><i class="fa-solid fa-industry"></i> Slaughterhouse Operations</li>
-          <li><i class="fa-solid fa-scissors"></i> Industrial Cutting & Trimming</li>
-          <li><i class="fa-solid fa-drumstick-bite"></i> Deboning — Beef, Poultry, Lamb</li>
-          <li><i class="fa-solid fa-boxes-packing"></i> Portion Cutting & Packaging</li>
-          <li><i class="fa-solid fa-pump-medical"></i> HACCP Hygiene Compliance</li>
-          <li><i class="fa-solid fa-snowflake"></i> Cold Storage Procedures</li>
-          <li><i class="fa-solid fa-conveyor-belt"></i> Production-Line Processing</li>
-          <li><i class="fa-solid fa-shield-halved"></i> Knife-Handling Safety</li>
-          <li><i class="fa-solid fa-clipboard-check"></i> Food Safety Compliance</li>
-        </ul>
-      </div>
-
-      <div class="worker-card">
-        <div class="worker-card__top">
-          <div class="worker-card__icon"><i class="fa-solid fa-industry"></i></div>
-          <h3>Industrial Workers</h3>
-          <p>Diverse industrial candidates experienced in manufacturing, logistics and technical operations.</p>
-        </div>
-        <ul class="worker-skills">
-          <li><i class="fa-solid fa-microchip"></i> Machine Operation Assistance</li>
-          <li><i class="fa-solid fa-microchip"></i> CNC Support Operations</li>
-          <li><i class="fa-solid fa-conveyor-belt"></i> Assembly-Line Production</li>
-          <li><i class="fa-solid fa-warehouse"></i> Warehouse Logistics</li>
-          <li><i class="fa-solid fa-truck-ramp-box"></i> Forklift Experience</li>
-          <li><i class="fa-solid fa-magnifying-glass-chart"></i> Quality Inspection Support</li>
-          <li><i class="fa-solid fa-boxes-packing"></i> Packaging & Dispatch</li>
-          <li><i class="fa-solid fa-hammer"></i> Metal Fabrication Assistance</li>
-          <li><i class="fa-solid fa-screwdriver-wrench"></i> Maintenance Helper Roles</li>
-        </ul>
+        <a href="/contact" class="btn-glow btn-glow--sm">Enquire Now</a>
       </div>
     </div>
+  </section>
 
-    <!-- Language readiness bar -->
-    <div class="readiness-bar">
-      <div class="readiness-bar__icon"><i class="fa-solid fa-language"></i></div>
-      <div class="readiness-bar__text">
-        <strong>Language & Workplace Readiness</strong>
-        <p>All skilled worker candidates receive German language preparation (A2–B1 depending on role) plus workplace orientation training to support communication and integration within German industrial teams.</p>
-      </div>
-      <a href="/contact" class="btn-glow btn-glow--sm">Enquire Now</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════
+  <!-- ══════════════════════════════════════════════════════════
   5-STAGE SCREENING ROADMAP — Horizontal track design
 ═══════════════════════════════════════════════════════════════ -->
-<section class="screening">
-  <div class="container">
-    <div class="screening__header">
-      <span class="section-badge"><i class="fa-solid fa-filter"></i> Our Process</span>
-      <h2>The 5-Stage <span class="text-gradient">Screening Roadmap</span></h2>
-      <p>Every candidate passes our rigorous vetting before being presented to any employer — quality, compliance, confidence.</p>
+  <section class="screening">
+    <div class="container">
+      <div class="screening__header">
+        <span class="section-badge"
+          ><i class="fa-solid fa-filter"></i> Our Process</span
+        >
+        <h2>
+          The 5-Stage <span class="text-gradient">Screening Roadmap</span>
+        </h2>
+        <p>
+          Every candidate passes our rigorous vetting before being presented to
+          any employer — quality, compliance, confidence.
+        </p>
+      </div>
+
+      <div class="screening__track">
+        <div class="track__step">
+          <div class="track__bubble"><i class="fa-solid fa-language"></i></div>
+          <div class="track__connector"></div>
+          <div class="track__card">
+            <span class="track__num">01</span>
+            <h4>Language Assessment</h4>
+            <p>
+              Structured German language interviews assessing spoken fluency,
+              comprehension and written ability from A1 to B2.
+            </p>
+          </div>
+        </div>
+
+        <div class="track__step">
+          <div class="track__bubble">
+            <i class="fa-solid fa-file-contract"></i>
+          </div>
+          <div class="track__connector"></div>
+          <div class="track__card">
+            <span class="track__num">02</span>
+            <h4>Document Verification</h4>
+            <p>
+              All educational diplomas and vocational credentials are
+              cross-verified against German and EU recognition frameworks.
+            </p>
+          </div>
+        </div>
+
+        <div class="track__step">
+          <div class="track__bubble">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="track__connector"></div>
+          <div class="track__card">
+            <span class="track__num">03</span>
+            <h4>Criminal Record Check</h4>
+            <p>
+              Police clearance certificates from all countries of residence over
+              the past 10 years. Zero-tolerance policy.
+            </p>
+          </div>
+        </div>
+
+        <div class="track__step">
+          <div class="track__bubble"><i class="fa-solid fa-wallet"></i></div>
+          <div class="track__connector"></div>
+          <div class="track__card">
+            <span class="track__num">04</span>
+            <h4>Financial Review</h4>
+            <p>
+              Verification of Sperrkonto accounts and financial credibility for
+              Chancenkarte and overall transition readiness.
+            </p>
+          </div>
+        </div>
+
+        <div class="track__step">
+          <div class="track__bubble track__bubble--final">
+            <i class="fa-solid fa-thumbs-up"></i>
+          </div>
+          <div class="track__card">
+            <span class="track__num">05</span>
+            <h4>Compliance Sign-Off</h4>
+            <p>
+              Final holistic review of immigration eligibility, points-system
+              scoring and employer-specific requirements.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="screening__track">
-      <div class="track__step">
-        <div class="track__bubble"><i class="fa-solid fa-language"></i></div>
-        <div class="track__connector"></div>
-        <div class="track__card">
-          <span class="track__num">01</span>
-          <h4>Language Assessment</h4>
-          <p>Structured German language interviews assessing spoken fluency, comprehension and written ability from A1 to B2.</p>
-        </div>
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="container cta-strip__inner">
+      <div>
+        <h2>
+          Ready to Build Your <span class="text-gradient"
+            >German Workforce?</span
+          >
+        </h2>
+        <p>
+          Whether you need Chancenkarte candidates, Ausbildung trainees, nurses,
+          or skilled industrial workers — we have the pipeline ready.
+        </p>
       </div>
-
-      <div class="track__step">
-        <div class="track__bubble"><i class="fa-solid fa-file-contract"></i></div>
-        <div class="track__connector"></div>
-        <div class="track__card">
-          <span class="track__num">02</span>
-          <h4>Document Verification</h4>
-          <p>All educational diplomas and vocational credentials are cross-verified against German and EU recognition frameworks.</p>
-        </div>
-      </div>
-
-      <div class="track__step">
-        <div class="track__bubble"><i class="fa-solid fa-shield-halved"></i></div>
-        <div class="track__connector"></div>
-        <div class="track__card">
-          <span class="track__num">03</span>
-          <h4>Criminal Record Check</h4>
-          <p>Police clearance certificates from all countries of residence over the past 10 years. Zero-tolerance policy.</p>
-        </div>
-      </div>
-
-      <div class="track__step">
-        <div class="track__bubble"><i class="fa-solid fa-wallet"></i></div>
-        <div class="track__connector"></div>
-        <div class="track__card">
-          <span class="track__num">04</span>
-          <h4>Financial Review</h4>
-          <p>Verification of Sperrkonto accounts and financial credibility for Chancenkarte and overall transition readiness.</p>
-        </div>
-      </div>
-
-      <div class="track__step">
-        <div class="track__bubble track__bubble--final"><i class="fa-solid fa-thumbs-up"></i></div>
-        <div class="track__card">
-          <span class="track__num">05</span>
-          <h4>Compliance Sign-Off</h4>
-          <p>Final holistic review of immigration eligibility, points-system scoring and employer-specific requirements.</p>
-        </div>
+      <div class="cta-strip__btns">
+        <a href="/contact" class="btn btn-primary">Speak to an Expert</a>
+        <a href="/about" class="btn btn-outline del-outline"
+          >About Scandic Roots</a
+        >
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CTA STRIP -->
-<section class="cta-strip">
-  <div class="container cta-strip__inner">
-    <div>
-      <h2>Ready to Build Your <span class="text-gradient">German Workforce?</span></h2>
-      <p>Whether you need Chancenkarte candidates, Ausbildung trainees, nurses, or skilled industrial workers — we have the pipeline ready.</p>
-    </div>
-    <div class="cta-strip__btns">
-      <a href="/contact" class="btn btn-primary">Speak to an Expert</a>
-      <a href="/about" class="btn btn-outline">About Scandic Roots</a>
-    </div>
-  </div>
-</section>
-
+  </section>
 </Layout>
 
 <style>
-/* ── TOKENS ── */
-:root {
-  --indigo: #11184C;
-  --rose: #B23D69;
-  --violet: #2d1b5e;
-  --indigo-mid: #1a2269;
-  --white: #fff;
-  --off: #f7f8ff;
-  --muted: #4A5568;
-}
+  /* ── TOKENS ── */
+  :root {
+    --indigo: #11184c;
+    --rose: #b23d69;
+    --violet: #2d1b5e;
+    --indigo-mid: #1a2269;
+    --white: #fff;
+    --off: #f7f8ff;
+    --muted: #4a5568;
+  }
 
-/* ═══════════════════════════════════════════
+  /* ═══════════════════════════════════════════
   HERO
 ═══════════════════════════════════════════ */
-.sv-hero {
-  position: relative;
-  min-height: 100vh;
-  background: #09091a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  text-align: center;
-}
+  .sv-hero {
+    position: relative;
+    min-height: 100vh;
+    background: #09091a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+  }
 
-.sv-hero__noise {
-  position: absolute; inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none; z-index: 0;
-}
+  .sv-hero__noise {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
 
-.sv-hero__glow {
-  position: absolute; border-radius: 50%;
-  filter: blur(110px); pointer-events: none;
-}
-.sv-hero__glow--a { width: 700px; height: 700px; background: radial-gradient(circle, rgba(178,61,105,0.35) 0%, transparent 70%); top: -200px; right: -150px; }
-.sv-hero__glow--b { width: 600px; height: 600px; background: radial-gradient(circle, rgba(17,24,76,0.5) 0%, transparent 70%); bottom: -100px; left: -100px; }
-.sv-hero__glow--c { width: 400px; height: 400px; background: radial-gradient(circle, rgba(80,68,165,0.3) 0%, transparent 70%); top: 40%; left: 35%; }
+  .sv-hero__glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(110px);
+    pointer-events: none;
+  }
+  .sv-hero__glow--a {
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(
+      circle,
+      rgba(178, 61, 105, 0.35) 0%,
+      transparent 70%
+    );
+    top: -200px;
+    right: -150px;
+  }
+  .sv-hero__glow--b {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba(17, 24, 76, 0.5) 0%,
+      transparent 70%
+    );
+    bottom: -100px;
+    left: -100px;
+  }
+  .sv-hero__glow--c {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(
+      circle,
+      rgba(80, 68, 165, 0.3) 0%,
+      transparent 70%
+    );
+    top: 40%;
+    left: 35%;
+  }
 
-.sv-hero__inner {
-  position: relative; z-index: 2;
-  padding: 7rem 2rem 5rem;
-  max-width: 900px;
-}
+  .sv-hero__inner {
+    position: relative;
+    z-index: 2;
+    padding: 7rem 2rem 5rem;
+    max-width: 900px;
+  }
 
-.sv-hero__eyebrow {
-  display: flex; align-items: center; justify-content: center;
-  gap: 1rem; margin-bottom: 2rem;
-}
-.sv-hero__eyebrow p {
-  color: rgba(255,255,255,0.5);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-family: var(--font-heading);
-  margin: 0;
-}
-.dot { width: 4px; height: 4px; background: var(--rose); border-radius: 50%; display: block; }
+  .sv-hero__eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .sv-hero__eyebrow p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: var(--font-heading);
+    margin: 0;
+  }
+  .dot {
+    width: 4px;
+    height: 4px;
+    background: var(--rose);
+    border-radius: 50%;
+    display: block;
+  }
 
-.sv-hero__title {
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
-  color: #fff;
-  line-height: 1.12;
-  margin-bottom: 1.5rem;
-  letter-spacing: -1px;
-}
-.sv-hero__title em {
-  font-style: normal;
-  background: linear-gradient(90deg, #B23D69 0%, #7c6ef5 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+  .sv-hero__title {
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    color: #fff;
+    line-height: 1.12;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+  }
+  .sv-hero__title em {
+    font-style: normal;
+    background: linear-gradient(90deg, #b23d69 0%, #7c6ef5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 
-.sv-hero__sub {
-  font-size: 1.2rem;
-  color: rgba(255,255,255,0.6);
-  max-width: 620px;
-  margin: 0 auto 3rem;
-  line-height: 1.7;
-}
+  .sv-hero__sub {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 620px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+  }
 
-.sv-hero__nav {
-  display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center;
-}
+  .sv-hero__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+  }
 
-.sv-nav-pill {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  padding: 0.7rem 1.4rem;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 60px;
-  color: rgba(255,255,255,0.8);
-  font-size: 0.9rem;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  backdrop-filter: blur(8px);
-  background: rgba(255,255,255,0.05);
-  transition: all 0.3s;
-  cursor: pointer;
-}
-.sv-nav-pill i { color: var(--rose); font-size: 1rem; }
-.sv-nav-pill:hover {
-  background: rgba(178,61,105,0.2);
-  border-color: var(--rose);
-  color: #fff;
-  transform: translateY(-3px);
-}
+  .sv-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 60px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .sv-nav-pill i {
+    color: var(--rose);
+    font-size: 1rem;
+  }
+  .sv-nav-pill:hover {
+    background: rgba(178, 61, 105, 0.2);
+    border-color: var(--rose);
+    color: #fff;
+    transform: translateY(-3px);
+  }
 
-.sv-hero__scroll {
-  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
-  z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-  color: rgba(255,255,255,0.3);
-  font-size: 0.75rem;
-  font-family: var(--font-heading);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  animation: bounce 2s infinite;
-}
-@keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(6px); }
-}
+  .sv-hero__scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.75rem;
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(6px);
+    }
+  }
 
-/* ═══════════════════════════════════════════
+  /* ═══════════════════════════════════════════
   PROGRAM SPLIT SECTIONS
 ═══════════════════════════════════════════ */
-.prg {
-  padding: 6rem 0;
-  position: relative;
-  background: #fff;
-  overflow: hidden;
-}
-.prg--alt { background: var(--off); }
+  .prg {
+    padding: 6rem 0;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+  }
+  .prg--alt {
+    background: var(--off);
+  }
 
-.prg__stripe {
-  position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
-}
-.prg__stripe--indigo { background: linear-gradient(to bottom, var(--indigo), var(--violet)); }
-.prg__stripe--rose   { background: linear-gradient(to bottom, var(--rose), #7c6ef5); }
+  .prg__stripe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+  }
+  .prg__stripe--indigo {
+    background: linear-gradient(to bottom, var(--indigo), var(--violet));
+  }
+  .prg__stripe--rose {
+    background: linear-gradient(to bottom, var(--rose), #7c6ef5);
+  }
 
-.prg__grid {
-  display: grid;
-  grid-template-columns: 340px 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-.prg__grid--flip { direction: rtl; }
-.prg__grid--flip > * { direction: ltr; }
+  .prg__grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .prg__grid--flip {
+    direction: rtl;
+  }
+  .prg__grid--flip > * {
+    direction: ltr;
+  }
 
-.prg__anchor { position: sticky; top: 8rem; }
+  .prg__anchor {
+    position: sticky;
+    top: 8rem;
+  }
 
-.prg__num {
-  font-size: 5rem;
-  font-weight: 900;
-  font-family: var(--font-heading);
-  color: transparent;
-  -webkit-text-stroke: 2px rgba(17,24,76,0.1);
-  line-height: 1;
-  margin-bottom: 1rem;
-}
+  .prg__num {
+    font-size: 5rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(17, 24, 76, 0.1);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
 
-.prg__icon-wrap {
-  width: 70px; height: 70px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--indigo), var(--violet));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem; color: #fff;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 10px 30px rgba(17,24,76,0.25);
-}
-.prg__icon-wrap--rose { background: linear-gradient(135deg, var(--rose), #7c6ef5); }
-.prg__icon-wrap--indigo { background: linear-gradient(135deg, var(--indigo), var(--indigo-mid)); }
+  .prg__icon-wrap {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--indigo), var(--violet));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px rgba(17, 24, 76, 0.25);
+  }
+  .prg__icon-wrap--rose {
+    background: linear-gradient(135deg, var(--rose), #7c6ef5);
+  }
+  .prg__icon-wrap--indigo {
+    background: linear-gradient(135deg, var(--indigo), var(--indigo-mid));
+  }
 
-.prg__title {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  color: var(--indigo);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
+  .prg__title {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    color: var(--indigo);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
 
-.prg__lead {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--muted);
-  margin-bottom: 2rem;
-}
+  .prg__lead {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 2rem;
+  }
 
-/* ── Button ── */
-.btn-glow {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  padding: 0.85rem 1.8rem;
-  background: linear-gradient(135deg, var(--indigo), var(--violet));
-  color: #fff;
-  border-radius: 8px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.95rem;
-  transition: all 0.3s;
-  box-shadow: 0 8px 20px rgba(17,24,76,0.25);
-}
-.btn-glow:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(17,24,76,0.4);
-  color: #fff;
-}
-.btn-glow--sm { padding: 0.65rem 1.4rem; font-size: 0.85rem; white-space: nowrap; }
+  /* ── Button ── */
+  .btn-glow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.8rem;
+    background: linear-gradient(135deg, var(--indigo), var(--violet));
+    color: #fff;
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    box-shadow: 0 8px 20px rgba(17, 24, 76, 0.25);
+  }
+  .btn-glow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(17, 24, 76, 0.4);
+    color: #fff;
+  }
+  .btn-glow--sm {
+    padding: 0.65rem 1.4rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
 
-/* ── Info Cards ── */
-.prg__cards { display: flex; flex-direction: column; gap: 1.5rem; }
+  /* ── Info Cards ── */
+  .prg__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 
-.info-card {
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 16px;
-  padding: 2rem;
-  transition: all 0.3s;
-}
-.info-card:hover {
-  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
-  transform: translateY(-3px);
-}
+  .info-card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s;
+  }
+  .info-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+    transform: translateY(-3px);
+  }
 
-.info-card--accent {
-  background: linear-gradient(135deg, rgba(17,24,76,0.04), rgba(80,68,165,0.04));
-  border-color: rgba(17,24,76,0.1);
-}
+  .info-card--accent {
+    background: linear-gradient(
+      135deg,
+      rgba(17, 24, 76, 0.04),
+      rgba(80, 68, 165, 0.04)
+    );
+    border-color: rgba(17, 24, 76, 0.1);
+  }
 
-.info-card--dark {
-  background: linear-gradient(135deg, var(--indigo), var(--violet));
-  border-color: transparent;
-  color: #fff;
-}
-.info-card--dark h3, .info-card--dark p { color: rgba(255,255,255,0.9); }
+  .info-card--dark {
+    background: linear-gradient(135deg, var(--indigo), var(--violet));
+    border-color: transparent;
+    color: #fff;
+  }
+  .info-card--dark h3,
+  .info-card--dark p {
+    color: rgba(255, 255, 255, 0.9);
+  }
 
-.info-card__head {
-  display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;
-}
-.info-card__head i { font-size: 1.4rem; color: var(--rose); }
-.info-card--dark .info-card__head i { color: rgba(255,255,255,0.7); }
-.info-card__head h3 { font-size: 1.1rem; margin: 0; }
+  .info-card__head {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .info-card__head i {
+    font-size: 1.4rem;
+    color: var(--rose);
+  }
+  .info-card--dark .info-card__head i {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .info-card__head h3 {
+    font-size: 1.1rem;
+    margin: 0;
+  }
 
-.info-card p { font-size: 0.95rem; line-height: 1.6; margin: 0; }
+  .info-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+  }
 
-.check-list { list-style: none; padding: 0; margin: 0; }
-.check-list li {
-  padding: 0.5rem 0 0.5rem 1.8rem;
-  position: relative;
-  font-size: 0.95rem;
-  color: var(--muted);
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-}
-.check-list li:last-child { border-bottom: none; }
-.check-list li::before {
-  content: '\f058';
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 900;
-  position: absolute; left: 0; top: 0.55rem;
-  color: var(--rose);
-  font-size: 0.85rem;
-}
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .check-list li {
+    padding: 0.5rem 0 0.5rem 1.8rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  }
+  .check-list li:last-child {
+    border-bottom: none;
+  }
+  .check-list li::before {
+    content: "\f058";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    color: var(--rose);
+    font-size: 0.85rem;
+  }
 
-.tag-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
-.tag {
-  padding: 0.3rem 0.8rem;
-  background: rgba(17,24,76,0.06);
-  color: var(--indigo);
-  border-radius: 100px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  font-family: var(--font-heading);
-}
+  .tag-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .tag {
+    padding: 0.3rem 0.8rem;
+    background: rgba(17, 24, 76, 0.06);
+    color: var(--indigo);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+  }
 
-.support-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-.support-pills span {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  padding: 0.4rem 0.9rem;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 100px;
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.9);
-  font-family: var(--font-heading);
-  font-weight: 600;
-}
+  .support-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .support-pills span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
 
-/* ═══════════════════════════════════════════
+  /* ═══════════════════════════════════════════
   BENTO — AUSBILDUNG
 ═══════════════════════════════════════════ */
-.prg-bento { padding: 6rem 0; background: #fff; }
+  .prg-bento {
+    padding: 6rem 0;
+    background: #fff;
+  }
 
-.bento-header {
-  display: flex; gap: 2.5rem; align-items: center;
-  margin-bottom: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-.bento-header__meta { display: flex; align-items: center; gap: 1.5rem; flex-shrink: 0; }
-.bento-header__text h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom: 0.8rem; }
-.bento-header__text p { font-size: 1.05rem; margin: 0; }
+  .bento-header {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .bento-header__meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+  }
+  .bento-header__text h2 {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    margin-bottom: 0.8rem;
+  }
+  .bento-header__text p {
+    font-size: 1.05rem;
+    margin: 0;
+  }
 
-.bento {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto;
-  gap: 1.5rem;
-}
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 1.5rem;
+  }
 
-.bento__cell {
-  background: var(--off);
-  border: 1px solid rgba(0,0,0,0.05);
-  border-radius: 20px;
-  padding: 2rem;
-  transition: all 0.3s;
-}
-.bento__cell:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.06); }
+  .bento__cell {
+    background: var(--off);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s;
+  }
+  .bento__cell:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+  }
 
-.bento__cell--hero-dark {
-  grid-column: 1 / 3;
-  background: linear-gradient(135deg, var(--indigo) 0%, var(--violet) 100%);
-  color: #fff;
-}
-.bento__cell--hero-dark h3, .bento__cell--hero-dark p { color: rgba(255,255,255,0.9); }
-.bento__cell--hero-dark p { margin-bottom: 0.8rem; }
+  .bento__cell--hero-dark {
+    grid-column: 1 / 3;
+    background: linear-gradient(135deg, var(--indigo) 0%, var(--violet) 100%);
+    color: #fff;
+  }
+  .bento__cell--hero-dark h3,
+  .bento__cell--hero-dark p {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .bento__cell--hero-dark p {
+    margin-bottom: 0.8rem;
+  }
 
-.bento__cell--accent {
-  background: linear-gradient(135deg, rgba(178,61,105,0.07), rgba(80,68,165,0.07));
-}
+  .bento__cell--accent {
+    background: linear-gradient(
+      135deg,
+      rgba(178, 61, 105, 0.07),
+      rgba(80, 68, 165, 0.07)
+    );
+  }
 
-.bento__cell--fields { grid-column: span 2; }
+  .bento__cell--fields {
+    grid-column: span 2;
+  }
 
-.bento__cell--wide {
-  grid-column: span 3;
-  background: linear-gradient(135deg, rgba(17,24,76,0.03), rgba(80,68,165,0.03));
-}
+  .bento__cell--wide {
+    grid-column: span 3;
+    background: linear-gradient(
+      135deg,
+      rgba(17, 24, 76, 0.03),
+      rgba(80, 68, 165, 0.03)
+    );
+  }
 
-.bento__big-icon {
-  font-size: 3rem; color: rgba(255,255,255,0.3);
-  display: block; margin-bottom: 1.5rem;
-}
-.bento__cell-icon {
-  font-size: 1.8rem; color: var(--rose);
-  display: block; margin-bottom: 1rem;
-}
-.bento__cell h4 { font-size: 1.1rem; margin-bottom: 0.8rem; }
-.bento__cell p { font-size: 0.9rem; line-height: 1.6; margin: 0; }
+  .bento__big-icon {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.3);
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .bento__cell-icon {
+    font-size: 1.8rem;
+    color: var(--rose);
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .bento__cell h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  .bento__cell p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
 
-.bento__split {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
-}
-.bento__split > div h4 { font-size: 1.1rem; margin-bottom: 0.8rem; }
-.bento__split > div p { font-size: 0.9rem; line-height: 1.6; margin: 0; }
-.bento__split > div i.bento__cell-icon { margin-bottom: 0.8rem; }
+  .bento__split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .bento__split > div h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  .bento__split > div p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .bento__split > div i.bento__cell-icon {
+    margin-bottom: 0.8rem;
+  }
 
-.intake-rows { display: flex; flex-direction: column; gap: 0.7rem; margin: 1rem 0; }
-.intake-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 0.7rem 1rem; border-radius: 8px;
-}
-.intake-row--primary { background: var(--indigo); color: #fff; }
-.intake-row--secondary { background: rgba(178,61,105,0.1); }
-.intake-row strong { font-family: var(--font-heading); }
-.intake-note { font-size: 0.82rem; color: var(--muted); margin-top: 0.5rem !important; }
+  .intake-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin: 1rem 0;
+  }
+  .intake-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+  }
+  .intake-row--primary {
+    background: var(--indigo);
+    color: #fff;
+  }
+  .intake-row--secondary {
+    background: rgba(178, 61, 105, 0.1);
+  }
+  .intake-row strong {
+    font-family: var(--font-heading);
+  }
+  .intake-note {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.5rem !important;
+  }
 
-.field-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.8rem; }
-.field-tags span {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  padding: 0.4rem 0.9rem;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.07);
-  border-radius: 100px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  font-family: var(--font-heading);
-  color: var(--indigo);
-  transition: all 0.2s;
-}
-.field-tags span i { color: var(--rose); }
-.field-tags span:hover { background: var(--indigo); color: #fff; border-color: var(--indigo); }
-.field-tags span:hover i { color: rgba(255,255,255,0.7); }
+  .field-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+  }
+  .field-tags span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    color: var(--indigo);
+    transition: all 0.2s;
+  }
+  .field-tags span i {
+    color: var(--rose);
+  }
+  .field-tags span:hover {
+    background: var(--indigo);
+    color: #fff;
+    border-color: var(--indigo);
+  }
+  .field-tags span:hover i {
+    color: rgba(255, 255, 255, 0.7);
+  }
 
-/* ═══════════════════════════════════════════
+  /* ═══════════════════════════════════════════
   SKILLED WORKERS
 ═══════════════════════════════════════════ */
-.skilled-header {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 4rem; align-items: center;
-  padding-bottom: 4rem;
-  margin-bottom: 4rem;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-.skilled-header__left h2 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1rem; }
-.skilled-header__left p { margin-bottom: 2rem; }
+  .skilled-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .skilled-header__left h2 {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  .skilled-header__left p {
+    margin-bottom: 2rem;
+  }
 
-.skilled-header__right {
-  display: flex; flex-direction: column; gap: 1.2rem;
-}
-.skilled-stat {
-  display: flex; align-items: center; gap: 1.2rem;
-  padding: 1.2rem 1.5rem;
-  background: #fff;
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.05);
-}
-.skilled-stat i { font-size: 1.8rem; color: var(--indigo); }
-.skilled-stat strong { font-size: 1.3rem; font-family: var(--font-heading); color: var(--indigo); display: block; line-height: 1; }
-.skilled-stat span { font-size: 0.8rem; color: var(--muted); }
+  .skilled-header__right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .skilled-stat {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .skilled-stat i {
+    font-size: 1.8rem;
+    color: var(--indigo);
+  }
+  .skilled-stat strong {
+    font-size: 1.3rem;
+    font-family: var(--font-heading);
+    color: var(--indigo);
+    display: block;
+    line-height: 1;
+  }
+  .skilled-stat span {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
 
-.worker-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem; }
+  .worker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
 
-.worker-card {
-  border-radius: 20px;
-  border: 1px solid rgba(0,0,0,0.06);
-  overflow: hidden;
-  transition: all 0.3s;
-  background: #fff;
-}
-.worker-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+  .worker-card {
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: all 0.3s;
+    background: #fff;
+  }
+  .worker-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  }
 
-.worker-card--featured {
-  background: linear-gradient(to bottom, var(--indigo), var(--violet));
-  border: none;
-}
-.worker-card--featured .worker-card__top { border-bottom-color: rgba(255,255,255,0.1); }
-.worker-card--featured h3, .worker-card--featured p { color: rgba(255,255,255,0.9); }
-.worker-card--featured .worker-card__icon { background: rgba(255,255,255,0.15); color: #fff; }
-.worker-card--featured .worker-skills li { border-color: rgba(255,255,255,0.08); color: rgba(255,255,255,0.8); }
-.worker-card--featured .worker-skills li i { color: rgba(255,255,255,0.5); }
+  .worker-card--featured {
+    background: linear-gradient(to bottom, var(--indigo), var(--violet));
+    border: none;
+  }
+  .worker-card--featured .worker-card__top {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  .worker-card--featured h3,
+  .worker-card--featured p {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .worker-card--featured .worker-card__icon {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+  .worker-card--featured .worker-skills li {
+    border-color: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .worker-card--featured .worker-skills li i {
+    color: rgba(255, 255, 255, 0.5);
+  }
 
-.worker-card__top {
-  padding: 2rem;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  display: flex; flex-direction: column; gap: 0.8rem;
-}
-.worker-card__icon {
-  width: 56px; height: 56px;
-  background: linear-gradient(135deg, rgba(17,24,76,0.08), rgba(80,68,165,0.08));
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.5rem; color: var(--indigo);
-}
-.worker-card__top h3 { font-size: 1.15rem; margin: 0; }
-.worker-card__top p { font-size: 0.9rem; margin: 0; }
+  .worker-card__top {
+    padding: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .worker-card__icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(
+      135deg,
+      rgba(17, 24, 76, 0.08),
+      rgba(80, 68, 165, 0.08)
+    );
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--indigo);
+  }
+  .worker-card__top h3 {
+    font-size: 1.15rem;
+    margin: 0;
+  }
+  .worker-card__top p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
 
-.worker-skills {
-  padding: 1.5rem 2rem; list-style: none; margin: 0;
-}
-.worker-skills li {
-  display: flex; align-items: center; gap: 0.8rem;
-  padding: 0.55rem 0;
-  font-size: 0.9rem;
-  color: var(--muted);
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-}
-.worker-skills li:last-child { border: none; }
-.worker-skills li i { color: var(--rose); font-size: 0.85rem; width: 14px; text-align: center; }
+  .worker-skills {
+    padding: 1.5rem 2rem;
+    list-style: none;
+    margin: 0;
+  }
+  .worker-skills li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.55rem 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  }
+  .worker-skills li:last-child {
+    border: none;
+  }
+  .worker-skills li i {
+    color: var(--rose);
+    font-size: 0.85rem;
+    width: 14px;
+    text-align: center;
+  }
 
-.readiness-bar {
-  display: flex; align-items: center; gap: 2rem;
-  padding: 2rem 2.5rem;
-  background: linear-gradient(135deg, var(--indigo), var(--violet));
-  border-radius: 16px;
-  color: #fff;
-}
-.readiness-bar__icon { font-size: 3rem; opacity: 0.5; flex-shrink: 0; }
-.readiness-bar__text { flex: 1; }
-.readiness-bar__text strong { font-size: 1.15rem; display: block; margin-bottom: 0.4rem; color: #fff; }
-.readiness-bar__text p { margin: 0; color: rgba(255,255,255,0.75); font-size: 0.95rem; }
+  .readiness-bar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 2.5rem;
+    background: linear-gradient(135deg, var(--indigo), var(--violet));
+    border-radius: 16px;
+    color: #fff;
+  }
+  .readiness-bar__icon {
+    font-size: 3rem;
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+  .readiness-bar__text {
+    flex: 1;
+  }
+  .readiness-bar__text strong {
+    font-size: 1.15rem;
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #fff;
+  }
+  .readiness-bar__text p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+  }
 
-/* ═══════════════════════════════════════════
+  /* ═══════════════════════════════════════════
   SCREENING TRACK
 ═══════════════════════════════════════════ */
-.screening {
-  padding: 7rem 0;
-  background: var(--off);
-}
-.screening__header {
-  text-align: center; margin-bottom: 5rem;
-}
-.screening__header h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
-.screening__header p { color: var(--muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+  .screening {
+    padding: 7rem 0;
+    background: var(--off);
+  }
+  .screening__header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .screening__header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  .screening__header p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
 
-.screening__track {
-  display: flex; gap: 0; align-items: flex-start;
-  position: relative;
-}
-.screening__track::before {
-  content: '';
-  position: absolute;
-  top: 35px; left: 35px; right: 35px;
-  height: 2px;
-  background: linear-gradient(to right, var(--indigo), var(--rose));
-  z-index: 0;
-}
+  .screening__track {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+    position: relative;
+  }
+  .screening__track::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    right: 35px;
+    height: 2px;
+    background: linear-gradient(to right, var(--indigo), var(--rose));
+    z-index: 0;
+  }
 
-.track__step { flex: 1; display: flex; flex-direction: column; align-items: center; position: relative; z-index: 1; }
+  .track__step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
 
-.track__bubble {
-  width: 70px; height: 70px;
-  border-radius: 50%;
-  background: #fff;
-  border: 3px solid var(--indigo);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.6rem; color: var(--indigo);
-  margin-bottom: 1.5rem;
-  box-shadow: 0 8px 20px rgba(17,24,76,0.12);
-  transition: all 0.3s;
-}
-.track__bubble--final { background: var(--indigo); color: #fff; border-color: var(--rose); }
-.track__step:hover .track__bubble { background: var(--indigo); color: #fff; transform: scale(1.1); }
+  .track__bubble {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--indigo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--indigo);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 20px rgba(17, 24, 76, 0.12);
+    transition: all 0.3s;
+  }
+  .track__bubble--final {
+    background: var(--indigo);
+    color: #fff;
+    border-color: var(--rose);
+  }
+  .track__step:hover .track__bubble {
+    background: var(--indigo);
+    color: #fff;
+    transform: scale(1.1);
+  }
 
-.track__card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  border: 1px solid rgba(0,0,0,0.05);
-  text-align: center;
-  width: calc(100% - 1.5rem);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-  transition: all 0.3s;
-}
-.track__step:hover .track__card { box-shadow: 0 10px 30px rgba(0,0,0,0.08); transform: translateY(-4px); }
+  .track__card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: calc(100% - 1.5rem);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s;
+  }
+  .track__step:hover .track__card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+  }
 
-.track__num {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--rose);
-  font-family: var(--font-heading);
-  margin-bottom: 0.5rem;
-}
-.track__card h4 { font-size: 0.95rem; margin-bottom: 0.5rem; }
-.track__card p { font-size: 0.82rem; margin: 0; line-height: 1.5; }
+  .track__num {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--rose);
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+  }
+  .track__card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  .track__card p {
+    font-size: 0.82rem;
+    margin: 0;
+    line-height: 1.5;
+  }
 
-/* ═══════════════════════════════════════════
+  /* ═══════════════════════════════════════════
   CTA STRIP
 ═══════════════════════════════════════════ */
-.cta-strip {
-  background: linear-gradient(135deg, var(--indigo), var(--violet));
-  padding: 4rem 0;
-}
-.cta-strip__inner {
-  display: flex; gap: 3rem; align-items: center; justify-content: space-between;
-}
-.cta-strip h2 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 0.5rem; }
-.cta-strip p { color: rgba(255,255,255,0.7); margin: 0; max-width: 500px; }
-.cta-strip__btns { display: flex; gap: 1rem; flex-shrink: 0; flex-wrap: wrap; }
+  .cta-strip {
+    background: linear-gradient(135deg, var(--indigo), var(--violet));
+    padding: 4rem 0;
+  }
+  .cta-strip__inner {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cta-strip h2 {
+    color: #fff;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 0.5rem;
+  }
+  .cta-strip p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    max-width: 500px;
+  }
+  .cta-strip__btns {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+  .del-outline {
+    color: white !important;
+  }
 
-/* ═══════════════════════════════════════════
+  /* ═══════════════════════════════════════════
   RESPONSIVE
 ═══════════════════════════════════════════ */
-@media (max-width: 1100px) {
-  .prg__grid { grid-template-columns: 1fr; }
-  .prg__grid--flip { direction: ltr; }
-  .prg__anchor { position: static; }
-  .skilled-header { grid-template-columns: 1fr; gap: 2rem; }
-  .worker-grid { grid-template-columns: repeat(2, 1fr); }
-  .bento { grid-template-columns: 1fr 1fr; }
-  .bento__cell--hero-dark { grid-column: span 2; }
-  .bento__cell--fields { grid-column: span 2; }
-  .bento__cell--wide { grid-column: span 2; }
-  .screening__track { flex-direction: column; align-items: stretch; }
-  .screening__track::before { display: none; }
-  .track__step { flex-direction: row; gap: 1.5rem; align-items: flex-start; }
-  .track__bubble { margin-bottom: 0; flex-shrink: 0; width: 56px; height: 56px; font-size: 1.3rem; }
-  .track__card { width: 100%; text-align: left; }
-  .cta-strip__inner { flex-direction: column; text-align: center; }
-  .cta-strip p { margin: 0 auto; }
-}
+  @media (max-width: 1100px) {
+    .prg__grid {
+      grid-template-columns: 1fr;
+    }
+    .prg__grid--flip {
+      direction: ltr;
+    }
+    .prg__anchor {
+      position: static;
+    }
+    .skilled-header {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .worker-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .bento {
+      grid-template-columns: 1fr 1fr;
+    }
+    .bento__cell--hero-dark {
+      grid-column: span 2;
+    }
+    .bento__cell--fields {
+      grid-column: span 2;
+    }
+    .bento__cell--wide {
+      grid-column: span 2;
+    }
+    .screening__track {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .screening__track::before {
+      display: none;
+    }
+    .track__step {
+      flex-direction: row;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    .track__bubble {
+      margin-bottom: 0;
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      font-size: 1.3rem;
+    }
+    .track__card {
+      width: 100%;
+      text-align: left;
+    }
+    .cta-strip__inner {
+      flex-direction: column;
+      text-align: center;
+    }
+    .cta-strip p {
+      margin: 0 auto;
+    }
+  }
 
-@media (max-width: 768px) {
-  .bento { grid-template-columns: 1fr; }
-  .bento__cell--hero-dark, .bento__cell--fields, .bento__cell--wide { grid-column: span 1; }
-  .bento__split { grid-template-columns: 1fr; }
-  .worker-grid { grid-template-columns: 1fr; }
-  .bento-header { flex-direction: column; gap: 1.5rem; }
-  .readiness-bar { flex-direction: column; text-align: center; }
-}
+  @media (max-width: 768px) {
+    .bento {
+      grid-template-columns: 1fr;
+    }
+    .bento__cell--hero-dark,
+    .bento__cell--fields,
+    .bento__cell--wide {
+      grid-column: span 1;
+    }
+    .bento__split {
+      grid-template-columns: 1fr;
+    }
+    .worker-grid {
+      grid-template-columns: 1fr;
+    }
+    .bento-header {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .readiness-bar {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
 </style>

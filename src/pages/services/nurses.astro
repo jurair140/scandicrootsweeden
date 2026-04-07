@@ -1,0 +1,121 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Indian Nurses Recruitment Program" description="We recruit highly qualified, experienced, and German language-skilled Indian nurses for the German healthcare sector.">
+
+<section class="sv-hero sv-hero--short">
+  <div class="sv-hero__noise"></div>
+  <div class="sv-hero__glow sv-hero__glow--a"></div>
+  <div class="sv-hero__glow sv-hero__glow--b"></div>
+  <div class="container sv-hero__inner">
+    <div class="sv-hero__eyebrow">
+      <span class="dot"></span><p>Program 02</p><span class="dot"></span>
+    </div>
+    <h1 class="sv-hero__title">Indian Nurses<br /><em>Recruitment Program</em></h1>
+    <p class="sv-hero__sub">Well-qualified, experienced and German language-skilled Indian nurses for hospitals, elderly care centers, and rehabilitation facilities across Germany.</p>
+    <div class="sv-hero__nav">
+      <a href="/contact" class="btn-primary-glow">Hire Nurses <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="/services" class="btn-ghost">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<article class="reader-content">
+  <div class="container reader-container">
+    
+    <h2>Why Indian Nurses for Germany?</h2>
+    <p>Germany's healthcare system faces a critical shortage of qualified professionals. Our recruitment program bridges this gap by sourcing highly motivated, experienced, and professionally vetted nurses from India. Candidates arrive with completed nursing degrees and practical clinical experience, ready to integrate into your healthcare teams.</p>
+    
+    <hr class="reader-divider" />
+
+    <h2>Candidate Qualifications</h2>
+    <p>We ensure that all candidates meet strict educational and professional standards before they are introduced to German healthcare employers. Every candidate must possess:</p>
+    
+    <ul class="reader-list">
+      <li><strong>Academic Background:</strong> A recognized Diploma or Bachelor's degree in Nursing (B.Sc. Nursing or GNM equivalent).</li>
+      <li><strong>Practical Experience:</strong> Relevant clinical experience in a hospital, clinical, or formal care setting.</li>
+      <li><strong>Language Proficiency:</strong> German language skills verified at the B1 or B2 level through standardized certification.</li>
+      <li><strong>Commitment:</strong> A demonstrated intent for long-term employment and career growth within the German healthcare sector.</li>
+    </ul>
+
+    <hr class="reader-divider" />
+
+    <h2>The Recognition and Adaptation Process</h2>
+    <p>Indian nursing credentials must be recognized (Anerkennung) by the respective German state authorities. We manage and streamline this process for both the candidate and the employer ensuring full legal compliance.</p>
+    
+    <ul class="reader-list">
+      <li><strong>Initial Placement:</strong> Prior to full recognition, candidates may begin working as nursing assistants (Pflegehilfskräfte) under supervision in the facility.</li>
+      <li><strong>Adaptation Period:</strong> Candidates typically undergo an adaptation period or take a knowledge test (Kenntnisprüfung) to bridge any theoretical or practical differences.</li>
+      <li><strong>Full Licensing:</strong> Once the adaptation requirements are met, candidates receive their full license as registered nurses (Gesundheits- und Krankenpfleger/in) in Germany.</li>
+    </ul>
+
+    <hr class="reader-divider" />
+
+    <h2>Our Comprehensive Screening & Support</h2>
+    <p>We handle the heavy lifting of international recruitment, from initial interviews to onboarding, so healthcare facilities can maintain their primary focus on patient care and operations.</p>
+    
+    <ol class="reader-steps">
+      <li><strong>Rigorous Screening:</strong> We conduct German-language interviews, verify professional certificates, and perform strict criminal background checks on all candidates.</li>
+      <li><strong>Document Compliance:</strong> We manage the entire documentation pipeline required by the German recognition authorities and regional immigration offices.</li>
+      <li><strong>Relocation Assistance:</strong> We guide candidates through the visa process, coordinate flight logistics, and help organize initial accommodation near your facility.</li>
+      <li><strong>Cultural Integration:</strong> Candidates receive comprehensive online orientation covering European social norms, German workplace culture, and healthcare-specific expectations.</li>
+    </ol>
+
+  </div>
+</article>
+
+<section class="reader-cta">
+  <div class="container text-center">
+    <h2>Empower Your Healthcare Team</h2>
+    <p>Secure fully vetted, language-ready nursing professionals committed to long-term care.</p>
+    <div class="sv-hero__nav" style="margin-top: 2.5rem;">
+      <a href="/contact" class="btn-primary-glow">Discuss Requirements</a>
+    </div>
+  </div>
+</section>
+
+</Layout>
+
+<style>
+  :root { --ind: #11184c; --rose: #b23d69; --mut: #4a5568; --off: #f7f8ff; }
+  .sv-hero { position: relative; padding: 6rem 0 4rem; background: #09091a; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; text-align: center; }
+  .sv-hero--short { min-height: auto; }
+  .sv-hero__noise { position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; }
+  .sv-hero__glow { position: absolute; border-radius: 50%; filter: blur(110px); pointer-events: none; }
+  .sv-hero__glow--a { width: 600px; height: 600px; background: radial-gradient(circle, rgba(178,61,105,0.4) 0%, transparent 70%); top: -150px; right: -100px; }
+  .sv-hero__glow--b { width: 500px; height: 500px; background: radial-gradient(circle, rgba(17,24,76,0.6) 0%, transparent 70%); bottom: -50px; left: -80px; }
+  .sv-hero__inner { position: relative; z-index: 2; max-width: 800px; padding: 0 2rem; margin-top: 2rem; }
+  .sv-hero__eyebrow { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1.2rem; }
+  .sv-hero__eyebrow p { color: rgba(255,255,255,0.6); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 3px; font-family: var(--font-heading); margin: 0; }
+  .dot { width: 6px; height: 6px; background: var(--rose); border-radius: 50%; display: block; }
+  .sv-hero__title { font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: #fff; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.5px; }
+  .sv-hero__title em { font-style: normal; background: linear-gradient(90deg, #b23d69, #7c6ef5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .sv-hero__sub { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto 2.5rem; line-height: 1.7; }
+  .sv-hero__nav { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary-glow { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2rem; background: linear-gradient(135deg, #11184c, #2d1b5e); color: #fff; border-radius: 8px; font-family: var(--font-heading); font-weight: 700; font-size: 0.95rem; transition: all 0.3s; box-shadow: 0 8px 25px rgba(17,24,76,0.3); text-decoration: none; }
+  .btn-primary-glow:hover { transform: translateY(-3px); box-shadow: 0 14px 35px rgba(17,24,76,0.45); color: #fff; }
+  .btn-ghost { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2rem; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.8); border-radius: 8px; font-family: var(--font-heading); font-weight: 600; font-size: 0.95rem; transition: all 0.3s; text-decoration: none; }
+  .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); color: #fff; }
+  
+  .reader-content { padding: 5rem 0; background: #fff; }
+  .reader-container { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+  .reader-content h2 { font-size: 2rem; color: var(--ind); margin: 3rem 0 1.2rem; line-height: 1.3; font-family: var(--font-heading); letter-spacing: -0.5px; }
+  .reader-content h2:first-child { margin-top: 0; }
+  .reader-content h3 { font-size: 1.3rem; color: var(--ind); margin: 2rem 0 1rem; }
+  .reader-content p { font-size: 1.15rem; color: var(--mut); line-height: 1.8; margin-bottom: 1.5rem; }
+  .reader-content strong { color: var(--ind); font-weight: 700; }
+  .content-block { margin-bottom: 2rem; }
+  .reader-divider { border: 0; height: 1px; background: rgba(0,0,0,0.08); margin: 4rem 0; }
+  
+  .reader-list { list-style: none; padding: 0; margin: 0 0 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
+  .reader-list li { font-size: 1.15rem; color: var(--mut); line-height: 1.7; padding-left: 1.5rem; position: relative; }
+  .reader-list li::before { content: ''; position: absolute; left: 0; top: 0.6rem; width: 6px; height: 6px; border-radius: 50%; background: var(--rose); }
+  
+  .reader-steps { list-style: none; padding: 0; margin: 0 0 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; counter-reset: reader-step; }
+  .reader-steps li { font-size: 1.15rem; color: var(--mut); line-height: 1.7; position: relative; padding-left: 4rem; }
+  .reader-steps li::before { counter-increment: reader-step; content: "0" counter(reader-step); position: absolute; left: 0; top: -0.1rem; font-family: var(--font-heading); font-weight: 800; color: var(--rose); font-size: 1.2rem; opacity: 0.8; }
+
+  .reader-cta { padding: 6rem 0; background: var(--off); text-align: center; }
+  .reader-cta h2 { font-size: 2.2rem; color: var(--ind); margin-bottom: 1rem; font-family: var(--font-heading); letter-spacing: -0.5px; }
+  .reader-cta p { font-size: 1.15rem; color: var(--mut); max-width: 600px; margin: 0 auto; line-height: 1.7; }
+</style>

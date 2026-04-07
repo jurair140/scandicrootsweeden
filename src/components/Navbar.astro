@@ -35,40 +35,84 @@ const toggleUrl = isDe
       <span class="logo-red">Scandic</span><span class="logo-blue">Roots</span>
     </a>
 
-    <nav class="nav-links">
-      <a href={isDe ? "/de/" : "/"} class={currentPath === "" ? "active" : ""}
-        >{t("nav.home")}</a
-      >
-      <a
-        href={isDe ? "/de/about" : "/about"}
-        class={currentPath === "about" ? "active" : ""}
-        >{isDe ? "Über uns" : "About"}</a
-      >
-      <a
-        href={isDe ? "/de/services" : "/services"}
-        class={currentPath === "services" ? "active" : ""}
-        >{t("nav.services")}</a
-      >
-      <a
-        href={isDe ? "/de/contact" : "/contact"}
-        class={currentPath === "contact" ? "active" : ""}>{t("nav.contact")}</a
-      >
+    <!-- Desktop Navigation -->
+    <nav class="nav-links desktop-only">
+      <a href={isDe ? "/de/" : "/"} class={currentPath === "" ? "active" : ""}>{t("nav.home")}</a>
+      <a href={isDe ? "/de/about" : "/about"} class={currentPath === "about" ? "active" : ""}>{isDe ? "Über uns" : "About"}</a>
+      
+      <!-- Services Dropdown (Desktop) -->
+      <div class="dropdown">
+        <a href={isDe ? "/de/services" : "/services"} class={currentPath === "services" || currentPath.startsWith("services/") ? "active nav-link" : "nav-link"}>
+          {t("nav.services")}
+          <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href={isDe ? "/de/services/opportunity-card" : "/services/opportunity-card"}>{isDe ? "Chancenkarte" : "Opportunity Card"}</a>
+          <a href={isDe ? "/de/services/nurses" : "/services/nurses"}>{isDe ? "Pflegekräfte" : "Nurses"}</a>
+          <a href={isDe ? "/de/services/ausbildung" : "/services/ausbildung"}>Ausbildung</a>
+          <a href={isDe ? "/de/services/skilled-workers" : "/services/skilled-workers"}>{isDe ? "Fachkräfte" : "Skilled Workers"}</a>
+        </div>
+      </div>
+      
+      <a href={isDe ? "/de/contact" : "/contact"} class={currentPath === "contact" ? "active" : ""}>{t("nav.contact")}</a>
     </nav>
 
-    <div class="nav-cta">
-      <a
-        href={isDe ? "/de/contact" : "/contact"}
-        class="btn btn-outline"
-        style="border-radius: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;"
-        >{t("nav.contactBtn")}</a
-      >
+    <div class="nav-cta desktop-only">
+      <a href={isDe ? "/de/contact" : "/contact"} class="btn btn-outline" style="border-radius: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;">{t("nav.contactBtn")}</a>
     </div>
 
-    <button class="mobile-toggle" aria-label="Toggle Menu">
+    <!-- Mobile Menu Open Toggle -->
+    <button class="mobile-toggle" aria-label="Open Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
+
+<!-- Mobile Off-Canvas Drawer Architecture -->
+<div class="mobile-overlay"></div>
+<div class="mobile-drawer">
+  <div class="mobile-drawer-header">
+    <a href="/" class="logo">
+      <span class="logo-red">Scandic</span><span class="logo-blue">Roots</span>
+    </a>
+    <button class="mobile-close" aria-label="Close Menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+  
+  <div class="mobile-drawer-body">
+    <a href={isDe ? "/de/" : "/"} class={currentPath === "" ? "active" : ""}>{t("nav.home")}</a>
+    <a href={isDe ? "/de/about" : "/about"} class={currentPath === "about" ? "active" : ""}>{isDe ? "Über uns" : "About"}</a>
+    
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-toggle" id="services-accordion-btn">
+        {t("nav.services")} 
+        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+      </button>
+      <div class="mobile-accordion-content" id="services-accordion-content">
+        <a href={isDe ? "/de/services/opportunity-card" : "/services/opportunity-card"}>{isDe ? "Chancenkarte" : "Opportunity Card"}</a>
+        <a href={isDe ? "/de/services/nurses" : "/services/nurses"}>{isDe ? "Pflegekräfte" : "Nurses"}</a>
+        <a href={isDe ? "/de/services/ausbildung" : "/services/ausbildung"}>Ausbildung</a>
+        <a href={isDe ? "/de/services/skilled-workers" : "/services/skilled-workers"}>{isDe ? "Fachkräfte" : "Skilled Workers"}</a>
+        <a href={isDe ? "/de/services" : "/services"} class="view-all-services">{isDe ? "Alle Leistungen ansehen" : "View All Services"} <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    
+    <a href={isDe ? "/de/contact" : "/contact"} class={currentPath === "contact" ? "active" : ""}>{t("nav.contact")}</a>
+  </div>
+
+  <div class="mobile-drawer-footer">
+    <a href={toggleUrl} class="mobile-lang-btn">
+      <div class="lang-icon-wrapper">
+        <i class="fa-solid fa-globe"></i>
+      </div>
+      <span>{isDe ? "Switch to English" : "Auf Deutsch wechseln"}</span>
+    </a>
+    <a href={isDe ? "/de/contact" : "/contact"} class="btn btn-primary mobile-cta">
+      {t("nav.contactBtn")}
+    </a>
+  </div>
+</div>
 
 <style>
   .topbar {
@@ -86,20 +130,17 @@ const toggleUrl = isDe
     display: flex;
     gap: 1.5rem;
   }
-
   .lang-toggle-wrapper {
     margin-left: 1rem;
     padding-left: 1rem;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
   }
-
   .lang-toggle {
     color: #ffffff;
     font-weight: 600;
     text-decoration: none;
     transition: color 0.2s;
   }
-
   .lang-toggle:hover {
     color: var(--color-accent);
   }
@@ -111,7 +152,7 @@ const toggleUrl = isDe
     width: 100%;
     background: #ffffff;
     z-index: 1000;
-    border-bottom: 2px solid #f0f4f8; /* subtle border */
+    border-bottom: 2px solid #f0f4f8;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* very soft shadow */
     transition: all var(--transition-normal);
   }
@@ -129,32 +170,75 @@ const toggleUrl = isDe
     font-size: 1.8rem;
     letter-spacing: -0.5px;
     text-transform: uppercase;
+    text-decoration: none;
   }
-
   .logo-red {
     color: #e53e3e; /* Reference red */
   }
-
   .logo-blue {
     color: var(--color-primary); /* Deep Indigo */
   }
 
-  .nav-links {
+  /* Desktop Nav */
+  .desktop-only {
     display: flex;
-    gap: 2rem;
   }
 
+  .nav-links {
+    gap: 2rem;
+  }
   .nav-links a {
     font-size: 0.95rem;
     font-weight: 500;
     color: var(--color-text-main);
     position: relative;
     padding: 0.5rem 0;
+    text-decoration: none;
+    transition: color 0.2s ease;
   }
-
   .nav-links a:hover,
   .nav-links a.active {
     color: var(--color-accent);
+  }
+
+  /* Dropdown Styles Desktop */
+  .dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #f0f4f8;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .dropdown-menu a {
+    display: block;
+    padding: 0.8rem 1.5rem !important;
+    font-size: 0.95rem;
+    color: var(--color-text-main) !important;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+  }
+  .dropdown-menu a:hover {
+    background: #f7f9fa;
+    color: var(--color-accent) !important;
   }
 
   .mobile-toggle {
@@ -163,93 +247,295 @@ const toggleUrl = isDe
     border: none;
     cursor: pointer;
     flex-direction: column;
-    gap: 5px;
-    z-index: 1100;
+    gap: 6px;
+    z-index: 1001; /* Above normal navbar */
+    padding: 5px;
   }
-
   .mobile-toggle span {
     display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-text-main);
+    width: 28px;
+    height: 2px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
     transition: all 0.3s;
   }
 
-  /* Mobile Active State */
-  .mobile-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 6px);
+  /* Mobile Drawer Initial state (Hidden on Desktop) */
+  .mobile-overlay {
+    display: none;
   }
-  .mobile-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .mobile-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -6px);
+  .mobile-drawer {
+    display: none;
   }
 
+  /* --- Mobile Optimization --- */
   @media (max-width: 992px) {
-    header.navbar .nav-links,
-    header.navbar .nav-cta,
+    .desktop-only {
+      display: none !important;
+    }
     .topbar {
       display: none !important;
     }
+    .mobile-toggle {
+      display: flex;
+    }
 
-    header.navbar .nav-links.active {
-      display: flex !important;
+    /* Mobile Drawer Architecture */
+    .mobile-overlay {
+      display: block;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100vh;
-      background: white;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1050;
-      gap: 2.5rem;
-      animation: fadeIn 0.3s ease forwards;
+      background: rgba(17, 24, 76, 0.6); /* Dark indigo dim */
+      backdrop-filter: blur(5px);
+      z-index: 1040;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+    .mobile-overlay.active {
+      opacity: 1;
+      visibility: visible;
     }
 
-    header.navbar .nav-links.active a {
+    .mobile-drawer {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 85%;
+      max-width: 420px;
+      height: 100vh;
+      background: #ffffff;
+      z-index: 1050;
+      transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+      box-shadow: -10px 0 40px rgba(0,0,0,0.15);
+      overflow-y: auto;
+    }
+    .mobile-drawer.active {
+      right: 0;
+    }
+
+    /* Header inside Drawer */
+    .mobile-drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .mobile-close {
+      background: transparent;
+      border: none;
       font-size: 1.8rem;
+      color: var(--color-text-main);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+    }
+    .mobile-close:hover {
+      background: #f1f5f9;
+      color: var(--color-accent);
+    }
+
+    /* Drawer Body (Links) */
+    .mobile-drawer-body {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      flex-grow: 1;
+    }
+    .mobile-drawer-body > a, 
+    .mobile-accordion-toggle {
+      font-family: var(--font-heading);
+      font-size: 1.8rem; /* Premium typography */
       font-weight: 700;
       color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      cursor: pointer;
+    }
+    .mobile-drawer-body > a.active {
+      color: var(--color-accent);
+    }
+    .mobile-drawer-body > a:hover,
+    .mobile-accordion-toggle:hover {
+      color: var(--color-accent);
     }
 
-    .mobile-toggle {
-      display: flex !important;
+    /* Accordion for Services */
+    .mobile-accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      padding-top: 0;
+      margin-left: 1rem;
+      border-left: 2px solid #f1f5f9;
     }
-  }
+    .mobile-accordion-content.open {
+      max-height: 500px;
+      opacity: 1;
+      padding-top: 1.5rem;
+      margin-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .accordion-icon {
+      font-size: 1.2rem;
+      transition: transform 0.4s ease;
+      color: var(--color-text-muted);
+    }
+    .accordion-icon.open {
+      transform: rotate(180deg);
+      color: var(--color-accent);
+    }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    .mobile-accordion-content a {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      padding-left: 1.5rem;
+      transition: color 0.3s ease;
+      display: block;
+    }
+    .mobile-accordion-content a:hover {
+      color: var(--color-primary);
+    }
+    .mobile-accordion-content .view-all-services {
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Drawer Footer (Buttons) */
+    .mobile-drawer-footer {
+      padding: 2rem;
+      background: #f8fafc; /* subtle separation */
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .mobile-lang-btn {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 0.8rem;
+      text-decoration: none;
+      color: var(--color-text-main);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+    .lang-icon-wrapper {
+      width: 40px;
+      height: 40px;
+      background: #f1f5f9;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      color: var(--color-primary);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    .mobile-lang-btn:hover {
+      border-color: var(--color-primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .mobile-lang-btn:hover .lang-icon-wrapper {
+      background: var(--color-primary);
+      color: #ffffff;
+    }
+
+    .mobile-cta {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      justify-content: center;
+    }
   }
 </style>
 
 <script>
   function initNav() {
-    const toggle = document.querySelector('.mobile-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const mobileToggle = document.querySelector(".mobile-toggle");
+    const mobileClose = document.querySelector(".mobile-close");
+    const mobileDrawer = document.querySelector(".mobile-drawer");
+    const mobileOverlay = document.querySelector(".mobile-overlay");
+    const accordionToggle = document.querySelector("#services-accordion-btn");
+    const accordionContent = document.querySelector("#services-accordion-content");
+    const accordionIcon = document.querySelector(".accordion-icon");
 
-    if (toggle && navLinks) {
-      toggle.addEventListener('click', () => {
-        toggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        // Prevent body scroll when menu is open
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-      });
+    // Drawer Open/Close Logic
+    function openDrawer() {
+      if (mobileDrawer && mobileOverlay) {
+        mobileDrawer.classList.add("active");
+        mobileOverlay.classList.add("active");
+        document.body.style.overflow = "hidden"; // Prevent background scroll
+      }
+    }
 
-      // Close menu when a link is clicked
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          toggle.classList.remove('active');
-          navLinks.classList.remove('active');
-          document.body.style.overflow = '';
-        });
+    function closeDrawer() {
+      if (mobileDrawer && mobileOverlay) {
+        mobileDrawer.classList.remove("active");
+        mobileOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    }
+
+    if (mobileToggle) mobileToggle.addEventListener("click", openDrawer);
+    if (mobileClose) mobileClose.addEventListener("click", closeDrawer);
+    if (mobileOverlay) mobileOverlay.addEventListener("click", closeDrawer);
+
+    // Accordion Logic
+    if (accordionToggle && accordionContent && accordionIcon) {
+      // Clean up previous event listeners if initialized multiple times by Astro view transitions
+      const newToggle = accordionToggle.cloneNode(true) as HTMLElement;
+      if (accordionToggle.parentNode) {
+         accordionToggle.parentNode.replaceChild(newToggle, accordionToggle);
+      }
+      
+      newToggle.addEventListener("click", () => {
+        accordionContent.classList.toggle("open");
+        const newIcon = newToggle.querySelector(".accordion-icon");
+        if(newIcon) {
+           newIcon.classList.toggle("open");
+        }
       });
     }
   }
 
+  // Run on first load
   initNav();
-  document.addEventListener('astro:page-load', initNav);
+  // Run on subsequent page changes in Astro
+  document.addEventListener("astro:page-load", initNav);
 </script>

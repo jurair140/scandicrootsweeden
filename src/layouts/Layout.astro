@@ -1,17 +1,22 @@
 ---
-import '../styles/global.css';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import { getLangFromUrl } from '../i18n/utils';
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import CookieConsent from "../components/CookieConsent.astro";
+import { getLangFromUrl } from "../i18n/utils";
 
 interface Props {
 	title: string;
 	description?: string;
 }
 
-const { title, description = "Scandic Roots provides end-to-end international recruitment services, connecting European employers with global talent." } = Astro.props;
+const {
+	title,
+	description = "Scandic Roots provides end-to-end international recruitment services, connecting European employers with global talent.",
+} = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 ---
+
 <!doctype html>
 <html lang={lang}>
 	<head>
@@ -21,7 +26,9 @@ const lang = getLangFromUrl(Astro.url);
 		<meta name="generator" content={Astro.generator} />
 		<title>{title} | Scandic Roots</title>
 		<meta name="description" content={description} />
-		<script src="https://kit.fontawesome.com/094a872d8c.js" crossorigin="anonymous"></script>
+		<script
+			src="https://kit.fontawesome.com/094a872d8c.js"
+			crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<Navbar />
@@ -29,5 +36,6 @@ const lang = getLangFromUrl(Astro.url);
 			<slot />
 		</main>
 		<Footer />
+		<CookieConsent />
 	</body>
 </html>

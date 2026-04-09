@@ -1,543 +1,1800 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { getLangFromUrl } from '../../i18n/utils';
+import Layout from "../../layouts/Layout.astro";
+import { getLangFromUrl } from "../../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<Layout title="Über uns" description="Erfahren Sie mehr über Scandic Roots — unsere Mission, Indien-Allianz und 5-stufiger Auswahlprozess.">
-
-<!-- HERO — SPLIT SCREEN -->
-<section class="ab-hero">
-  <div class="ab-hero__left">
-    <div class="ab-hero__left-inner">
-      <div class="ab-hero__eyebrow">
-        <span class="dot"></span>
-        <p>Gegründet in Schweden. Verwurzelt in Indien. Deutschland-Fokussiert.</p>
+<Layout
+  title="Über uns"
+  description="Erfahren Sie mehr über Scandic Roots, unsere Mission, Indien-Allianz und den 5-stufigen Auswahlprozess."
+>
+  <!-- HERO — SPLIT SCREEN -->
+  <section class="ab-hero">
+    <div class="ab-hero__left">
+      <div class="ab-hero__left-inner">
+        <div class="ab-hero__eyebrow">
+          <span class="dot"></span>
+          <p>
+            Gegründet in Schweden. Verwurzelt in Indien. Deutschland Fokussiert.
+          </p>
+        </div>
+        <h1 class="ab-hero__title">
+          Wir verbinden<br /><em>Zwei Welten.</em>
+        </h1>
+        <p class="ab-hero__sub">
+          Scandic Roots wurde gegründet, um Deutschlands wachsenden
+          Fachkräftemangel durch eine strukturierte, ethische und
+          ergebnisorientierte Brücke zwischen indischen Arbeitskräften und
+          deutschen Arbeitgebern zu lösen.
+        </p>
+        <div class="ab-hero__btns">
+          <a href="/de/services" class="btn-glow"
+            >Unsere Programme <i class="fa-solid fa-arrow-right"></i></a
+          >
+          <a href="/de/contact" class="btn-ghost">Kontaktieren Sie uns</a>
+        </div>
       </div>
-      <h1 class="ab-hero__title">
-        Wir verbinden<br /><em>Zwei Welten.</em>
-      </h1>
-      <p class="ab-hero__sub">Scandic Roots wurde gegründet, um Deutschlands wachsenden Fachkräftemangel durch eine strukturierte, ethische und ergebnisorientierte Brücke zwischen indischen Arbeitskräften und deutschen Arbeitgebern zu lösen.</p>
-      <div class="ab-hero__btns">
-        <a href="/de/services" class="btn-glow">Unsere Programme <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="/de/contact" class="btn-ghost">Kontaktieren Sie uns</a>
+    </div>
+    <div class="ab-hero__right">
+      <div class="ab-hero__map-bg"><div class="ab-hero__glow"></div></div>
+      <div class="ab-stat-grid">
+        <div class="ab-stat">
+          <i class="fa-solid fa-passport"></i><span class="ab-stat__num">4</span
+          ><span class="ab-stat__label">Kernprogramme</span>
+        </div>
+        <div class="ab-stat ab-stat--accent">
+          <i class="fa-solid fa-plane-departure"></i><span class="ab-stat__flag"
+            >🇮🇳 to 🇩🇪</span
+          ><span class="ab-stat__label">Indien nach Deutschland</span>
+        </div>
+        <div class="ab-stat">
+          <i class="fa-solid fa-filter"></i><span class="ab-stat__num">5</span
+          ><span class="ab-stat__label">Stufen Screening</span>
+        </div>
+        <div class="ab-stat">
+          <i class="fa-solid fa-building-user"></i><span class="ab-stat__num"
+            >15+</span
+          ><span class="ab-stat__label">Branchen</span>
+        </div>
+      </div>
+      <div class="ab-tri-flags">
+        <div class="ab-flag-node">
+          <span>🇸🇪</span><small>Hauptsitz Schweden</small>
+        </div>
+        <div class="ab-flag-node">
+          <span>🇮🇳</span><small>Indien Netzwerk</small>
+        </div>
+        <div class="ab-flag-node">
+          <span>🇩🇪</span><small>Deutschland Fokus</small>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="ab-hero__right">
-    <div class="ab-hero__map-bg"><div class="ab-hero__glow"></div></div>
-    <div class="ab-stat-grid">
-      <div class="ab-stat"><i class="fa-solid fa-passport"></i><span class="ab-stat__num">4</span><span class="ab-stat__label">Kernprogramme</span></div>
-      <div class="ab-stat ab-stat--accent"><i class="fa-solid fa-plane-departure"></i><span class="ab-stat__flag">🇮🇳 → 🇩🇪</span><span class="ab-stat__label">Indien nach Deutschland</span></div>
-      <div class="ab-stat"><i class="fa-solid fa-filter"></i><span class="ab-stat__num">5</span><span class="ab-stat__label">Stufen Screening</span></div>
-      <div class="ab-stat"><i class="fa-solid fa-building-user"></i><span class="ab-stat__num">15+</span><span class="ab-stat__label">Branchen</span></div>
-    </div>
-    <div class="ab-tri-flags">
-      <div class="ab-flag-node"><span>🇸🇪</span><small>Hauptsitz Schweden</small></div>
-      <div class="ab-flag-node"><span>🇮🇳</span><small>Indien-Netzwerk</small></div>
-      <div class="ab-flag-node"><span>🇩🇪</span><small>Deutschland-Fokus</small></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- WER WIR SIND -->
-<section class="who-we-are">
-  <div class="container">
-    <div class="wwa__inner">
-      <aside class="wwa__sidebar">
-        <span class="section-badge"><i class="fa-solid fa-book-open"></i> Unsere Geschichte</span>
-        <h2>Eine Tri-Länder <span class="text-gradient">Workforce-Brücke</span></h2>
-        <div class="wwa__sidebar-cards">
-          <div class="wwa__country-card">
-            <div class="wwa__country-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-            <h4>Hauptsitz in Schweden</h4>
-            <p>Mit skandinavischer Präzision und Zugang zu nordischen und deutschen Arbeitsmärkten tätig.</p>
+  <!-- WER WIR SIND -->
+  <section class="who-we-are">
+    <div class="container">
+      <div class="wwa__inner">
+        <aside class="wwa__sidebar">
+          <span class="section-badge"
+            ><i class="fa-solid fa-book-open"></i> Unsere Geschichte</span
+          >
+          <h2>
+            Eine Tri-Länder <span class="text-gradient">Workforce-Brücke</span>
+          </h2>
+          <div class="wwa__sidebar-cards">
+            <div class="wwa__country-card">
+              <div class="wwa__country-icon">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <h4>Hauptsitz in Schweden</h4>
+              <p>
+                Mit skandinavischer Präzision und Zugang zu nordischen und
+                deutschen Arbeitsmärkten tätig.
+              </p>
+            </div>
+            <div class="wwa__country-card wwa__country-card--featured">
+              <div class="wwa__country-icon">
+                <i class="fa-solid fa-building-flag"></i>
+              </div>
+              <h4>Deutschland Fokus</h4>
+              <p>
+                Tiefes Fachwissen in deutschem Arbeitsrecht, Visawegen und
+                Personalintegration.
+              </p>
+            </div>
+            <div class="wwa__country-card">
+              <div class="wwa__country-icon">
+                <i class="fa-solid fa-handshake-simple"></i>
+              </div>
+              <h4>Indien Talentpartnerschaft</h4>
+              <p>
+                Institutionelle Partnerschaften mit Zugang zu einem breiten,
+                qualifizierten indischen Kandidatenpool.
+              </p>
+            </div>
           </div>
-          <div class="wwa__country-card wwa__country-card--featured">
-            <div class="wwa__country-icon"><i class="fa-solid fa-building-flag"></i></div>
-            <h4>Deutschland-Fokus</h4>
-            <p>Tiefes Fachwissen in deutschem Arbeitsrecht, Visawegen und Personalintegration.</p>
+        </aside>
+        <div class="wwa__text">
+          <p class="wwa__text-large">
+            Scandic Roots wurde mit einer einzigen klaren Vision gegründet,
+            Deutschlands sich beschleunigenden Fachkräftemangel durch einen
+            prozessorientierten, ethischen und zutiefst persönlichen Ansatz zu
+            lösen.
+          </p>
+
+          <div
+            class="wwa__eu-notice"
+            style="background: rgba(178, 61, 105, 0.05); border: 1px solid rgba(178, 61, 105, 0.1); border-left: 4px solid var(--rose); padding: 1.5rem; border-radius: 8px; margin: 2rem 0;"
+          >
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+              <i
+                class="fa-solid fa-building-shield"
+                style="color: var(--rose); font-size: 1.5rem; margin-top: 0.1rem;"
+              ></i>
+              <div>
+                <h4
+                  style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--indigo);"
+                >
+                  EU-Etablierte Operationen
+                </h4>
+                <p
+                  style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--muted);"
+                >
+                  Scandic Roots ist ein <strong
+                    >in Slowenien registriertes</strong
+                  > Unternehmen für Unternehmensberatung und die Vermittlung qualifizierter
+                  Arbeitskräfte. Wir widmen uns der Unterstützung europäischer Unternehmen
+                  mit vollständig konformen Personallösungen, spezialisiert auf den
+                  Schiffbau, das Baugewerbe und den Transport &amp; Logistiksektor.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="wwa__country-card">
-            <div class="wwa__country-icon"><i class="fa-solid fa-handshake-simple"></i></div>
-            <h4>Indien-Talentpartnerschaft</h4>
-            <p>Institutionelle Partnerschaften mit Zugang zu einem breiten, qualifizierten indischen Kandidatenpool.</p>
+
+          <p>
+            Mit Hauptsitz in Schweden und tiefen Wurzeln in Indien und
+            Deutschland bringen wir eine einzigartige
+            Mehrechtsprechungs-Perspektive ein. Unser Team versteht die Nuancen
+            des deutschen Arbeitsrechts, die Komplexität indischer
+            Bildungsnachweise und die kulturelle Integration für langfristigen
+            Erfolg.
+          </p>
+          <p>
+            Wir bieten vier Wege an: die <strong>Chancenkarte</strong>, <strong
+              >Pflegekräfte Rekrutierung</strong
+            >, <strong>Ausbildungsvermittlung</strong> und <strong
+              >Internationale Fachkräfte Rekrutierung</strong
+            >.
+          </p>
+          <div class="wwa__divider"></div>
+          <div class="wwa__bullets">
+            <div class="wwa__bullet">
+              <i class="fa-solid fa-circle-check"></i><span
+                >Keine versteckten Gebühren, volle Transparenz für Kandidaten.</span>
+            </div>
+            <div class="wwa__bullet">
+              <i class="fa-solid fa-circle-check"></i><span
+                >Vollständige Einhaltung deutscher und EU Recruitingstandards.</span>
+            </div>
+            <div class="wwa__bullet">
+              <i class="fa-solid fa-circle-check"></i><span
+                >Unterstützung nach der Vermittlung bis zur langfristigen
+                Integration.</span>
+            </div>
           </div>
         </div>
-      </aside>
-      <div class="wwa__text">
-        <p class="wwa__text-large">Scandic Roots wurde mit einer einzigen klaren Vision gegründet — Deutschlands sich beschleunigenden Fachkräftemangel durch einen prozessorientierten, ethischen und zutiefst persönlichen Ansatz zu lösen.</p>
-        <p>Mit Hauptsitz in Schweden und tiefen Wurzeln in Indien und Deutschland bringen wir eine einzigartige Mehrechtsprechungs-Perspektive ein. Unser Team versteht die Nuancen des deutschen Arbeitsrechts, die Komplexität indischer Bildungsnachweise und die kulturelle Integration für langfristigen Erfolg.</p>
-        <p>Wir bieten vier Wege an: die <strong>Chancenkarte</strong>, <strong>Pflegekräfte-Rekrutierung</strong>, <strong>Ausbildungsvermittlung</strong> und <strong>Internationale Fachkräfte-Rekrutierung</strong>.</p>
-        <div class="wwa__divider"></div>
-        <div class="wwa__bullets">
-          <div class="wwa__bullet"><i class="fa-solid fa-circle-check"></i><span>Keine versteckten Gebühren — volle Transparenz für Kandidaten.</span></div>
-          <div class="wwa__bullet"><i class="fa-solid fa-circle-check"></i><span>Vollständige Einhaltung deutscher und EU-Recruitingstandards.</span></div>
-          <div class="wwa__bullet"><i class="fa-solid fa-circle-check"></i><span>Unterstützung nach der Vermittlung bis zur langfristigen Integration.</span></div>
-        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- MISSION & WERTE -->
-<section class="values-section">
-  <div class="container">
-    <div class="values-section__header">
-      <span class="section-badge section-badge--light"><i class="fa-solid fa-gem"></i> Was uns antreibt</span>
-      <h2>Mission <span class="text-gradient-light">&amp; Kernwerte</span></h2>
-      <p>Jede Entscheidung wird von diesen Prinzipien geleitet — von der Kandidatensuche bis zur Integration nach der Vermittlung.</p>
+  <!-- MISSION & WERTE -->
+  <section class="values-section">
+    <div class="container">
+      <div class="values-section__header">
+        <span class="section-badge section-badge--light"
+          ><i class="fa-solid fa-gem"></i> Was uns antreibt</span
+        >
+        <h2>
+          Mission <span class="text-gradient-light">&amp; Kernwerte</span>
+        </h2>
+        <p>
+          Jede Entscheidung wird von diesen Prinzipien geleitet, von der
+          Kandidatensuche bis zur Integration nach der Vermittlung.
+        </p>
+      </div>
+      <div class="values-masonry">
+        <div class="val-card val-card--big">
+          <div class="val-card__icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Unsere Mission</h3>
+          <p>
+            Deutschen Arbeitgebern zuverlässige, professionell geprüfte und
+            sprachlich vorbereitete Kandidaten aus Indien zu vermitteln,
+            während indischen Fachkräften ein strukturierter, ethischer Weg in
+            eine bessere Zukunft in Deutschland eröffnet wird.
+          </p>
+        </div>
+        <div class="val-card">
+          <div class="val-card__icon">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <h3>Präzises Matching</h3>
+          <p>
+            Jeder Kandidat wird auf Fähigkeiten, Sprachkenntnisse, kulturelle
+            Passung und Compliance bewertet.
+          </p>
+        </div>
+        <div class="val-card">
+          <div class="val-card__icon">
+            <i class="fa-solid fa-scale-balanced"></i>
+          </div>
+          <h3>Ethische Rekrutierung</h3>
+          <p>
+            Volle Transparenz. Keine versteckten Gebühren. Keine Abkürzungen bei
+            der Compliance.
+          </p>
+        </div>
+        <div class="val-card val-card--accent">
+          <div class="val-card__icon">
+            <i class="fa-solid fa-earth-europe"></i>
+          </div>
+          <h3>Kulturelle Integration</h3>
+          <p>
+            Wir bereiten Kandidaten nicht nur auf Arbeit, sondern auch auf das
+            Leben in Deutschland vor: Arbeitskultur, europäische Sozialnormen
+            und Alltagsregelungen.
+          </p>
+        </div>
+        <div class="val-card">
+          <div class="val-card__icon">
+            <i class="fa-solid fa-handshake-angle"></i>
+          </div>
+          <h3>Langfristiges Engagement</h3>
+          <p>
+            Wir stoppen nicht bei der Vermittlung. Nachbetreuung und
+            Orientierungsklassen sichern die Retention.
+          </p>
+        </div>
+        <div class="val-card">
+          <div class="val-card__icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3>Arbeitskontinuität</h3>
+          <p>
+            Wir bauen langfristige Talent Pipelines, keine einmaligen
+            Vermittlungen, für nachhaltige Stabilität.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="values-masonry">
-      <div class="val-card val-card--big">
-        <div class="val-card__icon"><i class="fa-solid fa-bullseye"></i></div>
-        <h3>Unsere Mission</h3>
-        <p>Deutschen Arbeitgebern zuverlässige, professionell geprüfte und sprachlich vorbereitete Kandidaten aus Indien zu vermitteln — während indischen Fachkräften ein strukturierter, ethischer Weg in eine bessere Zukunft in Deutschland eröffnet wird.</p>
-      </div>
-      <div class="val-card">
-        <div class="val-card__icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-        <h3>Präzises Matching</h3>
-        <p>Jeder Kandidat wird auf Fähigkeiten, Sprachkenntnisse, kulturelle Passung und Compliance bewertet.</p>
-      </div>
-      <div class="val-card">
-        <div class="val-card__icon"><i class="fa-solid fa-scale-balanced"></i></div>
-        <h3>Ethische Rekrutierung</h3>
-        <p>Volle Transparenz. Keine versteckten Gebühren. Keine Abkürzungen bei der Compliance.</p>
-      </div>
-      <div class="val-card val-card--accent">
-        <div class="val-card__icon"><i class="fa-solid fa-earth-europe"></i></div>
-        <h3>Kulturelle Integration</h3>
-        <p>Wir bereiten Kandidaten nicht nur auf Arbeit, sondern auch auf das Leben in Deutschland vor — Arbeitskultur, europäische Sozialnormen und Alltagsregelungen.</p>
-      </div>
-      <div class="val-card">
-        <div class="val-card__icon"><i class="fa-solid fa-handshake-angle"></i></div>
-        <h3>Langfristiges Engagement</h3>
-        <p>Wir stoppen nicht bei der Vermittlung. Nachbetreuung und Orientierungsklassen sichern die Retention.</p>
-      </div>
-      <div class="val-card">
-        <div class="val-card__icon"><i class="fa-solid fa-chart-line"></i></div>
-        <h3>Arbeitskontinuität</h3>
-        <p>Wir bauen langfristige Talent-Pipelines — keine einmaligen Vermittlungen — für nachhaltige Stabilität.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- VIER PROGRAMME -->
-<section class="programs-section">
-  <div class="container">
-    <div class="programs-section__header">
-      <span class="section-badge"><i class="fa-solid fa-briefcase"></i> Was wir bieten</span>
-      <h2>Unsere vier <span class="text-gradient">Kernprogramme</span></h2>
+  <!-- VIER PROGRAMME -->
+  <section class="programs-section">
+    <div class="container">
+      <div class="programs-section__header">
+        <span class="section-badge"
+          ><i class="fa-solid fa-briefcase"></i> Was wir bieten</span
+        >
+        <h2>Unsere vier <span class="text-gradient">Kernprogramme</span></h2>
+      </div>
+      <div class="prog-tracks">
+        <div class="prog-track">
+          <div class="prog-track__num">01</div>
+          <div class="prog-track__icon-wrap">
+            <i class="fa-solid fa-passport"></i>
+          </div>
+          <h3>Chancenkarte <br /><span>(Opportunity Card)</span></h3>
+          <p>
+            Punktebasierter Aufenthaltstitel für Nicht-EU-Fachkräfte zur
+            Jobsuche in Deutschland, bis zu 12 Monate, ohne vorheriges
+            Jobangebot.
+          </p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Sprachkenntnisbewertung</li>
+            <li>
+              <i class="fa-solid fa-check"></i> Sperrkonto Unterstützung (12.000 €+)
+            </li>
+            <li><i class="fa-solid fa-check"></i> Dokumentenvorbereitung</li>
+            <li>
+              <i class="fa-solid fa-check"></i> Jobsuche-Orientierung nach Ankunft
+            </li>
+          </ul>
+          <a href="/de/services#opportunity"
+            >Mehr erfahren <i class="fa-solid fa-arrow-right"></i></a
+          >
+        </div>
+        <div class="prog-track prog-track--featured">
+          <div class="prog-track__num">02</div>
+          <div class="prog-track__icon-wrap">
+            <i class="fa-solid fa-user-nurse"></i>
+          </div>
+          <h3>
+            Pflegekräfte für das<br /><span>Deutsche Gesundheitssystem</span>
+          </h3>
+          <p>
+            Gut qualifizierte, erfahrene und deutschsprachige (B1 bis B2) indische
+            Pflegekräfte für Krankenhäuser und Reha Einrichtungen in
+            Deutschland.
+          </p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> B1 bis B2 Deutschkenntnisse</li>
+            <li>
+              <i class="fa-solid fa-check"></i> Anerkanntes Diplom/Bachelor in Pflege
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> Unterstützung zur Berufsanerkennung
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> Integrations &amp; Relocation Hilfe
+            </li>
+          </ul>
+          <a href="/de/services#nurses"
+            >Mehr erfahren <i class="fa-solid fa-arrow-right"></i></a
+          >
+        </div>
+        <div class="prog-track">
+          <div class="prog-track__num">03</div>
+          <div class="prog-track__icon-wrap">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3>Ausbildungskandidaten <br /><span>Vermittlung</span></h3>
+          <p>
+            Motivierte indische Kandidaten für Deutschlands duales
+            Ausbildungssystem, vorgeprüft, deutschvorbereitet (A2-B1) und
+            integrationsbereit.
+          </p>
+          <ul>
+            <li>
+              <i class="fa-solid fa-check"></i> Branchenspezifisches Matching
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> August bis September und Februar bis März
+              Aufnahmen
+            </li>
+            <li><i class="fa-solid fa-check"></i> Relocation Unterstützung</li>
+            <li>
+              <i class="fa-solid fa-check"></i> Europäische Sozialorientierung
+            </li>
+          </ul>
+          <a href="/de/services#ausbildung"
+            >Mehr erfahren <i class="fa-solid fa-arrow-right"></i></a
+          >
+        </div>
+        <div class="prog-track">
+          <div class="prog-track__num">04</div>
+          <div class="prog-track__icon-wrap">
+            <i class="fa-solid fa-helmet-safety"></i>
+          </div>
+          <h3>Internationale Fachkräfte <br /><span>Rekrutierung</span></h3>
+          <p>
+            Erfahrene Arbeitskräfte für Deutschlands Schiffbau-,
+            Fleischverarbeitungs- und Industriesektoren, sprachvorbereitet und
+            vorgeprüft.
+          </p>
+          <ul>
+            <li>
+              <i class="fa-solid fa-check"></i> Schiffbau- &amp; Schweißexperten
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> Fleischverarbeitungsprofis
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> Industrie- &amp; Logistikarbeiter
+            </li>
+            <li><i class="fa-solid fa-check"></i> A2 bis B1 Deutschvorbereitung</li>
+          </ul>
+          <a href="/de/services#skilled"
+            >Mehr erfahren <i class="fa-solid fa-arrow-right"></i></a
+          >
+        </div>
+      </div>
     </div>
-    <div class="prog-tracks">
-      <div class="prog-track">
-        <div class="prog-track__num">01</div>
-        <div class="prog-track__icon-wrap"><i class="fa-solid fa-passport"></i></div>
-        <h3>Chancenkarte <br /><span>(Opportunity Card)</span></h3>
-        <p>Punktebasierter Aufenthaltstitel für Nicht-EU-Fachkräfte zur Jobsuche in Deutschland — bis zu 12 Monate, ohne vorheriges Jobangebot.</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> Sprachkenntnisbewertung</li>
-          <li><i class="fa-solid fa-check"></i> Sperrkonto-Unterstützung (12.000 €+)</li>
-          <li><i class="fa-solid fa-check"></i> Dokumentenvorbereitung</li>
-          <li><i class="fa-solid fa-check"></i> Jobsuche-Orientierung nach Ankunft</li>
-        </ul>
-        <a href="/de/services#opportunity">Mehr erfahren <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-      <div class="prog-track prog-track--featured">
-        <div class="prog-track__num">02</div>
-        <div class="prog-track__icon-wrap"><i class="fa-solid fa-user-nurse"></i></div>
-        <h3>Pflegekräfte für das<br /><span>Deutsche Gesundheitssystem</span></h3>
-        <p>Gut qualifizierte, erfahrene und deutschsprachige (B1–B2) indische Pflegekräfte für Krankenhäuser und Reha-Einrichtungen in Deutschland.</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> B1–B2 Deutschkenntnisse</li>
-          <li><i class="fa-solid fa-check"></i> Anerkanntes Diplom/Bachelor in Pflege</li>
-          <li><i class="fa-solid fa-check"></i> Unterstützung zur Berufsanerkennung</li>
-          <li><i class="fa-solid fa-check"></i> Integrations- &amp; Relocation-Hilfe</li>
-        </ul>
-        <a href="/de/services#nurses">Mehr erfahren <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-      <div class="prog-track">
-        <div class="prog-track__num">03</div>
-        <div class="prog-track__icon-wrap"><i class="fa-solid fa-graduation-cap"></i></div>
-        <h3>Ausbildungskandidaten <br /><span>Vermittlung</span></h3>
-        <p>Motivierte indische Kandidaten für Deutschlands duales Ausbildungssystem — vorgeprüft, deutschvorbereitet (A2–B1) und integrationsbereit.</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> Branchenspezifisches Matching</li>
-          <li><i class="fa-solid fa-check"></i> August–September &amp; Februar–März Aufnahmen</li>
-          <li><i class="fa-solid fa-check"></i> Relocation-Unterstützung</li>
-          <li><i class="fa-solid fa-check"></i> Europäische Sozialorientierung</li>
-        </ul>
-        <a href="/de/services#ausbildung">Mehr erfahren <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-      <div class="prog-track">
-        <div class="prog-track__num">04</div>
-        <div class="prog-track__icon-wrap"><i class="fa-solid fa-helmet-safety"></i></div>
-        <h3>Internationale Fachkräfte <br /><span>Rekrutierung</span></h3>
-        <p>Erfahrene Arbeitskräfte für Deutschlands Schiffbau-, Fleischverarbeitungs- und Industriesektoren — sprachvorbereitet und vorgeprüft.</p>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> Schiffbau- &amp; Schweißexperten</li>
-          <li><i class="fa-solid fa-check"></i> Fleischverarbeitungsprofis</li>
-          <li><i class="fa-solid fa-check"></i> Industrie- &amp; Logistikarbeiter</li>
-          <li><i class="fa-solid fa-check"></i> A2–B1 Deutschvorbereitung</li>
-        </ul>
-        <a href="/de/services#skilled">Mehr erfahren <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- INDIEN-ALLIANZ TRAINING -->
-<section class="training-alliance">
-  <div class="container">
-    <div class="training-alliance__header">
-      <span class="section-badge section-badge--light"><i class="fa-solid fa-school-flag"></i> Indien-Allianz</span>
-      <h2>Interne <span class="text-gradient-light">Trainingseinrichtung</span></h2>
-      <p>Durch institutionelle Partnerschaften in Indien betreiben wir eine umfassende Vorbereitungseinrichtung — bevor die Kandidaten ins Flugzeug steigen.</p>
+  <!-- INDIEN-ALLIANZ TRAINING -->
+  <section class="training-alliance">
+    <div class="container">
+      <div class="training-alliance__header">
+        <span class="section-badge section-badge--light"
+          ><i class="fa-solid fa-school-flag"></i> Indien Allianz</span
+        >
+        <h2>
+          Interne <span class="text-gradient-light">Trainingseinrichtung</span>
+        </h2>
+        <p>
+          Durch institutionelle Partnerschaften in Indien betreiben wir eine
+          umfassende Vorbereitungseinrichtung, bevor die Kandidaten ins
+          Flugzeug steigen.
+        </p>
+      </div>
+      <div class="ta-cards">
+        <div class="ta-card ta-card--featured">
+          <div class="ta-card__icon"><i class="fa-solid fa-comments"></i></div>
+          <h3>Deutschsprachtraining</h3>
+          <p>
+            Durchgeführt von <strong>muttersprachlichen Deutschen</strong>.
+            Unser Training geht weit über die Grundlagen hinaus. Berufssprache,
+            Branchenvokabular, Alltagskommunikation auf A1 bis B2 Niveau.
+          </p>
+          <div class="ta-levels">
+            <span>A1</span><span>A2</span><span>B1</span><span>B2</span>
+          </div>
+        </div>
+        <div class="ta-card">
+          <div class="ta-card__icon">
+            <i class="fa-solid fa-microphone-lines"></i>
+          </div>
+          <h3>Interview Vorbereitung</h3>
+          <p>
+            Mock-Interviews, die reale deutschen Arbeitgebergspräche simulieren,
+            technische Fragen und professionelle Selbstpräsentation auf
+            Deutsch.
+          </p>
+        </div>
+        <div class="ta-card">
+          <div class="ta-card__icon"><i class="fa-solid fa-gavel"></i></div>
+          <h3>Deutsches Recht &amp; Regelungen</h3>
+          <p>
+            Arbeitsrecht, Sozialversicherung, Arbeitssicherheit und Wohnrecht
+            für Neuankömmlinge in Deutschland.
+          </p>
+        </div>
+        <div class="ta-card">
+          <div class="ta-card__icon">
+            <i class="fa-solid fa-people-arrows"></i>
+          </div>
+          <h3>Europäische Sozialnormen</h3>
+          <p>
+            Orientierungssitzungen zu Sozialetikette, Pünktlichkeit, Hierarchie,
+            ÖPNV und Integration in die deutsche Gemeinschaft.
+          </p>
+        </div>
+        <div class="ta-card">
+          <div class="ta-card__icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Arbeitsplatz Kulturbereitschaft</h3>
+          <p>
+            Deutsche Werte: Effizienz, Präzision, indirekte Kommunikation,
+            professionelle Grenzen, reduzieren Kulturschock und beschleunigen
+            Integration.
+          </p>
+        </div>
+        <div class="ta-card">
+          <div class="ta-card__icon">
+            <i class="fa-solid fa-clipboard-check"></i>
+          </div>
+          <h3>Dokumenten &amp; Compliance Vorbereitung</h3>
+          <p>
+            Geführte Vorbereitung von Zeugnissen, polizeilichen
+            Führungszeugnissen, Sperrkonto Anforderungen und Visumantrag.
+          </p>
+        </div>
+      </div>
+      <div class="ta-pullquote">
+        <i class="fa-solid fa-quote-left"></i>
+        <blockquote>
+          Die meisten Agenturen leiten einfach Lebensläufe weiter.<br /><strong
+            >Wir bauen Kandidaten auf.</strong>
+        </blockquote>
+        <cite>Scandic Roots Trainingsphilosophie</cite>
+      </div>
     </div>
-    <div class="ta-cards">
-      <div class="ta-card ta-card--featured">
-        <div class="ta-card__icon"><i class="fa-solid fa-comments"></i></div>
-        <h3>Deutschsprachtraining</h3>
-        <p>Durchgeführt von <strong>muttersprachlichen Deutschen</strong>. Unser Training geht weit über die Grundlagen hinaus — Berufssprache, Branchenvokabular, Alltagskommunikation auf A1–B2 Niveau.</p>
-        <div class="ta-levels"><span>A1</span><span>A2</span><span>B1</span><span>B2</span></div>
-      </div>
-      <div class="ta-card">
-        <div class="ta-card__icon"><i class="fa-solid fa-microphone-lines"></i></div>
-        <h3>Interview-Vorbereitung</h3>
-        <p>Mock-Interviews, die reale deutschen Arbeitgebergspräche simulieren — technische Fragen und professionelle Selbstpräsentation auf Deutsch.</p>
-      </div>
-      <div class="ta-card">
-        <div class="ta-card__icon"><i class="fa-solid fa-gavel"></i></div>
-        <h3>Deutsches Recht &amp; Regelungen</h3>
-        <p>Arbeitsrecht, Sozialversicherung, Arbeitssicherheit und Wohnrecht für Neuankömmlinge in Deutschland.</p>
-      </div>
-      <div class="ta-card">
-        <div class="ta-card__icon"><i class="fa-solid fa-people-arrows"></i></div>
-        <h3>Europäische Sozialnormen</h3>
-        <p>Orientierungssitzungen zu Sozialetikette, Pünktlichkeit, Hierarchie, ÖPNV und Integration in die deutsche Gemeinschaft.</p>
-      </div>
-      <div class="ta-card">
-        <div class="ta-card__icon"><i class="fa-solid fa-briefcase"></i></div>
-        <h3>Arbeitsplatz-Kulturbereitschaft</h3>
-        <p>Deutsche Werte — Effizienz, Präzision, indirekte Kommunikation, professionelle Grenzen — reduzieren Kulturschock und beschleunigen Integration.</p>
-      </div>
-      <div class="ta-card">
-        <div class="ta-card__icon"><i class="fa-solid fa-clipboard-check"></i></div>
-        <h3>Dokumenten &amp; Compliance-Vorbereitung</h3>
-        <p>Geführte Vorbereitung von Zeugnissen, polizeilichen Führungszeugnissen, Sperrkonto-Anforderungen und Visumantrag.</p>
-      </div>
-    </div>
-    <div class="ta-pullquote">
-      <i class="fa-solid fa-quote-left"></i>
-      <blockquote>Die meisten Agenturen leiten einfach Lebensläufe weiter.<br /><strong>Wir bauen Kandidaten auf.</strong></blockquote>
-      <cite>— Scandic Roots Trainingsphilosophie</cite>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- 5-STUFEN VETTING -->
-<section class="vetting-section">
-  <div class="container">
-    <div class="vetting-section__header">
-      <span class="section-badge"><i class="fa-solid fa-filter"></i> Unser Prüfprozess</span>
-      <h2>Wie wir <span class="text-gradient">Kandidaten auswählen</span></h2>
-      <p>Unser 5-stufiger Screening-Prozess ist einer der strengsten der Branche — jeder Kandidat ist vollständig qualifiziert und compliant.</p>
+  <!-- 5-STUFEN VETTING -->
+  <section class="vetting-section">
+    <div class="container">
+      <div class="vetting-section__header">
+        <span class="section-badge"
+          ><i class="fa-solid fa-filter"></i> Unser Prüfprozess</span
+        >
+        <h2>Wie wir <span class="text-gradient">Kandidaten auswählen</span></h2>
+        <p>
+          Unser 5-stufiger Screening-Prozess ist einer der strengsten der
+          Branche, jeder Kandidat ist vollständig qualifiziert und compliant.
+        </p>
+      </div>
+      <div class="vet-timeline">
+        <div class="vet-item">
+          <div class="vet-item__connector-wrap">
+            <div class="vet-step"><i class="fa-solid fa-language"></i></div><div
+              class="vet-line"
+            >
+            </div>
+          </div>
+          <div class="vet-content vet-content--right">
+            <span class="vet-num">01</span>
+            <h3>Sprachkenntnischeck</h3>
+            <p>
+              Strukturierte Video oder Präsenz Deutsch Interviews. Beurteilung
+              von Sprechflüssigkeit, Verstehen, Schreiben und
+              kontextspezifischem Vokabular. Mindestanforderungen je nach
+              Programmtyp (A1 für Chancenkarte; A2 bis B1 für Ausbildung und
+              Fachkräfte).
+            </p>
+            <div class="vet-tags">
+              <span>Mündliches Interview</span><span>Schriftlicher Test</span
+              ><span>Niveauzertifizierung</span>
+            </div>
+          </div>
+        </div>
+        <div class="vet-item vet-item--flip">
+          <div class="vet-content vet-content--left">
+            <span class="vet-num">02</span>
+            <h3>Dokumentenverifizierung</h3>
+            <p>
+              Alle Bildungs- und Berufsqualifikationen werden geprüft und gegen
+              deutsche und EU-Anerkennungsrahmen abgeglichen.
+              Gleichwertigkeitszuordnungen werden identifiziert.
+            </p>
+            <div class="vet-tags">
+              <span>Abschlussverifizierung</span><span
+                >Berufsqualifikationen</span
+              ><span>Erfahrungsnachweise</span>
+            </div>
+          </div>
+          <div class="vet-item__connector-wrap">
+            <div class="vet-step">
+              <i class="fa-solid fa-file-contract"></i>
+            </div><div class="vet-line"></div>
+          </div>
+        </div>
+        <div class="vet-item">
+          <div class="vet-item__connector-wrap">
+            <div class="vet-step vet-step--dark">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div><div class="vet-line"></div>
+          </div>
+          <div class="vet-content vet-content--right">
+            <span class="vet-num">03</span>
+            <h3>Führungszeugnis</h3>
+            <p>
+              Jeder Kandidat reicht gültige polizeiliche Führungszeugnisse aus
+              allen Wohnsitzländern der letzten 10 Jahre ein.
+              Nulltoleranzpolitik bei disqualifizierenden Einträgen.
+            </p>
+            <div class="vet-tags">
+              <span>Polizeiliche Bestätigung</span><span
+                >Hintergrundprüfung</span
+              ><span>Nulltoleranz</span>
+            </div>
+          </div>
+        </div>
+        <div class="vet-item vet-item--flip">
+          <div class="vet-content vet-content--left">
+            <span class="vet-num">04</span>
+            <h3>Finanzielle Bonitätsprüfung</h3>
+            <p>
+              Bei Chancenkarte-Antragstellern prüfen wir das Sperrkonto mit dem
+              erforderlichen Guthaben (ca. 12.000 €+) und die allgemeine
+              finanzielle Bonität für die Übergangsphase.
+            </p>
+            <div class="vet-tags">
+              <span>Sperrkonto Nachweis</span><span>Finanzaufstellung</span
+              ><span>Eigenversorgungscheck</span>
+            </div>
+          </div>
+          <div class="vet-item__connector-wrap">
+            <div class="vet-step"><i class="fa-solid fa-wallet"></i></div><div
+              class="vet-line"
+            >
+            </div>
+          </div>
+        </div>
+        <div class="vet-item">
+          <div class="vet-item__connector-wrap">
+            <div class="vet-step vet-step--final">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </div>
+          </div>
+          <div class="vet-content vet-content--right">
+            <span class="vet-num">05</span>
+            <h3>Abschließende Compliance Freigabe</h3>
+            <p>
+              Unser Compliance-Team führt eine finale Gesamtprüfung durch:
+              Einwanderungseignung, Punktebewertung (für Chancenkarte),
+              Visaweg Eignung und arbeitgeberspezifische Anforderungen. Nur
+              Kandidaten, die alle fünf Stufen bestehen, werden empfohlen.
+            </p>
+            <div class="vet-tags">
+              <span>Punktesystemprüfung</span><span>Einwanderungsreview</span
+              ><span>Arbeitgeberbereit</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="vet-timeline">
-      <div class="vet-item">
-        <div class="vet-item__connector-wrap"><div class="vet-step"><i class="fa-solid fa-language"></i></div><div class="vet-line"></div></div>
-        <div class="vet-content vet-content--right">
-          <span class="vet-num">01</span>
-          <h3>Sprachkenntnischeck</h3>
-          <p>Strukturierte Video- oder Präsenz-Deutsch-Interviews. Beurteilung von Sprechflüssigkeit, Verstehen, Schreiben und kontextspezifischem Vokabular. Mindestanforderungen je nach Programmtyp (A1 für Chancenkarte; A2–B1 für Ausbildung und Fachkräfte).</p>
-          <div class="vet-tags"><span>Mündliches Interview</span><span>Schriftlicher Test</span><span>Niveauzertifizierung</span></div>
-        </div>
-      </div>
-      <div class="vet-item vet-item--flip">
-        <div class="vet-content vet-content--left">
-          <span class="vet-num">02</span>
-          <h3>Dokumentenverifizierung</h3>
-          <p>Alle Bildungs- und Berufsqualifikationen werden geprüft und gegen deutsche und EU-Anerkennungsrahmen abgeglichen. Gleichwertigkeitszuordnungen werden identifiziert.</p>
-          <div class="vet-tags"><span>Abschlussverifizierung</span><span>Berufsqualifikationen</span><span>Erfahrungsnachweise</span></div>
-        </div>
-        <div class="vet-item__connector-wrap"><div class="vet-step"><i class="fa-solid fa-file-contract"></i></div><div class="vet-line"></div></div>
-      </div>
-      <div class="vet-item">
-        <div class="vet-item__connector-wrap"><div class="vet-step vet-step--dark"><i class="fa-solid fa-shield-halved"></i></div><div class="vet-line"></div></div>
-        <div class="vet-content vet-content--right">
-          <span class="vet-num">03</span>
-          <h3>Führungszeugnis</h3>
-          <p>Jeder Kandidat reicht gültige polizeiliche Führungszeugnisse aus allen Wohnsitzländern der letzten 10 Jahre ein. Nulltoleranzpolitik bei disqualifizierenden Einträgen.</p>
-          <div class="vet-tags"><span>Polizeiliche Bestätigung</span><span>Hintergrundprüfung</span><span>Nulltoleranz</span></div>
-        </div>
-      </div>
-      <div class="vet-item vet-item--flip">
-        <div class="vet-content vet-content--left">
-          <span class="vet-num">04</span>
-          <h3>Finanzielle Bonitätsprüfung</h3>
-          <p>Bei Chancenkarte-Antragstellern prüfen wir das Sperrkonto mit dem erforderlichen Guthaben (ca. 12.000 €+) und die allgemeine finanzielle Bonität für die Übergangsphase.</p>
-          <div class="vet-tags"><span>Sperrkonto-Nachweis</span><span>Finanzaufstellung</span><span>Eigenversorgungscheck</span></div>
-        </div>
-        <div class="vet-item__connector-wrap"><div class="vet-step"><i class="fa-solid fa-wallet"></i></div><div class="vet-line"></div></div>
-      </div>
-      <div class="vet-item">
-        <div class="vet-item__connector-wrap"><div class="vet-step vet-step--final"><i class="fa-solid fa-thumbs-up"></i></div></div>
-        <div class="vet-content vet-content--right">
-          <span class="vet-num">05</span>
-          <h3>Abschließende Compliance-Freigabe</h3>
-          <p>Unser Compliance-Team führt eine finale Gesamtprüfung durch: Einwanderungseignung, Punktebewertung (für Chancenkarte), Visaweg-Eignung und arbeitgeberspezifische Anforderungen. Nur Kandidaten, die alle fünf Stufen bestehen, werden empfohlen.</p>
-          <div class="vet-tags"><span>Punktesystemprüfung</span><span>Einwanderungsreview</span><span>Arbeitgeberbereit</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- TEAM & WARUM WIR -->
-<section class="team-why">
-  <div class="container team-why__grid">
-    <div class="team-panel">
-      <span class="section-badge"><i class="fa-solid fa-users"></i> Unser Team</span>
-      <h2>Die Menschen hinter <span class="text-gradient">Scandic Roots</span></h2>
-      <div class="team-list">
-        <div class="team-item">
-          <div class="team-item__icon"><i class="fa-solid fa-user-tie"></i></div>
-          <div><h4>Management-Team</h4><span class="team-role">Strategische Führung</span><p>Kombinierte Erfahrung in internationalem Recruiting, Einwanderungs-Compliance und Workforce-Strategie.</p></div>
+  <!-- TEAM & WARUM WIR -->
+  <section class="team-why">
+    <div class="container team-why__grid">
+      <div class="team-panel">
+        <span class="section-badge"
+          ><i class="fa-solid fa-users"></i> Unser Team</span
+        >
+        <h2>
+          Die Menschen hinter <span class="text-gradient">Scandic Roots</span>
+        </h2>
+        <div class="team-list">
+          <div class="team-item">
+            <div class="team-item__icon">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div>
+              <h4>Management Team</h4><span class="team-role"
+                >Strategische Führung</span
+              ><p>
+                Kombinierte Erfahrung in internationalem Recruiting,
+                Einwanderungs-Compliance und Workforce Strategie.
+              </p>
+            </div>
+          </div>
+          <div class="team-item">
+            <div class="team-item__icon">
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+            <div>
+              <h4>Sprachtrainer</h4><span class="team-role"
+                >Muttersprachliche Deutschlehrer</span
+              ><p>
+                Muttersprachliche Deutschlehrer, die CEFR-konforme Kurse von A1
+                bis B2 abhalten.
+              </p>
+            </div>
+          </div>
+          <div class="team-item">
+            <div class="team-item__icon">
+              <i class="fa-solid fa-file-shield"></i>
+            </div>
+            <div>
+              <h4>Screening &amp; Compliance</h4><span class="team-role"
+                >Prüf &amp; Rechtsexperten</span
+              ><p>
+                Fachleute für Dokumentenverifizierung, Führungszeugnisse und
+                Einwanderungs-Compliance.
+              </p>
+            </div>
+          </div>
+          <div class="team-item">
+            <div class="team-item__icon">
+              <i class="fa-solid fa-handshake-angle"></i>
+            </div>
+            <div>
+              <h4>Kandidaten-Support</h4><span class="team-role"
+                >Integrationskoordinatoren</span
+              ><p>
+                Supportteam begleitet von der Erstbewertung über Training bis
+                nach der Ankunft in Deutschland.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="team-item">
-          <div class="team-item__icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-          <div><h4>Sprachtrainer</h4><span class="team-role">Muttersprachliche Deutschlehrer</span><p>Muttersprachliche Deutschlehrer, die CEFR-konforme Kurse von A1 bis B2 abhalten.</p></div>
-        </div>
-        <div class="team-item">
-          <div class="team-item__icon"><i class="fa-solid fa-file-shield"></i></div>
-          <div><h4>Screening &amp; Compliance</h4><span class="team-role">Prüf- &amp; Rechtsexperten</span><p>Fachleute für Dokumentenverifizierung, Führungszeugnisse und Einwanderungs-Compliance.</p></div>
-        </div>
-        <div class="team-item">
-          <div class="team-item__icon"><i class="fa-solid fa-handshake-angle"></i></div>
-          <div><h4>Kandidaten-Support</h4><span class="team-role">Integrationskoordinatoren</span><p>Supportteam begleitet von der Erstbewertung über Training bis nach der Ankunft in Deutschland.</p></div>
+      </div>
+      <div class="why-panel">
+        <span class="section-badge section-badge--light"
+          ><i class="fa-solid fa-award"></i> Unser Vorteil</span
+        >
+        <h2>
+          Warum wählen <span class="text-gradient-light"
+            >deutsche Arbeitgeber</span
+          > uns?
+        </h2>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-item__num">01</div><div>
+              <h4>Vorgeprüft, nicht nur gesourct</h4><p>
+                Jeder Kandidat besteht unser 5 Stufen Vetting. Keine
+                verschwendeten Interviews, keine Compliance Überraschungen.
+              </p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item__num">02</div><div>
+              <h4>Sprachbereite Kandidaten</h4><p>
+                Training von muttersprachlichen Deutschen, echte
+                Kommunikationsfähigkeit, nicht nur Zertifikate.
+              </p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item__num">03</div><div>
+              <h4>Indien-Allianz</h4><p>
+                Zugang zu einem breiten, qualifizierten indischen Kandidatenpool
+                durch institutionelle Partnerschaften.
+              </p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item__num">04</div><div>
+              <h4>End to End Management</h4><p>
+                Von Kandidatensuche und Screening bis Visa, Relocation und
+                Integration, wir managen die gesamte Pipeline.
+              </p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item__num">05</div><div>
+              <h4>Mehrere Programmpfade</h4><p>
+                Tiefes Fachwissen in Chancenkarte, Ausbildung, Pflegekräfte und
+                Fachkräften für präzises Matching.
+              </p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item__num">06</div><div>
+              <h4>Schweden basiert, global vernetzt</h4><p>
+                Europäische Glaubwürdigkeit und Rechtssicherheit kombiniert mit
+                Tiefe und Volumen unseres Indien Netzwerks.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="why-panel">
-      <span class="section-badge section-badge--light"><i class="fa-solid fa-award"></i> Unser Vorteil</span>
-      <h2>Warum wählen <span class="text-gradient-light">deutsche Arbeitgeber</span> uns?</h2>
-      <div class="why-list">
-        <div class="why-item"><div class="why-item__num">01</div><div><h4>Vorgeprüft, nicht nur gesourct</h4><p>Jeder Kandidat besteht unser 5-Stufen-Vetting. Keine verschwendeten Interviews, keine Compliance-Überraschungen.</p></div></div>
-        <div class="why-item"><div class="why-item__num">02</div><div><h4>Sprachbereite Kandidaten</h4><p>Training von muttersprachlichen Deutschen — echte Kommunikationsfähigkeit, nicht nur Zertifikate.</p></div></div>
-        <div class="why-item"><div class="why-item__num">03</div><div><h4>Indien-Allianz</h4><p>Zugang zu einem breiten, qualifizierten indischen Kandidatenpool durch institutionelle Partnerschaften.</p></div></div>
-        <div class="why-item"><div class="why-item__num">04</div><div><h4>End-to-End Management</h4><p>Von Kandidatensuche und Screening bis Visa, Relocation und Integration — wir managen die gesamte Pipeline.</p></div></div>
-        <div class="why-item"><div class="why-item__num">05</div><div><h4>Mehrere Programmpfade</h4><p>Tiefes Fachwissen in Chancenkarte, Ausbildung, Pflegekräfte und Fachkräften für präzises Matching.</p></div></div>
-        <div class="why-item"><div class="why-item__num">06</div><div><h4>Schweden-basiert, global vernetzt</h4><p>Europäische Glaubwürdigkeit und Rechtssicherheit kombiniert mit Tiefe und Volumen unseres Indien-Netzwerks.</p></div></div>
+  </section>
+
+  <!-- CTA -->
+  <section class="ab-cta">
+    <div class="ab-cta__bg">
+      <div class="ab-cta__glow-a"></div><div class="ab-cta__glow-b"></div>
+    </div>
+    <div class="container ab-cta__inner">
+      <h2>Bereit für Ihre<br /><em>Partnerschaft?</em></h2>
+      <p>
+        Ob Arbeitgeber auf der Suche nach qualifiziertem Talent oder Kandidat
+        mit dem Wunsch nach einer Karriere in Deutschland, Scandic Roots ist
+        Ihr vertrauenswürdiger Partner.
+      </p>
+      <div class="ab-cta__btns">
+        <a href="/de/contact" class="btn-glow"
+          >Kontaktieren Sie uns <i class="fa-solid fa-arrow-right"></i></a
+        >
+        <a href="/de/services" class="btn-ghost">Leistungen erkunden</a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="ab-cta">
-  <div class="ab-cta__bg"><div class="ab-cta__glow-a"></div><div class="ab-cta__glow-b"></div></div>
-  <div class="container ab-cta__inner">
-    <h2>Bereit für Ihre<br /><em>Partnerschaft?</em></h2>
-    <p>Ob Arbeitgeber auf der Suche nach qualifiziertem Talent oder Kandidat mit dem Wunsch nach einer Karriere in Deutschland — Scandic Roots ist Ihr vertrauenswürdiger Partner.</p>
-    <div class="ab-cta__btns">
-      <a href="/de/contact" class="btn-glow">Kontaktieren Sie uns <i class="fa-solid fa-arrow-right"></i></a>
-      <a href="/de/services" class="btn-ghost">Leistungen erkunden</a>
-    </div>
-  </div>
-</section>
-
+  </section>
 </Layout>
 
 <style>
-:root { --indigo:#11184C;--rose:#B23D69;--violet:#2d1b5e;--indigo-mid:#1a2269;--white:#fff;--off:#f7f8ff;--muted:#4A5568; }
+  :root {
+    --indigo: #11184c;
+    --rose: #b23d69;
+    --violet: #2d1b5e;
+    --indigo-mid: #1a2269;
+    --white: #fff;
+    --off: #f7f8ff;
+    --muted: #4a5568;
+  }
 
-.ab-hero { display:grid;grid-template-columns:1fr 1fr;min-height:100vh; }
-.ab-hero__left { background:#09091a;display:flex;align-items:center;padding:8rem 5rem 6rem 4rem;position:relative;overflow:hidden; }
-.ab-hero__left::before { content:'';position:absolute;top:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(178,61,105,0.25) 0%,transparent 70%);filter:blur(80px);pointer-events:none; }
-.ab-hero__eyebrow { display:flex;align-items:center;gap:0.8rem;margin-bottom:1.5rem; }
-.ab-hero__eyebrow p { color:rgba(255,255,255,0.4);font-size:0.75rem;text-transform:uppercase;letter-spacing:3px;margin:0;font-family:var(--font-heading); }
-.dot { width:4px;height:4px;background:var(--rose);border-radius:50%;display:block;flex-shrink:0; }
-.ab-hero__title { font-size:clamp(3.5rem,6vw,5.5rem);color:#fff;line-height:1.05;margin-bottom:1.5rem;letter-spacing:-1.5px; }
-.ab-hero__title em { font-style:normal;background:linear-gradient(90deg,#B23D69 0%,#7c6ef5 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
-.ab-hero__sub { font-size:1.1rem;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:2.5rem; }
-.ab-hero__btns { display:flex;gap:1rem;flex-wrap:wrap; }
-.btn-glow { display:inline-flex;align-items:center;gap:0.6rem;padding:0.85rem 1.8rem;background:linear-gradient(135deg,var(--indigo),var(--violet));color:#fff;border-radius:8px;font-family:var(--font-heading);font-weight:700;font-size:0.95rem;transition:all 0.3s;box-shadow:0 8px 20px rgba(17,24,76,0.25); }
-.btn-glow:hover { transform:translateY(-3px);box-shadow:0 12px 30px rgba(17,24,76,0.4);color:#fff; }
-.btn-ghost { display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.8rem;border:1px solid rgba(255,255,255,0.2);border-radius:8px;color:rgba(255,255,255,0.7);font-family:var(--font-heading);font-weight:600;font-size:0.95rem;transition:all 0.3s; }
-.btn-ghost:hover { border-color:rgba(255,255,255,0.5);color:#fff; }
-.ab-hero__right { background:var(--off);display:flex;flex-direction:column;justify-content:center;padding:4rem 4rem 4rem 5rem;position:relative;overflow:hidden; }
-.ab-hero__map-bg { position:absolute;inset:0; }
-.ab-hero__glow { position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(17,24,76,0.05) 0%,transparent 70%);top:-100px;right:-100px;filter:blur(80px); }
-.ab-stat-grid { display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2.5rem; }
-.ab-stat { background:#fff;border-radius:16px;padding:1.8rem;border:1px solid rgba(0,0,0,0.05);display:flex;flex-direction:column;gap:0.5rem;transition:all 0.3s; }
-.ab-stat:hover { box-shadow:0 12px 30px rgba(0,0,0,0.07);transform:translateY(-3px); }
-.ab-stat--accent { background:linear-gradient(135deg,var(--indigo),var(--violet)); }
-.ab-stat--accent i,.ab-stat--accent .ab-stat__label { color:rgba(255,255,255,0.6); }
-.ab-stat--accent .ab-stat__num,.ab-stat--accent .ab-stat__flag { color:#fff; }
-.ab-stat i { font-size:1.2rem;color:var(--rose); }
-.ab-stat__num,.ab-stat__flag { font-size:2rem;font-weight:900;font-family:var(--font-heading);color:var(--indigo);line-height:1; }
-.ab-stat__label { font-size:0.78rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-family:var(--font-heading); }
-.ab-tri-flags { display:flex;gap:1rem;justify-content:space-between; }
-.ab-flag-node { display:flex;flex-direction:column;align-items:center;gap:0.5rem;padding:1.2rem;background:#fff;border-radius:12px;border:1px solid rgba(0,0,0,0.05);flex:1;text-align:center;transition:all 0.3s; }
-.ab-flag-node:hover { box-shadow:0 8px 25px rgba(0,0,0,0.07);transform:translateY(-3px); }
-.ab-flag-node span { font-size:2.5rem;display:block; }
-.ab-flag-node small { font-size:0.75rem;color:var(--muted);font-family:var(--font-heading);font-weight:600;text-transform:uppercase;letter-spacing:0.5px; }
+  .ab-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+  }
+  .ab-hero__left {
+    background: #09091a;
+    display: flex;
+    align-items: center;
+    padding: 8rem 5rem 6rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .ab-hero__left::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(
+      circle,
+      rgba(178, 61, 105, 0.25) 0%,
+      transparent 70%
+    );
+    filter: blur(80px);
+    pointer-events: none;
+  }
+  .ab-hero__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .ab-hero__eyebrow p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    font-family: var(--font-heading);
+  }
+  .dot {
+    width: 4px;
+    height: 4px;
+    background: var(--rose);
+    border-radius: 50%;
+    display: block;
+    flex-shrink: 0;
+  }
+  .ab-hero__title {
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    color: #fff;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1.5px;
+  }
+  .ab-hero__title em {
+    font-style: normal;
+    background: linear-gradient(90deg, #b23d69 0%, #7c6ef5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .ab-hero__sub {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+  .ab-hero__btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn-glow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.8rem;
+    background: linear-gradient(135deg, var(--indigo), var(--violet));
+    color: #fff;
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    box-shadow: 0 8px 20px rgba(17, 24, 76, 0.25);
+  }
+  .btn-glow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(17, 24, 76, 0.4);
+    color: #fff;
+  }
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+  }
+  .btn-ghost:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  .ab-hero__right {
+    background: var(--off);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 4rem 4rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .ab-hero__map-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .ab-hero__glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+      circle,
+      rgba(17, 24, 76, 0.05) 0%,
+      transparent 70%
+    );
+    top: -100px;
+    right: -100px;
+    filter: blur(80px);
+  }
+  .ab-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .ab-stat {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.3s;
+  }
+  .ab-stat:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+    transform: translateY(-3px);
+  }
+  .ab-stat--accent {
+    background: linear-gradient(135deg, var(--indigo), var(--violet));
+  }
+  .ab-stat--accent i,
+  .ab-stat--accent .ab-stat__label {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .ab-stat--accent .ab-stat__num,
+  .ab-stat--accent .ab-stat__flag {
+    color: #fff;
+  }
+  .ab-stat i {
+    font-size: 1.2rem;
+    color: var(--rose);
+  }
+  .ab-stat__num,
+  .ab-stat__flag {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    color: var(--indigo);
+    line-height: 1;
+  }
+  .ab-stat__label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    font-family: var(--font-heading);
+  }
+  .ab-tri-flags {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  .ab-flag-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.2rem;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    flex: 1;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  .ab-flag-node:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transform: translateY(-3px);
+  }
+  .ab-flag-node span {
+    font-size: 2.5rem;
+    display: block;
+  }
+  .ab-flag-node small {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
 
-.who-we-are { padding:7rem 0;background:#fff; }
-.wwa__inner { display:grid;grid-template-columns:400px 1fr;gap:6rem;align-items:start; }
-.wwa__sidebar h2 { font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:2rem; }
-.wwa__sidebar-cards { display:flex;flex-direction:column;gap:1.2rem; }
-.wwa__country-card { display:flex;gap:1rem;align-items:flex-start;padding:1.5rem;border-radius:12px;background:var(--off);border:1px solid rgba(0,0,0,0.05);transition:all 0.3s; }
-.wwa__country-card:hover { box-shadow:0 8px 20px rgba(0,0,0,0.05);transform:translateX(4px); }
-.wwa__country-card--featured { background:linear-gradient(135deg,var(--indigo),var(--violet));color:#fff; }
-.wwa__country-card--featured h4,.wwa__country-card--featured p { color:#fff; }
-.wwa__country-card--featured .wwa__country-icon { background:rgba(255,255,255,0.15);color:#fff; }
-.wwa__country-icon { width:44px;height:44px;flex-shrink:0;background:rgba(17,24,76,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--indigo); }
-.wwa__country-card h4 { font-size:0.95rem;margin-bottom:0.3rem; }
-.wwa__country-card p { font-size:0.85rem;margin:0;line-height:1.5; }
-.wwa__text-large { font-size:1.25rem;font-weight:500;color:var(--indigo);line-height:1.65;margin-bottom:1.5rem; }
-.wwa__text p { line-height:1.75;margin-bottom:1.2rem;font-size:1rem; }
-.wwa__divider { height:1px;background:rgba(0,0,0,0.07);margin:2rem 0; }
-.wwa__bullets { display:flex;flex-direction:column;gap:0.8rem; }
-.wwa__bullet { display:flex;align-items:flex-start;gap:0.8rem; }
-.wwa__bullet i { color:var(--rose);font-size:1rem;margin-top:0.15rem;flex-shrink:0; }
-.wwa__bullet span { font-size:0.95rem;color:var(--muted); }
+  .who-we-are {
+    padding: 7rem 0;
+    background: #fff;
+  }
+  .wwa__inner {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+  .wwa__sidebar h2 {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    margin-bottom: 2rem;
+  }
+  .wwa__sidebar-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .wwa__country-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: var(--off);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+  }
+  .wwa__country-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transform: translateX(4px);
+  }
+  .wwa__country-card--featured {
+    background: linear-gradient(135deg, var(--indigo), var(--violet));
+    color: #fff;
+  }
+  .wwa__country-card--featured h4,
+  .wwa__country-card--featured p {
+    color: #fff;
+  }
+  .wwa__country-card--featured .wwa__country-icon {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+  .wwa__country-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    background: rgba(17, 24, 76, 0.08);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--indigo);
+  }
+  .wwa__country-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+  }
+  .wwa__country-card p {
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .wwa__text-large {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--indigo);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+  .wwa__text p {
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+  }
+  .wwa__divider {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.07);
+    margin: 2rem 0;
+  }
+  .wwa__bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .wwa__bullet {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .wwa__bullet i {
+    color: var(--rose);
+    font-size: 1rem;
+    margin-top: 0.15rem;
+    flex-shrink: 0;
+  }
+  .wwa__bullet span {
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
 
-.values-section { background:linear-gradient(135deg,#09091a 0%,#11184C 100%);padding:7rem 0; }
-.values-section__header { text-align:center;margin-bottom:4rem; }
-.values-section__header h2 { font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1rem; }
-.values-section__header p { color:rgba(255,255,255,0.55);font-size:1.05rem;max-width:600px;margin:0 auto; }
-.section-badge--light { background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.1); }
-.text-gradient-light { background:linear-gradient(90deg,#f59e9e 0%,#c084fc 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
-.values-masonry { display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto;gap:1.5rem; }
-.val-card { background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:2.5rem;transition:all 0.3s; }
-.val-card:hover { background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);transform:translateY(-4px); }
-.val-card--big { grid-column:span 2; }
-.val-card--accent { background:linear-gradient(135deg,rgba(178,61,105,0.2),rgba(124,110,245,0.15));border-color:rgba(178,61,105,0.3); }
-.val-card__icon { font-size:2.2rem;color:var(--rose);margin-bottom:1.2rem;display:block; }
-.val-card h3 { font-size:1.1rem;color:#fff;margin-bottom:0.8rem; }
-.val-card p { font-size:0.92rem;color:rgba(255,255,255,0.6);line-height:1.65;margin:0; }
+  .values-section {
+    background: linear-gradient(135deg, #09091a 0%, #11184c 100%);
+    padding: 7rem 0;
+  }
+  .values-section__header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .values-section__header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  .values-section__header p {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .section-badge--light {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .text-gradient-light {
+    background: linear-gradient(90deg, #f59e9e 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .values-masonry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+  }
+  .val-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: all 0.3s;
+  }
+  .val-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-4px);
+  }
+  .val-card--big {
+    grid-column: span 2;
+  }
+  .val-card--accent {
+    background: linear-gradient(
+      135deg,
+      rgba(178, 61, 105, 0.2),
+      rgba(124, 110, 245, 0.15)
+    );
+    border-color: rgba(178, 61, 105, 0.3);
+  }
+  .val-card__icon {
+    font-size: 2.2rem;
+    color: var(--rose);
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+  .val-card h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+  }
+  .val-card p {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.65;
+    margin: 0;
+  }
 
-.programs-section { padding:7rem 0;background:#fff; }
-.programs-section__header { text-align:center;margin-bottom:4rem; }
-.programs-section__header h2 { font-size:clamp(2rem,4vw,3rem); }
-.prog-tracks { display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem; }
-.prog-track { padding:2.5rem 1.8rem;background:var(--off);border-radius:20px;border:1px solid rgba(0,0,0,0.05);display:flex;flex-direction:column;gap:0;transition:all 0.3s;position:relative;overflow:hidden; }
-.prog-track::before { content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--indigo),var(--violet));opacity:0;transition:opacity 0.3s; }
-.prog-track:hover { transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,0.08); }
-.prog-track:hover::before { opacity:1; }
-.prog-track--featured { background:linear-gradient(160deg,var(--indigo) 0%,var(--violet) 100%);border:none;color:#fff; }
-.prog-track--featured::before { opacity:1;background:linear-gradient(90deg,var(--rose),#7c6ef5); }
-.prog-track--featured h3,.prog-track--featured span { color:rgba(255,255,255,0.9); }
-.prog-track--featured .prog-track__num { -webkit-text-stroke-color:rgba(255,255,255,0.08); }
-.prog-track--featured .prog-track__icon-wrap { background:rgba(255,255,255,0.15);color:#fff; }
-.prog-track--featured p,.prog-track--featured li { color:rgba(255,255,255,0.7); }
-.prog-track--featured li i { color:rgba(255,255,255,0.5); }
-.prog-track--featured a { color:rgba(255,255,255,0.9);border-top-color:rgba(255,255,255,0.1); }
-.prog-track--featured a:hover { color:#fff; }
-.prog-track__num { font-size:4rem;font-weight:900;font-family:var(--font-heading);color:transparent;-webkit-text-stroke:2px rgba(17,24,76,0.08);line-height:1;margin-bottom:1rem; }
-.prog-track__icon-wrap { width:52px;height:52px;border-radius:12px;background:rgba(17,24,76,0.08);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--indigo);margin-bottom:1.2rem; }
-.prog-track h3 { font-size:1.05rem;color:var(--indigo);margin-bottom:0.8rem; }
-.prog-track h3 span { font-size:0.9rem;opacity:0.7;display:block; }
-.prog-track > p { font-size:0.9rem;line-height:1.6;margin-bottom:1.5rem;flex:1; }
-.prog-track ul { list-style:none;padding:0;margin-bottom:1.5rem;display:flex;flex-direction:column;gap:0.5rem; }
-.prog-track ul li { font-size:0.85rem;color:var(--muted);display:flex;align-items:center;gap:0.5rem; }
-.prog-track ul li i { color:var(--rose);font-size:0.75rem; }
-.prog-track a { font-size:0.85rem;font-weight:700;color:var(--indigo);font-family:var(--font-heading);padding-top:1rem;border-top:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;gap:0.4rem;transition:gap 0.2s; }
-.prog-track a:hover { gap:0.7rem; }
+  .programs-section {
+    padding: 7rem 0;
+    background: #fff;
+  }
+  .programs-section__header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .programs-section__header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  .prog-tracks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  .prog-track {
+    padding: 2.5rem 1.8rem;
+    background: var(--off);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .prog-track::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--indigo), var(--violet));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .prog-track:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  }
+  .prog-track:hover::before {
+    opacity: 1;
+  }
+  .prog-track--featured {
+    background: linear-gradient(160deg, var(--indigo) 0%, var(--violet) 100%);
+    border: none;
+    color: #fff;
+  }
+  .prog-track--featured::before {
+    opacity: 1;
+    background: linear-gradient(90deg, var(--rose), #7c6ef5);
+  }
+  .prog-track--featured h3,
+  .prog-track--featured span {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .prog-track--featured .prog-track__num {
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.08);
+  }
+  .prog-track--featured .prog-track__icon-wrap {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+  .prog-track--featured p,
+  .prog-track--featured li {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .prog-track--featured li i {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .prog-track--featured a {
+    color: rgba(255, 255, 255, 0.9);
+    border-top-color: rgba(255, 255, 255, 0.1);
+  }
+  .prog-track--featured a:hover {
+    color: #fff;
+  }
+  .prog-track__num {
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(17, 24, 76, 0.08);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .prog-track__icon-wrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(17, 24, 76, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--indigo);
+    margin-bottom: 1.2rem;
+  }
+  .prog-track h3 {
+    font-size: 1.05rem;
+    color: var(--indigo);
+    margin-bottom: 0.8rem;
+  }
+  .prog-track h3 span {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    display: block;
+  }
+  .prog-track > p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+  .prog-track ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .prog-track ul li {
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .prog-track ul li i {
+    color: var(--rose);
+    font-size: 0.75rem;
+  }
+  .prog-track a {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--indigo);
+    font-family: var(--font-heading);
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: gap 0.2s;
+  }
+  .prog-track a:hover {
+    gap: 0.7rem;
+  }
 
-.training-alliance { background:linear-gradient(135deg,#09091a,var(--violet));padding:7rem 0; }
-.training-alliance__header { text-align:center;margin-bottom:4rem; }
-.training-alliance__header h2 { font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1rem; }
-.training-alliance__header p { color:rgba(255,255,255,0.6);max-width:600px;margin:0 auto; }
-.ta-cards { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:4rem; }
-.ta-card { background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:2rem;transition:all 0.3s; }
-.ta-card:hover { background:rgba(255,255,255,0.08);transform:translateY(-4px); }
-.ta-card--featured { grid-column:span 2;background:rgba(178,61,105,0.15);border-color:rgba(178,61,105,0.25); }
-.ta-card__icon { font-size:2rem;color:var(--rose);margin-bottom:1rem;display:block; }
-.ta-card h3 { font-size:1.1rem;color:#fff;margin-bottom:0.8rem; }
-.ta-card p { font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.6;margin:0;margin-bottom:0.8rem; }
-.ta-levels { display:flex;gap:0.5rem;margin-top:1rem; }
-.ta-levels span { padding:0.3rem 0.8rem;background:rgba(255,255,255,0.1);border-radius:100px;color:rgba(255,255,255,0.8);font-size:0.8rem;font-weight:700;font-family:var(--font-heading); }
-.ta-pullquote { text-align:center;padding:3rem;background:rgba(255,255,255,0.04);border-radius:20px;border:1px dashed rgba(255,255,255,0.1); }
-.ta-pullquote i { font-size:3rem;color:var(--rose);opacity:0.4;margin-bottom:1rem;display:block; }
-.ta-pullquote blockquote { font-size:clamp(1.5rem,3vw,2.2rem);font-family:var(--font-heading);color:rgba(255,255,255,0.8);font-style:normal;margin:0 0 1rem;line-height:1.4; }
-.ta-pullquote blockquote strong { color:#fff; }
-.ta-pullquote cite { color:rgba(255,255,255,0.35);font-size:0.85rem; }
+  .training-alliance {
+    background: linear-gradient(135deg, #09091a, var(--violet));
+    padding: 7rem 0;
+  }
+  .training-alliance__header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .training-alliance__header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  .training-alliance__header p {
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .ta-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+  .ta-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s;
+  }
+  .ta-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
+  }
+  .ta-card--featured {
+    grid-column: span 2;
+    background: rgba(178, 61, 105, 0.15);
+    border-color: rgba(178, 61, 105, 0.25);
+  }
+  .ta-card__icon {
+    font-size: 2rem;
+    color: var(--rose);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .ta-card h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+  }
+  .ta-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 0.8rem;
+  }
+  .ta-levels {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .ta-levels span {
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+  }
+  .ta-pullquote {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 20px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+  }
+  .ta-pullquote i {
+    font-size: 3rem;
+    color: var(--rose);
+    opacity: 0.4;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .ta-pullquote blockquote {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-family: var(--font-heading);
+    color: rgba(255, 255, 255, 0.8);
+    font-style: normal;
+    margin: 0 0 1rem;
+    line-height: 1.4;
+  }
+  .ta-pullquote blockquote strong {
+    color: #fff;
+  }
+  .ta-pullquote cite {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.85rem;
+  }
 
-.vetting-section { padding:7rem 0;background:#fff; }
-.vetting-section__header { text-align:center;margin-bottom:5rem; }
-.vetting-section__header h2 { font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem; }
-.vetting-section__header p { color:var(--muted);max-width:600px;margin:0 auto; }
-.vet-timeline { display:flex;flex-direction:column;gap:0;max-width:1000px;margin:0 auto; }
-.vet-item { display:grid;grid-template-columns:80px 1fr;gap:2.5rem;align-items:start; }
-.vet-item--flip { grid-template-columns:1fr 80px; }
-.vet-item__connector-wrap { display:flex;flex-direction:column;align-items:center; }
-.vet-step { width:80px;height:80px;border-radius:50%;background:var(--off);border:3px solid rgba(17,24,76,0.15);display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:var(--indigo);flex-shrink:0;z-index:2;transition:all 0.3s;box-shadow:0 6px 20px rgba(0,0,0,0.06); }
-.vet-step--dark { background:var(--indigo);color:#fff;border-color:var(--indigo); }
-.vet-step--final { background:linear-gradient(135deg,var(--rose),#7c6ef5);color:#fff;border-color:transparent; }
-.vet-item:hover .vet-step { background:var(--indigo);color:#fff;border-color:var(--indigo); }
-.vet-line { width:3px;flex:1;min-height:60px;background:linear-gradient(to bottom,rgba(17,24,76,0.15),rgba(17,24,76,0.03));margin:4px 0; }
-.vet-content { padding:2.5rem;border-radius:20px;background:var(--off);border:1px solid rgba(0,0,0,0.05);margin-bottom:1rem;transition:all 0.3s; }
-.vet-content:hover { box-shadow:0 12px 35px rgba(0,0,0,0.06);transform:translateY(-3px); }
-.vet-num { display:inline-block;font-size:0.7rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--rose);font-family:var(--font-heading);margin-bottom:0.5rem; }
-.vet-content h3 { font-size:1.2rem;color:var(--indigo);margin-bottom:0.8rem; }
-.vet-content p { font-size:0.95rem;line-height:1.7;margin-bottom:1rem; }
-.vet-tags { display:flex;gap:0.5rem;flex-wrap:wrap; }
-.vet-tags span { padding:0.3rem 0.8rem;background:rgba(17,24,76,0.06);border-radius:100px;font-size:0.78rem;font-weight:600;color:var(--indigo);font-family:var(--font-heading); }
+  .vetting-section {
+    padding: 7rem 0;
+    background: #fff;
+  }
+  .vetting-section__header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .vetting-section__header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  .vetting-section__header p {
+    color: var(--muted);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .vet-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .vet-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .vet-item--flip {
+    grid-template-columns: 1fr 80px;
+  }
+  .vet-item__connector-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .vet-step {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--off);
+    border: 3px solid rgba(17, 24, 76, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--indigo);
+    flex-shrink: 0;
+    z-index: 2;
+    transition: all 0.3s;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  }
+  .vet-step--dark {
+    background: var(--indigo);
+    color: #fff;
+    border-color: var(--indigo);
+  }
+  .vet-step--final {
+    background: linear-gradient(135deg, var(--rose), #7c6ef5);
+    color: #fff;
+    border-color: transparent;
+  }
+  .vet-item:hover .vet-step {
+    background: var(--indigo);
+    color: #fff;
+    border-color: var(--indigo);
+  }
+  .vet-line {
+    width: 3px;
+    flex: 1;
+    min-height: 60px;
+    background: linear-gradient(
+      to bottom,
+      rgba(17, 24, 76, 0.15),
+      rgba(17, 24, 76, 0.03)
+    );
+    margin: 4px 0;
+  }
+  .vet-content {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: var(--off);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+  }
+  .vet-content:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    transform: translateY(-3px);
+  }
+  .vet-num {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--rose);
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+  }
+  .vet-content h3 {
+    font-size: 1.2rem;
+    color: var(--indigo);
+    margin-bottom: 0.8rem;
+  }
+  .vet-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .vet-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .vet-tags span {
+    padding: 0.3rem 0.8rem;
+    background: rgba(17, 24, 76, 0.06);
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--indigo);
+    font-family: var(--font-heading);
+  }
 
-.team-why { padding:7rem 0; }
-.team-why__grid { display:grid;grid-template-columns:1fr 1fr;gap:5rem; }
-.team-panel h2,.why-panel h2 { font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:2.5rem; }
-.team-list { display:flex;flex-direction:column;gap:1rem; }
-.team-item { display:flex;gap:1.2rem;align-items:flex-start;padding:1.5rem;border-radius:16px;background:var(--off);border:1px solid rgba(0,0,0,0.04);transition:all 0.3s; }
-.team-item:hover { box-shadow:0 8px 25px rgba(0,0,0,0.06);transform:translateX(6px); }
-.team-item__icon { width:50px;height:50px;flex-shrink:0;background:linear-gradient(135deg,var(--indigo),var(--violet));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#fff; }
-.team-item h4 { font-size:1rem;color:var(--indigo);margin-bottom:0.2rem; }
-.team-role { display:inline-block;font-size:0.75rem;color:var(--rose);font-weight:700;text-transform:uppercase;letter-spacing:1px;font-family:var(--font-heading);margin-bottom:0.5rem; }
-.team-item p { font-size:0.88rem;margin:0;line-height:1.5; }
-.why-panel { background:linear-gradient(135deg,var(--indigo) 0%,var(--violet) 100%);border-radius:24px;padding:3.5rem; }
-.why-panel h2 { color:#fff; }
-.why-list { display:flex;flex-direction:column;gap:1.2rem; }
-.why-item { display:flex;gap:1.2rem;align-items:flex-start;padding:1.2rem 1.5rem;background:rgba(255,255,255,0.06);border-radius:12px;border:1px solid rgba(255,255,255,0.08);transition:all 0.3s; }
-.why-item:hover { background:rgba(255,255,255,0.1); }
-.why-item__num { font-size:1.8rem;font-weight:900;font-family:var(--font-heading);color:rgba(255,255,255,0.12);line-height:1;flex-shrink:0;min-width:40px; }
-.why-item h4 { font-size:0.95rem;color:#fff;margin-bottom:0.3rem; }
-.why-item p { font-size:0.85rem;color:rgba(255,255,255,0.55);margin:0;line-height:1.5; }
+  .team-why {
+    padding: 7rem 0;
+  }
+  .team-why__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+  .team-panel h2,
+  .why-panel h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 2.5rem;
+  }
+  .team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .team-item {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: var(--off);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.3s;
+  }
+  .team-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transform: translateX(6px);
+  }
+  .team-item__icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--indigo), var(--violet));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  .team-item h4 {
+    font-size: 1rem;
+    color: var(--indigo);
+    margin-bottom: 0.2rem;
+  }
+  .team-role {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--rose);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+  }
+  .team-item p {
+    font-size: 0.88rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .why-panel {
+    background: linear-gradient(135deg, var(--indigo) 0%, var(--violet) 100%);
+    border-radius: 24px;
+    padding: 3.5rem;
+  }
+  .why-panel h2 {
+    color: #fff;
+  }
+  .why-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .why-item {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    padding: 1.2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s;
+  }
+  .why-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .why-item__num {
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    color: rgba(255, 255, 255, 0.12);
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 40px;
+  }
+  .why-item h4 {
+    font-size: 0.95rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+  }
+  .why-item p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0;
+    line-height: 1.5;
+  }
 
-.ab-cta { position:relative;text-align:center;padding:8rem 0;overflow:hidden;background:#09091a; }
-.ab-cta__bg { position:absolute;inset:0;pointer-events:none; }
-.ab-cta__glow-a { position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(178,61,105,0.3),transparent 70%);filter:blur(100px);top:-100px;left:-100px; }
-.ab-cta__glow-b { position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(80,68,165,0.3),transparent 70%);filter:blur(100px);bottom:-50px;right:-50px; }
-.ab-cta__inner { position:relative;z-index:2;max-width:700px;margin:0 auto; }
-.ab-cta h2 { font-size:clamp(2.5rem,5vw,4rem);color:#fff;margin-bottom:1.5rem; }
-.ab-cta h2 em { font-style:normal;background:linear-gradient(90deg,#B23D69,#7c6ef5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
-.ab-cta p { color:rgba(255,255,255,0.55);font-size:1.1rem;margin-bottom:2.5rem;line-height:1.65; }
-.ab-cta__btns { display:flex;gap:1rem;justify-content:center;flex-wrap:wrap; }
+  .ab-cta {
+    position: relative;
+    text-align: center;
+    padding: 8rem 0;
+    overflow: hidden;
+    background: #09091a;
+  }
+  .ab-cta__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .ab-cta__glow-a {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba(178, 61, 105, 0.3),
+      transparent 70%
+    );
+    filter: blur(100px);
+    top: -100px;
+    left: -100px;
+  }
+  .ab-cta__glow-b {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+      circle,
+      rgba(80, 68, 165, 0.3),
+      transparent 70%
+    );
+    filter: blur(100px);
+    bottom: -50px;
+    right: -50px;
+  }
+  .ab-cta__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .ab-cta h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+  .ab-cta h2 em {
+    font-style: normal;
+    background: linear-gradient(90deg, #b23d69, #7c6ef5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .ab-cta p {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.65;
+  }
+  .ab-cta__btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-@media(max-width:1100px){
-  .ab-hero { grid-template-columns:1fr; }
-  .ab-hero__right { display:none; }
-  .ab-hero__left { padding:8rem 2rem 6rem; }
-  .wwa__inner { grid-template-columns:1fr;gap:3rem; }
-  .values-masonry { grid-template-columns:repeat(2,1fr); }
-  .val-card--big { grid-column:span 2; }
-  .prog-tracks { grid-template-columns:repeat(2,1fr); }
-  .ta-cards { grid-template-columns:repeat(2,1fr); }
-  .ta-card--featured { grid-column:span 2; }
-  .vet-item,.vet-item--flip { grid-template-columns:60px 1fr; }
-  .vet-item--flip { direction:ltr; }
-  .vet-item--flip > .vet-content { order:2; }
-  .vet-item--flip > .vet-item__connector-wrap { order:1; }
-  .team-why__grid { grid-template-columns:1fr; }
-}
-@media(max-width:768px){
-  .values-masonry { grid-template-columns:1fr; }
-  .val-card--big { grid-column:span 1; }
-  .prog-tracks { grid-template-columns:1fr; }
-  .ta-cards { grid-template-columns:1fr; }
-  .ta-card--featured { grid-column:span 1; }
-  .ab-stat-grid { grid-template-columns:1fr 1fr; }
-}
+  @media (max-width: 1100px) {
+    .ab-hero {
+      grid-template-columns: 1fr;
+    }
+    .ab-hero__right {
+      display: none;
+    }
+    .ab-hero__left {
+      padding: 8rem 2rem 6rem;
+    }
+    .wwa__inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .values-masonry {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .val-card--big {
+      grid-column: span 2;
+    }
+    .prog-tracks {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .ta-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .ta-card--featured {
+      grid-column: span 2;
+    }
+    .vet-item,
+    .vet-item--flip {
+      grid-template-columns: 60px 1fr;
+    }
+    .vet-item--flip {
+      direction: ltr;
+    }
+    .vet-item--flip > .vet-content {
+      order: 2;
+    }
+    .vet-item--flip > .vet-item__connector-wrap {
+      order: 1;
+    }
+    .team-why__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 768px) {
+    .values-masonry {
+      grid-template-columns: 1fr;
+    }
+    .val-card--big {
+      grid-column: span 1;
+    }
+    .prog-tracks {
+      grid-template-columns: 1fr;
+    }
+    .ta-cards {
+      grid-template-columns: 1fr;
+    }
+    .ta-card--featured {
+      grid-column: span 1;
+    }
+    .ab-stat-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 </style>

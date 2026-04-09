@@ -46,6 +46,13 @@ const year = new Date().getFullYear();
           <li>
             <a
               href={isDe
+                ? "/de/services/studium-zulassung"
+                : "/services/university-admission"}
+              >{isDe ? "Studium Zulassung" : "University Admissions"}</a>
+          </li>
+          <li>
+            <a
+              href={isDe
                 ? "/de/services/skilled-workers"
                 : "/services/skilled-workers"}
               >{isDe ? "Industrielles Personal" : "Industrial Workforce"}</a>

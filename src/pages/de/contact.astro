@@ -32,7 +32,7 @@ const isDe = lang === "de";
         </p>
 
         <div class="info-block">
-          <div class="info-icon">📍</div>
+          <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
           <div class="info-text">
             <h4>{isDe ? "Schweden Zentrale" : "Sweden HQ"}</h4>
             <p>Olof Palmes Gata 12<br />111 37 Stockholm, Sweden</p>
@@ -40,20 +40,20 @@ const isDe = lang === "de";
         </div>
 
         <div class="info-block">
-          <div class="info-icon">✉️</div>
+          <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
           <div class="info-text">
-            <h4>{isDe ? "E-Mail schreiben" : "Email Us"}</h4>
+            <h4>{isDe ? "Email schreiben" : "Email Us"}</h4>
             <p>info@scandicroots.se<br />support@scandicroots.se</p>
           </div>
         </div>
 
         <div class="info-block">
-          <div class="info-icon">📞</div>
+          <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
           <div class="info-text">
             <h4>{isDe ? "Rufen Sie uns an" : "Call Us"}</h4>
             <p>
               +46 8 123 45 67<br />{
-                isDe ? "Mo-Fr, 09:00-18:00 CET" : "Mon-Fri, 09:00-18:00 CET"
+                isDe ? "Mo bis Fr, 09:00 bis 18:00 CET" : "Mon to Fri, 09:00 to 18:00 CET"
               }
             </p>
           </div>
@@ -73,7 +73,17 @@ const isDe = lang === "de";
           </div>
 
           <div class="form-group">
-            <label for="email">{t("contact.form.email")}</label>
+            <label for="company">{t("contact.form.company")}</label>
+            <input
+              type="text"
+              id="company"
+              placeholder={t("contact.form.placeholder.company")}
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">{t("contact.form.email.official")}</label>
             <input
               type="email"
               id="email"
@@ -85,10 +95,12 @@ const isDe = lang === "de";
           <div class="form-group">
             <label for="inquiry">{t("contact.form.inquiry")}</label>
             <select id="inquiry">
-              <option>{t("contact.form.option1")}</option>
-              <option>{t("contact.form.option2")}</option>
-              <option>{t("contact.form.option3")}</option>
-              <option>{t("contact.form.option4")}</option>
+              <option>{t("contact.form.option.opportunity")}</option>
+              <option>{t("contact.form.option.nurses")}</option>
+              <option>{t("contact.form.option.ausbildung")}</option>
+              <option>{t("contact.form.option.admission")}</option>
+              <option>{t("contact.form.option.skilled")}</option>
+              <option>{t("contact.form.option.other")}</option>
             </select>
           </div>
 
@@ -108,13 +120,124 @@ const isDe = lang === "de";
       </div>
     </div>
   </section>
+
+  <!-- Modern Staff Section Overhaul -->
+  <section class="staff-overhaul">
+    <div class="staff-overhaul__glow staff-overhaul__glow--1"></div>
+    <div class="staff-overhaul__glow staff-overhaul__glow--2"></div>
+
+    <div class="container staff-overhaul__inner">
+      <div class="staff-header">
+        <span class="staff-badge"
+          >{isDe ? "Individuelle Betreuung" : "Dedicated Support"}</span
+        >
+        <h2 class="staff-title">
+          <Fragment set:html={t("contact.staff.title")} />
+        </h2>
+        <p class="staff-subtitle">{t("contact.staff.subtitle")}</p>
+      </div>
+
+      <div class="staff-modern-grid">
+        <!-- Vinu Mohan -->
+        <div class="staff-glass-card">
+          <div class="staff-glass-card__content">
+            <div class="staff-card-main">
+              <h3 class="staff-name">Vinu Mohan</h3>
+              <p class="staff-role">{t("contact.staff.role.regional")}</p>
+
+              <div class="staff-language-highlight">
+                <i class="fa-solid fa-language"></i>
+                <span class="staff-lang-label">{isDe ? "Sprachen:" : "Languages:"}</span>
+                <div class="staff-tags-inline">
+                  <span>Svenska</span>
+                  <span>English</span>
+                </div>
+              </div>
+            </div>
+            <div class="staff-actions-grid">
+              <a
+                href="mailto:vinu.mohan@scandicroots.se"
+                class="staff-action-link"
+              >
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <span>{isDe ? "Email an Vinu" : "Email Vinu"}</span>
+              </a>
+              <a href="tel:+4681234567" class="staff-action-link">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span>{isDe ? "Anrufen" : "Call Advisor"}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bianka Bittlingmeier -->
+        <div class="staff-glass-card">
+          <div class="staff-glass-card__content">
+            <div class="staff-card-main">
+              <h3 class="staff-name">Bianka Bittlingmeier</h3>
+              <p class="staff-role">{t("contact.staff.role.relations")}</p>
+
+              <div class="staff-language-highlight">
+                <i class="fa-solid fa-language"></i>
+                <span class="staff-lang-label">{isDe ? "Sprachen:" : "Languages:"}</span>
+                <div class="staff-tags-inline staff-tags-inline--alt">
+                  <span>Deutsch</span>
+                  <span>Svenska</span>
+                </div>
+              </div>
+            </div>
+            <div class="staff-actions-grid">
+              <a
+                href="mailto:bianka.b@scandicroots.se"
+                class="staff-action-link"
+              >
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <span>{isDe ? "Email an Bianka" : "Email Bianka"}</span>
+              </a>
+              <a href="tel:+49123456789" class="staff-action-link">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span>{isDe ? "Anrufen" : "Call Advisor"}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
   .page-header {
-    background: var(--color-primary-light);
-    padding: 10rem 0 5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: #09091a;
+    padding: 12rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at top right,
+      rgba(178, 61, 105, 0.15) 0%,
+      transparent 60%
+    );
+    pointer-events: none;
+  }
+  .page-header h1 {
+    color: #fff;
+  }
+  .page-header p {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .section {
+    padding: 6rem 0;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
 
   .text-center {
@@ -128,9 +251,9 @@ const isDe = lang === "de";
   }
 
   .page-title {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     margin-bottom: 1rem;
-    margin-top: 2rem;
+    font-weight: 800;
   }
 
   .page-subtitle {
@@ -141,9 +264,9 @@ const isDe = lang === "de";
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    gap: 6rem;
     align-items: start;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
   }
 
   .info-block {
@@ -223,6 +346,224 @@ const isDe = lang === "de";
   @media (max-width: 992px) {
     .contact-grid {
       grid-template-columns: 1fr;
+    }
+  }
+
+  /* --- MODERN STAFF OVERHAUL --- */
+  .staff-overhaul {
+    background: #050510;
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+  }
+  .staff-overhaul__glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .staff-overhaul__glow--1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba(178, 61, 105, 0.15) 0%,
+      transparent 70%
+    );
+    top: -100px;
+    left: -200px;
+  }
+  .staff-overhaul__glow--2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+      circle,
+      rgba(17, 24, 76, 0.3) 0%,
+      transparent 70%
+    );
+    bottom: -150px;
+    right: -100px;
+  }
+
+  .staff-overhaul__inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  .staff-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 5rem;
+  }
+  .staff-badge {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: rgba(178, 61, 105, 0.1);
+    border: 1px solid rgba(178, 61, 105, 0.2);
+    border-radius: 100px;
+    color: #b23d69;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+  }
+  .staff-title {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
+  }
+  .staff-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+  }
+
+  .staff-modern-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .staff-glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .staff-glass-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(178, 61, 105, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .staff-card-main {
+    margin-bottom: 2.5rem;
+  }
+
+  .staff-language-highlight {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1.4rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+  }
+
+  .staff-language-highlight i {
+    color: #B23D69;
+    font-size: 1.2rem;
+  }
+
+  .staff-lang-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+  }
+
+  .staff-tags-inline {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .staff-tags-inline span {
+    padding: 0.2rem 0.6rem;
+    background: #B23D69;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .staff-tags-inline--alt span {
+    background: #11184C;
+  }
+
+  .staff-glass-card__content {
+    padding: 2.5rem;
+  }
+  .staff-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+    color: #fff;
+  }
+  .staff-role {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .staff-actions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .staff-action-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1.2rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  .staff-action-link i {
+    font-size: 1.4rem;
+    color: #b23d69;
+    transition: transform 0.3s;
+  }
+  .staff-action-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #b23d69;
+  }
+  .staff-action-link:hover i {
+    transform: translateY(-3px) scale(1.1);
+  }
+
+  @media (max-width: 850px) {
+    .staff-modern-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    .staff-glass-card__img {
+      height: 400px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .staff-glass-card__content {
+      padding: 1.5rem;
+    }
+    .staff-actions-grid {
+      grid-template-columns: 1fr;
+    }
+    .staff-action-link {
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
     }
   }
 </style>

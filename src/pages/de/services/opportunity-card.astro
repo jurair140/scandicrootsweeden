@@ -1,135 +1,420 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import Layout from "../../../layouts/Layout.astro";
 ---
-<Layout title="Chancenkarte - Scandic Roots" description="Erfahren Sie mehr über die deutsche Chancenkarte - eine punktebasierte Aufenthaltserlaubnis.">
 
-<section class="sv-hero sv-hero--short">
-  <div class="sv-hero__noise"></div>
-  <div class="sv-hero__glow sv-hero__glow--a"></div>
-  <div class="sv-hero__glow sv-hero__glow--b"></div>
-  <div class="container sv-hero__inner">
-    <div class="sv-hero__eyebrow">
-      <span class="dot"></span><p>Programm 01</p><span class="dot"></span>
+<Layout
+  title="Chancenkarte | Scandic Roots"
+  description="Erfahren Sie mehr über die deutsche Chancenkarte, eine punktebasierte Aufenthaltserlaubnis."
+>
+  <section class="sv-hero sv-hero--short">
+    <div class="sv-hero__noise"></div>
+    <div class="sv-hero__glow sv-hero__glow--a"></div>
+    <div class="sv-hero__glow sv-hero__glow--b"></div>
+    <div class="container sv-hero__inner">
+      <div class="sv-hero__eyebrow">
+        <span class="dot"></span><p>Programm 01</p><span class="dot"></span>
+      </div>
+      <h1 class="sv-hero__title">
+        Deutsche Chancenkarte<br /><em>(Opportunity Card)</em>
+      </h1>
+      <p class="sv-hero__sub">
+        Ein punktebasierter Aufenthaltstitel, der es qualifizierten Fachkräften
+        aus Nicht EU Ländern ermöglicht, ohne Arbeitsangebot einzureisen und bis
+        zu einem Jahr nach Arbeit zu suchen.
+      </p>
+      <div class="sv-hero__nav">
+        <a href="/de/contact" class="btn-primary-glow"
+          >Jetzt Bewerben <i class="fa-solid fa-arrow-right"></i></a
+        >
+        <a href="/de/services" class="btn-ghost">Alle Dienste ansehen</a>
+      </div>
     </div>
-    <h1 class="sv-hero__title">Deutsche Chancenkarte<br /><em>(Opportunity Card)</em></h1>
-    <p class="sv-hero__sub">Ein punktebasierter Aufenthaltstitel, der es qualifizierten Fachkräften aus Nicht-EU-Ländern ermöglicht, ohne Arbeitsangebot einzureisen und bis zu einem Jahr nach Arbeit zu suchen.</p>
-    <div class="sv-hero__nav">
-      <a href="/de/contact" class="btn-primary-glow">Jetzt Bewerben <i class="fa-solid fa-arrow-right"></i></a>
-      <a href="/de/services" class="btn-ghost">Alle Dienste ansehen</a>
+  </section>
+
+  <article class="reader-content">
+    <div class="container reader-container">
+      <h2>Was ist die Chancenkarte?</h2>
+      <p>
+        Die deutsche Chancenkarte ist ein Aufenthaltstitel, der es
+        qualifizierten Fachkräften ermöglicht, nach Deutschland einzureisen und
+        intensiv nach einer passenden Beschäftigung zu suchen, ohne dass vorab
+        ein Arbeitsangebot vorliegen muss. Das System basiert auf Punkten,
+        welche Bildung, Berufserfahrung, Sprachkenntnisse, Alter und Bezug zu
+        Deutschland bewerten.
+      </p>
+      <p>
+        Mit der Chancenkarte können Kandidaten bis zu <strong>einem Jahr</strong
+        > in Deutschland bleiben, um Arbeit zu suchen. Die Antragstellung ist ganzjährig
+        möglich.
+      </p>
+
+      <hr class="reader-divider" />
+
+      <h2>Voraussetzungen und Kriterien</h2>
+      <p>
+        Die Bewerber müssen zentrale Anforderungen erfüllen, für weitere
+        Qualifikationen gibt es Bonuspunkte:
+      </p>
+
+      <div class="content-block">
+        <h3>Qualifikationsabschluss</h3>
+        <p>
+          Ein anerkannter Bildungsabschluss ist Pflicht, dies kann ein
+          Hochschulabschluss oder ein anerkannter Berufsabschluss nach deutschen
+          Maßstäben sein.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h3>Sprachkenntnisse</h3>
+        <ul class="reader-list">
+          <li>Mindestanforderung: Deutsch A1 oder fließendes Englisch.</li>
+          <li>
+            Zusätzliche Bonuspunkte bei besseren Deutschkenntnissen (B1, B2+).
+          </li>
+          <li>Höhere Sprachniveaus verbessern das Gesamtergebnis deutlich.</li>
+        </ul>
+      </div>
+
+      <div class="content-block">
+        <h3>Berufserfahrung</h3>
+        <ul class="reader-list">
+          <li>Relevante und fortlaufende Berufserfahrung ist notwendig.</li>
+          <li>Verfügbarkeit von entsprechenden Arbeitszeugnissen.</li>
+        </ul>
+      </div>
+
+      <div class="content-block">
+        <h3>Finanzielle Mittel (Sperrkonto)</h3>
+        <p>
+          Ein deutsches Sperrkonto dient als Nachweis, dass der Lebensunterhalt
+          während des Suchaufenthalts eigenständig gesichert ist.
+        </p>
+        <ul class="reader-list">
+          <li>
+            Für ein Jahr Aufenthalt sind mindestens <strong>ca. 12.000 €</strong
+            > vorzuweisen.
+          </li>
+          <li>
+            Das Konto ist zweckgebunden (Auszahlung von rund 1.000 € / Monat).
+          </li>
+        </ul>
+      </div>
+
+      <hr class="reader-divider" />
+
+      <h2>Der Ablauf</h2>
+      <p>
+        Da die Botschaftstermine sehr variieren können, raten wir zu einer
+        frühen und detaillierten Vorbereitung der nötigen Unterlagen.
+      </p>
+
+      <ol class="reader-steps">
+        <li>
+          <strong>Dokumentenprüfung:</strong> Zusammenstellung und Übersetzung aller
+          erforderlichen Zeugnisse (Dauer: 4-8 Wochen).
+        </li>
+        <li>
+          <strong>Sperrkonto Eröffnung:</strong> Eröffnung des Sperrkontos über einen
+          zertifizierten Anbieter inklusive Finanzierungsnachweis (2-4 Wochen).
+        </li>
+        <li>
+          <strong>Botschaftstermin:</strong> Abgabe des vollständigen Antrags bei
+          der zuständigen Auslandsvertretung (4-12 Wochen).
+        </li>
+        <li>
+          <strong>Ankunft:</strong> Einreise nach Deutschland zur aktiven Jobsuche
+          unter Wahrung des legalen Aufenthaltsstatus für bis zu 12 Monate.
+        </li>
+      </ol>
     </div>
-  </div>
-</section>
+  </article>
 
-<article class="reader-content">
-  <div class="container reader-container">
-    
-    <h2>Was ist die Chancenkarte?</h2>
-    <p>Die deutsche Chancenkarte ist ein Aufenthaltstitel, der es qualifizierten Fachkräften ermöglicht, nach Deutschland einzureisen und intensiv nach einer passenden Beschäftigung zu suchen, ohne dass vorab ein Arbeitsangebot vorliegen muss. Das System basiert auf Punkten, welche Bildung, Berufserfahrung, Sprachkenntnisse, Alter und Bezug zu Deutschland bewerten.</p>
-    <p>Mit der Chancenkarte können Kandidaten bis zu <strong>einem Jahr</strong> in Deutschland bleiben, um Arbeit zu suchen. Die Antragstellung ist ganzjährig möglich.</p>
-
-    <hr class="reader-divider" />
-
-    <h2>Voraussetzungen und Kriterien</h2>
-    <p>Die Bewerber müssen zentrale Anforderungen erfüllen, für weitere Qualifikationen gibt es Bonuspunkte:</p>
-    
-    <div class="content-block">
-      <h3>Qualifikationsabschluss</h3>
-      <p>Ein anerkannter Bildungsabschluss ist Pflicht — dies kann ein Hochschulabschluss oder ein anerkannter Berufsabschluss nach deutschen Maßstäben sein.</p>
+  <section class="reader-cta">
+    <div class="container text-center">
+      <h2>Bereit für Ihre Karriere in Deutschland?</h2>
+      <p>
+        Wir begleiten Sie vom ersten Dokumenten Check bis zur erfolgreichen
+        Ankunft.
+      </p>
+      <div class="sv-hero__nav" style="margin-top: 2.5rem;">
+        <a href="/de/contact" class="btn-primary-glow"
+          >Expertengespräch vereinbaren</a
+        >
+      </div>
     </div>
-
-    <div class="content-block">
-      <h3>Sprachkenntnisse</h3>
-      <ul class="reader-list">
-        <li>Mindestanforderung: Deutsch A1 oder fließendes Englisch.</li>
-        <li>Zusätzliche Bonuspunkte bei besseren Deutschkenntnissen (B1, B2+).</li>
-        <li>Höhere Sprachniveaus verbessern das Gesamtergebnis deutlich.</li>
-      </ul>
-    </div>
-
-    <div class="content-block">
-      <h3>Berufserfahrung</h3>
-      <ul class="reader-list">
-        <li>Relevante und fortlaufende Berufserfahrung ist notwendig.</li>
-        <li>Verfügbarkeit von entsprechenden Arbeitszeugnissen.</li>
-      </ul>
-    </div>
-
-    <div class="content-block">
-      <h3>Finanzielle Mittel (Sperrkonto)</h3>
-      <p>Ein deutsches Sperrkonto dient als Nachweis, dass der Lebensunterhalt während des Suchaufenthalts eigenständig gesichert ist.</p>
-      <ul class="reader-list">
-        <li>Für ein Jahr Aufenthalt sind mindestens <strong>ca. 12.000 €</strong> vorzuweisen.</li>
-        <li>Das Konto ist zweckgebunden (Auszahlung von rund 1.000 € / Monat).</li>
-      </ul>
-    </div>
-
-    <hr class="reader-divider" />
-
-    <h2>Der Ablauf</h2>
-    <p>Da die Botschaftstermine sehr variieren können, raten wir zu einer frühen und detaillierten Vorbereitung der nötigen Unterlagen.</p>
-    
-    <ol class="reader-steps">
-      <li><strong>Dokumentenprüfung:</strong> Zusammenstellung und Übersetzung aller erforderlichen Zeugnisse (Dauer: 4-8 Wochen).</li>
-      <li><strong>Sperrkonto-Eröffnung:</strong> Eröffnung des Sperrkontos über einen zertifizierten Anbieter inklusive Finanzierungsnachweis (2-4 Wochen).</li>
-      <li><strong>Botschaftstermin:</strong> Abgabe des vollständigen Antrags bei der zuständigen Auslandsvertretung (4-12 Wochen).</li>
-      <li><strong>Ankunft:</strong> Einreise nach Deutschland zur aktiven Jobsuche unter Wahrung des legalen Aufenthaltsstatus für bis zu 12 Monate.</li>
-    </ol>
-
-  </div>
-</article>
-
-<section class="reader-cta">
-  <div class="container text-center">
-    <h2>Bereit für Ihre Karriere in Deutschland?</h2>
-    <p>Wir begleiten Sie vom ersten Dokumenten-Check bis zur erfolgreichen Ankunft.</p>
-    <div class="sv-hero__nav" style="margin-top: 2.5rem;">
-      <a href="/de/contact" class="btn-primary-glow">Expertengespräch vereinbaren</a>
-    </div>
-  </div>
-</section>
-
+  </section>
 </Layout>
 
 <style>
-  :root { --ind: #11184c; --rose: #b23d69; --mut: #4a5568; --off: #f7f8ff; }
-  .sv-hero { position: relative; padding: 6rem 0 4rem; background: #09091a; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; text-align: center; }
-  .sv-hero--short { min-height: auto; }
-  .sv-hero__noise { position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; }
-  .sv-hero__glow { position: absolute; border-radius: 50%; filter: blur(110px); pointer-events: none; }
-  .sv-hero__glow--a { width: 600px; height: 600px; background: radial-gradient(circle, rgba(178,61,105,0.4) 0%, transparent 70%); top: -150px; right: -100px; }
-  .sv-hero__glow--b { width: 500px; height: 500px; background: radial-gradient(circle, rgba(17,24,76,0.6) 0%, transparent 70%); bottom: -50px; left: -80px; }
-  .sv-hero__inner { position: relative; z-index: 2; max-width: 800px; padding: 0 2rem; margin-top: 2rem; }
-  .sv-hero__eyebrow { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1.2rem; }
-  .sv-hero__eyebrow p { color: rgba(255,255,255,0.6); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 3px; font-family: var(--font-heading); margin: 0; }
-  .dot { width: 6px; height: 6px; background: var(--rose); border-radius: 50%; display: block; }
-  .sv-hero__title { font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: #fff; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.5px; }
-  .sv-hero__title em { font-style: normal; background: linear-gradient(90deg, #b23d69, #7c6ef5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .sv-hero__sub { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto 2.5rem; line-height: 1.7; }
-  .sv-hero__nav { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-  .btn-primary-glow { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2rem; background: linear-gradient(135deg, #11184c, #2d1b5e); color: #fff; border-radius: 8px; font-family: var(--font-heading); font-weight: 700; font-size: 0.95rem; transition: all 0.3s; box-shadow: 0 8px 25px rgba(17,24,76,0.3); text-decoration: none; }
-  .btn-primary-glow:hover { transform: translateY(-3px); box-shadow: 0 14px 35px rgba(17,24,76,0.45); color: #fff; }
-  .btn-ghost { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2rem; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.8); border-radius: 8px; font-family: var(--font-heading); font-weight: 600; font-size: 0.95rem; transition: all 0.3s; text-decoration: none; }
-  .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); color: #fff; }
-  
-  .reader-content { padding: 5rem 0; background: #fff; }
-  .reader-container { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
-  .reader-content h2 { font-size: 2rem; color: var(--ind); margin: 3rem 0 1.2rem; line-height: 1.3; font-family: var(--font-heading); letter-spacing: -0.5px; }
-  .reader-content h2:first-child { margin-top: 0; }
-  .reader-content h3 { font-size: 1.3rem; color: var(--ind); margin: 2rem 0 1rem; }
-  .reader-content p { font-size: 1.15rem; color: var(--mut); line-height: 1.8; margin-bottom: 1.5rem; }
-  .reader-content strong { color: var(--ind); font-weight: 700; }
-  .content-block { margin-bottom: 2rem; }
-  .reader-divider { border: 0; height: 1px; background: rgba(0,0,0,0.08); margin: 4rem 0; }
-  
-  .reader-list { list-style: none; padding: 0; margin: 0 0 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
-  .reader-list li { font-size: 1.15rem; color: var(--mut); line-height: 1.7; padding-left: 1.5rem; position: relative; }
-  .reader-list li::before { content: ''; position: absolute; left: 0; top: 0.6rem; width: 6px; height: 6px; border-radius: 50%; background: var(--rose); }
-  
-  .reader-steps { list-style: none; padding: 0; margin: 0 0 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; counter-reset: reader-step; }
-  .reader-steps li { font-size: 1.15rem; color: var(--mut); line-height: 1.7; position: relative; padding-left: 4rem; }
-  .reader-steps li::before { counter-increment: reader-step; content: "0" counter(reader-step); position: absolute; left: 0; top: -0.1rem; font-family: var(--font-heading); font-weight: 800; color: var(--rose); font-size: 1.2rem; opacity: 0.8; }
+  :root {
+    --ind: #11184c;
+    --rose: #b23d69;
+    --mut: #4a5568;
+    --off: #f7f8ff;
+  }
+  .sv-hero {
+    position: relative;
+    padding: 6rem 0 4rem;
+    background: #09091a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+  }
+  .sv-hero--short {
+    min-height: auto;
+  }
+  .sv-hero__noise {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+  .sv-hero__glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(110px);
+    pointer-events: none;
+  }
+  .sv-hero__glow--a {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba(178, 61, 105, 0.4) 0%,
+      transparent 70%
+    );
+    top: -150px;
+    right: -100px;
+  }
+  .sv-hero__glow--b {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+      circle,
+      rgba(17, 24, 76, 0.6) 0%,
+      transparent 70%
+    );
+    bottom: -50px;
+    left: -80px;
+  }
+  .sv-hero__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+    margin-top: 2rem;
+  }
+  .sv-hero__eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .sv-hero__eyebrow p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: var(--font-heading);
+    margin: 0;
+  }
+  .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--rose);
+    border-radius: 50%;
+    display: block;
+  }
+  .sv-hero__title {
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+  }
+  .sv-hero__title em {
+    font-style: normal;
+    background: linear-gradient(90deg, #b23d69, #7c6ef5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .sv-hero__sub {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
+  .sv-hero__nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary-glow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 2rem;
+    background: linear-gradient(135deg, #11184c, #2d1b5e);
+    color: #fff;
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    box-shadow: 0 8px 25px rgba(17, 24, 76, 0.3);
+    text-decoration: none;
+  }
+  .btn-primary-glow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 35px rgba(17, 24, 76, 0.45);
+    color: #fff;
+  }
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+  }
 
-  .reader-cta { padding: 6rem 0; background: var(--off); text-align: center; }
-  .reader-cta h2 { font-size: 2.2rem; color: var(--ind); margin-bottom: 1rem; font-family: var(--font-heading); letter-spacing: -0.5px; }
-  .reader-cta p { font-size: 1.15rem; color: var(--mut); max-width: 600px; margin: 0 auto; line-height: 1.7; }
+  .reader-content {
+    padding: 5rem 0;
+    background: #fff;
+  }
+  .reader-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .reader-content h2 {
+    font-size: 2rem;
+    color: var(--ind);
+    margin: 3rem 0 1.2rem;
+    line-height: 1.3;
+    font-family: var(--font-heading);
+    letter-spacing: -0.5px;
+  }
+  .reader-content h2:first-child {
+    margin-top: 0;
+  }
+  .reader-content h3 {
+    font-size: 1.3rem;
+    color: var(--ind);
+    margin: 2rem 0 1rem;
+  }
+  .reader-content p {
+    font-size: 1.15rem;
+    color: var(--mut);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  .reader-content strong {
+    color: var(--ind);
+    font-weight: 700;
+  }
+  .content-block {
+    margin-bottom: 2rem;
+  }
+  .reader-divider {
+    border: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.08);
+    margin: 4rem 0;
+  }
+
+  .reader-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .reader-list li {
+    font-size: 1.15rem;
+    color: var(--mut);
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .reader-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--rose);
+  }
+
+  .reader-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    counter-reset: reader-step;
+  }
+  .reader-steps li {
+    font-size: 1.15rem;
+    color: var(--mut);
+    line-height: 1.7;
+    position: relative;
+    padding-left: 4rem;
+  }
+  .reader-steps li::before {
+    counter-increment: reader-step;
+    content: "0" counter(reader-step);
+    position: absolute;
+    left: 0;
+    top: -0.1rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: var(--rose);
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+
+  .reader-cta {
+    padding: 6rem 0;
+    background: var(--off);
+    text-align: center;
+  }
+  .reader-cta h2 {
+    font-size: 2.2rem;
+    color: var(--ind);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+    letter-spacing: -0.5px;
+  }
+  .reader-cta p {
+    font-size: 1.15rem;
+    color: var(--mut);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
 </style>

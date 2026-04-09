@@ -4,6 +4,7 @@ import ausbildungImg from "../assets/ausbildung.jpg";
 import opportunityImg from "../assets/opportunity.jpg";
 import healthcareImg from "../assets/healthcare.jpg";
 import industrialImg from "../assets/industrial.jpg";
+import admissionImg from "../assets/admission-card.png";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -15,7 +16,7 @@ const services = [
     title: isDe ? "Ausbildung Rekrutierung" : "Ausbildung Recruitment",
     description: isDe
       ? "Verbinden Sie sich mit Deutschlands renommiertem Berufsbildungssystem. Wir helfen Unternehmen, durch internationale Talente eine zukunftssichere Belegschaft aufzubauen."
-      : "Connect with Germany's prestigious vocational training system. We help companies build a future-ready workforce through international talent.",
+      : "Connect with Germany's prestigious vocational training system. We help companies build a future ready workforce through international talent.",
     image: ausbildungImg.src,
     icon: "🎓",
     link: isDe ? "/de/services/ausbildung" : "/services/ausbildung",
@@ -25,8 +26,8 @@ const services = [
     id: "opportunity",
     title: isDe ? "Chancenkarte" : "Opportunity Card",
     description: isDe
-      ? "Beschleunigte Einstellung mit Kandidaten, die für das deutsche Chancenkarte-Programm qualifiziert sind."
-      : "Fast-track hiring with candidates eligible under Germany's Chancenkarte program.",
+      ? "Beschleunigte Einstellung mit Kandidaten, die für das deutsche Chancenkarte Programm qualifiziert sind."
+      : "Fast track hiring with candidates eligible under Germany's Chancenkarte program.",
     image: opportunityImg.src,
     icon: "🎫",
     link: isDe ? "/de/services/opportunity-card" : "/services/opportunity-card",
@@ -42,6 +43,17 @@ const services = [
     icon: "⚕️",
     link: isDe ? "/de/services/nurses" : "/services/nurses",
     size: "small",
+  },
+  {
+    id: "admission",
+    title: isDe ? "Studium Zulassung" : "University Admission",
+    description: isDe
+      ? "Umfassende Unterstützung bei der Zulassung für Studierende aus Indien und Nepal an europäischen Hochschulen."
+      : "Comprehensive admission support for students from India and Nepal seeking higher education in Europe.",
+    image: admissionImg.src,
+    icon: "🎓",
+    link: isDe ? "/de/services/studium-zulassung" : "/services/university-admission",
+    size: "large",
   },
   {
     id: "industrial",

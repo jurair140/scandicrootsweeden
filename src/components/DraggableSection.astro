@@ -1,9 +1,14 @@
 ---
 // src/components/DraggableSection.astro
-import berlinImg from "../assets/destination-berlin.jpg";
-import stockholmImg from "../assets/destination-stockholm.jpg";
-import professionalsImg from "../assets/placed-professionals.jpg";
-import careerImg from "../assets/career-path.jpg";
+import uni1 from "../assets/uni_heidelberg.png";
+import uni2 from "../assets/uni_munich.png";
+import uni3 from "../assets/uni_excellence.png";
+import nurse1 from "../assets/nurse_pro.png";
+import nurse2 from "../assets/nurse_team.png";
+import healthcare from "../assets/healthcare_tech.png";
+import ausbildung from "../assets/ausbildung_trainee.png";
+import opportunity from "../assets/opportunity_success.png";
+import industry from "../assets/industrial_talent.png";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -12,74 +17,69 @@ const isDe = lang === "de";
 
 const polaroids = [
   {
-    img: berlinImg.src,
-    label: isDe ? "Berlin" : "Berlin, DE",
+    img: industry.src,
+    label: t("draggable.label.industry"),
+    rotation: -10,
+    top: 160,
+    left: 120,
+  },
+
+  {
+    img: uni1.src,
+    label: t("draggable.label.uni1"),
     rotation: -5,
-    top: 120,
-    left: 100,
+    top: 100,
+    left: 80,
   },
   {
-    img: stockholmImg.src,
-    label: isDe ? "Stockholm" : "Stockholm, SE",
+    img: nurse1.src,
+    label: t("draggable.label.nurses1"),
+    rotation: 15,
+    top: 150,
+    left: 90,
+  },
+  {
+    img: uni2.src,
+    label: t("draggable.label.uni2"),
     rotation: 8,
-    top: 100,
+    top: 80,
     left: 140,
   },
   {
-    img: professionalsImg.src,
-    label: isDe ? "Fachkräfte" : "Placed Talent",
+    img: uni3.src,
+    label: t("draggable.label.uni3"),
     rotation: -12,
     top: 130,
     left: 110,
   },
+
   {
-    img: careerImg.src,
-    label: isDe ? "Karriereweg" : "Career Success",
-    rotation: 15,
-    top: 140,
-    left: 80,
+    img: nurse2.src,
+    label: t("draggable.label.nurses2"),
+    rotation: -8,
+    top: 110,
+    left: 160,
   },
   {
-    img: berlinImg.src,
-    label: isDe ? "Ihre Zukunft" : "Your Future",
-    rotation: 3,
-    top: 110,
+    img: healthcare.src,
+    label: t("draggable.label.healthcare"),
+    rotation: 10,
+    top: 140,
     left: 130,
   },
   {
-    img: stockholmImg.src,
-    label: isDe ? "Relocation" : "Relocation",
-    rotation: -8,
-    top: 125,
-    left: 120,
-  },
-  {
-    img: professionalsImg.src,
-    label: isDe ? "Exzellenz" : "Excellence",
-    rotation: 10,
-    top: 115,
-    left: 90,
-  },
-  {
-    img: careerImg.src,
-    label: isDe ? "Wachstum" : "Growth",
+    img: ausbildung.src,
+    label: t("draggable.label.ausbildung"),
     rotation: -4,
-    top: 135,
-    left: 150,
+    top: 120,
+    left: 60,
   },
   {
-    img: berlinImg.src,
-    label: isDe ? "Innovation" : "Innovation",
-    rotation: -2,
-    top: 118,
-    left: 125,
-  },
-  {
-    img: professionalsImg.src,
-    label: isDe ? "Partnerschaft" : "Partnership",
-    rotation: 6,
-    top: 105,
-    left: 115,
+    img: opportunity.src,
+    label: t("draggable.label.opportunity"),
+    rotation: 12,
+    top: 90,
+    left: 180,
   },
 ];
 ---
@@ -124,8 +124,8 @@ const polaroids = [
         {t("home.draggable.p2")}
       </p>
       <div class="btn-group">
-        <a href={isDe ? "/de/contact" : "/contact"} class="btn btn-primary"
-          >{t("home.draggable.cta.primary")}</a
+        <button type="button" class="btn btn-primary partner-modal-trigger"
+          >{t("home.draggable.cta.primary")}</button
         >
         <a href={isDe ? "/de/services" : "/services"} class="btn btn-outline"
           >{t("home.draggable.cta.secondary")}</a
@@ -243,8 +243,8 @@ const polaroids = [
     cursor: grab;
     user-select: none;
     -webkit-user-select: none;
-    touch-action: none;      /* CRITICAL: prevents browser scroll hijacking touch events */
-    will-change: left, top;  /* GPU-composited movement */
+    touch-action: none; /* CRITICAL: prevents browser scroll hijacking touch events */
+    will-change: left, top; /* GPU-composited movement */
     transition: box-shadow 0.3s ease;
     width: 240px;
   }

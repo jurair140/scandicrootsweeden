@@ -37,7 +37,7 @@ const isDe = lang === "de";
           {t("home.about.p2")}
         </p>
         <a
-          href={isDe ? "/de/services" : "/services"}
+          href={isDe ? "/de/about" : "/about"}
           class="btn btn-outline"
           style="margin-top: 2rem;">{t("home.about.cta")}</a
         >
@@ -249,9 +249,9 @@ const isDe = lang === "de";
           </p>
 
           <div class="portal-action">
-            <a
-              href={isDe ? "/de/contact" : "/contact"}
-              class="btn btn-primary portal-btn magnetic-target"
+            <button
+              type="button"
+              class="btn btn-primary portal-btn magnetic-target partner-modal-trigger"
             >
               {t("home.portal.cta")}
               <svg
@@ -268,7 +268,7 @@ const isDe = lang === "de";
                 ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
                   points="12 5 19 12 12 19"></polyline></svg
               >
-            </a>
+            </button>
             <p class="portal-subtext">
               {t("home.portal.subtext")}
             </p>

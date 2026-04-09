@@ -1,0 +1,851 @@
+---
+// src/components/PartnershipModal.astro
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!-- Partnership Modal -->
+<div
+  id="partnership-modal"
+  class="pm-overlay"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+>
+  <div class="pm-container">
+    <!-- LEFT PANEL — Branding -->
+    <div class="pm-panel-left">
+      <div class="pm-left-inner">
+        <div class="pm-left-badge">B2B Partnership</div>
+        <h2 class="pm-left-title">
+          Let's Build<br /><span>Something<br />Lasting.</span>
+        </h2>
+        <p class="pm-left-sub">
+          Fill in your organisation's details and our team will reach out within
+          48 hours to begin the conversation.
+        </p>
+        <ul class="pm-checklist">
+          <li>
+            <span class="check-icon">✓</span> Verified EU-compliant process
+          </li>
+          <li><span class="check-icon">✓</span> Dedicated account manager</li>
+          <li><span class="check-icon">✓</span> Long-term talent pipeline</li>
+          <li><span class="check-icon">✓</span> Multilingual support team</li>
+        </ul>
+      </div>
+      <div class="pm-left-orb orb-a"></div>
+      <div class="pm-left-orb orb-b"></div>
+    </div>
+
+    <!-- RIGHT PANEL — Form / Success -->
+    <div class="pm-panel-right">
+      <button
+        class="pm-close"
+        id="close-partner-modal"
+        aria-label="Close modal"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><line x1="18" y1="6" x2="6" y2="18"></line><line
+            x1="6"
+            y1="6"
+            x2="18"
+            y2="18"></line></svg
+        >
+      </button>
+
+      <!-- FORM STAGE -->
+      <div id="pm-form-stage">
+        <p class="pm-form-heading">{t("modal.partner.title")}</p>
+        <form id="partnership-form" class="pm-form" novalidate>
+          <div class="pm-grid">
+            <div class="pm-field full">
+              <label for="pm-institution"
+                >{t("modal.partner.institution")}
+                <span class="req">*</span></label
+              >
+              <input
+                type="text"
+                id="pm-institution"
+                name="institution"
+                placeholder="e.g. Müller GmbH"
+                required
+              />
+            </div>
+
+            <div class="pm-field">
+              <label for="pm-register"
+                >{t("modal.partner.register")} <span class="req">*</span></label
+              >
+              <input
+                type="text"
+                id="pm-register"
+                name="register"
+                placeholder="e.g. HRB 12345"
+                required
+              />
+            </div>
+
+            <div class="pm-field">
+              <label for="pm-licence">{t("modal.partner.licence")}</label>
+              <input
+                type="text"
+                id="pm-licence"
+                name="licence"
+                placeholder="Optional"
+              />
+            </div>
+
+            <div class="pm-field full">
+              <label for="pm-address"
+                >{t("modal.partner.address")} <span class="req">*</span></label
+              >
+              <input
+                type="text"
+                id="pm-address"
+                name="address"
+                placeholder="Street, City, Country"
+                required
+              />
+            </div>
+
+            <div class="pm-field">
+              <label for="pm-email"
+                >{t("modal.partner.email")} <span class="req">*</span></label
+              >
+              <input
+                type="email"
+                id="pm-email"
+                name="email"
+                placeholder="office@company.com"
+                required
+              />
+            </div>
+
+            <div class="pm-field">
+              <label for="pm-lang"
+                >{t("modal.partner.lang")} <span class="req">*</span></label
+              >
+              <select id="pm-lang" name="lang" required>
+                <option value="english">{t("modal.partner.lang.en")}</option>
+                <option value="german">{t("modal.partner.lang.de")}</option>
+                <option value="swedish">{t("modal.partner.lang.sv")}</option>
+              </select>
+            </div>
+
+            <div class="pm-field">
+              <label for="pm-repname"
+                >{t("modal.partner.repName")} <span class="req">*</span></label
+              >
+              <input
+                type="text"
+                id="pm-repname"
+                name="repName"
+                placeholder="Full name"
+                required
+              />
+            </div>
+
+            <div class="pm-field">
+              <label for="pm-repdesig"
+                >{t("modal.partner.repDesig")} <span class="req">*</span></label
+              >
+              <input
+                type="text"
+                id="pm-repdesig"
+                name="repDesig"
+                placeholder="e.g. CEO, HR Manager"
+                required
+              />
+            </div>
+
+            <div class="pm-field full">
+              <label for="pm-message"
+                >{t("modal.partner.message")} <span class="req">*</span></label
+              >
+              <textarea
+                id="pm-message"
+                name="message"
+                rows="3"
+                placeholder="Tell us about your hiring needs."
+                required></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="pm-submit">
+            <span class="pm-submit-text">{t("modal.partner.submit")}</span>
+            <svg
+              class="pm-submit-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                points="12 5 19 12 12 19"></polyline></svg
+            >
+          </button>
+        </form>
+      </div>
+
+      <!-- SUCCESS STAGE (hidden by default) -->
+      <div id="pm-success-stage" class="pm-success hidden">
+        <div class="pm-success-ring">
+          <svg viewBox="0 0 52 52" fill="none">
+            <circle
+              class="ring-circle"
+              cx="26"
+              cy="26"
+              r="24"
+              stroke="currentColor"
+              stroke-width="2"></circle>
+            <path
+              class="ring-check"
+              d="M14 26 l8 8 l16-16"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <h3 class="pm-success-title">{t("modal.partner.successTitle")}</h3>
+        <p class="pm-success-text">{t("modal.partner.successText")}</p>
+        <button type="button" class="pm-close-success" id="close-success-modal"
+          >{t("modal.partner.close")}</button
+        >
+      </div>
+    </div><!-- /right panel -->
+  </div>
+</div>
+
+<style>
+  /* ── Overlay ── */
+  .pm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 14, 44, 0.75);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition:
+      opacity 0.35s ease,
+      visibility 0.35s ease;
+  }
+
+  .pm-overlay[aria-hidden="true"] {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  /* ── Main container (two-panel) ── */
+  .pm-container {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    width: 100%;
+    max-width: 900px;
+    height: 90vh; /* fixed height so both panels fill it */
+    max-height: 700px; /* cap on very tall screens */
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+    transform: translateY(0) scale(1);
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .pm-overlay[aria-hidden="true"] .pm-container {
+    transform: translateY(24px) scale(0.97);
+  }
+
+  /* ── LEFT panel ── */
+  .pm-panel-left {
+    background: var(--color-primary, #11184c);
+    padding: 3rem 2.5rem;
+    position: relative;
+    overflow: hidden; /* left panel doesn't scroll — by design */
+    display: flex;
+    align-items: flex-start;
+    color: #fff;
+    height: 100%; /* fill the container height */
+    box-sizing: border-box;
+  }
+
+  .pm-left-inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  .pm-left-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-accent, #b23d69);
+    background: rgba(178, 61, 105, 0.15);
+    border: 1px solid rgba(178, 61, 105, 0.3);
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+  }
+
+  .pm-left-title {
+    font-family: var(--font-heading, "Outfit", sans-serif);
+    font-size: 2.6rem;
+    font-weight: 900;
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+  }
+
+  .pm-left-title span {
+    color: var(--color-accent, #b23d69);
+  }
+
+  .pm-left-sub {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  .pm-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .pm-checklist li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .check-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(178, 61, 105, 0.2);
+    color: var(--color-accent, #b23d69);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+
+  .pm-left-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .orb-a {
+    width: 250px;
+    height: 250px;
+    background: var(--color-accent, #b23d69);
+    opacity: 0.12;
+    bottom: -60px;
+    right: -60px;
+  }
+
+  .orb-b {
+    width: 150px;
+    height: 150px;
+    background: #5044a5;
+    opacity: 0.2;
+    top: -30px;
+    left: -30px;
+  }
+
+  /* ── RIGHT panel ── */
+  .pm-panel-right {
+    background: #fff;
+    overflow-y: auto; /* THIS is what makes the form scroll */
+    -webkit-overflow-scrolling: touch;
+    padding: 2.5rem 2.5rem 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* fill the container height */
+    box-sizing: border-box;
+  }
+
+  /* ── Close button ── */
+  .pm-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: #f1f5f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #64748b;
+    transition:
+      background 0.2s,
+      color 0.2s;
+    flex-shrink: 0;
+  }
+
+  .pm-close:hover {
+    background: var(--color-primary, #11184c);
+    color: #fff;
+  }
+
+  .pm-close svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* ── Form heading ── */
+  .pm-form-heading {
+    font-family: var(--font-heading, "Outfit", sans-serif);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary, #11184c);
+    margin-bottom: 1.5rem;
+    padding-right: 2.5rem; /* avoid overlap with close btn */
+  }
+
+  /* ── Form grid ── */
+  .pm-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .pm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pm-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .pm-field.full {
+    grid-column: 1 / -1;
+  }
+
+  .pm-field label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #374151;
+    letter-spacing: 0.3px;
+  }
+
+  .req {
+    color: var(--color-accent, #b23d69);
+  }
+
+  .pm-field input,
+  .pm-field select,
+  .pm-field textarea {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 0.7rem 0.9rem;
+    font-family: var(--font-body, "Inter", sans-serif);
+    font-size: 0.9rem;
+    color: #1e293b;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s,
+      background 0.2s;
+    width: 100%;
+  }
+
+  .pm-field input:focus,
+  .pm-field select:focus,
+  .pm-field textarea:focus {
+    outline: none;
+    border-color: var(--color-accent, #b23d69);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(178, 61, 105, 0.1);
+  }
+
+  .pm-field textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  /* ── Submit button ── */
+  .pm-submit {
+    width: 100%;
+    padding: 0.95rem 2rem;
+    border: none;
+    border-radius: 12px;
+    background: var(--color-primary, #11184c);
+    color: #fff;
+    font-family: var(--font-heading, "Outfit", sans-serif);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    transition:
+      background 0.25s,
+      transform 0.2s,
+      box-shadow 0.25s;
+    letter-spacing: 0.3px;
+  }
+
+  .pm-submit:hover {
+    background: var(--color-accent, #b23d69);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(178, 61, 105, 0.3);
+  }
+
+  .pm-submit-icon {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s;
+  }
+
+  .pm-submit:hover .pm-submit-icon {
+    transform: translateX(4px);
+  }
+
+  /* ── Success stage ── */
+  .pm-success {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    gap: 1rem;
+  }
+
+  .pm-success.hidden {
+    display: none;
+  }
+
+  #pm-form-stage.hidden {
+    display: none;
+  }
+
+  .pm-success-ring {
+    width: 80px;
+    height: 80px;
+    color: var(--color-accent, #b23d69);
+    margin-bottom: 0.5rem;
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+
+  .pm-success-ring svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ring-circle {
+    stroke-dasharray: 160;
+    stroke-dashoffset: 160;
+    animation: drawCircle 0.5s 0.1s ease forwards;
+  }
+
+  .ring-check {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 40;
+    animation: drawCheck 0.4s 0.5s ease forwards;
+  }
+
+  @keyframes drawCircle {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes drawCheck {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes popIn {
+    from {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .pm-success-title {
+    font-family: var(--font-heading, "Outfit", sans-serif);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-primary, #11184c);
+    margin: 0;
+  }
+
+  .pm-success-text {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.65;
+    max-width: 380px;
+  }
+
+  .pm-close-success {
+    margin-top: 0.5rem;
+    padding: 0.75rem 2.5rem;
+    border: 2px solid var(--color-primary, #11184c);
+    border-radius: 100px;
+    background: transparent;
+    color: var(--color-primary, #11184c);
+    font-family: var(--font-heading, "Outfit", sans-serif);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition:
+      background 0.2s,
+      color 0.2s;
+  }
+
+  .pm-close-success:hover {
+    background: var(--color-primary, #11184c);
+    color: #fff;
+  }
+
+  /* ── Responsive ── */
+
+  /* Tablet: hide checklist, reduce padding */
+  @media (max-width: 900px) {
+    .pm-container {
+      grid-template-columns: 260px 1fr;
+    }
+    .pm-panel-left {
+      padding: 2rem 1.5rem;
+    }
+    .pm-left-title {
+      font-size: 2rem;
+    }
+    .pm-checklist {
+      display: none;
+    }
+    .pm-left-sub {
+      font-size: 0.82rem;
+    }
+  }
+
+  /* Mobile: stack panels, left becomes a compact top banner */
+  @media (max-width: 640px) {
+    .pm-overlay {
+      padding: 0;
+      align-items: flex-end; /* sheet slides from bottom on mobile */
+    }
+
+    .pm-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      max-width: 100%;
+      width: 100%;
+      max-height: 95dvh; /* use dvh to respect keyboard */
+      border-radius: 24px 24px 0 0;
+    }
+
+    .pm-overlay[aria-hidden="true"] .pm-container {
+      transform: translateY(100%); /* slide down instead of scale */
+    }
+
+    /* Left panel: compact horizontal banner on mobile */
+    .pm-panel-left {
+      padding: 1.25rem 1.5rem;
+      align-items: center;
+    }
+
+    .pm-left-inner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .pm-left-badge {
+      display: none;
+    }
+
+    .pm-left-title {
+      font-size: 1.2rem;
+      font-weight: 900;
+      margin-bottom: 0;
+      letter-spacing: -0.5px;
+      white-space: nowrap;
+    }
+
+    .pm-left-title br {
+      display: none;
+    }
+    .pm-left-sub {
+      display: none;
+    }
+    .pm-checklist {
+      display: none;
+    }
+
+    .orb-a,
+    .orb-b {
+      display: none;
+    }
+
+    /* Right panel: scrollable, takes remaining space */
+    .pm-panel-right {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 1.25rem 1.25rem 2rem;
+      flex: 1;
+    }
+
+    .pm-close {
+      /* Move close button to top-right of the whole modal on mobile */
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .pm-form-heading {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      padding-right: 2.5rem;
+    }
+
+    /* Stack all fields to single column */
+    .pm-grid {
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .pm-field.full {
+      grid-column: 1;
+    }
+
+    .pm-field input,
+    .pm-field select,
+    .pm-field textarea {
+      padding: 0.65rem 0.8rem;
+      font-size: 0.95rem; /* slightly bigger for touch */
+      border-radius: 8px;
+    }
+
+    .pm-submit {
+      padding: 0.9rem;
+      font-size: 0.95rem;
+      border-radius: 10px;
+    }
+
+    /* Success screen on mobile */
+    .pm-success {
+      padding: 2rem 1rem;
+    }
+
+    .pm-success-title {
+      font-size: 1.6rem;
+    }
+
+    .pm-success-text {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<script>
+  function setupPartnershipModal() {
+    const modal = document.getElementById("partnership-modal");
+    const closeBtn = document.getElementById("close-partner-modal");
+    const closeSuccessBtn = document.getElementById("close-success-modal");
+    const form = document.getElementById(
+      "partnership-form",
+    ) as HTMLFormElement | null;
+    const formStage = document.getElementById("pm-form-stage");
+    const successStage = document.getElementById("pm-success-stage");
+
+    const triggers = document.querySelectorAll(".partner-modal-trigger");
+
+    const openModal = (e: Event) => {
+      e.preventDefault();
+      if (!modal) return;
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeModal = () => {
+      if (!modal) return;
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      // Reset back to form after close animation
+      setTimeout(() => {
+        if (form) form.reset();
+        formStage?.classList.remove("hidden");
+        successStage?.classList.add("hidden");
+      }, 380);
+    };
+
+    triggers.forEach((trigger) => trigger.addEventListener("click", openModal));
+    closeBtn?.addEventListener("click", closeModal);
+    closeSuccessBtn?.addEventListener("click", closeModal);
+
+    // Click outside to close
+    modal?.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Escape key to close
+    document.addEventListener("keydown", (e) => {
+      if (
+        e.key === "Escape" &&
+        modal?.getAttribute("aria-hidden") === "false"
+      ) {
+        closeModal();
+      }
+    });
+
+    // Form submit → show success screen
+    form?.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // TODO: replace with actual fetch() to email API
+      // e.g. fetch('/api/partner', { method: 'POST', body: new FormData(form) })
+
+      // Swap to success screen
+      formStage?.classList.add("hidden");
+      successStage?.classList.remove("hidden");
+    });
+  }
+
+  setupPartnershipModal();
+  document.addEventListener("astro:page-load", setupPartnershipModal);
+</script>

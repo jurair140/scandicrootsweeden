@@ -42,12 +42,14 @@ html {
   background-color: var(--color-bg-main);
   color: var(--color-text-main);
   scroll-behavior: smooth;
+
 }
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
 }
 
 h1,

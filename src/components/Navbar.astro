@@ -3,15 +3,15 @@
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.replace(/^\/de/, "").replace(/^\//, ""); // get base path without lang prefix and leading slash
+const currentPath = pathname.replace(/^\/en/, "").replace(/^\//, ""); // get base path without lang prefix and leading slash
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const isDe = lang === "de";
-// Create toggle URL: if DE, remove /de prefix. If EN, add /de prefix.
+// Create toggle URL: if EN, remove /en prefix. If DE, add /en prefix.
 const toggleUrl = isDe
-  ? pathname.replace(/^\/de/, "") || "/"
-  : `/de${pathname === "/" ? "" : pathname}`;
+  ? `/en${pathname === "/" ? "" : pathname}`
+  : pathname.replace(/^\/en/, "") || "/";
 ---
 
 <!-- Optional top bar for reference accuracy (Email / Phone / Location) -->
@@ -37,11 +37,11 @@ const toggleUrl = isDe
 
     <!-- Desktop Navigation -->
     <nav class="nav-links desktop-only">
-      <a href={isDe ? "/de/" : "/"} class={currentPath === "" ? "active" : ""}
+      <a href={isDe ? "/" : "/en/"} class={currentPath === "" ? "active" : ""}
         >{t("nav.home")}</a
       >
       <a
-        href={isDe ? "/de/about" : "/about"}
+        href={isDe ? "/about" : "/en/about"}
         class={currentPath === "about" ? "active" : ""}
         >{isDe ? "Über uns" : "About"}</a
       >
@@ -49,7 +49,7 @@ const toggleUrl = isDe
       <!-- Services Dropdown (Desktop) -->
       <div class="dropdown">
         <a
-          href={isDe ? "/de/services" : "/services"}
+          href={isDe ? "/services" : "/en/services"}
           class={currentPath === "services" ||
           currentPath.startsWith("services/")
             ? "active nav-link"
@@ -61,40 +61,40 @@ const toggleUrl = isDe
         <div class="dropdown-menu">
           <a
             href={isDe
-              ? "/de/services/opportunity-card"
-              : "/services/opportunity-card"}
+              ? "/services/opportunity-card"
+              : "/en/services/opportunity-card"}
             >{isDe ? "Chancenkarte" : "Opportunity Card"}</a
           >
-          <a href={isDe ? "/de/services/nurses" : "/services/nurses"}
+          <a href={isDe ? "/services/nurses" : "/en/services/nurses"}
             >{isDe ? "Pflegekräfte" : "Nurses"}</a
           >
-          <a href={isDe ? "/de/services/ausbildung" : "/services/ausbildung"}
+          <a href={isDe ? "/services/ausbildung" : "/en/services/ausbildung"}
             >Ausbildung</a
           >
           <a
             href={isDe
-              ? "/de/services/studium-zulassung"
-              : "/services/university-admission"}
+              ? "/services/studium-zulassung"
+              : "/en/services/university-admission"}
             >{isDe ? "Studium Zulassung" : "University Admission"}</a
           >
           <a
             href={isDe
-              ? "/de/services/skilled-workers"
-              : "/services/skilled-workers"}
+              ? "/services/skilled-workers"
+              : "/en/services/skilled-workers"}
             >{isDe ? "Fachkräfte" : "Skilled Workers"}</a
           >
         </div>
       </div>
 
       <a
-        href={isDe ? "/de/contact" : "/contact"}
+        href={isDe ? "/contact" : "/en/contact"}
         class={currentPath === "contact" ? "active" : ""}>{t("nav.contact")}</a
       >
     </nav>
 
     <div class="nav-cta desktop-only">
       <a
-        href={isDe ? "/de/contact" : "/contact"}
+        href={isDe ? "/contact" : "/en/contact"}
         class="btn btn-outline"
         style="border-radius: 0; padding: 0.6rem 1.5rem; font-size: 0.9rem;"
         >{t("nav.contactBtn")}</a
@@ -121,11 +121,11 @@ const toggleUrl = isDe
   </div>
 
   <div class="mobile-drawer-body">
-    <a href={isDe ? "/de/" : "/"} class={currentPath === "" ? "active" : ""}
+    <a href={isDe ? "/" : "/en/"} class={currentPath === "" ? "active" : ""}
       >{t("nav.home")}</a
     >
     <a
-      href={isDe ? "/de/about" : "/about"}
+      href={isDe ? "/about" : "/en/about"}
       class={currentPath === "about" ? "active" : ""}
       >{isDe ? "Über uns" : "About"}</a
     >
@@ -138,29 +138,29 @@ const toggleUrl = isDe
       <div class="mobile-accordion-content" id="services-accordion-content">
         <a
           href={isDe
-            ? "/de/services/opportunity-card"
-            : "/services/opportunity-card"}
+            ? "/services/opportunity-card"
+            : "/en/services/opportunity-card"}
           >{isDe ? "Chancenkarte" : "Opportunity Card"}</a
         >
-        <a href={isDe ? "/de/services/nurses" : "/services/nurses"}
+        <a href={isDe ? "/services/nurses" : "/en/services/nurses"}
           >{isDe ? "Pflegekräfte" : "Nurses"}</a
         >
-        <a href={isDe ? "/de/services/ausbildung" : "/services/ausbildung"}
+        <a href={isDe ? "/services/ausbildung" : "/en/services/ausbildung"}
           >Ausbildung</a
         >
         <a
           href={isDe
-            ? "/de/services/studium-zulassung"
-            : "/services/university-admission"}
+            ? "/services/studium-zulassung"
+            : "/en/services/university-admission"}
           >{isDe ? "Studium Zulassung" : "University Admission"}</a
         >
         <a
           href={isDe
-            ? "/de/services/skilled-workers"
-            : "/services/skilled-workers"}
+            ? "/services/skilled-workers"
+            : "/en/services/skilled-workers"}
           >{isDe ? "Fachkräfte" : "Skilled Workers"}</a
         >
-        <a href={isDe ? "/de/services" : "/services"} class="view-all-services"
+        <a href={isDe ? "/services" : "/en/services"} class="view-all-services"
           >{isDe ? "Alle Leistungen ansehen" : "View All Services"}
           <i class="fa-solid fa-arrow-right"></i></a
         >
@@ -168,7 +168,7 @@ const toggleUrl = isDe
     </div>
 
     <a
-      href={isDe ? "/de/contact" : "/contact"}
+      href={isDe ? "/contact" : "/en/contact"}
       class={currentPath === "contact" ? "active" : ""}>{t("nav.contact")}</a
     >
   </div>
@@ -181,7 +181,7 @@ const toggleUrl = isDe
       <span>{isDe ? "Switch to English" : "Auf Deutsch wechseln"}</span>
     </a>
     <a
-      href={isDe ? "/de/contact" : "/contact"}
+      href={isDe ? "/contact" : "/en/contact"}
       class="btn btn-primary mobile-cta"
     >
       {t("nav.contactBtn")}

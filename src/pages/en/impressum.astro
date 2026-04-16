@@ -1,0 +1,114 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t('footer.impressum')} description="Scandic Roots Impressum">
+  <main class="legal-page">
+    <div class="container">
+      <header class="legal-header">
+        <h1 class="text-gradient">Impressum</h1>
+        <p class="last-updated">Legal Disclosure according to Swedish and German Law</p>
+      </header>
+
+      <div class="legal-content">
+        <section>
+          <h2>Information according to § 5 TMG</h2>
+          <p>
+            <strong>Scandic Roots AB</strong><br />
+            Götgatan 12<br />
+            116 46 Stockholm<br />
+            Sweden
+          </p>
+        </section>
+
+        <section>
+          <h2>Represented by</h2>
+          <p>
+            Board of Directors / Managing Directors
+          </p>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+          <p>
+            Phone: +46 8 123 45 67<br />
+            E-mail: info@scandicroots.se
+          </p>
+        </section>
+
+        <section>
+          <h2>Register Entry</h2>
+          <p>
+            Entry in the Corporate Register (Bolagsverket).<br />
+            Registration Number: [Pending / Insert Number]
+          </p>
+        </section>
+
+        <section>
+          <h2>VAT ID</h2>
+          <p>
+            VAT identification number according to § 27 a of the Value Added Tax Act:<br />
+            [Pending / Insert Number]
+          </p>
+        </section>
+
+        <section>
+          <h2>Dispute Resolution</h2>
+          <p>
+            The European Commission provides a platform for online dispute resolution (OS): <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>.<br />
+            We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .legal-page {
+    padding: 12rem 0 8rem;
+    background-color: #fcfcfc;
+  }
+  .legal-header {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  .legal-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  .last-updated {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+  }
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 4rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  }
+  .legal-content section {
+    margin-bottom: 3rem;
+  }
+  .legal-content h2 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+  }
+  .legal-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .legal-content a {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+</style>

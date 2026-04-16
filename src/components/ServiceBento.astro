@@ -13,13 +13,13 @@ const isDe = lang === "de";
 const services = [
   {
     id: "ausbildung",
-    title: isDe ? "Ausbildung Rekrutierung" : "Ausbildung Recruitment",
+    title: isDe ? "Ausbildung Vermittlung" : "Ausbildung Placement",
     description: isDe
       ? "Verbinden Sie sich mit Deutschlands renommiertem Berufsbildungssystem. Wir helfen Unternehmen, durch internationale Talente eine zukunftssichere Belegschaft aufzubauen."
       : "Connect with Germany's prestigious vocational training system. We help companies build a future ready workforce through international talent.",
     image: ausbildungImg.src,
     icon: "🎓",
-    link: isDe ? "/de/services/ausbildung" : "/services/ausbildung",
+    link: isDe ? "/services/ausbildung" : "/en/services/ausbildung",
     size: "large", // spans 2 cols
   },
   {
@@ -30,7 +30,7 @@ const services = [
       : "Fast track hiring with candidates eligible under Germany's Chancenkarte program.",
     image: opportunityImg.src,
     icon: "🎫",
-    link: isDe ? "/de/services/opportunity-card" : "/services/opportunity-card",
+    link: isDe ? "/services/opportunity-card" : "/en/services/opportunity-card",
     size: "small", // spans 1 col
   },
   {
@@ -41,7 +41,7 @@ const services = [
       : "Qualified international nurses for European healthcare institutions.",
     image: healthcareImg.src,
     icon: "⚕️",
-    link: isDe ? "/de/services/nurses" : "/services/nurses",
+    link: isDe ? "/services/nurses" : "/en/services/nurses",
     size: "small",
   },
   {
@@ -52,7 +52,7 @@ const services = [
       : "Comprehensive admission support for students from India and Nepal seeking higher education in Europe.",
     image: admissionImg.src,
     icon: "🎓",
-    link: isDe ? "/de/services/studium-zulassung" : "/services/university-admission",
+    link: isDe ? "/services/studium-zulassung" : "/en/services/university-admission",
     size: "large",
   },
   {
@@ -63,7 +63,7 @@ const services = [
       : "Skilled workers for manufacturing, logistics, and technical trades across Europe. Reliable pipelines for heavy industry needs.",
     image: industrialImg.src,
     icon: "⚙️",
-    link: isDe ? "/de/services/skilled-workers" : "/services/skilled-workers",
+    link: isDe ? "/services/skilled-workers" : "/en/services/skilled-workers",
     size: "large",
   },
 ];

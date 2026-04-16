@@ -1,126 +1,135 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getLangFromUrl } from "../../i18n/utils";
-const lang = getLangFromUrl(Astro.url);
 ---
 
 <Layout
-  title="Über uns"
-  description="Erfahren Sie mehr über Scandic Roots, unsere Mission, Indien-Allianz und den 5-stufigen Auswahlprozess."
+  title="About Us"
+  description="Learn about Scandic Roots, our mission, India training alliance, and 5-stage vetting process connecting Indian talent with German employers."
 >
-  <!-- HERO — SPLIT SCREEN -->
+  <!-- ══════════════════════════════════════════════════════════
+  HERO — Split-screen with floating stats
+═══════════════════════════════════════════════════════════════ -->
   <section class="ab-hero">
     <div class="ab-hero__left">
       <div class="ab-hero__left-inner">
         <div class="ab-hero__eyebrow">
           <span class="dot"></span>
-          <p>
-            Gegründet in Schweden. Verwurzelt in Indien. Deutschland Fokussiert.
-          </p>
+          <p>Sweden Based. India Sourced. Germany Focused.</p>
         </div>
         <h1 class="ab-hero__title">
-          Wir verbinden<br /><em>Zwei Welten.</em>
+          We Bridge<br />
+          <em>Two Worlds.</em>
         </h1>
         <p class="ab-hero__sub">
-          Scandic Roots wurde gegründet, um Deutschlands wachsenden
-          Fachkräftemangel durch eine strukturierte, ethische und
-          ergebnisorientierte Brücke zwischen indischen Arbeitskräften und
-          deutschen Arbeitgebern zu lösen.
+          Scandic Roots was built to solve Germany's growing skilled labor
+          shortage by creating a structured, ethical, and results driven bridge
+          between Indian workforce talent and German employers.
         </p>
         <div class="ab-hero__btns">
-          <a href="/de/services" class="btn-glow"
-            >Unsere Programme <i class="fa-solid fa-arrow-right"></i></a
+          <a href="/services" class="btn-glow"
+            >Explore Our Programs <i class="fa-solid fa-arrow-right"></i></a
           >
-          <a href="/de/contact" class="btn-ghost">Kontaktieren Sie uns</a>
+          <a href="/contact" class="btn-ghost">Contact Us</a>
         </div>
       </div>
     </div>
+
     <div class="ab-hero__right">
-      <div class="ab-hero__map-bg"><div class="ab-hero__glow"></div></div>
+      <div class="ab-hero__map-bg">
+        <div class="ab-hero__glow"></div>
+      </div>
       <div class="ab-stat-grid">
         <div class="ab-stat">
-          <i class="fa-solid fa-passport"></i><span class="ab-stat__num">4</span
-          ><span class="ab-stat__label">Kernprogramme</span>
+          <i class="fa-solid fa-passport"></i>
+          <span class="ab-stat__num">4</span>
+          <span class="ab-stat__label">Core Programs</span>
         </div>
         <div class="ab-stat ab-stat--accent">
-          <i class="fa-solid fa-plane-departure"></i><span class="ab-stat__flag"
-            >🇮🇳 to 🇩🇪</span
-          ><span class="ab-stat__label">Indien nach Deutschland</span>
+          <i class="fa-solid fa-plane-departure"></i>
+          <span class="ab-stat__flag">🇮🇳 to 🇩🇪</span>
+          <span class="ab-stat__label">India to Germany</span>
         </div>
         <div class="ab-stat">
-          <i class="fa-solid fa-filter"></i><span class="ab-stat__num">5</span
-          ><span class="ab-stat__label">Stufen Screening</span>
+          <i class="fa-solid fa-filter"></i>
+          <span class="ab-stat__num">5</span>
+          <span class="ab-stat__label">Stage Vetting</span>
         </div>
         <div class="ab-stat">
-          <i class="fa-solid fa-building-user"></i><span class="ab-stat__num"
-            >15+</span
-          ><span class="ab-stat__label">Branchen</span>
+          <i class="fa-solid fa-building-user"></i>
+          <span class="ab-stat__num">15+</span>
+          <span class="ab-stat__label">Industries Served</span>
         </div>
       </div>
       <div class="ab-tri-flags">
-        <div class="ab-flag-node">
-          <span>🇸🇪</span><small>Hauptsitz Schweden</small>
+        <div class="ab-flag-node ab-flag-node--se">
+          <span>🇸🇪</span>
+          <small>Sweden HQ</small>
         </div>
-        <div class="ab-flag-node">
-          <span>🇮🇳</span><small>Indien Netzwerk</small>
+        <div class="ab-flag-node ab-flag-node--in">
+          <span>🇮🇳</span>
+          <small>India Network</small>
         </div>
-        <div class="ab-flag-node">
-          <span>🇩🇪</span><small>Deutschland Fokus</small>
+        <div class="ab-flag-node ab-flag-node--de">
+          <span>🇩🇪</span>
+          <small>Germany Focus</small>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WER WIR SIND -->
+  <!-- ══════════════════════════════════════════════════════════
+  WHO WE ARE — Wide typography-led section
+═══════════════════════════════════════════════════════════════ -->
   <section class="who-we-are">
     <div class="container">
       <div class="wwa__inner">
         <aside class="wwa__sidebar">
           <span class="section-badge"
-            ><i class="fa-solid fa-book-open"></i> Unsere Geschichte</span
+            ><i class="fa-solid fa-book-open"></i> Our Story</span
           >
           <h2>
-            Eine Tri-Länder <span class="text-gradient">Workforce-Brücke</span>
+            A Tri Country <span class="text-gradient">Workforce Bridge</span>
           </h2>
           <div class="wwa__sidebar-cards">
             <div class="wwa__country-card">
               <div class="wwa__country-icon">
                 <i class="fa-solid fa-map-location-dot"></i>
               </div>
-              <h4>Hauptsitz in Schweden</h4>
+              <h4>Headquartered in Sweden</h4>
               <p>
-                Mit skandinavischer Präzision und Zugang zu nordischen und
-                deutschen Arbeitsmärkten tätig.
+                Operating with Scandinavian precision and access to Nordic and
+                German labor markets.
               </p>
             </div>
             <div class="wwa__country-card wwa__country-card--featured">
               <div class="wwa__country-icon">
                 <i class="fa-solid fa-building-flag"></i>
               </div>
-              <h4>Deutschland Fokus</h4>
+              <h4>Germany Focused Operations</h4>
               <p>
-                Tiefes Fachwissen in deutschem Arbeitsrecht, Visawegen und
-                Personalintegration.
+                Deep expertise in German labor law, visa pathways, and workforce
+                integration.
               </p>
             </div>
             <div class="wwa__country-card">
               <div class="wwa__country-icon">
                 <i class="fa-solid fa-handshake-simple"></i>
               </div>
-              <h4>Indien Talentpartnerschaft</h4>
+              <h4>India Talent Alliance</h4>
               <p>
-                Institutionelle Partnerschaften mit Zugang zu einem breiten,
-                qualifizierten indischen Kandidatenpool.
+                Institutional partnerships providing access to a wide, qualified
+                Indian candidate pool.
               </p>
             </div>
           </div>
         </aside>
+
         <div class="wwa__text">
           <p class="wwa__text-large">
-            Scandic Roots wurde mit einer einzigen klaren Vision gegründet,
-            Deutschlands sich beschleunigenden Fachkräftemangel durch einen
-            prozessorientierten, ethischen und zutiefst persönlichen Ansatz zu
-            lösen.
+            Scandic Roots was founded with a single clear vision, to solve
+            Europe's accelerating skilled labor shortage through a process
+            driven, ethical, and deeply personal approach to international
+            recruitment.
           </p>
 
           <div
@@ -136,51 +145,62 @@ const lang = getLangFromUrl(Astro.url);
                 <h4
                   style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--indigo);"
                 >
-                  EU-Etablierte Operationen
+                  EU Established Operations
                 </h4>
                 <p
                   style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--muted);"
                 >
-                  Scandic Roots ist ein <strong
-                    >in Slowenien registriertes</strong
-                  > Unternehmen für Unternehmensberatung und die Vermittlung qualifizierter
-                  Arbeitskräfte. Wir widmen uns der Unterstützung europäischer Unternehmen
-                  mit vollständig konformen Personallösungen, spezialisiert auf den
-                  Schiffbau, das Baugewerbe und den Transport &amp; Logistiksektor.
+                  We also have a <strong>Slovenia registered</strong> business consulting
+                  and skilled workforce sourcing company. We are dedicated to supporting
+                  European companies with fully compliant staffing solutions, specializing
+                  in the shipbuilding, construction, and transport &amp; logistics
+                  sectors supplied over <strong>4000+ workers</strong> to European
+                  companies.
                 </p>
               </div>
             </div>
           </div>
 
           <p>
-            Mit Hauptsitz in Schweden und tiefen Wurzeln in Indien und
-            Deutschland bringen wir eine einzigartige
-            Mehrechtsprechungs-Perspektive ein. Unser Team versteht die Nuancen
-            des deutschen Arbeitsrechts, die Komplexität indischer
-            Bildungsnachweise und die kulturelle Integration für langfristigen
-            Erfolg.
+            Headquartered in Sweden, with deep operational roots both in India
+            and Germany, we bring a uniquely multi jurisdictional perspective to
+            workforce solutions. Our team understands the nuances of German
+            labor law, the complexities of Indian educational credentials, and
+            the cultural integration required for long term placement success.
           </p>
           <p>
-            Wir bieten vier Wege an: die <strong>Chancenkarte</strong>, <strong
-              >Pflegekräfte Rekrutierung</strong
-            >, <strong>Ausbildungsvermittlung</strong> und <strong
-              >Internationale Fachkräfte Rekrutierung</strong
-            >.
+            We support four key pathways: the <strong
+              >German Opportunity Card (Chancenkarte)</strong
+            > for self directed job seekers, <strong
+              >Indian Nurses Recruitment</strong
+            > for Germany's healthcare sector, <strong
+              >Ausbildung Placement</strong
+            > for vocational trainees, and <strong
+              >International Skilled Worker Recruitment</strong
+            > for industrial and technical employers.
           </p>
           <div class="wwa__divider"></div>
           <div class="wwa__bullets">
             <div class="wwa__bullet">
               <i class="fa-solid fa-circle-check"></i><span
-                >Keine versteckten Gebühren, volle Transparenz für Kandidaten.</span>
+                >Established operations in Europe with extensive experience in
+                the field.</span
+              >
             </div>
             <div class="wwa__bullet">
               <i class="fa-solid fa-circle-check"></i><span
-                >Vollständige Einhaltung deutscher und EU Recruitingstandards.</span>
+                >No hidden fees for candidates, full transparency, always.</span
+              >
             </div>
             <div class="wwa__bullet">
               <i class="fa-solid fa-circle-check"></i><span
-                >Unterstützung nach der Vermittlung bis zur langfristigen
-                Integration.</span>
+                >Full compliance with German and EU recruitment standards.</span
+              >
+            </div>
+            <div class="wwa__bullet">
+              <i class="fa-solid fa-circle-check"></i><span
+                >Post placement support until successful long term integration.</span
+              >
             </div>
           </div>
         </div>
@@ -188,95 +208,100 @@ const lang = getLangFromUrl(Astro.url);
     </div>
   </section>
 
-  <!-- MISSION & WERTE -->
+  <!-- ══════════════════════════════════════════════════════════
+  MISSION & VALUES — Dark card masonry grid
+═══════════════════════════════════════════════════════════════ -->
   <section class="values-section">
     <div class="container">
       <div class="values-section__header">
         <span class="section-badge section-badge--light"
-          ><i class="fa-solid fa-gem"></i> Was uns antreibt</span
+          ><i class="fa-solid fa-gem"></i> What Drives Us</span
         >
         <h2>
-          Mission <span class="text-gradient-light">&amp; Kernwerte</span>
+          Our Mission <span class="text-gradient-light">&amp; Core Values</span>
         </h2>
         <p>
-          Jede Entscheidung wird von diesen Prinzipien geleitet, von der
-          Kandidatensuche bis zur Integration nach der Vermittlung.
+          Every decision we make is guided by these principles, from sourcing
+          our first candidate to supporting integration years after placement.
         </p>
       </div>
+
       <div class="values-masonry">
         <div class="val-card val-card--big">
           <div class="val-card__icon"><i class="fa-solid fa-bullseye"></i></div>
-          <h3>Unsere Mission</h3>
+          <h3>Our Mission</h3>
           <p>
-            Deutschen Arbeitgebern zuverlässige, professionell geprüfte und
-            sprachlich vorbereitete Kandidaten aus Indien zu vermitteln,
-            während indischen Fachkräften ein strukturierter, ethischer Weg in
-            eine bessere Zukunft in Deutschland eröffnet wird.
+            To provide German employers with reliable, professionally screened,
+            efficiently and contribute to long term workforce development, while
+            giving Indian professionals a structured, ethical pathway to a
+            better future in Germany.
           </p>
         </div>
         <div class="val-card">
           <div class="val-card__icon">
             <i class="fa-solid fa-magnifying-glass-chart"></i>
           </div>
-          <h3>Präzises Matching</h3>
+          <h3>Precision Matching</h3>
           <p>
-            Jeder Kandidat wird auf Fähigkeiten, Sprachkenntnisse, kulturelle
-            Passung und Compliance bewertet.
+            Every candidate is evaluated for technical skill, language
+            proficiency, cultural fit, and compliance.
           </p>
         </div>
         <div class="val-card">
           <div class="val-card__icon">
             <i class="fa-solid fa-scale-balanced"></i>
           </div>
-          <h3>Ethische Rekrutierung</h3>
+          <h3>Ethical Recruitment</h3>
           <p>
-            Volle Transparenz. Keine versteckten Gebühren. Keine Abkürzungen bei
-            der Compliance.
+            Full transparency. No hidden fees. No shortcuts in compliance.
+            German and EU standards, always.
           </p>
         </div>
         <div class="val-card val-card--accent">
           <div class="val-card__icon">
             <i class="fa-solid fa-earth-europe"></i>
           </div>
-          <h3>Kulturelle Integration</h3>
+          <h3>Cultural Integration</h3>
           <p>
-            Wir bereiten Kandidaten nicht nur auf Arbeit, sondern auch auf das
-            Leben in Deutschland vor: Arbeitskultur, europäische Sozialnormen
-            und Alltagsregelungen.
+            We prepare candidates not just for employment, but for life in
+            Germany: workplace culture, European social norms, and day to day
+            regulations.
           </p>
         </div>
         <div class="val-card">
           <div class="val-card__icon">
             <i class="fa-solid fa-handshake-angle"></i>
           </div>
-          <h3>Langfristiges Engagement</h3>
+          <h3>Long Term Commitment</h3>
           <p>
-            Wir stoppen nicht bei der Vermittlung. Nachbetreuung und
-            Orientierungsklassen sichern die Retention.
+            We don't stop at placement. Post arrival support, orientation
+            classes, and follow-up ensure retention.
           </p>
         </div>
         <div class="val-card">
           <div class="val-card__icon">
             <i class="fa-solid fa-chart-line"></i>
           </div>
-          <h3>Arbeitskontinuität</h3>
+          <h3>Workforce Continuity</h3>
           <p>
-            Wir bauen langfristige Talent Pipelines, keine einmaligen
-            Vermittlungen, für nachhaltige Stabilität.
+            We build long term talent pipelines, not one off placements, for
+            sustainable workforce stability.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VIER PROGRAMME -->
+  <!-- ══════════════════════════════════════════════════════════
+  FOUR PROGRAMS — Horizontal scroll cards
+═══════════════════════════════════════════════════════════════ -->
   <section class="programs-section">
     <div class="container">
       <div class="programs-section__header">
         <span class="section-badge"
-          ><i class="fa-solid fa-briefcase"></i> Was wir bieten</span
+          ><i class="fa-solid fa-briefcase"></i> What We Offer</span
         >
-        <h2>Unsere vier <span class="text-gradient">Kernprogramme</span></h2>
+        <h2>Our Four <span class="text-gradient">Core Programs</span></h2>
       </div>
       <div class="prog-tracks">
         <div class="prog-track">
@@ -284,303 +309,334 @@ const lang = getLangFromUrl(Astro.url);
           <div class="prog-track__icon-wrap">
             <i class="fa-solid fa-passport"></i>
           </div>
-          <h3>Chancenkarte <br /><span>(Opportunity Card)</span></h3>
+          <h3>Opportunity Card <br /><span>(Chancenkarte)</span></h3>
           <p>
-            Punktebasierter Aufenthaltstitel für Nicht-EU-Fachkräfte zur
-            Jobsuche in Deutschland, bis zu 12 Monate, ohne vorheriges
-            Jobangebot.
+            Points based residence permit for non EU professionals to search for
+            employment in Germany for up to 12 months without a prior job offer.
           </p>
           <ul>
-            <li><i class="fa-solid fa-check"></i> Sprachkenntnisbewertung</li>
             <li>
-              <i class="fa-solid fa-check"></i> Sperrkonto Unterstützung (12.000 €+)
+              <i class="fa-solid fa-check"></i> Language proficiency assessment
             </li>
-            <li><i class="fa-solid fa-check"></i> Dokumentenvorbereitung</li>
             <li>
-              <i class="fa-solid fa-check"></i> Jobsuche-Orientierung nach Ankunft
+              <i class="fa-solid fa-check"></i> Sperrkonto support (€12,000+)
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> Document preparation guidance
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> Post arrival job search orientation
             </li>
           </ul>
-          <a href="/de/services#opportunity"
-            >Mehr erfahren <i class="fa-solid fa-arrow-right"></i></a
+          <a href="/services/opportunity-card"
+            >Learn More <i class="fa-solid fa-arrow-right"></i></a
           >
         </div>
+
         <div class="prog-track prog-track--featured">
           <div class="prog-track__num">02</div>
           <div class="prog-track__icon-wrap">
             <i class="fa-solid fa-user-nurse"></i>
           </div>
-          <h3>
-            Pflegekräfte für das<br /><span>Deutsche Gesundheitssystem</span>
+
+          <h3 class="color-heading">
+            Nurses to the <br />
+            <span>German Healthcare System</span>
           </h3>
           <p>
-            Gut qualifizierte, erfahrene und deutschsprachige (B1 bis B2) indische
-            Pflegekräfte für Krankenhäuser und Reha Einrichtungen in
-            Deutschland.
+            Well-qualified, experienced, and B1 to B2 German language skilled
+            Indian nurses for hospitals, elderly care centers, and
+            rehabilitation facilities across Germany.
           </p>
           <ul>
-            <li><i class="fa-solid fa-check"></i> B1 bis B2 Deutschkenntnisse</li>
             <li>
-              <i class="fa-solid fa-check"></i> Anerkanntes Diplom/Bachelor in Pflege
+              <i class="fa-solid fa-check"></i> B1 to B2 German proficiency
             </li>
             <li>
-              <i class="fa-solid fa-check"></i> Unterstützung zur Berufsanerkennung
+              <i class="fa-solid fa-check"></i> Recognized Diploma/Bachelor's in Nursing
             </li>
             <li>
-              <i class="fa-solid fa-check"></i> Integrations &amp; Relocation Hilfe
+              <i class="fa-solid fa-check"></i> Qualification recognition support
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> Integration & relocation assistance
             </li>
           </ul>
-          <a href="/de/services#nurses"
-            >Mehr erfahren <i class="fa-solid fa-arrow-right"></i></a
+          <a href="/services/nurses"
+            >Learn More <i class="fa-solid fa-arrow-right"></i></a
           >
         </div>
+
         <div class="prog-track">
           <div class="prog-track__num">03</div>
           <div class="prog-track__icon-wrap">
             <i class="fa-solid fa-graduation-cap"></i>
           </div>
-          <h3>Ausbildungskandidaten <br /><span>Vermittlung</span></h3>
+          <h3>Ausbildung<br /><span>Candidate Placement</span></h3>
           <p>
-            Motivierte indische Kandidaten für Deutschlands duales
-            Ausbildungssystem, vorgeprüft, deutschvorbereitet (A2-B1) und
-            integrationsbereit.
+            Motivated Indian candidates for Germany's dual vocational training
+            system, pre-screened, B1 to B2 German language prepared, and
+            integration ready.
           </p>
           <ul>
+            <li><i class="fa-solid fa-check"></i> Sector specific matching</li>
             <li>
-              <i class="fa-solid fa-check"></i> Branchenspezifisches Matching
+              <i class="fa-solid fa-check"></i> August to September and February to
+              March intakes
             </li>
+            <li><i class="fa-solid fa-check"></i> Relocation support</li>
             <li>
-              <i class="fa-solid fa-check"></i> August bis September und Februar bis März
-              Aufnahmen
-            </li>
-            <li><i class="fa-solid fa-check"></i> Relocation Unterstützung</li>
-            <li>
-              <i class="fa-solid fa-check"></i> Europäische Sozialorientierung
+              <i class="fa-solid fa-check"></i> European social orientation
             </li>
           </ul>
-          <a href="/de/services#ausbildung"
-            >Mehr erfahren <i class="fa-solid fa-arrow-right"></i></a
+          <a href="/services/ausbildung"
+            >Learn More <i class="fa-solid fa-arrow-right"></i></a
           >
         </div>
+
         <div class="prog-track">
           <div class="prog-track__num">04</div>
           <div class="prog-track__icon-wrap">
             <i class="fa-solid fa-helmet-safety"></i>
           </div>
-          <h3>Internationale Fachkräfte <br /><span>Rekrutierung</span></h3>
+          <h3>International Skilled<br /><span>Workers Recruitment</span></h3>
           <p>
-            Erfahrene Arbeitskräfte für Deutschlands Schiffbau-,
-            Fleischverarbeitungs- und Industriesektoren, sprachvorbereitet und
-            vorgeprüft.
+            Experienced workers for Germany's shipbuilding, meat processing, and
+            industrial sectors, language prepared and pre screened for immediate
+            integration.
           </p>
           <ul>
             <li>
-              <i class="fa-solid fa-check"></i> Schiffbau- &amp; Schweißexperten
+              <i class="fa-solid fa-check"></i> Shipbuilding & welding experts
             </li>
             <li>
-              <i class="fa-solid fa-check"></i> Fleischverarbeitungsprofis
+              <i class="fa-solid fa-check"></i> Meat processing professionals
             </li>
             <li>
-              <i class="fa-solid fa-check"></i> Industrie- &amp; Logistikarbeiter
+              <i class="fa-solid fa-check"></i> Industrial & logistics workers
             </li>
-            <li><i class="fa-solid fa-check"></i> A2 bis B1 Deutschvorbereitung</li>
+            <li>
+              <i class="fa-solid fa-check"></i> A2 to B1 German preparation
+            </li>
           </ul>
-          <a href="/de/services#skilled"
-            >Mehr erfahren <i class="fa-solid fa-arrow-right"></i></a
+          <a href="/services/skilled-workers"
+            >Learn More <i class="fa-solid fa-arrow-right"></i></a
           >
         </div>
       </div>
     </div>
   </section>
 
-  <!-- INDIEN-ALLIANZ TRAINING -->
+  <!-- ══════════════════════════════════════════════════════════
+  INDIA TRAINING ALLIANCE — Full-width dark section with cards
+═══════════════════════════════════════════════════════════════ -->
   <section class="training-alliance">
     <div class="container">
       <div class="training-alliance__header">
         <span class="section-badge section-badge--light"
-          ><i class="fa-solid fa-school-flag"></i> Indien Allianz</span
+          ><i class="fa-solid fa-school-flag"></i> India Alliance</span
         >
         <h2>
-          Interne <span class="text-gradient-light">Trainingseinrichtung</span>
+          In-House <span class="text-gradient-light">Training Facility</span>
         </h2>
         <p>
-          Durch institutionelle Partnerschaften in Indien betreiben wir eine
-          umfassende Vorbereitungseinrichtung, bevor die Kandidaten ins
-          Flugzeug steigen.
+          Through institutional partnerships across India, we operate a
+          comprehensive pre departure facility that prepares candidates for life
+          and work in Germany, before they ever board a flight.
         </p>
       </div>
+
       <div class="ta-cards">
         <div class="ta-card ta-card--featured">
           <div class="ta-card__icon"><i class="fa-solid fa-comments"></i></div>
-          <h3>Deutschsprachtraining</h3>
+          <h3>German Language Training</h3>
           <p>
-            Durchgeführt von <strong>muttersprachlichen Deutschen</strong>.
-            Unser Training geht weit über die Grundlagen hinaus. Berufssprache,
-            Branchenvokabular, Alltagskommunikation auf A1 bis B2 Niveau.
+            Conducted by <strong>native German speakers</strong>. Our language
+            training goes beyond classroom basics, candidates learn workplace
+            German, industry specific vocabulary, everyday communication, and
+            social skills, structured to A1 to B2 levels depending on the
+            program.
           </p>
           <div class="ta-levels">
             <span>A1</span><span>A2</span><span>B1</span><span>B2</span>
           </div>
         </div>
+
         <div class="ta-card">
           <div class="ta-card__icon">
             <i class="fa-solid fa-microphone-lines"></i>
           </div>
-          <h3>Interview Vorbereitung</h3>
+          <h3>Interview Preparation</h3>
           <p>
-            Mock-Interviews, die reale deutschen Arbeitgebergspräche simulieren,
-            technische Fragen und professionelle Selbstpräsentation auf
-            Deutsch.
+            Mock interview sessions simulating actual German employer
+            environments, technical questions, and professional presentation in
+            German.
           </p>
         </div>
+
         <div class="ta-card">
           <div class="ta-card__icon"><i class="fa-solid fa-gavel"></i></div>
-          <h3>Deutsches Recht &amp; Regelungen</h3>
+          <h3>German Laws & Regulations</h3>
           <p>
-            Arbeitsrecht, Sozialversicherung, Arbeitssicherheit und Wohnrecht
-            für Neuankömmlinge in Deutschland.
+            Labor law basics, social insurance, workplace safety regulations,
+            and housing laws relevant to newcomers in Germany.
           </p>
         </div>
+
         <div class="ta-card">
           <div class="ta-card__icon">
             <i class="fa-solid fa-people-arrows"></i>
           </div>
-          <h3>Europäische Sozialnormen</h3>
+          <h3>European Social & Cultural Norms</h3>
           <p>
-            Orientierungssitzungen zu Sozialetikette, Pünktlichkeit, Hierarchie,
-            ÖPNV und Integration in die deutsche Gemeinschaft.
+            Orientation sessions on social etiquette, punctuality, hierarchy,
+            public transport and integration into German community life.
           </p>
         </div>
+
         <div class="ta-card">
           <div class="ta-card__icon"><i class="fa-solid fa-briefcase"></i></div>
-          <h3>Arbeitsplatz Kulturbereitschaft</h3>
+          <h3>Workplace Culture Readiness</h3>
           <p>
-            Deutsche Werte: Effizienz, Präzision, indirekte Kommunikation,
-            professionelle Grenzen, reduzieren Kulturschock und beschleunigen
-            Integration.
+            German workplace values: efficiency, precision, indirect
+            communication, and professional boundaries, to reduce cultural shock
+            and accelerate integration.
           </p>
         </div>
+
         <div class="ta-card">
           <div class="ta-card__icon">
             <i class="fa-solid fa-clipboard-check"></i>
           </div>
-          <h3>Dokumenten &amp; Compliance Vorbereitung</h3>
+          <h3>Document & Compliance Prep</h3>
           <p>
-            Geführte Vorbereitung von Zeugnissen, polizeilichen
-            Führungszeugnissen, Sperrkonto Anforderungen und Visumantrag.
+            Guided preparation of academic transcripts, certificates, police
+            clearance, health records, Sperrkonto, and visa applications.
           </p>
         </div>
       </div>
+
       <div class="ta-pullquote">
         <i class="fa-solid fa-quote-left"></i>
         <blockquote>
-          Die meisten Agenturen leiten einfach Lebensläufe weiter.<br /><strong
-            >Wir bauen Kandidaten auf.</strong>
+          Most agencies simply forward CVs.<br /><strong
+            >We build candidates.</strong
+          >
         </blockquote>
-        <cite>Scandic Roots Trainingsphilosophie</cite>
+        <cite>Scandic Roots Training Philosophy</cite>
       </div>
     </div>
   </section>
 
-  <!-- 5-STUFEN VETTING -->
+  <!-- ══════════════════════════════════════════════════════════
+  5-STAGE VETTING — Alternating zigzag timeline
+═══════════════════════════════════════════════════════════════ -->
   <section class="vetting-section">
     <div class="container">
       <div class="vetting-section__header">
         <span class="section-badge"
-          ><i class="fa-solid fa-filter"></i> Unser Prüfprozess</span
+          ><i class="fa-solid fa-filter"></i> Our Vetting Process</span
         >
-        <h2>Wie wir <span class="text-gradient">Kandidaten auswählen</span></h2>
+        <h2>How We <span class="text-gradient">Select Candidates</span></h2>
         <p>
-          Unser 5-stufiger Screening-Prozess ist einer der strengsten der
-          Branche, jeder Kandidat ist vollständig qualifiziert und compliant.
+          industry, ensuring every candidate we present is genuinely qualified
+          and fully compliant.
         </p>
       </div>
+
       <div class="vet-timeline">
         <div class="vet-item">
           <div class="vet-item__connector-wrap">
-            <div class="vet-step"><i class="fa-solid fa-language"></i></div><div
-              class="vet-line"
-            >
-            </div>
+            <div class="vet-step"><i class="fa-solid fa-language"></i></div>
+            <div class="vet-line"></div>
           </div>
           <div class="vet-content vet-content--right">
             <span class="vet-num">01</span>
-            <h3>Sprachkenntnischeck</h3>
+            <h3>Language Proficiency Check</h3>
             <p>
-              Strukturierte Video oder Präsenz Deutsch Interviews. Beurteilung
-              von Sprechflüssigkeit, Verstehen, Schreiben und
-              kontextspezifischem Vokabular. Mindestanforderungen je nach
-              Programmtyp (A1 für Chancenkarte; A2 bis B1 für Ausbildung und
-              Fachkräfte).
+              Structured face to face or video German language interviews.
+              Candidates are assessed across spoken fluency, comprehension,
+              writing ability, and context specific vocabulary. Minimum
+              requirements set by program type (A1 for Chancenkarte; A2 to B1
+              for Ausbildung and Skilled Workers).
             </p>
             <div class="vet-tags">
-              <span>Mündliches Interview</span><span>Schriftlicher Test</span
-              ><span>Niveauzertifizierung</span>
+              <span>Spoken Interview</span><span>Written Test</span><span
+                >Level Certification</span
+              >
             </div>
           </div>
         </div>
+
         <div class="vet-item vet-item--flip">
           <div class="vet-content vet-content--left">
             <span class="vet-num">02</span>
-            <h3>Dokumentenverifizierung</h3>
+            <h3>Educational Document Verification</h3>
             <p>
-              Alle Bildungs- und Berufsqualifikationen werden geprüft und gegen
-              deutsche und EU-Anerkennungsrahmen abgeglichen.
-              Gleichwertigkeitszuordnungen werden identifiziert.
+              All educational and vocational credentials are collected and cross
+              verified. We assess whether qualifications are recognized under
+              German and EU frameworks, check for equivalency, and identify any
+              gaps requiring additional certification.
             </p>
             <div class="vet-tags">
-              <span>Abschlussverifizierung</span><span
-                >Berufsqualifikationen</span
-              ><span>Erfahrungsnachweise</span>
+              <span>Degree Verification</span><span>Vocational Credentials</span
+              ><span>Experience Letters</span>
             </div>
           </div>
           <div class="vet-item__connector-wrap">
             <div class="vet-step">
               <i class="fa-solid fa-file-contract"></i>
-            </div><div class="vet-line"></div>
+            </div>
+            <div class="vet-line"></div>
           </div>
         </div>
+
         <div class="vet-item">
           <div class="vet-item__connector-wrap">
             <div class="vet-step vet-step--dark">
               <i class="fa-solid fa-shield-halved"></i>
-            </div><div class="vet-line"></div>
+            </div>
+            <div class="vet-line"></div>
           </div>
           <div class="vet-content vet-content--right">
             <span class="vet-num">03</span>
-            <h3>Führungszeugnis</h3>
+            <h3>Criminal Record Check</h3>
             <p>
-              Jeder Kandidat reicht gültige polizeiliche Führungszeugnisse aus
-              allen Wohnsitzländern der letzten 10 Jahre ein.
-              Nulltoleranzpolitik bei disqualifizierenden Einträgen.
+              Every candidate submits valid police clearance certificates from
+              all countries of residence in the past 10 years. We carefully
+              review documents and decline any candidate with a disqualifying
+              record, protecting employers and ensuring placement integrity.
             </p>
             <div class="vet-tags">
-              <span>Polizeiliche Bestätigung</span><span
-                >Hintergrundprüfung</span
-              ><span>Nulltoleranz</span>
+              <span>Police Clearance</span><span>Background Screening</span
+              ><span>Zero Tolerance</span>
             </div>
           </div>
         </div>
+
         <div class="vet-item vet-item--flip">
           <div class="vet-content vet-content--left">
             <span class="vet-num">04</span>
-            <h3>Finanzielle Bonitätsprüfung</h3>
+            <h3>Financial Credibility Review</h3>
             <p>
-              Bei Chancenkarte-Antragstellern prüfen wir das Sperrkonto mit dem
-              erforderlichen Guthaben (ca. 12.000 €+) und die allgemeine
-              finanzielle Bonität für die Übergangsphase.
+              For Chancenkarte applicants, we verify that candidates have or are
+              opening a German blocked bank account (Sperrkonto) with the
+              required balance (approximately €12,000+). We also assess overall
+              financial credibility to ensure candidates can manage the
+              transition period effectively.
             </p>
             <div class="vet-tags">
-              <span>Sperrkonto Nachweis</span><span>Finanzaufstellung</span
-              ><span>Eigenversorgungscheck</span>
+              <span>Sperrkonto Proof</span><span>Financial Statement</span><span
+                >Self-Sufficiency Check</span
+              >
             </div>
           </div>
           <div class="vet-item__connector-wrap">
-            <div class="vet-step"><i class="fa-solid fa-wallet"></i></div><div
-              class="vet-line"
-            >
-            </div>
+            <div class="vet-step"><i class="fa-solid fa-wallet"></i></div>
+            <div class="vet-line"></div>
           </div>
         </div>
+
         <div class="vet-item">
           <div class="vet-item__connector-wrap">
             <div class="vet-step vet-step--final">
@@ -589,16 +645,17 @@ const lang = getLangFromUrl(Astro.url);
           </div>
           <div class="vet-content vet-content--right">
             <span class="vet-num">05</span>
-            <h3>Abschließende Compliance Freigabe</h3>
+            <h3>Eligibility & Compliance Final Sign Off</h3>
             <p>
-              Unser Compliance-Team führt eine finale Gesamtprüfung durch:
-              Einwanderungseignung, Punktebewertung (für Chancenkarte),
-              Visaweg Eignung und arbeitgeberspezifische Anforderungen. Nur
-              Kandidaten, die alle fünf Stufen bestehen, werden empfohlen.
+              Our compliance team conducts a final holistic review: immigration
+              eligibility, points system scoring (for Chancenkarte), visa
+              pathway suitability, and employer specific requirements. Only
+              candidates who pass all five stages receive our formal
+              recommendation to the employer.
             </p>
             <div class="vet-tags">
-              <span>Punktesystemprüfung</span><span>Einwanderungsreview</span
-              ><span>Arbeitgeberbereit</span>
+              <span>Points System Check</span><span>Immigration Review</span
+              ><span>Employer-Ready</span>
             </div>
           </div>
         </div>
@@ -606,15 +663,18 @@ const lang = getLangFromUrl(Astro.url);
     </div>
   </section>
 
-  <!-- TEAM & WARUM WIR -->
+  <!-- ══════════════════════════════════════════════════════════
+  TEAM + WHY US — Side-by-side with visual distinction
+═══════════════════════════════════════════════════════════════ -->
   <section class="team-why">
     <div class="container team-why__grid">
+      <!-- Team -->
       <div class="team-panel">
         <span class="section-badge"
-          ><i class="fa-solid fa-users"></i> Unser Team</span
+          ><i class="fa-solid fa-users"></i> Our Team</span
         >
         <h2>
-          Die Menschen hinter <span class="text-gradient">Scandic Roots</span>
+          The People Behind <span class="text-gradient">Scandic Roots</span>
         </h2>
         <div class="team-list">
           <div class="team-item">
@@ -622,11 +682,12 @@ const lang = getLangFromUrl(Astro.url);
               <i class="fa-solid fa-user-tie"></i>
             </div>
             <div>
-              <h4>Management Team</h4><span class="team-role"
-                >Strategische Führung</span
-              ><p>
-                Kombinierte Erfahrung in internationalem Recruiting,
-                Einwanderungs-Compliance und Workforce Strategie.
+              <h4>Management Team</h4>
+              <span class="team-role">Strategic Leadership</span>
+              <p>
+                Combined experience in B2B international staffing, German
+                immigration compliance, and workforce strategy across Europe and
+                South Asia.
               </p>
             </div>
           </div>
@@ -635,11 +696,11 @@ const lang = getLangFromUrl(Astro.url);
               <i class="fa-solid fa-chalkboard-user"></i>
             </div>
             <div>
-              <h4>Sprachtrainer</h4><span class="team-role"
-                >Muttersprachliche Deutschlehrer</span
-              ><p>
-                Muttersprachliche Deutschlehrer, die CEFR-konforme Kurse von A1
-                bis B2 abhalten.
+              <h4>Language Training Staff</h4>
+              <span class="team-role">Native German Trainers</span>
+              <p>
+                Our language team consists of native German speakers conducting
+                CEFR aligned classes from A1 beginner to B2 professional level.
               </p>
             </div>
           </div>
@@ -648,11 +709,11 @@ const lang = getLangFromUrl(Astro.url);
               <i class="fa-solid fa-file-shield"></i>
             </div>
             <div>
-              <h4>Screening &amp; Compliance</h4><span class="team-role"
-                >Prüf &amp; Rechtsexperten</span
-              ><p>
-                Fachleute für Dokumentenverifizierung, Führungszeugnisse und
-                Einwanderungs-Compliance.
+              <h4>Screening & Compliance</h4>
+              <span class="team-role">Vetting & Legal Experts</span>
+              <p>
+                Dedicated professionals handling document verification, criminal
+                backgrounds, financial credibility, and immigration sign offs.
               </p>
             </div>
           </div>
@@ -661,71 +722,86 @@ const lang = getLangFromUrl(Astro.url);
               <i class="fa-solid fa-handshake-angle"></i>
             </div>
             <div>
-              <h4>Kandidaten-Support</h4><span class="team-role"
-                >Integrationskoordinatoren</span
-              ><p>
-                Supportteam begleitet von der Erstbewertung über Training bis
-                nach der Ankunft in Deutschland.
+              <h4>Candidate Support</h4>
+              <span class="team-role">Integration Coordinators</span>
+              <p>
+                Our support team assists candidates from initial assessment
+                through training, relocation, accommodation, and post arrival
+                integration.
               </p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Why Us -->
       <div class="why-panel">
         <span class="section-badge section-badge--light"
-          ><i class="fa-solid fa-award"></i> Unser Vorteil</span
+          ><i class="fa-solid fa-award"></i> Our Advantage</span
         >
         <h2>
-          Warum wählen <span class="text-gradient-light"
-            >deutsche Arbeitgeber</span
-          > uns?
+          Why <span class="text-gradient-light">German Employers</span> Choose Us
         </h2>
         <div class="why-list">
           <div class="why-item">
-            <div class="why-item__num">01</div><div>
-              <h4>Vorgeprüft, nicht nur gesourct</h4><p>
-                Jeder Kandidat besteht unser 5 Stufen Vetting. Keine
-                verschwendeten Interviews, keine Compliance Überraschungen.
+            <div class="why-item__num">01</div>
+            <div>
+              <h4>Pre Screened, Not Just Sourced</h4>
+              <p>
+                Every candidate passes our 5 stage vetting before you see their
+                profile. No wasted interviews, no compliance surprises.
               </p>
             </div>
           </div>
           <div class="why-item">
-            <div class="why-item__num">02</div><div>
-              <h4>Sprachbereite Kandidaten</h4><p>
-                Training von muttersprachlichen Deutschen, echte
-                Kommunikationsfähigkeit, nicht nur Zertifikate.
+            <div class="why-item__num">02</div>
+            <div>
+              <h4>Language Ready Candidates</h4>
+              <p>
+                Candidates are trained by native German speakers, real
+                communication ability, not just certificates.
               </p>
             </div>
           </div>
           <div class="why-item">
-            <div class="why-item__num">03</div><div>
-              <h4>Indien-Allianz</h4><p>
-                Zugang zu einem breiten, qualifizierten indischen Kandidatenpool
-                durch institutionelle Partnerschaften.
+            <div class="why-item__num">03</div>
+            <div>
+              <h4>India Institutional Alliance</h4>
+              <p>
+                Access to a wide, qualified Indian candidate base through our
+                partnerships with educational institutions and training
+                networks.
               </p>
             </div>
           </div>
           <div class="why-item">
-            <div class="why-item__num">04</div><div>
-              <h4>End to End Management</h4><p>
-                Von Kandidatensuche und Screening bis Visa, Relocation und
-                Integration, wir managen die gesamte Pipeline.
+            <div class="why-item__num">04</div>
+            <div>
+              <h4>End to End Management</h4>
+              <p>
+                From candidate sourcing and screening to visa support,
+                relocation, and post arrival integration, we manage the complete
+                pipeline.
               </p>
             </div>
           </div>
           <div class="why-item">
-            <div class="why-item__num">05</div><div>
-              <h4>Mehrere Programmpfade</h4><p>
-                Tiefes Fachwissen in Chancenkarte, Ausbildung, Pflegekräfte und
-                Fachkräften für präzises Matching.
+            <div class="why-item__num">05</div>
+            <div>
+              <h4>Multiple Pathway Expertise</h4>
+              <p>
+                Deep expertise in Chancenkarte, Ausbildung, Nurses, and Skilled
+                Workers, matching candidates precisely to each pathway.
               </p>
             </div>
           </div>
           <div class="why-item">
-            <div class="why-item__num">06</div><div>
-              <h4>Schweden basiert, global vernetzt</h4><p>
-                Europäische Glaubwürdigkeit und Rechtssicherheit kombiniert mit
-                Tiefe und Volumen unseres Indien Netzwerks.
+            <div class="why-item__num">06</div>
+            <div>
+              <h4>Sweden Based, Globally Minded</h4>
+              <p>
+                European credibility and legal clarity combined with the depth
+                and volume of our India network.
               </p>
             </div>
           </div>
@@ -737,26 +813,28 @@ const lang = getLangFromUrl(Astro.url);
   <!-- CTA -->
   <section class="ab-cta">
     <div class="ab-cta__bg">
-      <div class="ab-cta__glow-a"></div><div class="ab-cta__glow-b"></div>
+      <div class="ab-cta__glow-a"></div>
+      <div class="ab-cta__glow-b"></div>
     </div>
     <div class="container ab-cta__inner">
-      <h2>Bereit für Ihre<br /><em>Partnerschaft?</em></h2>
+      <h2>Ready to Start Your<br /><em>Partnership?</em></h2>
       <p>
-        Ob Arbeitgeber auf der Suche nach qualifiziertem Talent oder Kandidat
-        mit dem Wunsch nach einer Karriere in Deutschland, Scandic Roots ist
-        Ihr vertrauenswürdiger Partner.
+        Whether you're an employer seeking qualified talent or a candidate
+        looking for opportunities in Germany, Scandic Roots is your trusted
+        partner.
       </p>
       <div class="ab-cta__btns">
-        <a href="/de/contact" class="btn-glow"
-          >Kontaktieren Sie uns <i class="fa-solid fa-arrow-right"></i></a
+        <a href="/contact" class="btn-glow"
+          >Contact Us Today <i class="fa-solid fa-arrow-right"></i></a
         >
-        <a href="/de/services" class="btn-ghost">Leistungen erkunden</a>
+        <a href="/services" class="btn-ghost">Explore Services</a>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
+  /* ── TOKENS ── */
   :root {
     --indigo: #11184c;
     --rose: #b23d69;
@@ -767,11 +845,15 @@ const lang = getLangFromUrl(Astro.url);
     --muted: #4a5568;
   }
 
+  /* ═══════════════════════════════════════════
+  HERO — SPLIT SCREEN
+═══════════════════════════════════════════ */
   .ab-hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 100vh;
   }
+
   .ab-hero__left {
     background: #09091a;
     display: flex;
@@ -795,6 +877,7 @@ const lang = getLangFromUrl(Astro.url);
     filter: blur(80px);
     pointer-events: none;
   }
+
   .ab-hero__eyebrow {
     display: flex;
     align-items: center;
@@ -817,6 +900,7 @@ const lang = getLangFromUrl(Astro.url);
     display: block;
     flex-shrink: 0;
   }
+
   .ab-hero__title {
     font-size: clamp(3.5rem, 6vw, 5.5rem);
     color: #fff;
@@ -831,17 +915,20 @@ const lang = getLangFromUrl(Astro.url);
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
   .ab-hero__sub {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.7;
     margin-bottom: 2.5rem;
   }
+
   .ab-hero__btns {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
   }
+
   .btn-glow {
     display: inline-flex;
     align-items: center;
@@ -861,6 +948,7 @@ const lang = getLangFromUrl(Astro.url);
     box-shadow: 0 12px 30px rgba(17, 24, 76, 0.4);
     color: #fff;
   }
+
   .btn-ghost {
     display: inline-flex;
     align-items: center;
@@ -878,6 +966,8 @@ const lang = getLangFromUrl(Astro.url);
     border-color: rgba(255, 255, 255, 0.5);
     color: #fff;
   }
+
+  /* Right Panel */
   .ab-hero__right {
     background: var(--off);
     display: flex;
@@ -904,6 +994,7 @@ const lang = getLangFromUrl(Astro.url);
     right: -100px;
     filter: blur(80px);
   }
+
   .ab-stat-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -954,6 +1045,7 @@ const lang = getLangFromUrl(Astro.url);
     color: var(--muted);
     font-family: var(--font-heading);
   }
+
   .ab-tri-flags {
     display: flex;
     gap: 1rem;
@@ -989,20 +1081,26 @@ const lang = getLangFromUrl(Astro.url);
     letter-spacing: 0.5px;
   }
 
+  /* ═══════════════════════════════════════════
+  WHO WE ARE
+═══════════════════════════════════════════ */
   .who-we-are {
     padding: 7rem 0;
     background: #fff;
   }
+
   .wwa__inner {
     display: grid;
     grid-template-columns: 400px 1fr;
     gap: 6rem;
     align-items: start;
   }
+
   .wwa__sidebar h2 {
     font-size: clamp(2rem, 3.5vw, 2.8rem);
     margin-bottom: 2rem;
   }
+
   .wwa__sidebar-cards {
     display: flex;
     flex-direction: column;
@@ -1034,6 +1132,7 @@ const lang = getLangFromUrl(Astro.url);
     background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
+
   .wwa__country-icon {
     width: 44px;
     height: 44px;
@@ -1055,6 +1154,7 @@ const lang = getLangFromUrl(Astro.url);
     margin: 0;
     line-height: 1.5;
   }
+
   .wwa__text-large {
     font-size: 1.25rem;
     font-weight: 500;
@@ -1067,11 +1167,13 @@ const lang = getLangFromUrl(Astro.url);
     margin-bottom: 1.2rem;
     font-size: 1rem;
   }
+
   .wwa__divider {
     height: 1px;
     background: rgba(0, 0, 0, 0.07);
     margin: 2rem 0;
   }
+
   .wwa__bullets {
     display: flex;
     flex-direction: column;
@@ -1093,10 +1195,14 @@ const lang = getLangFromUrl(Astro.url);
     color: var(--muted);
   }
 
+  /* ═══════════════════════════════════════════
+  MISSION & VALUES — DARK SECTION
+═══════════════════════════════════════════ */
   .values-section {
     background: linear-gradient(135deg, #09091a 0%, #11184c 100%);
     padding: 7rem 0;
   }
+
   .values-section__header {
     text-align: center;
     margin-bottom: 4rem;
@@ -1112,23 +1218,27 @@ const lang = getLangFromUrl(Astro.url);
     max-width: 600px;
     margin: 0 auto;
   }
+
   .section-badge--light {
     background: rgba(255, 255, 255, 0.08);
     color: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
+
   .text-gradient-light {
     background: linear-gradient(90deg, #f59e9e 0%, #c084fc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
   .values-masonry {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: 1.5rem;
   }
+
   .val-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.07);
@@ -1152,6 +1262,7 @@ const lang = getLangFromUrl(Astro.url);
     );
     border-color: rgba(178, 61, 105, 0.3);
   }
+
   .val-card__icon {
     font-size: 2.2rem;
     color: var(--rose);
@@ -1170,10 +1281,14 @@ const lang = getLangFromUrl(Astro.url);
     margin: 0;
   }
 
+  /* ═══════════════════════════════════════════
+  FOUR PROGRAMS
+═══════════════════════════════════════════ */
   .programs-section {
     padding: 7rem 0;
     background: #fff;
   }
+
   .programs-section__header {
     text-align: center;
     margin-bottom: 4rem;
@@ -1181,11 +1296,13 @@ const lang = getLangFromUrl(Astro.url);
   .programs-section__header h2 {
     font-size: clamp(2rem, 4vw, 3rem);
   }
+
   .prog-tracks {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }
+
   .prog-track {
     padding: 2.5rem 1.8rem;
     background: var(--off);
@@ -1216,6 +1333,7 @@ const lang = getLangFromUrl(Astro.url);
   .prog-track:hover::before {
     opacity: 1;
   }
+
   .prog-track--featured {
     background: linear-gradient(160deg, var(--indigo) 0%, var(--violet) 100%);
     border: none;
@@ -1250,6 +1368,7 @@ const lang = getLangFromUrl(Astro.url);
   .prog-track--featured a:hover {
     color: #fff;
   }
+
   .prog-track__num {
     font-size: 4rem;
     font-weight: 900;
@@ -1321,11 +1440,18 @@ const lang = getLangFromUrl(Astro.url);
   .prog-track a:hover {
     gap: 0.7rem;
   }
+  .color-heading {
+    color: #fff !important;
+  }
 
+  /* ═══════════════════════════════════════════
+  TRAINING ALLIANCE — DARK SECTION
+═══════════════════════════════════════════ */
   .training-alliance {
     background: linear-gradient(135deg, #09091a, var(--violet));
     padding: 7rem 0;
   }
+
   .training-alliance__header {
     text-align: center;
     margin-bottom: 4rem;
@@ -1340,12 +1466,14 @@ const lang = getLangFromUrl(Astro.url);
     max-width: 600px;
     margin: 0 auto;
   }
+
   .ta-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-bottom: 4rem;
   }
+
   .ta-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.07);
@@ -1357,11 +1485,13 @@ const lang = getLangFromUrl(Astro.url);
     background: rgba(255, 255, 255, 0.08);
     transform: translateY(-4px);
   }
+
   .ta-card--featured {
     grid-column: span 2;
     background: rgba(178, 61, 105, 0.15);
     border-color: rgba(178, 61, 105, 0.25);
   }
+
   .ta-card__icon {
     font-size: 2rem;
     color: var(--rose);
@@ -1380,6 +1510,7 @@ const lang = getLangFromUrl(Astro.url);
     margin: 0;
     margin-bottom: 0.8rem;
   }
+
   .ta-levels {
     display: flex;
     gap: 0.5rem;
@@ -1394,6 +1525,7 @@ const lang = getLangFromUrl(Astro.url);
     font-weight: 700;
     font-family: var(--font-heading);
   }
+
   .ta-pullquote {
     text-align: center;
     padding: 3rem;
@@ -1424,6 +1556,9 @@ const lang = getLangFromUrl(Astro.url);
     font-size: 0.85rem;
   }
 
+  /* ═══════════════════════════════════════════
+  5-STAGE VETTING — ZIGZAG
+═══════════════════════════════════════════ */
   .vetting-section {
     padding: 7rem 0;
     background: #fff;
@@ -1441,6 +1576,7 @@ const lang = getLangFromUrl(Astro.url);
     max-width: 600px;
     margin: 0 auto;
   }
+
   .vet-timeline {
     display: flex;
     flex-direction: column;
@@ -1448,6 +1584,7 @@ const lang = getLangFromUrl(Astro.url);
     max-width: 1000px;
     margin: 0 auto;
   }
+
   .vet-item {
     display: grid;
     grid-template-columns: 80px 1fr;
@@ -1457,11 +1594,13 @@ const lang = getLangFromUrl(Astro.url);
   .vet-item--flip {
     grid-template-columns: 1fr 80px;
   }
+
   .vet-item__connector-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .vet-step {
     width: 80px;
     height: 80px;
@@ -1493,6 +1632,12 @@ const lang = getLangFromUrl(Astro.url);
     color: #fff;
     border-color: var(--indigo);
   }
+  .vet-item--flip:hover .vet-step,
+  .vet-step--dark:hover {
+    background: var(--rose);
+    border-color: var(--rose);
+  }
+
   .vet-line {
     width: 3px;
     flex: 1;
@@ -1504,6 +1649,7 @@ const lang = getLangFromUrl(Astro.url);
     );
     margin: 4px 0;
   }
+
   .vet-content {
     padding: 2.5rem;
     border-radius: 20px;
@@ -1516,6 +1662,7 @@ const lang = getLangFromUrl(Astro.url);
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
     transform: translateY(-3px);
   }
+
   .vet-num {
     display: inline-block;
     font-size: 0.7rem;
@@ -1536,6 +1683,7 @@ const lang = getLangFromUrl(Astro.url);
     line-height: 1.7;
     margin-bottom: 1rem;
   }
+
   .vet-tags {
     display: flex;
     gap: 0.5rem;
@@ -1551,24 +1699,33 @@ const lang = getLangFromUrl(Astro.url);
     font-family: var(--font-heading);
   }
 
+  /* ═══════════════════════════════════════════
+  TEAM & WHY
+═══════════════════════════════════════════ */
   .team-why {
     padding: 7rem 0;
   }
+
   .team-why__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
+  }
+
+  .team-panel {
   }
   .team-panel h2,
   .why-panel h2 {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     margin-bottom: 2.5rem;
   }
+
   .team-list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
+
   .team-item {
     display: flex;
     gap: 1.2rem;
@@ -1583,6 +1740,7 @@ const lang = getLangFromUrl(Astro.url);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
     transform: translateX(6px);
   }
+
   .team-item__icon {
     width: 50px;
     height: 50px;
@@ -1615,6 +1773,8 @@ const lang = getLangFromUrl(Astro.url);
     margin: 0;
     line-height: 1.5;
   }
+
+  /* Why panel */
   .why-panel {
     background: linear-gradient(135deg, var(--indigo) 0%, var(--violet) 100%);
     border-radius: 24px;
@@ -1623,11 +1783,13 @@ const lang = getLangFromUrl(Astro.url);
   .why-panel h2 {
     color: #fff;
   }
+
   .why-list {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
   }
+
   .why-item {
     display: flex;
     gap: 1.2rem;
@@ -1641,6 +1803,7 @@ const lang = getLangFromUrl(Astro.url);
   .why-item:hover {
     background: rgba(255, 255, 255, 0.1);
   }
+
   .why-item__num {
     font-size: 1.8rem;
     font-weight: 900;
@@ -1662,6 +1825,9 @@ const lang = getLangFromUrl(Astro.url);
     line-height: 1.5;
   }
 
+  /* ═══════════════════════════════════════════
+  CTA
+═══════════════════════════════════════════ */
   .ab-cta {
     position: relative;
     text-align: center;
@@ -1731,6 +1897,9 @@ const lang = getLangFromUrl(Astro.url);
     flex-wrap: wrap;
   }
 
+  /* ═══════════════════════════════════════════
+  RESPONSIVE
+═══════════════════════════════════════════ */
   @media (max-width: 1100px) {
     .ab-hero {
       grid-template-columns: 1fr;
@@ -1777,6 +1946,7 @@ const lang = getLangFromUrl(Astro.url);
       grid-template-columns: 1fr;
     }
   }
+
   @media (max-width: 768px) {
     .values-masonry {
       grid-template-columns: 1fr;

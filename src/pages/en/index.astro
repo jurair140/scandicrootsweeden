@@ -37,7 +37,7 @@ const isDe = lang === "de";
           {t("home.about.p2")}
         </p>
         <a
-          href={isDe ? "/de/about" : "/about"}
+          href={isDe ? "/about" : "/en/about"}
           class="btn btn-outline"
           style="margin-top: 2rem;">{t("home.about.cta")}</a
         >
@@ -776,9 +776,10 @@ const isDe = lang === "de";
       margin-bottom: 3rem;
     }
   }
+
   @media (max-width: 992px) {
     .roadmap-wrapper {
-      height: auto; 
+      height: auto;
       padding: 2rem 0;
       flex-direction: column;
       align-items: flex-start;
@@ -803,7 +804,7 @@ const isDe = lang === "de";
       justify-content: flex-start;
     }
     .roadmap-node {
-      left: -42px;
+      left: -42px; /* 60px padding - 30px line pos - node half-width */
       top: 2rem;
       transform: none;
     }

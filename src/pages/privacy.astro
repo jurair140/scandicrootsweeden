@@ -4,90 +4,193 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const isDe = lang === "de";
 ---
 
-<Layout title={t("footer.privacy")} description="Scandic Roots Privacy Policy">
+<Layout
+  title={t("footer.privacy")}
+  description={isDe
+    ? "Datenschutzerklärung von Scandic Roots"
+    : "Scandic Roots Privacy Policy"}
+>
   <main class="legal-page">
     <div class="container">
       <header class="legal-header">
         <h1 class="text-gradient">{t("footer.privacy")}</h1>
-        <p class="last-updated">Last Updated: March 30, 2026</p>
+        <p class="last-updated">
+          {
+            isDe
+              ? "Zuletzt aktualisiert: 30. März 2026"
+              : "Last Updated: March 30, 2026"
+          }
+        </p>
       </header>
 
       <div class="legal-content">
-        <section>
-          <h2>1. Introduction</h2>
-          <p>
-            Scandic Roots ("we", "us", or "our") respects your privacy and is
-            committed to protecting your personal data. This privacy policy will
-            inform you as to how we look after your personal data when you visit
-            our website and tell you about your privacy rights and how the law
-            protects you.
-          </p>
-        </section>
+        {
+          isDe ? (
+            <>
+              <section>
+                <h2>1. Einleitung</h2>
+                <p>
+                  Scandic Roots ("wir", "uns" oder "unser") respektiert Ihre
+                  Privatsphäre und setzt sich für den Schutz Ihrer
+                  personenbezogenen Daten ein. Diese Datenschutzerklärung
+                  informiert Sie darüber, wie wir mit Ihren personenbezogenen
+                  Daten umgehen, wenn Sie unsere Website besuchen, und klärt Sie
+                  über Ihre Datenschutzrechte und den gesetzlichen Schutz auf.
+                </p>
+              </section>
 
-        <section>
-          <h2>2. The Data We Collect About You</h2>
-          <p>
-            Personal data, or personal information, means any information about
-            an individual from which that person can be identified. We may
-            collect, use, store and transfer different kinds of personal data
-            about you which we have grouped together as follows:
-          </p>
-          <ul>
-            <li>
-              <strong>Identity Data:</strong> includes first name, last name, username
-              or similar identifier.
-            </li>
-            <li>
-              <strong>Contact Data:</strong> includes email address and telephone
-              numbers.
-            </li>
-            <li>
-              <strong>Technical Data:</strong> includes internet protocol (IP) address,
-              browser type and version, time zone setting and location.
-            </li>
-          </ul>
-        </section>
+              <section>
+                <h2>2. Die Daten, die wir über Sie sammeln</h2>
+                <p>
+                  Personenbezogene Daten sind alle Informationen über eine
+                  Person, aus denen diese Person identifiziert werden kann. Wir
+                  können verschiedene Arten von personenbezogenen Daten über Sie
+                  sammeln, verwenden, speichern und übertragen, die wir wie
+                  folgt zusammengefasst haben:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Identitätsdaten:</strong> umfasst Vorname, Nachname,
+                    Benutzername oder ähnliche Identifikatoren.
+                  </li>
+                  <li>
+                    <strong>Kontaktdaten:</strong> umfasst E-Mail-Adresse und
+                    Telefonnummern.
+                  </li>
+                  <li>
+                    <strong>Technische Daten:</strong> umfasst
+                    Internet Protokoll Adresse (IP), Browsertyp und -version,
+                    Zeitzoneneinstellung und Standort.
+                  </li>
+                </ul>
+              </section>
 
-        <section>
-          <h2>3. How We Use Your Personal Data</h2>
-          <p>
-            We will only use your personal data when the law allows us to. Most
-            commonly, we will use your personal data in the following
-            circumstances:
-          </p>
-          <ul>
-            <li>
-              Where we need to perform the contract we are about to enter into
-              or have entered into with you.
-            </li>
-            <li>
-              Where it is necessary for our legitimate interests (or those of a
-              third party).
-            </li>
-            <li>Where we need to comply with a legal obligation.</li>
-          </ul>
-        </section>
+              <section>
+                <h2>3. Wie wir Ihre personenbezogenen Daten verwenden</h2>
+                <p>
+                  Wir werden Ihre personenbezogenen Daten nur dann verwenden,
+                  wenn das Gesetz es uns erlaubt. In der Regel verwenden wir
+                  Ihre personenbezogenen Daten in den folgenden Situationen:
+                </p>
+                <ul>
+                  <li>
+                    Wenn wir den Vertrag erfüllen müssen, den wir mit Ihnen
+                    geschlossen haben oder schließen werden.
+                  </li>
+                  <li>
+                    Wenn es für unsere berechtigten Interessen (oder die eines
+                    Dritten) erforderlich ist.
+                  </li>
+                  <li>
+                    Wenn wir eine gesetzliche Verpflichtung erfüllen müssen.
+                  </li>
+                </ul>
+              </section>
 
-        <section>
-          <h2>4. Data Security</h2>
-          <p>
-            We have put in place appropriate security measures to prevent your
-            personal data from being accidentally lost, used or accessed in an
-            unauthorized way, altered or disclosed.
-          </p>
-        </section>
+              <section>
+                <h2>4. Datensicherheit</h2>
+                <p>
+                  Wir haben angemessene Sicherheitsmaßnahmen getroffen, um zu
+                  verhindern, dass Ihre personenbezogenen Daten versehentlich
+                  verloren gehen, unbefugt verwendet oder aufgerufen, geändert
+                  oder offengelegt werden.
+                </p>
+              </section>
 
-        <section>
-          <h2>5. Your Legal Rights</h2>
-          <p>
-            Under certain circumstances, you have rights under data protection
-            laws in relation to your personal data, including the right to
-            request access, correction, erasure, restriction, transfer, or to
-            object to processing.
-          </p>
-        </section>
+              <section>
+                <h2>5. Ihre gesetzlichen Rechte</h2>
+                <p>
+                  Unter bestimmten Umständen haben Sie Rechte gemäß den
+                  Datenschutzgesetzen in Bezug auf Ihre personenbezogenen Daten,
+                  einschließlich des Rechts auf Auskunft, Berichtigung,
+                  Löschung, Einschränkung, Übertragung oder Widerspruch gegen
+                  die Verarbeitung.
+                </p>
+              </section>
+            </>
+          ) : (
+            <>
+              <section>
+                <h2>1. Introduction</h2>
+                <p>
+                  Scandic Roots ("we", "us", or "our") respects your privacy and
+                  is committed to protecting your personal data. This privacy
+                  policy will inform you as to how we look after your personal
+                  data when you visit our website and tell you about your
+                  privacy rights and how the law protects you.
+                </p>
+              </section>
+
+              <section>
+                <h2>2. The Data We Collect About You</h2>
+                <p>
+                  Personal data, or personal information, means any information
+                  about an individual from which that person can be identified.
+                  We may collect, use, store and transfer different kinds of
+                  personal data about you which we have grouped together as
+                  follows:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Identity Data:</strong> includes first name, last
+                    name, username or similar identifier.
+                  </li>
+                  <li>
+                    <strong>Contact Data:</strong> includes email address and
+                    telephone numbers.
+                  </li>
+                  <li>
+                    <strong>Technical Data:</strong> includes internet protocol
+                    (IP) address, browser type and version, time zone setting
+                    and location.
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>3. How We Use Your Personal Data</h2>
+                <p>
+                  We will only use your personal data when the law allows us to.
+                  Most commonly, we will use your personal data in the following
+                  circumstances:
+                </p>
+                <ul>
+                  <li>
+                    Where we need to perform the contract we are about to enter
+                    into or have entered into with you.
+                  </li>
+                  <li>
+                    Where it is necessary for our legitimate interests (or those
+                    of a third party).
+                  </li>
+                  <li>Where we need to comply with a legal obligation.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>4. Data Security</h2>
+                <p>
+                  We have put in place appropriate security measures to prevent
+                  your personal data from being accidentally lost, used or
+                  accessed in an unauthorized way, altered or disclosed.
+                </p>
+              </section>
+
+              <section>
+                <h2>5. Your Legal Rights</h2>
+                <p>
+                  Under certain circumstances, you have rights under data
+                  protection laws in relation to your personal data, including
+                  the right to request access, correction, erasure, restriction,
+                  transfer, or to object to processing.
+                </p>
+              </section>
+            </>
+          )
+        }
       </div>
     </div>
   </main>

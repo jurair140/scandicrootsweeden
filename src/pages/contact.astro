@@ -1,558 +1,616 @@
 ---
 // src/pages/contact.astro
 import Layout from "../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const isDe = lang === "de";
 ---
 
 <Layout
-  title="Contact Us"
-  description="Get in touch with Scandic Roots to secure global talent for your team."
+    title={isDe ? "Kontaktieren Sie uns" : "Contact Us"}
+    description={isDe
+        ? "Nehmen Sie Kontakt mit Scandic Roots auf, um globale Talente für Ihr Team zu sichern."
+        : "Get in touch with Scandic Roots to secure global talent for your team."}
 >
-  <div class="page-header">
-    <div class="container text-center">
-      <h1 class="page-title">
-        Contact <span class="text-gradient">Our Team</span>
-      </h1>
-      <p class="page-subtitle">
-        Ready to address your labor shortages? We are here to help.
-      </p>
+    <div class="page-header">
+        <div class="container text-center">
+            <h1 class="page-title">
+                <Fragment set:html={t("contact.title")} />
+            </h1>
+            <p class="page-subtitle">{t("contact.subtitle")}</p>
+        </div>
     </div>
-  </div>
 
-  <section class="section container">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h2 class="section-title text-left">Get In Touch</h2>
-        <p style="margin-bottom: 2rem;">
-          Whether you're an employer looking for candidates or a professional
-          seeking opportunities, reach out to us and our team will respond
-          within 24 hours.
-        </p>
+    <section class="section container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2 class="section-title text-left">
+                    {t("contact.info.title")}
+                </h2>
+                <p style="margin-bottom: 2rem;">
+                    {t("contact.info.p")}
+                </p>
 
-        <div class="info-block">
-          <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="info-text">
-            <h4>Sweden HQ</h4>
-            <p>Olof Palmes Gata 12<br />111 37 Stockholm, Sweden</p>
-          </div>
-        </div>
-
-        <div class="info-block">
-          <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
-          <div class="info-text">
-            <h4>Email Us</h4>
-            <p>info@scandicroots.se<br />support@scandicroots.se</p>
-          </div>
-        </div>
-
-        <div class="info-block">
-          <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
-          <div class="info-text">
-            <h4>Call Us</h4>
-            <p>+46 8 123 45 67<br />Mon to Fri, 09:00 to 18:00 CET</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-form-wrapper glass-panel">
-        <form class="contact-form">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="John Doe" required />
-          </div>
-
-          <div class="form-group">
-            <label for="company">Company / Institution Name</label>
-            <input
-              type="text"
-              id="company"
-              placeholder="Your company or institution"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Official Email ID</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="john@company.com"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="inquiry">Inquiry Type</label>
-            <select id="inquiry">
-              <option>German Opportunity Card</option>
-              <option>Nurses Recruitment</option>
-              <option>Ausbildung Placement</option>
-              <option>International Student Admission Support</option>
-              <option>International Skilled Workers</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              rows="5"
-              placeholder="How can we help you?"
-              required></textarea>
-          </div>
-
-          <button type="button" class="btn btn-primary submit-btn"
-            >Send Message</button
-          >
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Modern Staff Section Overhaul -->
-  <section class="staff-overhaul">
-    <div class="staff-overhaul__glow staff-overhaul__glow--1"></div>
-    <div class="staff-overhaul__glow staff-overhaul__glow--2"></div>
-
-    <div class="container staff-overhaul__inner">
-      <div class="staff-header">
-        <span class="staff-badge">Dedicated Support</span>
-        <h2 class="staff-title">
-          Meet Your <span class="text-gradient">Regional Advisors</span>
-        </h2>
-        <p class="staff-subtitle">
-          We believe in human connection. Connect with our native speaking
-          experts in the language you're most comfortable with.
-        </p>
-      </div>
-
-      <div class="staff-modern-grid">
-        <!-- Bianka Bittlingmeier -->
-        <div class="staff-glass-card">
-          <div class="staff-glass-card__content">
-            <div class="staff-card-main">
-              <h3 class="staff-name">Bianka Bittlingmeier</h3>
-              <p class="staff-role">European Relations Advisor</p>
-
-              <div class="staff-language-highlight">
-                <i class="fa-solid fa-language"></i>
-                <span class="staff-lang-label">Languages:</span>
-                <div class="staff-tags-inline staff-tags-inline--alt">
-                  <span>Deutsch</span>
-                  <span>Svenska</span>
+                <div class="info-block">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="info-text">
+                        <h4>{isDe ? "Schweden Zentrale" : "Sweden HQ"}</h4>
+                        <p>Olof Palmes Gata 12<br />111 37 Stockholm, Sweden</p>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="staff-actions-grid">
-              <a
-                href="mailto:bianka.b@scandicroots.se"
-                class="staff-action-link"
-              >
-                <i class="fa-solid fa-envelope-open-text"></i>
-                <span>Email Bianka</span>
-              </a>
-              <a href="tel:+49123456789" class="staff-action-link">
-                <i class="fa-solid fa-phone-volume"></i>
-                <span>Call Advisor</span>
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <!-- Vinu Mohan -->
-        <div class="staff-glass-card">
-          <div class="staff-glass-card__content">
-            <div class="staff-card-main">
-              <h3 class="staff-name">Vinu Mohan</h3>
-              <p class="staff-role">Regional Director / Strategy</p>
-
-              <div class="staff-language-highlight">
-                <i class="fa-solid fa-language"></i>
-                <span class="staff-lang-label">Languages:</span>
-                <div class="staff-tags-inline">
-                  <span>Svenska</span>
-                  <span>English</span>
+                <div class="info-block">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="info-text">
+                        <h4>{isDe ? "Email schreiben" : "Email Us"}</h4>
+                        <p>info@scandicroots.se<br />support@scandicroots.se</p>
+                    </div>
                 </div>
-              </div>
+
+                <div class="info-block">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="info-text">
+                        <h4>{isDe ? "Rufen Sie uns an" : "Call Us"}</h4>
+                        <p>
+                            +46 8 123 45 67<br />{
+                                isDe
+                                    ? "Mo bis Fr, 09:00 bis 18:00 CET"
+                                    : "Mon to Fri, 09:00 to 18:00 CET"
+                            }
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="staff-actions-grid">
-              <a
-                href="mailto:vinu.mohan@scandicroots.se"
-                class="staff-action-link"
-              >
-                <i class="fa-solid fa-envelope-open-text"></i>
-                <span>Email Vinu</span>
-              </a>
-              <a href="tel:+4681234567" class="staff-action-link">
-                <i class="fa-solid fa-phone-volume"></i>
-                <span>Call Advisor</span>
-              </a>
+
+            <div class="contact-form-wrapper glass-panel">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">{t("contact.form.name")}</label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder={t("contact.form.placeholder.name")}
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">{t("contact.form.company")}</label>
+                        <input
+                            type="text"
+                            id="company"
+                            placeholder={t("contact.form.placeholder.company")}
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"
+                            >{t("contact.form.email.official")}</label
+                        >
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder={t("contact.form.placeholder.email")}
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiry">{t("contact.form.inquiry")}</label>
+                        <select id="inquiry">
+                            <option
+                                >{t("contact.form.option.opportunity")}</option
+                            >
+                            <option>{t("contact.form.option.nurses")}</option>
+                            <option
+                                >{t("contact.form.option.ausbildung")}</option
+                            >
+                            <option>{t("contact.form.option.admission")}</option
+                            >
+                            <option>{t("contact.form.option.skilled")}</option>
+                            <option>{t("contact.form.option.other")}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">{t("contact.form.message")}</label>
+                        <textarea
+                            id="message"
+                            rows="5"
+                            placeholder={t("contact.form.placeholder.message")}
+                            required></textarea>
+                    </div>
+
+                    <button type="button" class="btn btn-primary submit-btn"
+                        >{t("contact.form.send")}</button
+                    >
+                </form>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Modern Staff Section Overhaul -->
+    <section class="staff-overhaul">
+        <div class="staff-overhaul__glow staff-overhaul__glow--1"></div>
+        <div class="staff-overhaul__glow staff-overhaul__glow--2"></div>
+
+        <div class="container staff-overhaul__inner">
+            <div class="staff-header">
+                <span class="staff-badge"
+                    >{
+                        isDe ? "Individuelle Betreuung" : "Dedicated Support"
+                    }</span
+                >
+                <h2 class="staff-title">
+                    <Fragment set:html={t("contact.staff.title")} />
+                </h2>
+                <p class="staff-subtitle">{t("contact.staff.subtitle")}</p>
+            </div>
+
+            <div class="staff-modern-grid">
+                <!-- Bianka Bittlingmeier -->
+                <div class="staff-glass-card">
+                    <div class="staff-glass-card__content">
+                        <div class="staff-card-main">
+                            <h3 class="staff-name">Bianka Bittlingmeier</h3>
+                            <p class="staff-role">
+                                {t("contact.staff.role.relations")}
+                            </p>
+
+                            <div class="staff-language-highlight">
+                                <i class="fa-solid fa-language"></i>
+                                <span class="staff-lang-label"
+                                    >{isDe ? "Sprachen:" : "Languages:"}</span
+                                >
+                                <div
+                                    class="staff-tags-inline staff-tags-inline--alt"
+                                >
+                                    <span>Deutsch</span>
+                                    <span>Svenska</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="staff-actions-grid">
+                            <a
+                                href="mailto:bianka.b@scandicroots.se"
+                                class="staff-action-link"
+                            >
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                                <span
+                                    >{
+                                        isDe
+                                            ? "Email an Bianka"
+                                            : "Email Bianka"
+                                    }</span
+                                >
+                            </a>
+                            <a
+                                href="tel:+49123456789"
+                                class="staff-action-link"
+                            >
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <span>{isDe ? "Anrufen" : "Call Advisor"}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vinu Mohan -->
+                <div class="staff-glass-card">
+                    <div class="staff-glass-card__content">
+                        <div class="staff-card-main">
+                            <h3 class="staff-name">Vinu Mohan</h3>
+                            <p class="staff-role">
+                                {t("contact.staff.role.regional")}
+                            </p>
+
+                            <div class="staff-language-highlight">
+                                <i class="fa-solid fa-language"></i>
+                                <span class="staff-lang-label"
+                                    >{isDe ? "Sprachen:" : "Languages:"}</span
+                                >
+                                <div class="staff-tags-inline">
+                                    <span>Svenska</span>
+                                    <span>English</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="staff-actions-grid">
+                            <a
+                                href="mailto:vinu.mohan@scandicroots.se"
+                                class="staff-action-link"
+                            >
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                                <span
+                                    >{
+                                        isDe ? "Email an Vinu" : "Email Vinu"
+                                    }</span
+                                >
+                            </a>
+                            <a href="tel:+4681234567" class="staff-action-link">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <span>{isDe ? "Anrufen" : "Call Advisor"}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </Layout>
 
 <style>
-  .page-header {
-    background: #09091a;
-    padding: 12rem 0 6rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .page-header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-      circle at top right,
-      rgba(178, 61, 105, 0.15) 0%,
-      transparent 60%
-    );
-    pointer-events: none;
-  }
-  .page-header h1 {
-    color: #fff;
-  }
-  .page-header p {
-    color: rgba(255, 255, 255, 0.6);
-  }
+    .page-header {
+        background: #09091a;
+        padding: 12rem 0 6rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .page-header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            circle at top right,
+            rgba(178, 61, 105, 0.15) 0%,
+            transparent 60%
+        );
+        pointer-events: none;
+    }
+    .page-header h1 {
+        color: #fff;
+    }
+    .page-header p {
+        color: rgba(255, 255, 255, 0.6);
+    }
 
-  .section {
-    padding: 6rem 0;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 100px auto;
-    padding: 0 2rem;
-  }
+    .section {
+        padding: 6rem 0;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 100px auto;
+        padding: 0 1.2rem;
+    }
 
-  .text-center {
-    text-align: center;
-  }
-  .text-left {
-    text-align: left;
-  }
-  .text-left::after {
-    margin: 1rem 0 0;
-  }
+    .text-center {
+        text-align: center;
+    }
+    .text-left {
+        text-align: left;
+    }
+    .text-left::after {
+        margin: 1rem 0 0;
+    }
 
-  .page-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    margin-bottom: 1rem;
-    font-weight: 800;
-  }
+    .page-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        margin-bottom: 1rem;
+        font-weight: 800;
+    }
 
-  .page-subtitle {
-    font-size: 1.2rem;
-    color: var(--color-text-muted);
-  }
+    .page-subtitle {
+        font-size: 1.2rem;
+        color: var(--color-text-muted);
+    }
 
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: start;
-    margin-bottom: 6rem;
-  }
-
-  .info-block {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    align-items: center;
-  }
-
-  .info-icon {
-    width: 60px;
-    height: 60px;
-    background: #fff1f2;
-    border: 1px solid rgba(178, 61, 105, 0.2);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-  }
-
-  .info-text h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-  }
-
-  .info-text p {
-    margin: 0;
-  }
-
-  /* Form Styles */
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .form-group label {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--color-text-main);
-  }
-
-  .contact-form input,
-  .contact-form select,
-  .contact-form textarea {
-    background: #ffffff;
-    border: 1px solid #cbd5e0;
-    padding: 1rem;
-    border-radius: 8px;
-    color: var(--color-text-main);
-    font-family: var(--font-body);
-    font-size: 1rem;
-    transition: all var(--transition-fast);
-  }
-
-  .contact-form input:focus,
-  .contact-form select:focus,
-  .contact-form textarea:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(17, 24, 76, 0.1);
-  }
-
-  .submit-btn {
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  @media (max-width: 992px) {
     .contact-grid {
-      grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+        margin-bottom: 6rem;
     }
-  }
 
-  /* --- MODERN STAFF OVERHAUL --- */
-  .staff-overhaul {
-    background: #050510;
-    padding: 8rem 0;
-    position: relative;
-    overflow: hidden;
-    color: #fff;
-  }
-  .staff-overhaul__glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    pointer-events: none;
-    z-index: 0;
-  }
-  .staff-overhaul__glow--1 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(
-      circle,
-      rgba(178, 61, 105, 0.15) 0%,
-      transparent 70%
-    );
-    top: -100px;
-    left: -200px;
-  }
-  .staff-overhaul__glow--2 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(
-      circle,
-      rgba(17, 24, 76, 0.3) 0%,
-      transparent 70%
-    );
-    bottom: -150px;
-    right: -100px;
-  }
+    .info-block {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        align-items: center;
+    }
 
-  .staff-overhaul__inner {
-    position: relative;
-    z-index: 2;
-  }
+    .info-icon {
+        width: 60px;
+        height: 60px;
+        background: #fff1f2;
+        border: 1px solid rgba(178, 61, 105, 0.2);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+    }
 
-  .staff-header {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 5rem;
-  }
-  .staff-badge {
-    display: inline-block;
-    padding: 0.5rem 1.2rem;
-    background: rgba(178, 61, 105, 0.1);
-    border: 1px solid rgba(178, 61, 105, 0.2);
-    border-radius: 100px;
-    color: #b23d69;
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 1.5rem;
-  }
-  .staff-title {
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
-    margin-bottom: 1.2rem;
-    line-height: 1.1;
-  }
-  .staff-subtitle {
-    font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.6);
-    line-height: 1.7;
-  }
+    .info-text h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+    }
 
-  .staff-modern-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    max-width: 850px;
-    margin: 0 auto;
-  }
+    .info-text p {
+        margin: 0;
+    }
 
-  .staff-glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(15px);
-    border-radius: 24px;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .staff-glass-card:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(178, 61, 105, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
+    /* Form Styles */
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 
-  .staff-card-main {
-    margin-bottom: 2.5rem;
-  }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
-  .staff-language-highlight {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    padding: 1rem 1.4rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-  }
+    .form-group label {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: var(--color-text-main);
+    }
 
-  .staff-language-highlight i {
-    color: #b23d69;
-    font-size: 1.2rem;
-  }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        background: #ffffff;
+        border: 1px solid #cbd5e0;
+        padding: 1rem;
+        border-radius: 8px;
+        color: var(--color-text-main);
+        font-family: var(--font-body);
+        font-size: 1rem;
+        transition: all var(--transition-fast);
+    }
 
-  .staff-lang-label {
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.4);
-    letter-spacing: 1px;
-  }
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px rgba(17, 24, 76, 0.1);
+    }
 
-  .staff-tags-inline {
-    display: flex;
-    gap: 0.5rem;
-  }
+    .submit-btn {
+        width: 100%;
+        margin-top: 1rem;
+    }
 
-  .staff-tags-inline span {
-    padding: 0.2rem 0.6rem;
-    background: #b23d69;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-  }
+    @media (max-width: 992px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+    }
 
-  .staff-tags-inline--alt span {
-    background: #11184c;
-  }
+    /* --- MODERN STAFF OVERHAUL --- */
+    .staff-overhaul {
+        background: #050510;
+        padding: 8rem 0;
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+    }
+    .staff-overhaul__glow {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(120px);
+        pointer-events: none;
+        z-index: 0;
+    }
+    .staff-overhaul__glow--1 {
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+            circle,
+            rgba(178, 61, 105, 0.15) 0%,
+            transparent 70%
+        );
+        top: -100px;
+        left: -200px;
+    }
+    .staff-overhaul__glow--2 {
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+            circle,
+            rgba(17, 24, 76, 0.3) 0%,
+            transparent 70%
+        );
+        bottom: -150px;
+        right: -100px;
+    }
 
-  .staff-glass-card__content {
-    padding: 2.5rem;
-  }
-  .staff-name {
-    font-size: 1.5rem;
-    margin-bottom: 0.2rem;
-    color: #fff;
-  }
-  .staff-role {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.85rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.5px;
-  }
+    .staff-overhaul__inner {
+        position: relative;
+        z-index: 2;
+    }
 
-  .staff-actions-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .staff-action-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 1.2rem 1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 16px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: all 0.3s;
-  }
-  .staff-action-link i {
-    font-size: 1.4rem;
-    color: #b23d69;
-    transition: transform 0.3s;
-  }
-  .staff-action-link:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: #b23d69;
-  }
-  .staff-action-link:hover i {
-    transform: translateY(-3px) scale(1.1);
-  }
+    .staff-header {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 5rem;
+    }
+    .staff-badge {
+        display: inline-block;
+        padding: 0.5rem 1.2rem;
+        background: rgba(178, 61, 105, 0.1);
+        border: 1px solid rgba(178, 61, 105, 0.2);
+        border-radius: 100px;
+        color: #b23d69;
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+    }
+    .staff-title {
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        margin-bottom: 1.2rem;
+        line-height: 1.1;
+    }
+    .staff-subtitle {
+        font-size: 1.15rem;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.7;
+    }
 
-  @media (max-width: 850px) {
     .staff-modern-grid {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      padding: 0 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        max-width: 850px;
+        margin: 0 auto;
     }
-    .staff-glass-card__img {
-      height: 400px;
-    }
-  }
 
-  @media (max-width: 480px) {
-    .staff-glass-card__content {
-      padding: 1.5rem;
+    .staff-glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(15px);
+        border-radius: 24px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
+    .staff-glass-card:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(178, 61, 105, 0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .staff-card-main {
+        margin-bottom: 2.5rem;
+    }
+
+    .staff-language-highlight {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 1rem 1.4rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+    }
+
+    .staff-language-highlight i {
+        color: #b23d69;
+        font-size: 1.2rem;
+    }
+
+    .staff-lang-label {
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+        letter-spacing: 1px;
+    }
+
+    .staff-tags-inline {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .staff-tags-inline span {
+        padding: 0.2rem 0.6rem;
+        background: #b23d69;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .staff-tags-inline--alt span {
+        background: #11184c;
+    }
+
+    .staff-glass-card__content {
+        padding: 2.5rem;
+    }
+    .staff-name {
+        font-size: 1.5rem;
+        margin-bottom: 0.2rem;
+        color: #fff;
+    }
+    .staff-role {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
     .staff-actions-grid {
-      grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
     .staff-action-link {
-      flex-direction: row;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 1.2rem 1rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: all 0.3s;
     }
-  }
+    .staff-action-link i {
+        font-size: 1.4rem;
+        color: #b23d69;
+        transition: transform 0.3s;
+    }
+    .staff-action-link:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: #b23d69;
+    }
+    .staff-action-link:hover i {
+        transform: translateY(-3px) scale(1.1);
+    }
+
+    @media (max-width: 850px) {
+        .staff-modern-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+        .staff-glass-card__img {
+            height: 400px;
+        }
+    }
+    @media (max-width: 768px) {
+        .glass-panel {
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .staff-glass-card__content {
+            padding: 1.5rem;
+        }
+        .staff-actions-grid {
+            grid-template-columns: 1fr;
+        }
+        .staff-action-link {
+            flex-direction: row;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+        }
+    }
 </style>

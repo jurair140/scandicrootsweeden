@@ -4,6 +4,7 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const isDe = lang === "de";
 ---
 
 <!-- Partnership Modal -->
@@ -18,21 +19,52 @@ const t = useTranslations(lang);
     <!-- LEFT PANEL — Branding -->
     <div class="pm-panel-left">
       <div class="pm-left-inner">
-        <div class="pm-left-badge">B2B Partnership</div>
+        <div class="pm-left-badge">
+          {isDe ? "B2B Partnerschaft" : "B2B Partnership"}
+        </div>
         <h2 class="pm-left-title">
-          Let's Build<br /><span>Something<br />Lasting.</span>
+          <Fragment
+            set:html={isDe
+              ? "Lassen Sie uns<br /><span>etwas Dauerhaftes<br />aufbauen.</span>"
+              : "Let's Build<br /><span>Something<br />Lasting.</span>"}
+          />
         </h2>
         <p class="pm-left-sub">
-          Fill in your organisation's details and our team will reach out within
-          48 hours to begin the conversation.
+          {
+            isDe
+              ? "Geben Sie die Daten Ihrer Organisation ein und unser Team wird sich innerhalb von 48 Stunden bei Ihnen melden, um das Gespräch zu beginnen."
+              : "Fill in your organisation's details and our team will reach out within 48 hours to begin the conversation."
+          }
         </p>
         <ul class="pm-checklist">
           <li>
-            <span class="check-icon">✓</span> Verified EU-compliant process
+            <span class="check-icon">✓</span>
+            {
+              isDe
+                ? "Geprüfter EU-konformer Prozess"
+                : "Verified EU-compliant process"
+            }
           </li>
-          <li><span class="check-icon">✓</span> Dedicated account manager</li>
-          <li><span class="check-icon">✓</span> Long-term talent pipeline</li>
-          <li><span class="check-icon">✓</span> Multilingual support team</li>
+          <li>
+            <span class="check-icon">✓</span>
+            {
+              isDe
+                ? "Persönlicher Account Manager"
+                : "Dedicated account manager"
+            }
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            {
+              isDe
+                ? "Langfristige Talent-Pipeline"
+                : "Long-term talent pipeline"
+            }
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            {isDe ? "Mehrsprachiges Support-Team" : "Multilingual support team"}
+          </li>
         </ul>
       </div>
       <div class="pm-left-orb orb-a"></div>
@@ -302,7 +334,7 @@ const t = useTranslations(lang);
 
   .pm-left-title {
     font-family: var(--font-heading, "Outfit", sans-serif);
-    font-size: 2.6rem;
+    font-size: 2.3rem;
     font-weight: 900;
     line-height: 1.05;
     color: #fff;

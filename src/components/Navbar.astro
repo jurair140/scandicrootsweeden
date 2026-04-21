@@ -101,10 +101,15 @@ const toggleUrl = isDe
       >
     </div>
 
-    <!-- Mobile Menu Open Toggle -->
-    <button class="mobile-toggle" aria-label="Open Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="mobile-controls">
+      <a href={toggleUrl} class="mobile-nav-lang" aria-label="Toggle Language">
+        {isDe ? "ENG" : "DEU"}
+      </a>
+      <!-- Mobile Menu Open Toggle -->
+      <button class="mobile-toggle" aria-label="Open Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -341,6 +346,9 @@ const toggleUrl = isDe
   .mobile-overlay {
     display: none;
   }
+  .mobile-controls {
+    display: none;
+  }
   .mobile-drawer {
     display: none;
   }
@@ -355,6 +363,28 @@ const toggleUrl = isDe
     }
     .mobile-toggle {
       display: flex;
+    }
+    .mobile-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .mobile-nav-lang {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--color-primary);
+      text-decoration: none;
+      border: 1.5px solid var(--color-primary);
+      border-radius: 6px;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.85rem;
+      transition: all 0.3s;
+    }
+    .mobile-nav-lang:hover {
+      background: var(--color-primary);
+      color: #fff;
     }
 
     /* Mobile Drawer Architecture */

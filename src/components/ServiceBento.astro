@@ -12,28 +12,6 @@ const isDe = lang === "de";
 
 const services = [
   {
-    id: "ausbildung",
-    title: isDe ? "Ausbildung Vermittlung" : "Ausbildung Placement",
-    description: isDe
-      ? "Verbinden Sie sich mit Deutschlands renommiertem Berufsbildungssystem. Wir helfen Unternehmen, durch internationale Talente eine zukunftssichere Belegschaft aufzubauen."
-      : "Connect with Germany's prestigious vocational training system. We help companies build a future ready workforce through international talent.",
-    image: ausbildungImg.src,
-    icon: "🎓",
-    link: isDe ? "/services/ausbildung" : "/en/services/ausbildung",
-    size: "large", // spans 2 cols
-  },
-  {
-    id: "opportunity",
-    title: isDe ? "Chancenkarte" : "Opportunity Card",
-    description: isDe
-      ? "Beschleunigte Einstellung mit Kandidaten, die für das deutsche Chancenkarte Programm qualifiziert sind."
-      : "Fast track hiring with candidates eligible under Germany's Chancenkarte program.",
-    image: opportunityImg.src,
-    icon: "🎫",
-    link: isDe ? "/services/opportunity-card" : "/en/services/opportunity-card",
-    size: "small", // spans 1 col
-  },
-  {
     id: "healthcare",
     title: isDe ? "Gesundheitswesen" : "Healthcare",
     description: isDe
@@ -45,6 +23,17 @@ const services = [
     size: "small",
   },
   {
+    id: "ausbildung",
+    title: isDe ? "Ausbildung Vermittlung" : "Ausbildung Placement",
+    description: isDe
+      ? "Verbinden Sie sich mit Deutschlands renommiertem Berufsbildungssystem. Wir helfen Unternehmen, durch internationale Talente eine zukunftssichere Belegschaft aufzubauen."
+      : "Connect with Germany's prestigious vocational training system. We help companies build a future ready workforce through international talent.",
+    image: ausbildungImg.src,
+    icon: "🎓",
+    link: isDe ? "/services/ausbildung" : "/en/services/ausbildung",
+    size: "large", // spans 2 cols
+  },
+  {
     id: "admission",
     title: isDe ? "Studium Zulassung" : "University Admission",
     description: isDe
@@ -54,6 +43,17 @@ const services = [
     icon: "🎓",
     link: isDe ? "/services/studium-zulassung" : "/en/services/university-admission",
     size: "large",
+  },
+  {
+    id: "opportunity",
+    title: isDe ? "Chancenkarte" : "Opportunity Card",
+    description: isDe
+      ? "Beschleunigte Einstellung mit Kandidaten, die für das deutsche Chancenkarte Programm qualifiziert sind."
+      : "Fast track hiring with candidates eligible under Germany's Chancenkarte program.",
+    image: opportunityImg.src,
+    icon: "🎫",
+    link: isDe ? "/services/opportunity-card" : "/en/services/opportunity-card",
+    size: "small", // spans 1 col
   },
   {
     id: "industrial",

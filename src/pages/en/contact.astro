@@ -31,8 +31,8 @@ import Layout from "../../layouts/Layout.astro";
         <div class="info-block">
           <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
           <div class="info-text">
-            <h4>Sweden HQ</h4>
-            <p>Olof Palmes Gata 12<br />111 37 Stockholm, Sweden</p>
+            <h4>Slovenia HQ</h4>
+            <p>Dunajska cesta 136<br />ZIP 1000 LJUBLJANA, SLOVENIA</p>
           </div>
         </div>
 
@@ -40,7 +40,7 @@ import Layout from "../../layouts/Layout.astro";
           <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
           <div class="info-text">
             <h4>Email Us</h4>
-            <p>info@scandicroots.se<br />support@scandicroots.se</p>
+            <p>info@scandicroots.se</p>
           </div>
         </div>
 
@@ -48,7 +48,7 @@ import Layout from "../../layouts/Layout.astro";
           <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
           <div class="info-text">
             <h4>Call Us</h4>
-            <p>+46 8 123 45 67<br />Mon to Fri, 09:00 to 18:00 CET</p>
+            <p>+46 0708994811<br />Mon to Fri, 09:00 to 18:00 CET</p>
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@ import Layout from "../../layouts/Layout.astro";
           <div class="staff-glass-card__content">
             <div class="staff-card-main">
               <h3 class="staff-name">Bianka Bittlingmeier</h3>
-              <p class="staff-role">European Relations Advisor</p>
+              <p class="staff-role">CEO</p>
 
               <div class="staff-language-highlight">
                 <i class="fa-solid fa-language"></i>
@@ -144,14 +144,11 @@ import Layout from "../../layouts/Layout.astro";
               </div>
             </div>
             <div class="staff-actions-grid">
-              <a
-                href="mailto:bianka.b@scandicroots.se"
-                class="staff-action-link"
-              >
+              <a href="mailto:bianka@scandicroots.se" class="staff-action-link">
                 <i class="fa-solid fa-envelope-open-text"></i>
                 <span>Email Bianka</span>
               </a>
-              <a href="tel:+49123456789" class="staff-action-link">
+              <a href="tel:+460708994811" class="staff-action-link">
                 <i class="fa-solid fa-phone-volume"></i>
                 <span>Call Advisor</span>
               </a>
@@ -163,7 +160,7 @@ import Layout from "../../layouts/Layout.astro";
         <div class="staff-glass-card">
           <div class="staff-glass-card__content">
             <div class="staff-card-main">
-              <h3 class="staff-name">Vinu Mohan</h3>
+              <h3 class="staff-name">Poyilil Vinu</h3>
               <p class="staff-role">Regional Director / Strategy</p>
 
               <div class="staff-language-highlight">
@@ -176,14 +173,11 @@ import Layout from "../../layouts/Layout.astro";
               </div>
             </div>
             <div class="staff-actions-grid">
-              <a
-                href="mailto:vinu.mohan@scandicroots.se"
-                class="staff-action-link"
-              >
+              <a href="mailto:info@scandicroots.se" class="staff-action-link">
                 <i class="fa-solid fa-envelope-open-text"></i>
-                <span>Email Vinu</span>
+                <span>Email Poyilil Vinu</span>
               </a>
-              <a href="tel:+4681234567" class="staff-action-link">
+              <a href="tel:+460708994811" class="staff-action-link">
                 <i class="fa-solid fa-phone-volume"></i>
                 <span>Call Advisor</span>
               </a>
@@ -538,6 +532,12 @@ import Layout from "../../layouts/Layout.astro";
     }
     .staff-glass-card__img {
       height: 400px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .glass-panel {
+      padding: 0;
     }
   }
 

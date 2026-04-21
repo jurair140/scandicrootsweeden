@@ -32,23 +32,23 @@ import Layout from "../../layouts/Layout.astro";
       </p>
 
       <nav class="sv-hero__nav">
-        <a href="/services/opportunity-card" class="sv-nav-pill">
-          <i class="fa-solid fa-passport"></i>
-          <span>Opportunity Card</span>
-        </a>
-        <a href="/services/nurses" class="sv-nav-pill">
+        <a href="/en/services/nurses" class="sv-nav-pill">
           <i class="fa-solid fa-user-nurse"></i>
           <span>Nurses</span>
         </a>
-        <a href="/services/ausbildung" class="sv-nav-pill">
+        <a href="/en/services/ausbildung" class="sv-nav-pill">
           <i class="fa-solid fa-graduation-cap"></i>
           <span>Ausbildung</span>
         </a>
-        <a href="/services/university-admission" class="sv-nav-pill">
+        <a href="/en/services/university-admission" class="sv-nav-pill">
           <i class="fa-solid fa-university"></i>
           <span>University Admission</span>
         </a>
-        <a href="/services/skilled-workers" class="sv-nav-pill">
+        <a href="/en/services/opportunity-card" class="sv-nav-pill">
+          <i class="fa-solid fa-passport"></i>
+          <span>Opportunity Card</span>
+        </a>
+        <a href="/en/services/skilled-workers" class="sv-nav-pill">
           <i class="fa-solid fa-helmet-safety"></i>
           <span>Skilled Workers</span>
         </a>
@@ -62,116 +62,13 @@ import Layout from "../../layouts/Layout.astro";
   </section>
 
   <!-- ══════════════════════════════════════════════════════════
-  PROGRAM 01 — OPPORTUNITY CARD (Chancenkarte)
-  Layout: Left-anchored number + stacked info cards on right
-═══════════════════════════════════════════════════════════════ -->
-  <section class="prg" id="opportunity">
-    <div class="prg__stripe prg__stripe--indigo"></div>
-    <div class="container prg__grid">
-      <!-- Left anchor -->
-      <aside class="prg__anchor">
-        <div class="prg__num">01</div>
-        <div class="prg__icon-wrap"><i class="fa-solid fa-passport"></i></div>
-        <h2 class="prg__title">
-          German Opportunity Card<br /><span class="text-gradient"
-            >(Chancenkarte)</span
-          >
-        </h2>
-        <p class="prg__lead">
-          A points based residence permit allowing non EU professionals to
-          search for employment in Germany, for up to 12 months, without a prior
-          job offer.
-        </p>
-        <a href="/contact" class="btn-glow"
-          >Get Started <i class="fa-solid fa-arrow-right"></i></a
-        >
-      </aside>
-
-      <!-- Right cards -->
-      <div class="prg__cards">
-        <div class="info-card info-card--accent">
-          <div class="info-card__head">
-            <i class="fa-solid fa-list-check"></i>
-            <h3>Eligibility Criteria</h3>
-          </div>
-          <ul class="check-list">
-            <li>Recognized university degree or vocational qualification</li>
-            <li>German (A1) or English language skills minimum</li>
-            <li>Relevant professional work experience</li>
-            <li>Sufficient financial means for self support</li>
-            <li>
-              Bonus: Higher language level, prior Germany stay, age under 35
-            </li>
-          </ul>
-        </div>
-
-        <div class="info-card">
-          <div class="info-card__head">
-            <i class="fa-solid fa-vault"></i>
-            <h3>Blocked Account (Sperrkonto)</h3>
-          </div>
-          <p>
-            Applicants must show proof of financial resources, typically a
-            German blocked bank account. The required amount is approximately <strong
-              >€12,000+</strong
-            > for one year, ensuring self sufficiency during the job search period.
-          </p>
-          <div class="tag-row">
-            <span class="tag">€12,000+ Required</span>
-            <span class="tag">Sperrkonto Setup Support</span>
-          </div>
-        </div>
-
-        <div class="info-card">
-          <div class="info-card__head">
-            <i class="fa-regular fa-calendar"></i>
-            <h3>Intakes & Timeline</h3>
-          </div>
-          <p>
-            Applications can be submitted <strong>year round</strong>, no fixed
-            intake cycle. Processing times vary by embassy location. Early
-            preparation of documents is strongly recommended.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Year-Round</span>
-            <span class="tag">Embassy-Dependent</span>
-          </div>
-        </div>
-
-        <div class="info-card info-card--dark">
-          <div class="info-card__head">
-            <i class="fa-solid fa-handshake-angle"></i>
-            <h3>Additional Support We Provide</h3>
-          </div>
-          <div class="support-pills">
-            <span
-              ><i class="fa-solid fa-file-lines"></i> Document Preparation</span
-            >
-            <span><i class="fa-solid fa-vault"></i> Sperrkonto Guidance</span>
-            <span
-              ><i class="fa-solid fa-magnifying-glass-location"></i> Job Search Orientation</span
-            >
-            <span><i class="fa-solid fa-house"></i> Accommodation Support</span>
-            <span
-              ><i class="fa-solid fa-earth-europe"></i> European Life Orientation</span
-            >
-            <span
-              ><i class="fa-solid fa-scale-balanced"></i> German Law Briefing</span
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════════════
-  PROGRAM 02 — NURSES (Flipped layout + image panel)
+  PROGRAM 01 — NURSES (Flipped layout + image panel)
 ═══════════════════════════════════════════════════════════════ -->
   <section class="prg prg--alt" id="nurses">
     <div class="prg__stripe prg__stripe--rose"></div>
     <div class="container prg__grid prg__grid--flip">
       <aside class="prg__anchor">
-        <div class="prg__num">02</div>
+        <div class="prg__num">01</div>
         <div class="prg__icon-wrap prg__icon-wrap--rose">
           <i class="fa-solid fa-user-nurse"></i>
         </div>
@@ -185,7 +82,7 @@ import Layout from "../../layouts/Layout.astro";
           for hospitals, elderly care centers, and rehabilitation facilities
           across Germany.
         </p>
-        <a href="/contact" class="btn-glow"
+        <a href="/en/contact" class="btn-glow"
           >Hire Nurses <i class="fa-solid fa-arrow-right"></i></a
         >
       </aside>
@@ -263,13 +160,13 @@ import Layout from "../../layouts/Layout.astro";
   </section>
 
   <!-- ══════════════════════════════════════════════════════════
-  PROGRAM 03 — AUSBILDUNG (Full-width bento-style layout)
+  PROGRAM 02 — AUSBILDUNG (Full-width bento-style layout)
 ═══════════════════════════════════════════════════════════════ -->
   <section class="prg-bento" id="ausbildung">
     <div class="container">
       <header class="bento-header">
         <div class="bento-header__meta">
-          <div class="prg__num">03</div>
+          <div class="prg__num">02</div>
           <div class="prg__icon-wrap prg__icon-wrap--indigo">
             <i class="fa-solid fa-graduation-cap"></i>
           </div>
@@ -376,14 +273,14 @@ import Layout from "../../layouts/Layout.astro";
   </section>
 
   <!-- ══════════════════════════════════════════════════════════
-  PROGRAM 04 — UNIVERSITY ADMISSION (Flipped layout)
+  PROGRAM 03 — UNIVERSITY ADMISSION (Flipped layout)
 ═══════════════════════════════════════════════════════════════ -->
   <section class="prg" id="admission">
     <div class="prg__stripe prg__stripe--rose"></div>
     <div class="container prg__grid">
       <!-- Left anchor -->
       <aside class="prg__anchor">
-        <div class="prg__num">04</div>
+        <div class="prg__num">03</div>
         <div class="prg__icon-wrap prg__icon-wrap--rose">
           <i class="fa-solid fa-university"></i>
         </div>
@@ -397,7 +294,7 @@ import Layout from "../../layouts/Layout.astro";
           universities. We facilitate verified, admission ready candidates for
           higher education institutions.
         </p>
-        <a href="/services/university-admission" class="btn-glow">
+        <a href="/en/services/university-admission" class="btn-glow">
           Explore Program <i class="fa-solid fa-arrow-right"></i>
         </a>
       </aside>
@@ -460,6 +357,109 @@ import Layout from "../../layouts/Layout.astro";
   </section>
 
   <!-- ══════════════════════════════════════════════════════════
+  PROGRAM 04 — OPPORTUNITY CARD (Chancenkarte)
+  Layout: Left-anchored number + stacked info cards on right
+═══════════════════════════════════════════════════════════════ -->
+  <section class="prg" id="opportunity">
+    <div class="prg__stripe prg__stripe--indigo"></div>
+    <div class="container prg__grid">
+      <!-- Left anchor -->
+      <aside class="prg__anchor">
+        <div class="prg__num">04</div>
+        <div class="prg__icon-wrap"><i class="fa-solid fa-passport"></i></div>
+        <h2 class="prg__title">
+          German Opportunity Card<br /><span class="text-gradient"
+            >(Chancenkarte)</span
+          >
+        </h2>
+        <p class="prg__lead">
+          A points based residence permit allowing non EU professionals to
+          search for employment in Germany, for up to 12 months, without a prior
+          job offer.
+        </p>
+        <a href="/en/contact" class="btn-glow"
+          >Get Started <i class="fa-solid fa-arrow-right"></i></a
+        >
+      </aside>
+
+      <!-- Right cards -->
+      <div class="prg__cards">
+        <div class="info-card info-card--accent">
+          <div class="info-card__head">
+            <i class="fa-solid fa-list-check"></i>
+            <h3>Eligibility Criteria</h3>
+          </div>
+          <ul class="check-list">
+            <li>Recognized university degree or vocational qualification</li>
+            <li>German (A1) or English language skills minimum</li>
+            <li>Relevant professional work experience</li>
+            <li>Sufficient financial means for self support</li>
+            <li>
+              Bonus: Higher language level, prior Germany stay, age under 35
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card__head">
+            <i class="fa-solid fa-vault"></i>
+            <h3>Blocked Account (Sperrkonto)</h3>
+          </div>
+          <p>
+            Applicants must show proof of financial resources, typically a
+            German blocked bank account. The required amount is approximately <strong
+              >€12,000+</strong
+            > for one year, ensuring self sufficiency during the job search period.
+          </p>
+          <div class="tag-row">
+            <span class="tag">€12,000+ Required</span>
+            <span class="tag">Sperrkonto Setup Support</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card__head">
+            <i class="fa-regular fa-calendar"></i>
+            <h3>Intakes & Timeline</h3>
+          </div>
+          <p>
+            Applications can be submitted <strong>year round</strong>, no fixed
+            intake cycle. Processing times vary by embassy location. Early
+            preparation of documents is strongly recommended.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Year-Round</span>
+            <span class="tag">Embassy-Dependent</span>
+          </div>
+        </div>
+
+        <div class="info-card info-card--dark">
+          <div class="info-card__head">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <h3>Additional Support We Provide</h3>
+          </div>
+          <div class="support-pills">
+            <span
+              ><i class="fa-solid fa-file-lines"></i> Document Preparation</span
+            >
+            <span><i class="fa-solid fa-vault"></i> Sperrkonto Guidance</span>
+            <span
+              ><i class="fa-solid fa-magnifying-glass-location"></i> Job Search Orientation</span
+            >
+            <span><i class="fa-solid fa-house"></i> Accommodation Support</span>
+            <span
+              ><i class="fa-solid fa-earth-europe"></i> European Life Orientation</span
+            >
+            <span
+              ><i class="fa-solid fa-scale-balanced"></i> German Law Briefing</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
   PROGRAM 05 — SKILLED WORKERS (Tabbed profiles)
 ═══════════════════════════════════════════════════════════════ -->
   <section class="prg prg--alt" id="skilled">
@@ -479,7 +479,7 @@ import Layout from "../../layouts/Layout.astro";
             meat processing, and industrial sectors. Available year round, pre
             screened and ready for immediate integration.
           </p>
-          <a href="/contact" class="btn-glow"
+          <a href="/en/contact" class="btn-glow"
             >Discuss Requirements <i class="fa-solid fa-arrow-right"></i></a
           >
         </div>
@@ -646,7 +646,7 @@ import Layout from "../../layouts/Layout.astro";
             teams.
           </p>
         </div>
-        <a href="/contact" class="btn-glow btn-glow--sm">Enquire Now</a>
+        <a href="/en/contact" class="btn-glow btn-glow--sm">Enquire Now</a>
       </div>
     </div>
   </section>
@@ -718,10 +718,11 @@ import Layout from "../../layouts/Layout.astro";
           <div class="track__connector"></div>
           <div class="track__card">
             <span class="track__num">04</span>
-            <h4>Financial Review</h4>
+            <h4>Financial Background Check</h4>
             <p>
-              Verification of Sperrkonto accounts and financial credibility for
-              Chancenkarte and overall transition readiness.
+              We check the financial background and financial clarity of every
+              candidate. We ensure they do not have any outstanding debt in
+              India.
             </p>
           </div>
         </div>
@@ -735,7 +736,7 @@ import Layout from "../../layouts/Layout.astro";
             <h4>Compliance Sign-Off</h4>
             <p>
               Final holistic review of immigration eligibility, points system
-              scoring and employer-specific requirements.
+              scoring and employer specific requirements.
             </p>
           </div>
         </div>
@@ -758,8 +759,8 @@ import Layout from "../../layouts/Layout.astro";
         </p>
       </div>
       <div class="cta-strip__btns">
-        <a href="/contact" class="btn btn-primary">Speak to an Expert</a>
-        <a href="/about" class="btn btn-outline del-outline"
+        <a href="/en/contact" class="btn btn-primary">Speak to an Expert</a>
+        <a href="/en/about" class="btn btn-outline del-outline"
           >About Scandic Roots</a
         >
       </div>

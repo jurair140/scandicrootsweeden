@@ -59,12 +59,6 @@ const toggleUrl = isDe
           <i class="fa-solid fa-chevron-down dropdown-icon"></i>
         </a>
         <div class="dropdown-menu">
-          <a
-            href={isDe
-              ? "/services/opportunity-card"
-              : "/en/services/opportunity-card"}
-            >{isDe ? "Chancenkarte" : "Opportunity Card"}</a
-          >
           <a href={isDe ? "/services/nurses" : "/en/services/nurses"}
             >{isDe ? "Pflegekräfte" : "Nurses"}</a
           >
@@ -76,6 +70,12 @@ const toggleUrl = isDe
               ? "/services/studium-zulassung"
               : "/en/services/university-admission"}
             >{isDe ? "Studium Zulassung" : "University Admission"}</a
+          >
+          <a
+            href={isDe
+              ? "/services/opportunity-card"
+              : "/en/services/opportunity-card"}
+            >{isDe ? "Chancenkarte" : "Opportunity Card"}</a
           >
           <a
             href={isDe
@@ -136,12 +136,6 @@ const toggleUrl = isDe
         <i class="fa-solid fa-chevron-down accordion-icon"></i>
       </button>
       <div class="mobile-accordion-content" id="services-accordion-content">
-        <a
-          href={isDe
-            ? "/services/opportunity-card"
-            : "/en/services/opportunity-card"}
-          >{isDe ? "Chancenkarte" : "Opportunity Card"}</a
-        >
         <a href={isDe ? "/services/nurses" : "/en/services/nurses"}
           >{isDe ? "Pflegekräfte" : "Nurses"}</a
         >
@@ -153,6 +147,12 @@ const toggleUrl = isDe
             ? "/services/studium-zulassung"
             : "/en/services/university-admission"}
           >{isDe ? "Studium Zulassung" : "University Admission"}</a
+        >
+        <a
+          href={isDe
+            ? "/services/opportunity-card"
+            : "/en/services/opportunity-card"}
+          >{isDe ? "Chancenkarte" : "Opportunity Card"}</a
         >
         <a
           href={isDe

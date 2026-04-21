@@ -101,11 +101,11 @@ const toggleUrl = isDe
       >
     </div>
 
-    <div class="mobile-controls">
-      <a href={toggleUrl} class="mobile-nav-lang" aria-label="Toggle Language">
-        {isDe ? "ENG" : "DEU"}
+    <!-- Mobile Menu Tools -->
+    <div class="mobile-nav-tools">
+      <a href={toggleUrl} class="mobile-lang-link">
+        {isDe ? "🇺🇸 EN" : "🇩🇪 DE"}
       </a>
-      <!-- Mobile Menu Open Toggle -->
       <button class="mobile-toggle" aria-label="Open Menu">
         <span></span><span></span><span></span>
       </button>
@@ -342,11 +342,33 @@ const toggleUrl = isDe
     transition: all 0.3s;
   }
 
+  .mobile-nav-tools {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .mobile-lang-link {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.4rem 0.6rem;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+  }
+
+  .mobile-lang-link:hover {
+    background: #f1f5f9;
+    border-color: var(--color-primary);
+  }
+
   /* Mobile Drawer Initial state (Hidden on Desktop) */
   .mobile-overlay {
-    display: none;
-  }
-  .mobile-controls {
     display: none;
   }
   .mobile-drawer {
@@ -364,27 +386,8 @@ const toggleUrl = isDe
     .mobile-toggle {
       display: flex;
     }
-    .mobile-controls {
+    .mobile-nav-tools {
       display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .mobile-nav-lang {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: var(--color-primary);
-      text-decoration: none;
-      border: 1.5px solid var(--color-primary);
-      border-radius: 6px;
-      padding: 0.25rem 0.6rem;
-      font-size: 0.85rem;
-      transition: all 0.3s;
-    }
-    .mobile-nav-lang:hover {
-      background: var(--color-primary);
-      color: #fff;
     }
 
     /* Mobile Drawer Architecture */

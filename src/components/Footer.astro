@@ -118,16 +118,38 @@ const year = new Date().getFullYear();
           <!-- Social Icons Row -->
           <div class="passport-bottom">
             <div class="social-row">
-              <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-orb" aria-label="LinkedIn">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener"
+                class="social-orb"
+                aria-label="LinkedIn"
+              >
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
-              <a href="mailto:info@scandicroots.se" class="social-orb" aria-label="Email">
+              <a
+                href="mailto:info@scandicroot.com"
+                class="social-orb"
+                aria-label="Email"
+              >
                 <i class="fa-solid fa-envelope"></i>
               </a>
-              <a href="https://x.com" target="_blank" rel="noopener" class="social-orb" aria-label="X (Twitter)">
+              <a
+                href="https://x.com"
+                target="_blank"
+                rel="noopener"
+                class="social-orb"
+                aria-label="X (Twitter)"
+              >
                 <i class="fa-brands fa-x-twitter"></i>
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener" class="social-orb" aria-label="Instagram">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener"
+                class="social-orb"
+                aria-label="Instagram"
+              >
                 <i class="fa-brands fa-instagram"></i>
               </a>
               <a href="tel:+460708994811" class="social-orb" aria-label="Phone">
@@ -135,7 +157,6 @@ const year = new Date().getFullYear();
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -346,25 +367,23 @@ const year = new Date().getFullYear();
     position: absolute;
     inset: -1px;
     border-radius: 4px;
-    background: linear-gradient(
-      270deg,
-      #b23d69,
-      #11184c,
-      #7c6ef5,
-      #b23d69
-    );
+    background: linear-gradient(270deg, #b23d69, #11184c, #7c6ef5, #b23d69);
     background-size: 300% 300%;
     animation: border-flow 4s linear infinite;
     z-index: -1;
     opacity: 0.7;
   }
   @keyframes border-flow {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
-
-
 
   /* Monolith Bottom Bar */
   .monolith-footer-bottom {
@@ -452,14 +471,15 @@ const year = new Date().getFullYear();
     [data-mobile-card] {
       opacity: 0;
       transform: translateY(24px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
     }
     [data-mobile-card].is-visible {
       opacity: 1;
       transform: translateY(0);
     }
   }
-
 </style>
 
 <script>
@@ -473,7 +493,7 @@ const year = new Date().getFullYear();
             observer.disconnect();
           }
         },
-        { threshold: 0.2 }
+        { threshold: 0.2 },
       );
       observer.observe(card);
     }

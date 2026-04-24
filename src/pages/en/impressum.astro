@@ -6,12 +6,14 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title={t('footer.impressum')} description="Scandic Roots Impressum">
+<Layout title={t("footer.impressum")} description="Scandic Roots Impressum">
   <main class="legal-page">
     <div class="container">
       <header class="legal-header">
         <h1 class="text-gradient">Impressum</h1>
-        <p class="last-updated">Legal Disclosure according to Swedish and German Law</p>
+        <p class="last-updated">
+          Legal Disclosure according to Swedish and German Law
+        </p>
       </header>
 
       <div class="legal-content">
@@ -27,16 +29,14 @@ const t = useTranslations(lang);
 
         <section>
           <h2>Represented by</h2>
-          <p>
-            Board of Directors / Managing Directors
-          </p>
+          <p>Board of Directors / Managing Directors</p>
         </section>
 
         <section>
           <h2>Contact</h2>
           <p>
             Phone: +46 8 123 45 67<br />
-            E-mail: info@scandicroots.se
+            E-mail: info@scandicroot.com
           </p>
         </section>
 
@@ -51,7 +51,8 @@ const t = useTranslations(lang);
         <section>
           <h2>VAT ID</h2>
           <p>
-            VAT identification number according to § 27 a of the Value Added Tax Act:<br />
+            VAT identification number according to § 27 a of the Value Added Tax
+            Act:<br />
             [Pending / Insert Number]
           </p>
         </section>
@@ -59,8 +60,14 @@ const t = useTranslations(lang);
         <section>
           <h2>Dispute Resolution</h2>
           <p>
-            The European Commission provides a platform for online dispute resolution (OS): <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>.<br />
-            We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.
+            The European Commission provides a platform for online dispute
+            resolution (OS): <a
+              href="https://ec.europa.eu/consumers/odr"
+              target="_blank"
+              rel="noopener">https://ec.europa.eu/consumers/odr</a
+            >.<br />
+            We are not willing or obliged to participate in dispute resolution proceedings
+            before a consumer arbitration board.
           </p>
         </section>
       </div>
@@ -92,7 +99,7 @@ const t = useTranslations(lang);
     background: white;
     padding: 4rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   }
   .legal-content section {
     margin-bottom: 3rem;

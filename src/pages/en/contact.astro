@@ -41,6 +41,8 @@ import Layout from "../../layouts/Layout.astro";
           <div class="info-text">
             <h4>Email Us</h4>
             <p>info@scandicroots.se</p>
+            <p>bianka@scandicroots.se</p>
+            <p>isabelle@scandicroots.se</p>
           </div>
         </div>
 
@@ -83,7 +85,6 @@ import Layout from "../../layouts/Layout.astro";
           <div class="form-group">
             <label for="inquiry">Inquiry Type</label>
             <select id="inquiry">
-              <option>German Opportunity Card</option>
               <option>Nurses Recruitment</option>
               <option>Ausbildung Placement</option>
               <option>International Student Admission Support</option>
@@ -176,6 +177,38 @@ import Layout from "../../layouts/Layout.astro";
               <a href="mailto:info@scandicroots.se" class="staff-action-link">
                 <i class="fa-solid fa-envelope-open-text"></i>
                 <span>Email Poyilil Vinu</span>
+              </a>
+              <a href="tel:+460708994811" class="staff-action-link">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span>Call Advisor</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Isabelle Beyer -->
+        <div class="staff-glass-card">
+          <div class="staff-glass-card__content">
+            <div class="staff-card-main">
+              <h3 class="staff-name">Isabelle Beyer</h3>
+              <p class="staff-role">Business Development Manager</p>
+
+              <div class="staff-language-highlight">
+                <i class="fa-solid fa-language"></i>
+                <span class="staff-lang-label">Languages:</span>
+                <div class="staff-tags-inline">
+                  <span>Deutsch</span>
+                  <span>English</span>
+                </div>
+              </div>
+            </div>
+            <div class="staff-actions-grid">
+              <a
+                href="mailto:Isabelle@scandicroots.se"
+                class="staff-action-link"
+              >
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <span>Email Isabelle</span>
               </a>
               <a href="tel:+460708994811" class="staff-action-link">
                 <i class="fa-solid fa-phone-volume"></i>
@@ -406,9 +439,9 @@ import Layout from "../../layouts/Layout.astro";
 
   .staff-modern-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
-    max-width: 850px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
@@ -433,6 +466,7 @@ import Layout from "../../layouts/Layout.astro";
 
   .staff-language-highlight {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 0.8rem;
     margin-top: 1.5rem;
@@ -441,8 +475,9 @@ import Layout from "../../layouts/Layout.astro";
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
-
   .staff-language-highlight i {
     color: #b23d69;
     font-size: 1.2rem;

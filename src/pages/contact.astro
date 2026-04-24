@@ -39,7 +39,9 @@ const isDe = lang === "de";
                     </div>
                     <div class="info-text">
                         <h4>{isDe ? "Slowenien Zentrale" : "Slovenia HQ"}</h4>
-                        <p>Dunajska cesta 136<br />ZIP 1000 LJUBLJANA, SLOVENIA</p>
+                        <p>
+                            Dunajska cesta 136<br />ZIP 1000 LJUBLJANA, SLOVENIA
+                        </p>
                     </div>
                 </div>
 
@@ -50,6 +52,8 @@ const isDe = lang === "de";
                     <div class="info-text">
                         <h4>{isDe ? "Email schreiben" : "Email Us"}</h4>
                         <p>info@scandicroots.se</p>
+                        <p>bianka@scandicroots.se</p>
+                        <p>isabelle@scandicroots.se</p>
                     </div>
                 </div>
 
@@ -107,9 +111,6 @@ const isDe = lang === "de";
                     <div class="form-group">
                         <label for="inquiry">{t("contact.form.inquiry")}</label>
                         <select id="inquiry">
-                            <option
-                                >{t("contact.form.option.opportunity")}</option
-                            >
                             <option>{t("contact.form.option.nurses")}</option>
                             <option
                                 >{t("contact.form.option.ausbildung")}</option
@@ -232,11 +233,61 @@ const isDe = lang === "de";
                                 <i class="fa-solid fa-envelope-open-text"></i>
                                 <span
                                     >{
-                                        isDe ? "Email an Poyilil Vinu" : "Email Poyilil Vinu"
+                                        isDe
+                                            ? "Email an Poyilil Vinu"
+                                            : "Email Poyilil Vinu"
                                     }</span
                                 >
                             </a>
-                            <a href="tel:+460708994811" class="staff-action-link">
+                            <a
+                                href="tel:+460708994811"
+                                class="staff-action-link"
+                            >
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <span>{isDe ? "Anrufen" : "Call Advisor"}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Isabelle Beyer -->
+                <div class="staff-glass-card">
+                    <div class="staff-glass-card__content">
+                        <div class="staff-card-main">
+                            <h3 class="staff-name">Isabelle Beyer</h3>
+                            <p class="staff-role">
+                                {t("contact.staff.role.bdmanager")}
+                            </p>
+
+                            <div class="staff-language-highlight">
+                                <i class="fa-solid fa-language"></i>
+                                <span class="staff-lang-label"
+                                    >{isDe ? "Sprachen:" : "Languages:"}</span
+                                >
+                                <div class="staff-tags-inline">
+                                    <span>Deutsch</span>
+                                    <span>English</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="staff-actions-grid">
+                            <a
+                                href="mailto:Isabelle@scandicroots.se"
+                                class="staff-action-link"
+                            >
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                                <span
+                                    >{
+                                        isDe
+                                            ? "Email an Isabelle"
+                                            : "Email Isabelle"
+                                    }</span
+                                >
+                            </a>
+                            <a
+                                href="tel:+460708994811"
+                                class="staff-action-link"
+                            >
                                 <i class="fa-solid fa-phone-volume"></i>
                                 <span>{isDe ? "Anrufen" : "Call Advisor"}</span>
                             </a>
@@ -465,9 +516,9 @@ const isDe = lang === "de";
 
     .staff-modern-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2.5rem;
-        max-width: 850px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
@@ -492,6 +543,7 @@ const isDe = lang === "de";
 
     .staff-language-highlight {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 0.8rem;
         margin-top: 1.5rem;
@@ -500,6 +552,8 @@ const isDe = lang === "de";
         background: rgba(255, 255, 255, 0.03);
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 12px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .staff-language-highlight i {
@@ -517,6 +571,7 @@ const isDe = lang === "de";
 
     .staff-tags-inline {
         display: flex;
+        flex-wrap: wrap;
         gap: 0.5rem;
     }
 
